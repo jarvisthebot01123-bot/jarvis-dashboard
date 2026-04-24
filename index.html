@@ -396,11 +396,11 @@ const STRAT_COLORS = {
   news:     '#bc4c00',
 };
 const STRAT_TIPS = {
-  gap_go:   'Buys stocks that gap up >4% pre-market on high volume. Enters when price breaks the prior day high, exits by end of day. Target +15%, stop -4%.',
-  momentum: 'Buys stocks showing strong upward momentum — RSI 55-80, above VWAP, breaking above prior day high. Target +9%, stop -3%.',
-  mean_rev: 'Buys stocks that dropped >5% intraday, betting on a same-day bounce. RSI must be below 25. Target +8%, stop -3%.',
-  congress: 'Follows stock purchases disclosed by US Congress members under the STOCK Act. Buys the same ticker within 30 days of their disclosure.',
-  news:     'Trades stocks with high-confidence breaking news — FDA approvals, earnings beats, M&A. Only enters when confidence >75%. Target +20%, stop -5%.',
+  gap_go:   'Captures pre-market gap continuations through the open.',
+  momentum: 'Rides intraday trend continuations on confirmed strength.',
+  mean_rev: 'Fades sharp intraday selloffs in fundamentally strong names.',
+  congress: 'Mirrors disclosed positions from public market participants.',
+  news:     'Reacts to high-conviction, time-sensitive news catalysts.',
 };
 let charts = {}, countdown = REFRESH_SECS, countdownTimer, lastData = null;
 
