@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T23:42:36.339865Z",
+  "generated_at": "2026-04-24T23:47:24.147224Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -75,7 +75,7 @@
       "count": 30
     },
     "market_context": {
-      "age": "3.7h ago",
+      "age": "3.8h ago",
       "status": "warning"
     }
   },

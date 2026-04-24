@@ -459,44 +459,62 @@ applyPersona(location.hash.replace('#','') || 'trader', {updateHash:false});
 /* ── Helpers ── */
 function fmtPct(v) { return (v >= 0 ? '+' : '') + (v||0).toFixed(2) + '%'; }
 function cls(v)    { return v > 0 ? 'gain' : v < 0 ? 'loss' : 'flat'; }
+function hasTraded(d) { return (d.equity_curve||[]).some(r => (r.trades||0) > 0); }
 
 /* ── Render functions ── */
 function renderTopMetrics(d) {
   const a = d.account, spy = d.spy_benchmark;
+  const traded = hasTraded(d);
   // Card 1: Portfolio Index (100 = baseline)
   document.getElementById('equity').textContent = a.index.toFixed(2);
   document.getElementById('equity').className = 'metric';
-  document.getElementById('equity-sub').textContent = fmtPct(a.total_pct) + ' all-time';
-  document.getElementById('equity-sub').className = 'metric-sub ' + cls(a.total_pct);
+  document.getElementById('equity-sub').textContent = traded ? (fmtPct(a.total_pct) + ' all-time') : 'baseline';
+  document.getElementById('equity-sub').className = 'metric-sub ' + (traded ? cls(a.total_pct) : 'flat');
   // Card 2: Today
   const dp = document.getElementById('daily-pnl');
-  dp.textContent = fmtPct(a.daily_pct); dp.className = 'metric ' + cls(a.daily_pct);
+  dp.textContent = traded ? fmtPct(a.daily_pct) : '—';
+  dp.className = 'metric ' + (traded ? cls(a.daily_pct) : 'flat');
   document.getElementById('daily-pnl-pct').innerHTML = '&nbsp;';
   document.getElementById('daily-pnl-pct').className = 'metric-sub flat';
   // Card 3: All-Time
   const tp = document.getElementById('total-pnl');
-  tp.textContent = fmtPct(a.total_pct); tp.className = 'metric ' + cls(a.total_pct);
-  document.getElementById('total-pnl-pct').textContent = 'since start';
+  tp.textContent = traded ? fmtPct(a.total_pct) : '—';
+  tp.className = 'metric ' + (traded ? cls(a.total_pct) : 'flat');
+  document.getElementById('total-pnl-pct').textContent = traded ? 'since start' : 'no trades yet';
   document.getElementById('total-pnl-pct').className = 'metric-sub flat';
-  // Card 4: vs SPY
-  const alpha = spy.alpha_pct;
+  // Card 4: vs SPY — only meaningful once we have actual trade history
   const ae = document.getElementById('alpha');
-  ae.textContent = (alpha>=0?'▲ +':'▼ ') + Math.abs(alpha).toFixed(2) + '% alpha';
-  ae.className = 'metric ' + cls(alpha);
-  document.getElementById('spy-line').textContent = `SPY${spy.start_date?' since '+spy.start_date:''}: ${fmtPct(spy.return_pct)}`;
+  if (traded && spy.start_date) {
+    const alpha = spy.alpha_pct;
+    ae.textContent = (alpha>=0?'▲ +':'▼ ') + Math.abs(alpha).toFixed(2) + '% alpha';
+    ae.className = 'metric ' + cls(alpha);
+    document.getElementById('spy-line').textContent = `SPY since ${spy.start_date}: ${fmtPct(spy.return_pct)}`;
+  } else {
+    ae.textContent = '—';
+    ae.className = 'metric flat';
+    document.getElementById('spy-line').textContent = 'Benchmark starts at first trade';
+  }
 }
 
 function renderEquityChart(d) {
-  const h = d.equity_curve, ctx = document.getElementById('equity-chart'), nh = document.getElementById('no-history');
-  if (!h || !h.length) { ctx.style.display='none'; nh.style.display='block'; return; }
+  const h = d.equity_curve || [], ctx = document.getElementById('equity-chart'), nh = document.getElementById('no-history');
+  const traded = hasTraded(d);
+  // Only draw the chart once at least one day has actual trades. Otherwise
+  // a flat line at 100 is misleading and the SPY benchmark hasn't started yet.
+  if (!traded) { ctx.style.display='none'; nh.style.display='block'; return; }
   ctx.style.display='block'; nh.style.display='none';
-  const spyRate = d.spy_benchmark.return_pct/100, n = h.length;
-  const spyLine = h.map((_,i) => +(100*(1+spyRate*(i+1)/n)).toFixed(2));
-  if (charts.equity) charts.equity.destroy();
-  charts.equity = new Chart(ctx, { type:'line', data:{ labels:h.map(x=>x.date), datasets:[
+  const spy = d.spy_benchmark || {};
+  const datasets = [
     {label:'Jarvis',data:h.map(x=>x.index),borderColor:'#0969da',backgroundColor:'rgba(9,105,218,.06)',borderWidth:2,tension:.3,pointRadius:3,fill:true},
-    {label:'S&P 500',data:spyLine,borderColor:'#9a6700',backgroundColor:'transparent',borderWidth:1.5,borderDash:[4,3],tension:.3,pointRadius:0},
-  ]}, options:{ responsive:true, maintainAspectRatio:true,
+  ];
+  if (spy.start_date) {
+    const spyRate = (spy.return_pct||0)/100, n = h.length;
+    const spyLine = h.map((_,i) => +(100*(1+spyRate*(i+1)/n)).toFixed(2));
+    datasets.push({label:'S&P 500',data:spyLine,borderColor:'#9a6700',backgroundColor:'transparent',borderWidth:1.5,borderDash:[4,3],tension:.3,pointRadius:0});
+  }
+  if (charts.equity) charts.equity.destroy();
+  charts.equity = new Chart(ctx, { type:'line', data:{ labels:h.map(x=>x.date), datasets },
+    options:{ responsive:true, maintainAspectRatio:true,
     plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false,callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}`}}},
     scales:{x:{grid:{color:'rgba(208,215,222,.8)'},ticks:{color:'#656d76',font:{size:10}}},
             y:{grid:{color:'rgba(208,215,222,.8)'},ticks:{color:'#656d76',font:{size:10},callback:v=>v.toFixed(0)}}} }});
@@ -539,8 +557,13 @@ function renderStrategyCards(d) {
 }
 
 function renderHistory(d) {
-  const rows=d.equity_curve; if(!rows||!rows.length) return;
-  document.getElementById('history-body').innerHTML=[...rows].reverse().map(r=>`<tr>
+  const tbody = document.getElementById('history-body');
+  const rows=(d.equity_curve||[]).filter(r => (r.trades||0) > 0);
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:24px">No history yet</td></tr>`;
+    return;
+  }
+  tbody.innerHTML=[...rows].reverse().map(r=>`<tr>
     <td class="mono">${r.date}</td>
     <td class="${cls(r.daily_pct)}">${fmtPct(r.daily_pct)}</td>
     <td>${r.index.toFixed(2)}</td>
