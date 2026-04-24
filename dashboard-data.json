@@ -1,69 +1,61 @@
 {
-  "generated_at": "2026-04-24T23:33:28.432965Z",
+  "generated_at": "2026-04-24T23:42:36.339865Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "equity": 100000.0,
-    "daily_pnl": 0.0,
-    "total_pnl": 0.0,
-    "opening_equity": 100000.0,
-    "daily_pnl_pct": 0.0,
-    "total_pnl_pct": 0.0
+    "index": 100.0,
+    "opening_index": 100.0,
+    "daily_pct": 0.0,
+    "total_pct": 0.0
   },
   "spy_benchmark": {
     "return_pct": 0.0,
-    "equivalent_dollar_gain": 0.0,
     "our_return_pct": 0.0,
     "alpha_pct": 0.0,
     "start_date": "2026-04-24"
   },
   "strategy_stats": {
     "gap_go": {
-      "name": "Gap & Go",
-      "allocated": 25000,
+      "name": "S1",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
-      "total_pnl": 0
+      "pnl_pct": 0.0
     },
     "momentum": {
-      "name": "Momentum Breakout",
-      "allocated": 25000,
+      "name": "S2",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
-      "total_pnl": 0
+      "pnl_pct": 0.0
     },
     "mean_rev": {
-      "name": "Mean Reversion",
-      "allocated": 15000,
+      "name": "S3",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
-      "total_pnl": 0
+      "pnl_pct": 0.0
     },
     "congress": {
-      "name": "Wheel Strategy",
-      "allocated": 20000,
+      "name": "S4",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
-      "total_pnl": 0
+      "pnl_pct": 0.0
     },
     "news": {
-      "name": "News Catalyst",
-      "allocated": 15000,
+      "name": "S5",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
-      "total_pnl": 0
+      "pnl_pct": 0.0
     }
   },
   "equity_curve": [
     {
       "date": "2026-04-24",
-      "equity": 100000.0,
-      "daily_pnl": 0.0,
+      "index": 100.0,
+      "daily_pct": 0.0,
       "trades": 0,
       "strategies": []
     }
@@ -73,17 +65,17 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "1.1h ago",
+      "age": "1.3h ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "1.1h ago",
+      "age": "1.3h ago",
       "status": "warning",
       "count": 30
     },
     "market_context": {
-      "age": "3.6h ago",
+      "age": "3.7h ago",
       "status": "warning"
     }
   },
