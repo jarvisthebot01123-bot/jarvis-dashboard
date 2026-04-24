@@ -62,7 +62,7 @@ body.theme-youtuber {
 }
 
 /* ── Hero ── */
-.hero { background: linear-gradient(135deg, var(--surface) 0%, var(--accent-bg) 110%); border-bottom: 1px solid var(--border); padding: 14px 28px; position: relative; backdrop-filter: blur(6px); }
+.hero { background: linear-gradient(135deg, var(--surface) 0%, var(--accent-bg) 110%); border-bottom: 1px solid var(--border); padding: 14px 28px; position: relative; z-index: 100; backdrop-filter: blur(6px); }
 .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 50%, var(--accent-3) 100%); transition: background .25s; }
 .hero-inner { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; gap: 16px; min-height: 56px; }
 .hero-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
