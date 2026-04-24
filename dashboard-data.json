@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T22:09:00.217748Z",
+  "generated_at": "2026-04-24T22:12:56.165706Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -69,16 +69,16 @@
     }
   ],
   "open_positions": [],
-  "performance_summary": "Day 2 of paper trading. No trades executed. Equity $100,000. SPY benchmark initialized at $710.14 on 2026-04-24. All strategies enabled.",
+  "performance_summary": "Day 3 of paper trading. No trades executed. Equity $100,000. SPY benchmark initialized at $710.14 on 2026-04-24. All strategies enabled.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "0m ago",
+      "age": "4m ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "0m ago",
+      "age": "4m ago",
       "status": "fresh",
       "count": 30
     },
@@ -88,9 +88,9 @@
     }
   },
   "last_routine": {
-    "ts": "2026-04-25T12:30Z",
+    "ts": "2026-04-25T00:20Z",
     "routine": "pre_market",
-    "notes": "No gap data (API 503). BULLISH. 18 congress signals. NVDA news signal. news.json refresh failed (feedparser missing)."
+    "notes": "No PM gaps. BULLISH. 1 new congress (HD). 4 news signals: INTC/AMD/NVDA/UNH. VIX 18.67 normal."
   },
   "strategies_enabled": {
     "gap_go": true,
