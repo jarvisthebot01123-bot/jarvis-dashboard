@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T20:43:28.016705Z",
+  "generated_at": "2026-04-24T21:29:20.725179Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -69,28 +69,28 @@
     }
   ],
   "open_positions": [],
-  "performance_summary": "Day 1 of paper trading. No trades executed. Equity $100,000. SPY benchmark initialized at $710.14 on 2026-04-24. All strategies enabled.",
+  "performance_summary": "Day 2 of paper trading. No trades executed. Equity $100,000. SPY benchmark initialized at $710.14 on 2026-04-24. All strategies enabled.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "45m ago",
+      "age": "1.5h ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "45m ago",
-      "status": "fresh",
+      "age": "1.5h ago",
+      "status": "warning",
       "count": 30
     },
     "market_context": {
-      "age": "45m ago",
+      "age": "1.5h ago",
       "status": "fresh"
     }
   },
   "last_routine": {
-    "ts": "2026-04-24T20:58Z",
+    "ts": "2026-04-25T12:30Z",
     "routine": "pre_market",
-    "notes": "No gaps. BULLISH bias. 8 congress signals. 1 news signal (NVDA)."
+    "notes": "No gap data (API 503). BULLISH. 18 congress signals. NVDA news signal. news.json refresh failed (feedparser missing)."
   },
   "strategies_enabled": {
     "gap_go": true,
