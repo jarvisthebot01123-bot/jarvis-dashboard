@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T20:31:32.573187Z",
+  "generated_at": "2026-04-24T20:43:28.016705Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -73,25 +73,24 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "33m ago",
+      "age": "45m ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "33m ago",
+      "age": "45m ago",
       "status": "fresh",
       "count": 30
     },
     "market_context": {
-      "age": "33m ago",
+      "age": "45m ago",
       "status": "fresh"
     }
   },
   "last_routine": {
-    "ts": "16:15",
-    "routine": "end_of_day",
-    "daily_pnl": 0.0,
-    "trades": 0
+    "ts": "2026-04-24T20:58Z",
+    "routine": "pre_market",
+    "notes": "No gaps. BULLISH bias. 8 congress signals. 1 news signal (NVDA)."
   },
   "strategies_enabled": {
     "gap_go": true,
