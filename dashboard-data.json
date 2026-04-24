@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T22:37:10.761942Z",
+  "generated_at": "2026-04-24T22:41:26.113104Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -43,7 +43,7 @@
       "total_pnl": 0
     },
     "congress": {
-      "name": "Congress Copy",
+      "name": "Wheel Strategy",
       "allocated": 20000,
       "trades": 0,
       "wins": 0,
@@ -73,12 +73,12 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "10m ago",
+      "age": "14m ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "10m ago",
+      "age": "14m ago",
       "status": "fresh",
       "count": 30
     },

@@ -109,6 +109,33 @@
   .win-bar-fill { height: 100%; border-radius: 2px; background: var(--green); }
 
   .section-header { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
+
+  /* Strategy info icon + CSS tooltip */
+  .strat-info-icon { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%; background: var(--border); color: var(--muted); font-size: .6rem; font-weight: 700; cursor: default; user-select: none; flex-shrink: 0; }
+  .strat-info-icon::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #21262d;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: .75rem;
+    line-height: 1.5;
+    color: #e6edf3;
+    width: 240px;
+    text-align: left;
+    white-space: normal;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s;
+    z-index: 200;
+    box-shadow: 0 8px 24px rgba(0,0,0,.4);
+    font-weight: 400;
+  }
+  .strat-info-icon:hover::after { opacity: 1; }
 </style>
 </head>
 <body>
@@ -236,6 +263,14 @@ const STRAT_COLORS = {
   mean_rev: '#d29922',
   congress: '#bc8cff',
   news:     '#f0883e',
+};
+
+const STRAT_TIPS = {
+  gap_go:   'Buys stocks that gap up >4% pre-market on high volume. Enters when price breaks the prior day high, exits by end of day. Target +15%, stop -4%.',
+  momentum: 'Buys stocks showing strong upward momentum — RSI 55–80, above VWAP, breaking above prior day high. Target +9%, stop -3%.',
+  mean_rev: 'Buys stocks that dropped >5% intraday, betting on a same-day bounce. RSI must be below 25. Target +8%, stop -3%.',
+  congress: 'Follows stock purchases disclosed by US Congress members under the STOCK Act. Buys the same ticker within 30 days of their disclosure.',
+  news:     'Trades stocks with high-confidence breaking news — FDA approvals, earnings beats, M&A. Only enters when confidence >75%. Target +20%, stop -5%.',
 };
 
 let charts = {};
@@ -378,11 +413,15 @@ function renderStrategyCards(d) {
     const winPct = s.win_rate;
     const allocUsed = s.allocated > 0 ? Math.min(100, Math.abs(s.total_pnl) / s.allocated * 100) : 0;
 
+    const tip = (STRAT_TIPS[key] || '').replace(/"/g, '&quot;');
     container.innerHTML += `
       <div class="strat-card" style="${!isEnabled?'opacity:.45':''}">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <div>
-            <div class="strat-name">${s.name}</div>
+            <div class="strat-name" style="display:flex;align-items:center;gap:5px">
+              ${s.name}
+              <span class="strat-info-icon" data-tip="${tip}">?</span>
+            </div>
             <div class="strat-alloc">$${(s.allocated/1000).toFixed(0)}k alloc</div>
           </div>
           <div class="dot ${isEnabled?'dot-green':'dot-gray'}" style="margin-top:4px" title="${isEnabled?'Active':'Disabled'}"></div>
