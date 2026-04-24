@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-04-24T19:10:57.123283Z",
+  "halt_trading": false,
+  "halt_reason": null,
+  "account": {
+    "equity": 100000.0,
+    "daily_pnl": 0.0,
+    "total_pnl": 0.0,
+    "opening_equity": 100000.0,
+    "daily_pnl_pct": 0.0,
+    "total_pnl_pct": 0.0
+  },
+  "spy_benchmark": {
+    "return_pct": 0.0,
+    "equivalent_dollar_gain": 0.0,
+    "our_return_pct": 0.0,
+    "alpha_pct": 0.0,
+    "start_date": null
+  },
+  "strategy_stats": {
+    "gap_go": {
+      "name": "Gap & Go",
+      "allocated": 25000,
+      "trades": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total_pnl": 0
+    },
+    "momentum": {
+      "name": "Momentum Breakout",
+      "allocated": 25000,
+      "trades": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total_pnl": 0
+    },
+    "mean_rev": {
+      "name": "Mean Reversion",
+      "allocated": 15000,
+      "trades": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total_pnl": 0
+    },
+    "congress": {
+      "name": "Congress Copy",
+      "allocated": 20000,
+      "trades": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total_pnl": 0
+    },
+    "news": {
+      "name": "News Catalyst",
+      "allocated": 15000,
+      "trades": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total_pnl": 0
+    }
+  },
+  "equity_curve": [],
+  "open_positions": [],
+  "performance_summary": "No trades yet.",
+  "live_ready": false,
+  "data_freshness": {
+    "congress": {
+      "age": "1.3h ago",
+      "status": "fresh",
+      "count": 50
+    },
+    "news": {
+      "age": "2.6h ago",
+      "status": "stale",
+      "count": 30
+    },
+    "market_context": {
+      "age": "2.6h ago",
+      "status": "fresh"
+    }
+  },
+  "last_routine": null,
+  "strategies_enabled": {
+    "gap_go": true,
+    "momentum": true,
+    "mean_rev": true,
+    "congress": true,
+    "news": true
+  }
+}
