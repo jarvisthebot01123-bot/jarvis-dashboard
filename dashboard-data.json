@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T19:10:57.123283Z",
+  "generated_at": "2026-04-24T20:28:14.577445Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -15,7 +15,7 @@
     "equivalent_dollar_gain": 0.0,
     "our_return_pct": 0.0,
     "alpha_pct": 0.0,
-    "start_date": null
+    "start_date": "2026-04-24"
   },
   "strategy_stats": {
     "gap_go": {
@@ -59,27 +59,40 @@
       "total_pnl": 0
     }
   },
-  "equity_curve": [],
+  "equity_curve": [
+    {
+      "date": "2026-04-24",
+      "equity": 100000.0,
+      "daily_pnl": 0.0,
+      "trades": 0,
+      "strategies": []
+    }
+  ],
   "open_positions": [],
-  "performance_summary": "No trades yet.",
+  "performance_summary": "Day 1 of paper trading. No trades executed. Equity $100,000. SPY benchmark initialized at $710.14 on 2026-04-24. All strategies enabled.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "1.3h ago",
+      "age": "30m ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "2.6h ago",
-      "status": "stale",
+      "age": "30m ago",
+      "status": "fresh",
       "count": 30
     },
     "market_context": {
-      "age": "2.6h ago",
+      "age": "30m ago",
       "status": "fresh"
     }
   },
-  "last_routine": null,
+  "last_routine": {
+    "ts": "16:15",
+    "routine": "end_of_day",
+    "daily_pnl": 0.0,
+    "trades": 0
+  },
   "strategies_enabled": {
     "gap_go": true,
     "momentum": true,
