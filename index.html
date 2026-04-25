@@ -5,79 +5,100 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>J.A.R.V.I.S. Hub</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#f4f7ff;color:#1a2340;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;height:100vh;overflow:hidden;display:flex;flex-direction:column}
-body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='%230a1840' stroke-width='0.3' opacity='0.04'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='%230a1840' stroke-width='0.3' opacity='0.04'/%3E%3C/svg%3E");
-  background-size:56px 100px}
-body>*{position:relative;z-index:1}
+/* Hub — bright, airy, cinematic character showcase */
+body{
+  background:#eef3ff;
+  height:100vh;overflow:hidden;
+  display:flex;flex-direction:column;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='%231d4ed8' stroke-width='0.4' opacity='0.05'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='%231d4ed8' stroke-width='0.4' opacity='0.05'/%3E%3C/svg%3E");
+  background-size:56px 100px
+}
 
-/* ── Shared persona nav bar ── */
-.pnav-bar{display:flex;align-items:center;padding:10px 24px;background:rgba(10,20,50,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);gap:16px;flex-shrink:0}
-.pnav-logo{display:flex;align-items:center;gap:8px;color:#e8f0fa;text-decoration:none;font-size:.82rem;font-weight:900;letter-spacing:.14em;flex:1}
-.pnav-links{display:flex;align-items:center;gap:8px}
-.pnav-right{flex:1;display:flex;justify-content:flex-end;align-items:center;gap:8px}
-.pnav-item{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:30px;border:1.5px solid rgba(255,255,255,.1);background:transparent;color:#6b7fa0;text-decoration:none;font-size:.8rem;font-weight:600;transition:all .18s;white-space:nowrap}
-.pnav-item:hover{color:#e8f0fa;border-color:rgba(255,255,255,.25)}
-.pnav-item.hub.active,.pnav-item.hub:hover{color:#00c8ff;border-color:rgba(0,200,255,.4);background:rgba(0,200,255,.08)}
-.pnav-item.trader.active,.pnav-item.trader:hover{color:#c41230;border-color:rgba(196,18,48,.4);background:rgba(196,18,48,.1)}
-.pnav-item.youtuber.active,.pnav-item.youtuber:hover{color:#3b82f6;border-color:rgba(59,130,246,.4);background:rgba(59,130,246,.1)}
-.pnav-item.journalist.active,.pnav-item.journalist:hover{color:#cc0000;border-color:rgba(204,0,0,.4);background:rgba(204,0,0,.1)}
+/* Hub body */
+.hub-body{flex:1;display:flex;flex-direction:column;padding:14px 24px 8px;gap:12px;min-height:0;position:relative;z-index:2}
 
-/* ── Hub layout ── */
-.hub-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:16px 24px 8px;gap:16px}
-.hero{text-align:center}
-.logo{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:rgba(0,200,255,.1);border:1.5px solid rgba(0,200,255,.3);margin-bottom:10px}
-.title{font-size:1.65rem;font-weight:900;letter-spacing:.12em;color:#0f1f3d}
-.subtitle{font-size:.7rem;color:#00c8ff;letter-spacing:.2em;text-transform:uppercase;margin-top:3px;opacity:.8}
-.tagline{font-size:.88rem;color:#4a6080;margin-top:6px}
-.status-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,232,122,.08);border:1px solid rgba(0,232,122,.25);border-radius:20px;padding:4px 12px;font-size:.7rem;font-weight:700;color:#00e87a;letter-spacing:.08em;margin-top:8px}
-.status-dot{width:6px;height:6px;border-radius:50%;background:#00e87a;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 4px #00e87a}50%{box-shadow:0 0 12px #00e87a}}
+/* Hero */
+.hub-hero{text-align:center;flex-shrink:0}
+.hub-logo{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(0,100,200,.1);border:1.5px solid rgba(0,150,255,.25);margin-bottom:8px}
+.hub-title{font-size:1.55rem;font-weight:900;letter-spacing:.2em;color:#0f1a30}
+.hub-sub{font-size:.6rem;color:#1d4ed8;letter-spacing:.3em;text-transform:uppercase;margin-top:2px;opacity:.75;font-weight:700}
+.hub-tagline{font-size:.82rem;color:#5a7090;margin-top:5px}
+.hub-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  border-radius:20px;padding:4px 14px;font-size:.68rem;font-weight:700;
+  letter-spacing:.1em;margin-top:8px;border:1.5px solid;text-transform:uppercase
+}
+.hub-pill-active{background:rgba(5,150,105,.07);border-color:rgba(5,150,105,.3);color:#059669}
+.hub-pill-partial{background:rgba(245,158,11,.07);border-color:rgba(245,158,11,.3);color:#d97706}
+.hub-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;animation:pulse 2s ease-in-out infinite}
 
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1060px;margin:0 auto;width:100%}
-.card{background:rgba(255,255,255,.97);border:1px solid rgba(0,0,0,.07);border-radius:16px;padding:16px 14px;text-align:center;text-decoration:none;color:#1a2340;transition:transform .2s,box-shadow .25s,border-color .25s;display:block;box-shadow:0 2px 12px rgba(0,0,50,.06)}
-.card:hover{transform:translateY(-3px)}
-.card-avatar{margin:0 auto 10px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.card-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center}
-.card h3{font-size:.93rem;font-weight:700;margin-bottom:4px}
-.card p{font-size:.78rem;color:#5a7090;line-height:1.45;margin-bottom:8px}
-.card-badge{display:inline-block;font-size:.68rem;font-weight:600;padding:2px 9px;border-radius:10px}
-.card-stats{font-size:.72rem;color:#5a7090;min-height:16px;margin-bottom:6px}
+/* Cards grid — movie-poster layout */
+.hub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1;min-height:0}
 
-.card-trader{border-color:rgba(196,18,48,.2)}
-.card-trader:hover{border-color:rgba(196,18,48,.55);box-shadow:0 8px 40px rgba(196,18,48,.18)}
-.card-trader .card-avatar{background:rgba(196,18,48,.12);border:1.5px solid rgba(196,18,48,.3)}
-.card-trader .card-badge{background:rgba(196,18,48,.15);color:#c41230}
+.hub-card{
+  border-radius:16px;overflow:hidden;
+  text-decoration:none;color:#1a2340;
+  display:flex;flex-direction:column;
+  background:#fff;
+  border:1.5px solid rgba(0,0,50,.07);
+  box-shadow:0 4px 24px rgba(0,0,50,.07);
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+.hub-card:hover{transform:translateY(-5px)}
 
-.card-youtuber{border-color:rgba(59,130,246,.2)}
-.card-youtuber:hover{border-color:rgba(59,130,246,.55);box-shadow:0 8px 40px rgba(59,130,246,.18)}
-.card-youtuber .card-avatar{background:rgba(59,130,246,.12);border:1.5px solid rgba(59,130,246,.3)}
-.card-youtuber .card-badge{background:rgba(59,130,246,.15);color:#3b82f6}
+.card-img-wrap{flex:1;min-height:0;position:relative;overflow:hidden}
+.card-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s ease;display:block}
+.hub-card:hover .card-img-wrap img{transform:scale(1.05)}
+/* gradient fades image to white card footer */
+.card-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(255,255,255,.96) 100%)}
 
-.card-journalist{border-color:rgba(204,0,0,.2)}
-.card-journalist:hover{border-color:rgba(204,0,0,.55);box-shadow:0 8px 40px rgba(204,0,0,.18)}
-.card-journalist .card-avatar{background:rgba(204,0,0,.12);border:1.5px solid rgba(204,0,0,.3)}
-.card-journalist .card-badge{background:rgba(204,0,0,.15);color:#cc0000}
+.card-foot{padding:12px 14px;background:#fff;flex-shrink:0;border-top:1px solid rgba(0,0,50,.04)}
+.card-foot-name{font-size:.93rem;font-weight:800;margin-bottom:1px;color:#0f1a30}
+.card-foot-hero{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:4px;font-weight:700}
+.card-foot-desc{font-size:.72rem;color:#6a7f9a;margin-bottom:6px;line-height:1.4}
+.card-foot-stats{font-size:.72rem;min-height:16px}
 
-.card-add{border:2px dashed rgba(100,120,180,.2)}
-.card-add:hover{border-color:rgba(100,120,180,.4);box-shadow:0 8px 40px rgba(100,120,180,.1)}
-.card-add .card-avatar{background:rgba(100,120,180,.06);border:1.5px solid rgba(100,120,180,.15)}
-.card-add .card-badge{background:rgba(100,120,180,.1);color:#6070a0}
-.add-plus{font-size:1.9rem;color:rgba(30,50,120,.2)}
+/* Per-character */
+.card-trader{border-color:rgba(204,0,20,.12)}
+.card-trader:hover{border-color:rgba(204,0,20,.4);box-shadow:0 16px 50px rgba(204,0,20,.14)}
+.card-trader .card-foot-hero{color:#cc0014}
 
-footer{text-align:center;padding:6px;font-size:.7rem;color:#8090b0;flex-shrink:0}
+.card-youtuber{border-color:rgba(29,78,216,.12)}
+.card-youtuber:hover{border-color:rgba(29,78,216,.4);box-shadow:0 16px 50px rgba(29,78,216,.14)}
+.card-youtuber .card-foot-hero{color:#1d4ed8}
 
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:540px){.grid{grid-template-columns:1fr}.title{font-size:1.3rem}.pnav-logo span{display:none}.pnav-item{padding:4px 10px;font-size:.75rem}}
+.card-journalist{border-color:rgba(180,130,0,.12)}
+.card-journalist:hover{border-color:rgba(180,130,0,.4);box-shadow:0 16px 50px rgba(180,130,0,.1)}
+.card-journalist .card-foot-hero{color:#b45309}
+
+/* Add persona card */
+.hub-card-add{
+  border:2px dashed rgba(0,0,50,.12);background:#f8faff;
+  align-items:center;justify-content:center;text-align:center;
+  box-shadow:none;
+}
+.hub-card-add:hover{border-color:rgba(0,0,50,.25);background:#f4f6ff;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,50,.07)}
+.add-inner{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px}
+.add-plus{font-size:2.4rem;color:rgba(0,0,100,.15);line-height:1}
+.add-label{font-size:.8rem;color:rgba(0,0,80,.35);font-weight:600;letter-spacing:.04em}
+
+footer{text-align:center;padding:5px;font-size:.67rem;color:#8090b0;flex-shrink:0;position:relative;z-index:2}
+footer a{color:#8090b0;text-decoration:none}
+
+@media(max-width:900px){.hub-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.hub-grid{grid-template-columns:repeat(2,1fr);gap:10px}.hub-title{font-size:1.2rem}}
 </style>
 </head>
 <body>
 
 <header class="pnav-bar">
   <a href="index.html" class="pnav-logo">
-    <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="none" stroke="#00c8ff" stroke-width="1.5" opacity=".55"/><polygon points="24,14 31.2,18.5 31.2,27.5 24,32 16.8,27.5 16.8,18.5" fill="rgba(0,200,255,.07)" stroke="#00c8ff" stroke-width="1" opacity=".75"/><circle cx="24" cy="24" r="4" fill="#00c8ff" opacity=".95"/></svg>
+    <svg width="18" height="18" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="#00c8ff" stroke-width="1.5" opacity=".6"/><polygon points="24,14 31.2,18.5 31.2,27.5 24,32 16.8,27.5 16.8,18.5" fill="rgba(0,200,255,.08)" stroke="#00c8ff" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#00c8ff"/></svg>
     <span>J.A.R.V.I.S.</span>
   </a>
   <nav class="pnav-links">
@@ -91,120 +112,137 @@ footer{text-align:center;padding:6px;font-size:.7rem;color:#8090b0;flex-shrink:0
 </header>
 
 <div class="hub-body">
-  <div class="hero">
-    <div class="logo">
-      <svg width="32" height="32" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="24" r="22" fill="none" stroke="#00c8ff" stroke-width="1.5" opacity=".55"/>
-        <polygon points="24,14 31.2,18.5 31.2,27.5 24,32 16.8,27.5 16.8,18.5" fill="rgba(0,200,255,.07)" stroke="#00c8ff" stroke-width="1" opacity=".75"/>
-        <circle cx="24" cy="24" r="4" fill="#00c8ff" opacity=".95"/>
-      </svg>
+
+  <div class="hub-hero">
+    <div class="hub-logo">
+      <svg width="26" height="26" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="#1d4ed8" stroke-width="1.5" opacity=".5"/><polygon points="24,14 31.2,18.5 31.2,27.5 24,32 16.8,27.5 16.8,18.5" fill="rgba(29,78,216,.07)" stroke="#1d4ed8" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#1d4ed8" opacity=".8"/></svg>
     </div>
-    <div class="title">J.A.R.V.I.S.</div>
-    <div class="subtitle">Just A Rather Very Intelligent System</div>
-    <div class="tagline">Your personal AI network. Choose a persona to explore.</div>
-    <div class="status-pill" id="status-pill"><span class="status-dot" id="status-dot"></span><span id="status-text">CHECKING…</span></div>
+    <div class="hub-title">J.A.R.V.I.S.</div>
+    <div class="hub-sub">Just A Rather Very Intelligent System</div>
+    <div class="hub-tagline">Your personal AI operations network — choose a persona to begin</div>
+    <div class="hub-pill hub-pill-partial" id="status-pill">
+      <span class="hub-dot" id="status-dot" style="background:#d97706;box-shadow:0 0 6px #f59e0b"></span>
+      <span id="status-text">CHECKING…</span>
+    </div>
   </div>
 
-  <div class="grid">
+  <div class="hub-grid">
 
-    <a href="trader.html" class="card card-trader">
-      <div class="card-avatar">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Robert_Downey_Jr-2008.JPG/300px-Robert_Downey_Jr-2008.JPG" alt="Iron Man">
+    <a href="trader.html" class="hub-card card-trader">
+      <div class="card-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Robert_Downey_Jr-2008.JPG/800px-Robert_Downey_Jr-2008.JPG" alt="Iron Man — Robert Downey Jr">
       </div>
-      <h3>📈 Trader</h3>
-      <p>Autonomous AI day-trading — 5 strategies, $100k paper account</p>
-      <div class="card-stats" id="trader-stats">Loading…</div>
-      <span class="card-badge">Iron Man</span>
+      <div class="card-foot">
+        <div class="card-foot-name">📈 Trader</div>
+        <div class="card-foot-hero">Iron Man · Tony Stark</div>
+        <div class="card-foot-desc">Autonomous AI day-trading · 5 strategies · $100k paper</div>
+        <div class="card-foot-stats" id="trader-stats">Loading…</div>
+      </div>
     </a>
 
-    <a href="youtuber.html" class="card card-youtuber">
-      <div class="card-avatar">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Chris_Evans_as_Steve_Rogers_aka_Captain_America_%2834407349161%29.jpg/300px-Chris_Evans_as_Steve_Rogers_aka_Captain_America_%2834407349161%29.jpg" alt="Captain America">
+    <a href="youtuber.html" class="hub-card card-youtuber">
+      <div class="card-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Chris_Evans_as_Steve_Rogers_aka_Captain_America_%2834407349161%29.jpg/800px-Chris_Evans_as_Steve_Rogers_aka_Captain_America_%2834407349161%29.jpg" alt="Captain America — Chris Evans">
       </div>
-      <h3>🎬 YouTuber</h3>
-      <p>AI-powered content analytics — subscriber &amp; video performance</p>
-      <div class="card-stats" id="youtuber-stats">Checking…</div>
-      <span class="card-badge">Captain America</span>
+      <div class="card-foot">
+        <div class="card-foot-name">🎬 YouTuber</div>
+        <div class="card-foot-hero">Captain America · Steve Rogers</div>
+        <div class="card-foot-desc">AI content analytics · subscriber &amp; video performance</div>
+        <div class="card-foot-stats" id="youtuber-stats">Checking…</div>
+      </div>
     </a>
 
-    <a href="journalist.html" class="card card-journalist">
-      <div class="card-avatar">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Henry_Cavill_2014_Comic_Con.jpg/300px-Henry_Cavill_2014_Comic_Con.jpg" alt="Superman">
+    <a href="journalist.html" class="hub-card card-journalist">
+      <div class="card-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Henry_Cavill_2014_Comic_Con.jpg/800px-Henry_Cavill_2014_Comic_Con.jpg" alt="Superman — Henry Cavill">
       </div>
-      <h3>📰 Journalist</h3>
-      <p>AI editorial intelligence — breaking news &amp; story tracking</p>
-      <div class="card-stats" id="journalist-stats">Checking…</div>
-      <span class="card-badge">Clark Kent</span>
+      <div class="card-foot">
+        <div class="card-foot-name">📰 Journalist</div>
+        <div class="card-foot-hero">Superman · Clark Kent</div>
+        <div class="card-foot-desc">AI editorial intelligence · breaking news &amp; story tracking</div>
+        <div class="card-foot-stats" id="journalist-stats">Checking…</div>
+      </div>
     </a>
 
-    <a href="NEW_AVATAR.md" class="card card-add">
-      <div class="card-avatar">
+    <a href="NEW_AVATAR.md" class="hub-card hub-card-add">
+      <div class="add-inner">
         <div class="add-plus">+</div>
+        <div class="add-label">Add Persona</div>
+        <div style="font-size:.73rem;color:rgba(0,0,80,.3);line-height:1.5;margin-top:4px">Create a new J.A.R.V.I.S. product page with your own superhero theme</div>
+        <div style="font-size:.68rem;color:#1d4ed8;margin-top:10px;font-weight:700;letter-spacing:.06em;opacity:.55">READ GUIDE →</div>
       </div>
-      <h3>Add Persona</h3>
-      <p>Create a new J.A.R.V.I.S. product page with your own superhero theme</p>
-      <div class="card-stats">Read the guide</div>
-      <span class="card-badge">New hero</span>
     </a>
 
   </div>
 </div>
 
-<footer>J.A.R.V.I.S. · Built with Claude Code &nbsp;·&nbsp; <a href="NEW_AVATAR.md" style="color:#3a4a60;text-decoration:none">Add a persona</a></footer>
+<footer>J.A.R.V.I.S. &nbsp;·&nbsp; Built with Claude Code &nbsp;·&nbsp; <a href="NEW_AVATAR.md">Add a persona</a></footer>
 
 <script>
 async function checkSystems() {
-  const active = {trader: false, youtuber: false, journalist: false};
+  const active = {trader:false, youtuber:false, journalist:false};
 
   try {
-    const r = await fetch('dashboard-data.json?t=' + Date.now());
+    const r = await fetch('dashboard-data.json?t='+Date.now());
     if (r.ok) {
       const d = await r.json();
-      const a = d.account || {};
-      if (a.total_pct !== undefined) {
-        active.trader = true;
-        const pct = (a.total_pct >= 0 ? '+' : '') + a.total_pct.toFixed(2) + '%';
-        document.getElementById('trader-stats').textContent = 'All-time: ' + pct;
-      } else { document.getElementById('trader-stats').textContent = 'No trades yet'; }
+      const a = d.account||{};
+      active.trader = true;
+      if (a.total_pct !== undefined && a.total_pct !== 0) {
+        const sign = a.total_pct >= 0 ? '+' : '';
+        const col  = a.total_pct >= 0 ? '#059669' : '#dc2626';
+        document.getElementById('trader-stats').innerHTML =
+          `<span style="color:#059669">● Active</span>&nbsp;<span style="color:${col};font-size:.68rem">${sign}${a.total_pct.toFixed(2)}% all-time</span>`;
+      } else {
+        document.getElementById('trader-stats').innerHTML = '<span style="color:#059669">● Active — no trades yet</span>';
+      }
     }
-  } catch(e) { document.getElementById('trader-stats').textContent = '—'; }
+  } catch(e) {
+    document.getElementById('trader-stats').innerHTML = '<span style="color:#d97706">● Not configured</span>';
+  }
 
   try {
-    const r = await fetch('youtuber-data.json?t=' + Date.now());
+    const r = await fetch('youtuber-data.json?t='+Date.now());
     if (r.ok) {
       const d = await r.json();
       active.youtuber = d.connected === true;
       document.getElementById('youtuber-stats').innerHTML = active.youtuber
         ? '<span style="color:#059669">● Live</span>'
-        : '<span style="color:#f59e0b">● Not configured — push youtuber-data.json</span>';
-    }
-  } catch(e) { document.getElementById('youtuber-stats').innerHTML = '<span style="color:#f59e0b">● Not configured</span>'; }
+        : '<span style="color:#d97706">● Not configured — push youtuber-data.json</span>';
+    } else throw new Error();
+  } catch(e) {
+    document.getElementById('youtuber-stats').innerHTML = '<span style="color:#d97706">● Not configured</span>';
+  }
 
   try {
-    const r = await fetch('journalist-data.json?t=' + Date.now());
+    const r = await fetch('journalist-data.json?t='+Date.now());
     if (r.ok) {
       const d = await r.json();
       active.journalist = d.connected === true;
       document.getElementById('journalist-stats').innerHTML = active.journalist
         ? '<span style="color:#059669">● Live</span>'
-        : '<span style="color:#f59e0b">● Not configured — push journalist-data.json</span>';
-    }
-  } catch(e) { document.getElementById('journalist-stats').innerHTML = '<span style="color:#f59e0b">● Not configured</span>'; }
+        : '<span style="color:#d97706">● Not configured — push journalist-data.json</span>';
+    } else throw new Error();
+  } catch(e) {
+    document.getElementById('journalist-stats').innerHTML = '<span style="color:#d97706">● Not configured</span>';
+  }
 
   const n = Object.values(active).filter(Boolean).length;
   const pill = document.getElementById('status-pill');
-  const dot = document.getElementById('status-dot');
-  const txt = document.getElementById('status-text');
+  const dot  = document.getElementById('status-dot');
+  const txt  = document.getElementById('status-text');
   if (n === 3) {
+    pill.className = 'hub-pill hub-pill-active';
+    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#059669;box-shadow:0 0 8px #00e87a;animation:pulse 2s ease-in-out infinite;flex-shrink:0';
     txt.textContent = 'ALL SYSTEMS ACTIVE';
   } else if (n === 0) {
+    pill.className = 'hub-pill hub-pill-partial';
+    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#d97706;flex-shrink:0';
     txt.textContent = 'SETTING UP';
-    pill.style.cssText = 'background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.25);color:#f59e0b';
-    dot.style.cssText = 'background:#f59e0b;box-shadow:0 0 8px #f59e0b';
   } else {
+    pill.className = 'hub-pill hub-pill-partial';
+    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#d97706;flex-shrink:0';
     txt.textContent = n + '/3 ACTIVE';
-    pill.style.cssText = 'background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.25);color:#f59e0b';
-    dot.style.cssText = 'background:#f59e0b;box-shadow:0 0 8px #f59e0b';
   }
 }
 checkSystems();

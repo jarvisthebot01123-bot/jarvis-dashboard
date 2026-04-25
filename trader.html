@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>J.A.R.V.I.S. — Trader</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
 :root {
@@ -248,18 +249,7 @@ body > * { position: relative; z-index: 2; }
   .grid-strats { grid-template-columns: 1fr; }
   .metric { font-size: 1.5rem; }
 }
-/* ── Persona nav bar ── */
-.pnav-bar{position:sticky;top:0;z-index:500;display:flex;align-items:center;padding:10px 24px;background:rgba(10,20,50,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);gap:16px}
-.pnav-logo{display:flex;align-items:center;gap:8px;color:#e8f0fa;text-decoration:none;font-size:.82rem;font-weight:900;letter-spacing:.14em;flex:1}
-.pnav-links{display:flex;align-items:center;gap:8px}
-.pnav-right{flex:1;display:flex;justify-content:flex-end;align-items:center;gap:8px}
-.pnav-item{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:30px;border:1.5px solid rgba(255,255,255,.1);background:transparent;color:#6b7fa0;text-decoration:none;font-size:.8rem;font-weight:600;transition:all .18s;white-space:nowrap}
-.pnav-item:hover{color:#e8f0fa;border-color:rgba(255,255,255,.25)}
-.pnav-item.hub:hover{color:#00c8ff;border-color:rgba(0,200,255,.4);background:rgba(0,200,255,.08)}
-.pnav-item.trader.active,.pnav-item.trader:hover{color:#c41230;border-color:rgba(196,18,48,.4);background:rgba(196,18,48,.1)}
-.pnav-item.youtuber:hover{color:#3b82f6;border-color:rgba(59,130,246,.4);background:rgba(59,130,246,.1)}
-.pnav-item.journalist:hover{color:#cc0000;border-color:rgba(204,0,0,.4);background:rgba(204,0,0,.1)}
-@media(max-width:540px){.pnav-logo span{display:none}.pnav-item{padding:4px 10px;font-size:.75rem}}
+/* pnav-bar styles come from style.css */
 </style>
 </head>
 <body class="theme-trader">

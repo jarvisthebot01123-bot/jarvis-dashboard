@@ -5,95 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>J.A.R.V.I.S. — Journalist</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="style.css">
 <style>
+/* Superman / Clark Kent — bright primary color theme */
 :root {
-  --bg:      #fdf8f8;
-  --surface: rgba(255,255,255,.97);
-  --border:  rgba(204,0,0,.15);
-  --muted:   #7a5060;
-  --text:    #1a0808;
-  --green:   #059669;
-  --red:     #cc0000;
-  --arc:     #cc0000;
-  --gold:    #c9900a;
-  --blue:    #1a3a8f;
-  --accent-bg: rgba(204,0,0,.08);
+  --bg:         #f0f5ff;
+  --surface:    rgba(255,255,255,.97);
+  --border:     rgba(29,64,175,.12);
+  --muted:      #4a6280;
+  --text:       #0d1a36;
+  --arc:        #1e40af;
+  --gold:       #ca8a04;
+  --hero-bg:    linear-gradient(135deg,rgba(240,245,255,.99),rgba(220,235,255,.97));
+  --hero-stripe: linear-gradient(90deg,#1e40af 0%,#dc2626 50%,#ca8a04 100%);
+  --arc-soft:   rgba(29,64,175,.09);
+  --arc-border: rgba(29,64,175,.2);
+  --code-bg:    rgba(29,64,175,.05);
+  --code-text:  #1e3a8a;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;position:relative}
 body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='%23cc0000' stroke-width='0.4' opacity='0.10'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='%23cc0000' stroke-width='0.4' opacity='0.10'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='%231e40af' stroke-width='0.4' opacity='0.06'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='%23ca8a04' stroke-width='0.3' opacity='0.05'/%3E%3C/svg%3E");
   background-size:56px 100px}
 body::after{content:'';position:fixed;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,transparent,rgba(204,0,0,.3) 40%,rgba(204,0,0,.55) 50%,rgba(204,0,0,.3) 60%,transparent);
+  background:linear-gradient(90deg,transparent,rgba(29,64,175,.2) 25%,rgba(220,38,38,.35) 50%,rgba(202,138,4,.2) 75%,transparent);
   animation:scan 9s linear infinite;z-index:1;pointer-events:none}
-@keyframes scan{0%{top:-4px;opacity:0}3%{opacity:1}97%{opacity:.35}100%{top:100vh;opacity:0}}
-body>*{position:relative;z-index:2}
-
-.hero{background:linear-gradient(135deg,rgba(255,248,248,.99),rgba(255,235,235,.97));border-bottom:1px solid var(--border);padding:14px 28px;position:relative;z-index:100}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#cc0000 0%,#1a3a8f 50%,#f5d900 100%)}
-.hero-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:16px;min-height:56px}
-.hero-left{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
-.hero-text{min-width:0}
-.hero-title{font-size:1.25rem;font-weight:800;color:var(--text);letter-spacing:.08em}
-.hero-sub{font-size:.68rem;color:var(--arc);letter-spacing:.14em;text-transform:uppercase;margin-top:1px;font-weight:500;opacity:.85}
-.hero-desc{font-size:.82rem;color:var(--muted);margin-top:4px}
-.hero-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;font-size:.75rem;color:var(--muted);flex-shrink:0}
-.status{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:700;letter-spacing:.1em;color:#00e87a;text-transform:uppercase}
-.status-dot{width:7px;height:7px;border-radius:50%;background:#00e87a;box-shadow:0 0 8px #00e87a;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 6px #00e87a;opacity:1}50%{box-shadow:0 0 16px #00e87a;opacity:.65}}
-.nav-hub{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-size:.8rem;transition:color .2s}
-.nav-hub:hover{color:var(--arc)}
-
-.hero-avatar{flex-shrink:0;filter:drop-shadow(0 0 12px rgba(204,0,0,.7))}
-
-.main{padding:28px 32px;max-width:1200px;margin:0 auto}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;backdrop-filter:blur(8px);transition:box-shadow .3s,border-color .3s}
-.card:hover{border-color:rgba(204,0,0,.4);box-shadow:0 0 30px rgba(204,0,0,.1)}
-.card-sm{padding:16px}
-.card-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;font-weight:600}
-.metric{font-size:1.8rem;font-weight:700;line-height:1.1;color:var(--muted)}
-.metric-sub{font-size:.78rem;color:var(--muted);margin-top:4px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
-
-.page-hero{text-align:center;padding:48px 24px 36px}
-.page-hero-icon{display:inline-flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:50%;background:rgba(204,0,0,.12);border:2px solid rgba(204,0,0,.35);margin-bottom:20px;overflow:hidden}
-.page-hero-icon img{width:100%;height:100%;object-fit:cover;object-position:top center}
-.page-hero h2{font-size:1.6rem;font-weight:800;margin-bottom:10px;background:linear-gradient(135deg,#cc0000,#f5d900);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-hero p{color:var(--muted);max-width:480px;margin:0 auto;font-size:.95rem;line-height:1.6}
-.coming-soon{border:2px dashed rgba(204,0,0,.2);border-radius:14px;padding:64px 24px;text-align:center;color:var(--muted)}
-.coming-soon i{font-size:3rem;display:block;margin-bottom:16px;color:var(--arc);opacity:.4}
-.coming-soon h3{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:8px}
-.connect-block{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:24px}
-.connect-block h3{font-size:.95rem;font-weight:700;margin-bottom:8px;color:var(--text)}
-.connect-block p{font-size:.85rem;color:var(--muted);line-height:1.6}
-.code-block{background:rgba(255,230,230,.7);border:1px solid rgba(204,0,0,.15);border-radius:8px;padding:14px 16px;margin-top:12px;font-family:ui-monospace,"Cascadia Code",monospace;font-size:.8rem;color:#7a1a1a;white-space:pre-wrap;line-height:1.7}
-.badge{display:inline-flex;align-items:center;gap:5px;background:rgba(204,0,0,.12);color:var(--arc);border:1px solid rgba(204,0,0,.3);border-radius:6px;padding:3px 10px;font-size:.75rem;font-weight:600;text-decoration:none}
-.headline-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(204,0,0,.1)}
+.card:hover{border-color:rgba(29,64,175,.3);box-shadow:0 8px 40px rgba(29,64,175,.1)}
+.headline-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(29,64,175,.08)}
 .headline-row:last-child{border-bottom:none}
-.headline-dot{width:8px;height:8px;border-radius:50%;background:var(--arc);flex-shrink:0;margin-top:5px}
-
-@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}.main{padding:20px}}
-@media(max-width:600px){.grid-3{grid-template-columns:1fr}.hero{padding:16px}.hero-right{display:none}}
-/* ── Persona nav bar ── */
-.pnav-bar{position:sticky;top:0;z-index:500;display:flex;align-items:center;padding:10px 24px;background:rgba(10,20,50,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);gap:16px}
-.pnav-logo{display:flex;align-items:center;gap:8px;color:#e8f0fa;text-decoration:none;font-size:.82rem;font-weight:900;letter-spacing:.14em;flex:1}
-.pnav-links{display:flex;align-items:center;gap:8px}
-.pnav-right{flex:1;display:flex;justify-content:flex-end;align-items:center;gap:8px}
-.pnav-item{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:30px;border:1.5px solid rgba(255,255,255,.1);background:transparent;color:#6b7fa0;text-decoration:none;font-size:.8rem;font-weight:600;transition:all .18s;white-space:nowrap}
-.pnav-item:hover{color:#e8f0fa;border-color:rgba(255,255,255,.25)}
-.pnav-item.hub:hover{color:#00c8ff;border-color:rgba(0,200,255,.4);background:rgba(0,200,255,.08)}
-.pnav-item.trader:hover{color:#c41230;border-color:rgba(196,18,48,.4);background:rgba(196,18,48,.1)}
-.pnav-item.youtuber:hover{color:#3b82f6;border-color:rgba(59,130,246,.4);background:rgba(59,130,246,.1)}
-.pnav-item.journalist.active,.pnav-item.journalist:hover{color:#cc0000;border-color:rgba(204,0,0,.4);background:rgba(204,0,0,.1)}
-@media(max-width:540px){.pnav-logo span{display:none}.pnav-item{padding:4px 10px;font-size:.75rem}}
+.headline-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
 </style>
 </head>
 <body>
 
 <header class="pnav-bar">
   <a href="index.html" class="pnav-logo">
-    <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="none" stroke="#00c8ff" stroke-width="1.5" opacity=".55"/><polygon points="24,14 31.2,18.5 31.2,27.5 24,32 16.8,27.5 16.8,18.5" fill="rgba(0,200,255,.07)" stroke="#00c8ff" stroke-width="1" opacity=".75"/><circle cx="24" cy="24" r="4" fill="#00c8ff" opacity=".95"/></svg>
+    <svg width="18" height="18" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="#00c8ff" stroke-width="1.5" opacity=".55"/><polygon points="24,14 31.2,18.5 31.2,27.5 24,32 16.8,27.5 16.8,18.5" fill="rgba(0,200,255,.07)" stroke="#00c8ff" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#00c8ff"/></svg>
     <span>J.A.R.V.I.S.</span>
   </a>
   <nav class="pnav-links">
@@ -109,7 +55,7 @@ body>*{position:relative;z-index:2}
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Henry_Cavill_2014_Comic_Con.jpg/300px-Henry_Cavill_2014_Comic_Con.jpg" alt="Clark Kent" style="width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:top center;flex-shrink:0;box-shadow:0 0 14px rgba(204,0,0,.55);border:2px solid rgba(204,0,0,.4)">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Henry_Cavill_2014_Comic_Con.jpg/300px-Henry_Cavill_2014_Comic_Con.jpg" alt="Clark Kent" style="width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:top center;flex-shrink:0;box-shadow:0 0 18px rgba(29,64,175,.4);border:2px solid rgba(29,64,175,.3)">
       <div class="hero-text">
         <div class="hero-title">J.A.R.V.I.S.</div>
         <div class="hero-sub">Journalist · Clark Kent</div>
@@ -126,7 +72,7 @@ body>*{position:relative;z-index:2}
 
   <div class="page-hero">
     <div class="page-hero-icon">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Henry_Cavill_2014_Comic_Con.jpg/300px-Henry_Cavill_2014_Comic_Con.jpg" alt="Clark Kent">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Henry_Cavill_2014_Comic_Con.jpg/800px-Henry_Cavill_2014_Comic_Con.jpg" alt="Clark Kent">
     </div>
     <h2>Jarvis the Journalist</h2>
     <p>AI editorial intelligence platform. Connect your news collector to unlock breaking story detection, source monitoring, and real-time ticker tracking across finance, tech, and markets.</p>
@@ -152,7 +98,7 @@ body>*{position:relative;z-index:2}
 
   <div class="connect-block">
     <h3><i class="bi bi-plug-fill" style="color:var(--arc);margin-right:6px"></i>How to connect your news feed</h3>
-    <p>Push <code style="background:rgba(204,0,0,.1);padding:1px 6px;border-radius:4px;font-size:.85rem">journalist-data.json</code> to <strong>jarvis-dashboard</strong> from your news collector project. The page auto-refreshes every 60 seconds.</p>
+    <p>Push <code style="background:rgba(29,64,175,.08);padding:1px 6px;border-radius:4px;font-size:.85rem;color:var(--arc)">journalist-data.json</code> to <strong>jarvis-dashboard</strong> from your news collector project. The page auto-refreshes every 60 seconds.</p>
     <div class="code-block">
 # Your news collector pushes this JSON:
 {
@@ -176,7 +122,7 @@ body>*{position:relative;z-index:2}
   </div>
 
   <div class="card" id="headlines-card" style="margin-bottom:24px;display:none">
-    <div style="font-size:.85rem;font-weight:600;margin-bottom:14px">
+    <div style="font-size:.85rem;font-weight:700;margin-bottom:14px;letter-spacing:.04em">
       <i class="bi bi-lightning-fill" style="color:var(--arc);margin-right:6px"></i>Live Headlines
     </div>
     <div id="headlines-body"></div>
@@ -185,50 +131,51 @@ body>*{position:relative;z-index:2}
   <div class="coming-soon" id="coming-soon">
     <i class="bi bi-newspaper"></i>
     <h3>Awaiting Connection</h3>
-    <p>Push <code style="background:rgba(204,0,0,.1);padding:1px 6px;border-radius:4px">journalist-data.json</code> to jarvis-dashboard to activate live headlines.</p>
+    <p>Push <code style="background:rgba(29,64,175,.07);padding:1px 6px;border-radius:4px;color:var(--arc)">journalist-data.json</code> to jarvis-dashboard to activate live headlines.</p>
     <div style="margin-top:16px"><a href="NEW_AVATAR.md" class="badge"><i class="bi bi-book"></i> View setup guide</a></div>
   </div>
 
 </div>
 
 <script>
-const IMPACT_COLOR = { high: '#cc0000', medium: '#f5a623', low: '#7b8faa' };
+const IMPACT_COLOR = { high:'#dc2626', medium:'#f59e0b', low:'#6b82a8' };
 function setStatus(connected) {
   const dot = document.getElementById('sys-dot');
   const txt = document.getElementById('sys-text');
   if (connected) {
-    dot.style.cssText = 'background:#00e87a;box-shadow:0 0 8px #00e87a';
+    dot.style.cssText = 'width:7px;height:7px;border-radius:50%;background:#00e87a;box-shadow:0 0 8px #00e87a;animation:pulse 2s ease-in-out infinite;flex-shrink:0';
     txt.textContent = 'SYSTEM ACTIVE';
+    document.getElementById('sys-status').style.color = '#059669';
   } else {
-    dot.style.cssText = 'background:#f59e0b;box-shadow:0 0 8px #f59e0b';
+    dot.style.cssText = 'width:7px;height:7px;border-radius:50%;background:#f59e0b;box-shadow:0 0 6px #f59e0b;flex-shrink:0';
     txt.textContent = 'NOT CONFIGURED';
-    document.getElementById('sys-status').style.color = '#f59e0b';
+    document.getElementById('sys-status').style.color = '#d97706';
   }
 }
 async function load() {
   try {
-    const r = await fetch('journalist-data.json?t=' + Date.now());
+    const r = await fetch('journalist-data.json?t='+Date.now());
     if (!r.ok) { setStatus(false); return; }
     const d = await r.json();
     setStatus(d.connected === true);
     if (d.sources_monitored) document.getElementById('sources').textContent = d.sources_monitored;
     if (d.headlines_per_refresh) document.getElementById('headlines-count').textContent = d.headlines_per_refresh;
-    if (d.refresh_interval_min) document.getElementById('refresh-rate').textContent = d.refresh_interval_min + 'm';
+    if (d.refresh_interval_min) document.getElementById('refresh-rate').textContent = d.refresh_interval_min+'m';
     if (d.connected && d.headlines && d.headlines.length) {
       document.getElementById('coming-soon').style.display = 'none';
       document.getElementById('headlines-card').style.display = 'block';
-      document.getElementById('headlines-body').innerHTML = d.headlines.slice(0, 10).map(h => `
+      document.getElementById('headlines-body').innerHTML = d.headlines.slice(0,10).map(h => `
         <div class="headline-row">
-          <div class="headline-dot" style="background:${IMPACT_COLOR[h.impact] || '#7b8faa'}"></div>
+          <div class="headline-dot" style="background:${IMPACT_COLOR[h.impact]||'#6b82a8'}"></div>
           <div>
-            <div style="font-size:.85rem;color:var(--text);line-height:1.4">${h.title}</div>
+            <div style="font-size:.85rem;color:var(--text);line-height:1.45">${h.title}</div>
             <div style="font-size:.72rem;color:var(--muted);margin-top:3px">
-              ${h.source || ''} ${h.tickers && h.tickers.length ? '· ' + h.tickers.join(', ') : ''}
+              ${h.source||''} ${h.tickers&&h.tickers.length ? '· '+h.tickers.join(', ') : ''}
             </div>
           </div>
         </div>`).join('');
     }
-  } catch(e) {}
+  } catch(e) { setStatus(false); }
 }
 load();
 setInterval(load, 60000);

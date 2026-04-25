@@ -1,0 +1,124 @@
+/* ── J.A.R.V.I.S. Shared Stylesheet ── */
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;background:var(--bg,#f4f7ff);color:var(--text,#1a2340);position:relative}
+body>*{position:relative;z-index:2}
+
+@keyframes scan{0%{top:-4px;opacity:0}3%{opacity:1}97%{opacity:.35}100%{top:100vh;opacity:0}}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 6px currentColor}50%{opacity:.6;box-shadow:0 0 20px currentColor}}
+
+/* ─────────────────────────────────────────
+   Persona nav bar  (always dark — cinematic frame)
+───────────────────────────────────────── */
+.pnav-bar{
+  position:sticky;top:0;z-index:500;
+  display:flex;align-items:center;
+  padding:0 24px;height:48px;
+  background:rgba(5,10,25,.97);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  gap:16px
+}
+.pnav-logo{display:flex;align-items:center;gap:8px;color:#c8dff4;text-decoration:none;font-size:.78rem;font-weight:900;letter-spacing:.18em;flex:1}
+.pnav-links{display:flex;align-items:center;gap:6px}
+.pnav-right{flex:1;display:flex;justify-content:flex-end;align-items:center;gap:6px}
+.pnav-item{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:5px 13px;border-radius:20px;
+  border:1.5px solid rgba(255,255,255,.08);
+  background:transparent;
+  color:rgba(255,255,255,.3);
+  text-decoration:none;font-size:.78rem;font-weight:600;
+  transition:all .2s;white-space:nowrap;letter-spacing:.03em
+}
+.pnav-item:hover{color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.18)}
+.pnav-item.hub.active,.pnav-item.hub:hover{color:#00c8ff;border-color:rgba(0,200,255,.45);background:rgba(0,200,255,.08)}
+.pnav-item.trader.active,.pnav-item.trader:hover{color:#ff4040;border-color:rgba(255,64,64,.45);background:rgba(255,64,64,.09)}
+.pnav-item.youtuber.active,.pnav-item.youtuber:hover{color:#4f8ef7;border-color:rgba(79,142,247,.45);background:rgba(79,142,247,.09)}
+.pnav-item.journalist.active,.pnav-item.journalist:hover{color:#f59e0b;border-color:rgba(245,158,11,.45);background:rgba(245,158,11,.09)}
+@media(max-width:540px){.pnav-logo span{display:none}.pnav-item{padding:4px 9px;font-size:.72rem}}
+
+/* ─────────────────────────────────────────
+   Persona page hero bar  (light, branded)
+───────────────────────────────────────── */
+.hero{background:var(--hero-bg,var(--surface,#fff));border-bottom:1px solid var(--border);padding:0;position:relative;z-index:100;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--hero-stripe,linear-gradient(90deg,#00c8ff,#0050aa));z-index:2}
+.hero-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:20px;min-height:80px;padding:16px 32px;position:relative;z-index:1}
+.hero-left{display:flex;align-items:center;gap:16px;flex:1;min-width:0}
+.hero-text{min-width:0}
+.hero-title{font-size:1.35rem;font-weight:900;color:var(--text,#1a2340);letter-spacing:.1em;text-transform:uppercase}
+.hero-sub{font-size:.63rem;color:var(--arc,#00c8ff);letter-spacing:.22em;text-transform:uppercase;margin-top:3px;font-weight:700}
+.hero-desc{font-size:.83rem;color:var(--muted,#5a7090);margin-top:5px;line-height:1.5}
+.hero-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;font-size:.75rem;color:var(--muted,#5a7090);flex-shrink:0}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;letter-spacing:.12em;color:#059669;text-transform:uppercase}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#00e87a;box-shadow:0 0 8px #00e87a;animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+
+/* ─────────────────────────────────────────
+   Shared content layout
+───────────────────────────────────────── */
+.main{padding:28px 32px;max-width:1400px;margin:0 auto}
+.section-title{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;font-weight:700;display:flex;align-items:center;gap:8px}
+
+.card{background:var(--surface,rgba(255,255,255,.97));border:1px solid var(--border,rgba(0,0,50,.08));border-radius:16px;padding:20px;transition:box-shadow .3s,border-color .3s;box-shadow:0 2px 12px rgba(0,0,50,.05)}
+.card-sm{padding:16px}
+.card-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;font-weight:700}
+.metric{font-size:1.9rem;font-weight:800;line-height:1.05;color:var(--text)}
+.metric-sub{font-size:.78rem;color:var(--muted);margin-top:5px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+
+/* ─────────────────────────────────────────
+   Page hero (persona pages only)
+───────────────────────────────────────── */
+.page-hero{text-align:center;padding:52px 24px 36px;position:relative}
+.page-hero-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:110px;height:110px;border-radius:50%;
+  background:var(--arc-soft,rgba(0,0,0,.05));
+  border:3px solid var(--arc-border,rgba(0,0,0,.1));
+  margin-bottom:20px;overflow:hidden;
+  box-shadow:0 8px 40px var(--arc-soft,rgba(0,0,0,.08)),0 0 0 6px var(--arc-soft,rgba(0,0,0,.04))
+}
+.page-hero-icon img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.page-hero h2{
+  font-size:1.75rem;font-weight:900;margin-bottom:12px;
+  letter-spacing:.08em;text-transform:uppercase;
+  background:linear-gradient(135deg,var(--arc),var(--gold,var(--arc)));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+}
+.page-hero p{color:var(--muted);max-width:520px;margin:0 auto;font-size:.93rem;line-height:1.65}
+
+/* ─────────────────────────────────────────
+   Coming soon / connect blocks
+───────────────────────────────────────── */
+.coming-soon{
+  border:2px dashed var(--arc-border,rgba(0,0,0,.1));
+  border-radius:16px;padding:64px 24px;text-align:center;
+  color:var(--muted);background:rgba(255,255,255,.5)
+}
+.coming-soon i{font-size:3.5rem;display:block;margin-bottom:16px;color:var(--arc);opacity:.35}
+.coming-soon h3{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.coming-soon p{font-size:.87rem;line-height:1.65}
+
+.connect-block{background:var(--surface,rgba(255,255,255,.97));border:1px solid var(--border,rgba(0,0,50,.08));border-radius:16px;padding:24px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,50,.05)}
+.connect-block h3{font-size:.95rem;font-weight:700;margin-bottom:8px;color:var(--text)}
+.connect-block p{font-size:.87rem;color:var(--muted);line-height:1.65}
+.code-block{
+  background:var(--code-bg,rgba(0,100,200,.04));
+  border:1px solid var(--arc-border,rgba(0,100,200,.12));
+  border-radius:10px;padding:16px 18px;margin-top:14px;
+  font-family:ui-monospace,"Cascadia Code",monospace;
+  font-size:.8rem;color:var(--code-text,#1a3a6a);
+  white-space:pre-wrap;line-height:1.75
+}
+.badge{
+  display:inline-flex;align-items:center;gap:5px;
+  background:var(--arc-soft,rgba(0,100,200,.07));
+  color:var(--arc);border:1px solid var(--arc-border,rgba(0,100,200,.18));
+  border-radius:8px;padding:4px 12px;font-size:.75rem;font-weight:700;
+  text-decoration:none;letter-spacing:.04em;transition:background .15s
+}
+.badge:hover{background:var(--arc-soft)}
+
+@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}.main{padding:20px}}
+@media(max-width:600px){.grid-3{grid-template-columns:1fr}.hero-inner{padding:12px 16px}.hero-right{display:none}}
