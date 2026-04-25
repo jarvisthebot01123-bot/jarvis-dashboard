@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-04-25T00:00:00Z",
+  "connected": false,
+  "channel": {
+    "name": null,
+    "handle": null,
+    "subscribers": null,
+    "total_views": null,
+    "video_count": null,
+    "profile_image": null
+  },
+  "analytics_7d": {
+    "views": null,
+    "watch_time_hours": null,
+    "new_subscribers": null
+  },
+  "recent_videos": [],
+  "top_videos": []
+}

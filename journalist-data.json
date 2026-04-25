@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-04-25T00:00:00Z",
+  "connected": false,
+  "sources_monitored": 8,
+  "headlines_per_refresh": 30,
+  "refresh_interval_min": 30,
+  "stats": {
+    "articles_today": null,
+    "breaking_alerts": null,
+    "tickers_tracked": null
+  },
+  "breaking_stories": [],
+  "headlines": [],
+  "tracked_tickers": []
+}
