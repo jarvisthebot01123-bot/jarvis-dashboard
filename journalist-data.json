@@ -1,6 +1,62 @@
 {
-  "connected": false,
-  "generated_at": "2026-04-25T18:34:04.433968+00:00",
+  "connected": true,
+  "generated_at": "2026-04-25T18:49:06.405930+00:00",
   "persona": "journalist",
-  "briefings": []
+  "briefings": [
+    {
+      "id": "2026-04-25T2000Z-UK-mandelson-vetting",
+      "generated_at": "2026-04-25T20:00:00Z",
+      "region": "UK",
+      "headline": "Ian Collard declines to give oral evidence to MPs over Mandelson vetting row",
+      "neutral_summary": "Ian Collard, identified as a key figure in the row over the vetting of Peter Mandelson as Britain's ambassador to Washington, has informed the Foreign Affairs Committee that he will provide evidence only in writing and will not appear in person before MPs. The committee is conducting scrutiny of the circumstances surrounding Mandelson's appointment, amid what Labour mayors describe as a damaging episode for the party.\n\nFormer prime minister Rishi Sunak has argued that Sir Keir Starmer must take personal responsibility for the vetting controversy, accusing the government of drawing the wrong lessons from what he called a sorry episode. Labour mayors, speaking to the Independent, contend that the row — alongside repeated policy reversals — is driving voters away ahead of local elections, with Starmer's personal ratings a liability on the doorstep.",
+      "corroborated_facts": [
+        "The row over Peter Mandelson's vetting as ambassador to Washington has prompted parliamentary scrutiny and drawn criticism from both the opposition and figures within Labour."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "centre",
+          "characterisation": "Ian Collard has declined to give oral evidence to the Foreign Affairs Committee, restricting his submission to written form as parliamentary scrutiny of the Mandelson appointment continues."
+        },
+        {
+          "lean": "centre-left",
+          "characterisation": "Labour mayors warn that the Mandelson row is compounding voter disillusionment with Starmer, heightening fears of significant losses in the forthcoming local elections."
+        }
+      ],
+      "source_count": 3,
+      "outlets": [
+        "BBC News",
+        "Independent"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/cvg32z7jv7yo",
+        "https://www.independent.co.uk/news/uk/politics/peter-mandelson-keir-starmer-rishi-sunak-b2964867.html",
+        "https://www.independent.co.uk/news/uk/politics/starmer-labour-local-elections-mayors-sadiq-khan-b2964317.html"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-25T2000Z-TN-vck-party-posts",
+      "generated_at": "2026-04-25T20:00:00Z",
+      "region": "TN",
+      "headline": "VCK appoints two MLAs to state-level party posts after assembly candidacies denied",
+      "neutral_summary": "The Viduthalai Chiruthaigal Katchi has given state-level party posts to S.S. Balaji and Aloor Shanavas, two MLAs who were not allocated seats to contest in the most recent assembly election. The appointments represent an internal party reshuffle within the VCK.\n\nNo opposition reaction or internal dissent has been reported in connection with the appointments, and no competing account of the decision has emerged.",
+      "corroborated_facts": [],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "The VCK has accommodated two MLAs bypassed for assembly candidacies by awarding them state-level positions within the party organisation."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "The Hindu"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/tamil-nadu/ss-balaji-aloor-shanavas-of-vck-get-state-level-party-posts/article70906319.ece"
+      ],
+      "confidence": "low"
+    }
+  ]
 }
