@@ -249,9 +249,10 @@ body > * { position: relative; z-index: 2; }
   .metric { font-size: 1.5rem; }
 }
 /* ── Persona nav bar ── */
-.pnav-bar{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:10px 24px;background:rgba(2,8,18,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);gap:16px}
-.pnav-logo{display:flex;align-items:center;gap:8px;color:#e8f0fa;text-decoration:none;font-size:.82rem;font-weight:900;letter-spacing:.14em}
-.pnav-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pnav-bar{position:sticky;top:0;z-index:500;display:flex;align-items:center;padding:10px 24px;background:rgba(10,20,50,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);gap:16px}
+.pnav-logo{display:flex;align-items:center;gap:8px;color:#e8f0fa;text-decoration:none;font-size:.82rem;font-weight:900;letter-spacing:.14em;flex:1}
+.pnav-links{display:flex;align-items:center;gap:8px}
+.pnav-right{flex:1;display:flex;justify-content:flex-end;align-items:center;gap:8px}
 .pnav-item{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:30px;border:1.5px solid rgba(255,255,255,.1);background:transparent;color:#6b7fa0;text-decoration:none;font-size:.8rem;font-weight:600;transition:all .18s;white-space:nowrap}
 .pnav-item:hover{color:#e8f0fa;border-color:rgba(255,255,255,.25)}
 .pnav-item.hub:hover{color:#00c8ff;border-color:rgba(0,200,255,.4);background:rgba(0,200,255,.08)}
@@ -269,32 +270,20 @@ body > * { position: relative; z-index: 2; }
     <span>J.A.R.V.I.S.</span>
   </a>
   <nav class="pnav-links">
-    <a href="index.html" class="pnav-item hub"><i class="bi bi-grid-3x3-gap-fill"></i> Hub</a>
     <a href="trader.html" class="pnav-item trader active">📈 Trader</a>
     <a href="youtuber.html" class="pnav-item youtuber">🎬 YouTuber</a>
     <a href="journalist.html" class="pnav-item journalist">📰 Journalist</a>
   </nav>
+  <div class="pnav-right">
+    <a href="index.html" class="pnav-item hub"><i class="bi bi-grid-3x3-gap-fill"></i> Hub</a>
+  </div>
 </header>
 
 <!-- ═══ HERO ═══ -->
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <!-- Iron Man Avatar -->
-      <svg style="flex-shrink:0;filter:drop-shadow(0 0 10px rgba(196,18,48,.65))" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="24" r="23" fill="#1a0205"/>
-        <circle cx="24" cy="24" r="22.5" fill="none" stroke="#8b0015" stroke-width=".6" opacity=".6"/>
-        <ellipse cx="24" cy="21" rx="13" ry="14.5" fill="#c41230"/>
-        <path d="M11.5 17 Q11 21 12 26 L14.5 24 Q13.5 20.5 14 17 Z" fill="#8b0015"/>
-        <path d="M36.5 17 Q37 21 36 26 L33.5 24 Q34.5 20.5 34 17 Z" fill="#8b0015"/>
-        <rect x="22.5" y="8.5" width="3" height="8" rx="1.5" fill="#a01025" opacity=".7"/>
-        <path d="M12.5 26 Q12 30 13.5 33.5 Q17 37.5 24 38 Q31 37.5 34.5 33.5 Q36 30 35.5 26 Z" fill="#d4890a"/>
-        <line x1="18" y1="31" x2="30" y2="31" stroke="#b5730a" stroke-width=".8" opacity=".8"/>
-        <path d="M17 33 Q24 36 31 33 L30 34.5 Q24 37 18 34.5 Z" fill="#b5730a" opacity=".7"/>
-        <rect x="14" y="22" width="8" height="3.2" rx="1.6" fill="#00e5ff" opacity=".95"/>
-        <rect x="26" y="22" width="8" height="3.2" rx="1.6" fill="#00e5ff" opacity=".95"/>
-        <rect x="22.5" y="26" width="3" height="4.5" rx="1" fill="#b5730a" opacity=".5"/>
-      </svg>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Robert_Downey_Jr-2008.JPG/300px-Robert_Downey_Jr-2008.JPG" alt="Iron Man" style="width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:top center;flex-shrink:0;box-shadow:0 0 14px rgba(196,18,48,.55);border:2px solid rgba(196,18,48,.4)">
       <div class="hero-text">
         <div class="hero-greeting">J.A.R.V.I.S.<span class="page-tip" id="page-tip" data-tip="Live performance dashboard for an autonomous AI day-trading system. All amounts are shown as index (100 = starting capital).">?</span></div>
         <div class="hero-full-form">Just A Rather Very Intelligent System</div>
