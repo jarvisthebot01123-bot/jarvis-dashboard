@@ -178,17 +178,35 @@ body.theme-youtuber {
 .yt-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 24px; }
 .yt-coming { border: 2px dashed var(--border); border-radius: 12px; padding: 56px 24px; text-align: center; color: var(--muted); }
 
+/* ── Macro blackout banner ── */
+.macro-banner { background: #fff8c5; border: 1px solid rgba(154,103,0,.4); border-radius: 10px; padding: 12px 18px; margin-bottom: 16px; display: none; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+/* ── Sentiment row (Fear & Greed + Macro Events) ── */
+.grid-sentiment { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; margin-bottom: 20px; }
+
+/* ── Fear & Greed gauge ── */
+.fg-container { text-align: center; padding-top: 4px; }
+
+/* ── Macro event rows ── */
+.event-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(208,215,222,.6); }
+.event-row:last-child { border-bottom: none; }
+.event-badge { font-size: .68rem; font-weight: 700; padding: 2px 9px; border-radius: 10px; white-space: nowrap; }
+.event-badge-today { background: var(--red-bg); color: var(--red); }
+.event-badge-soon  { background: #fff8c5; color: var(--yellow); }
+.event-badge-far   { background: var(--bg); color: var(--muted); }
+
 /* ── Responsive ── */
 @media (max-width: 1200px) {
   .grid-strats { grid-template-columns: repeat(3,1fr); }
 }
 @media (max-width: 900px) {
-  .grid-top    { grid-template-columns: repeat(2,1fr); }
-  .grid-charts { grid-template-columns: 1fr; }
-  .grid-strats { grid-template-columns: repeat(2,1fr); }
-  .grid-bottom { grid-template-columns: 1fr; }
-  .grid-footer { grid-template-columns: 1fr; }
-  .yt-stats    { grid-template-columns: repeat(2,1fr); }
+  .grid-top       { grid-template-columns: repeat(2,1fr); }
+  .grid-charts    { grid-template-columns: 1fr; }
+  .grid-strats    { grid-template-columns: repeat(2,1fr); }
+  .grid-sentiment { grid-template-columns: 1fr; }
+  .grid-bottom    { grid-template-columns: 1fr; }
+  .grid-footer    { grid-template-columns: 1fr; }
+  .yt-stats       { grid-template-columns: repeat(2,1fr); }
   .main { padding: 16px 20px; }
 }
 @media (max-width: 600px) {
@@ -262,6 +280,13 @@ body.theme-youtuber {
     <span id="halt-reason" style="color:var(--muted);margin-left:8px"></span>
   </div>
 
+  <div class="macro-banner" id="macro-banner">
+    <i class="bi bi-calendar-event-fill" style="color:#9a6700;flex-shrink:0"></i>
+    <strong style="color:#9a6700">MACRO EVENT TODAY</strong>
+    <span id="macro-reason" style="color:var(--muted);margin-left:4px"></span>
+    <span style="font-size:.72rem;color:#9a6700;margin-left:auto;font-weight:600">⚡ Position sizes at 30%</span>
+  </div>
+
   <div class="grid-top">
     <div class="card card-sm">
       <div class="card-title">Portfolio Index</div>
@@ -308,6 +333,24 @@ body.theme-youtuber {
 
   <div class="section-header">Strategy Breakdown</div>
   <div class="grid-strats" id="strat-cards"></div>
+
+  <div class="grid-sentiment">
+    <div class="card card-sm">
+      <div class="card-title">Fear &amp; Greed Index</div>
+      <div class="fg-container" id="fg-container">
+        <div style="color:var(--muted);font-size:.82rem;padding:20px 0">
+          <i class="bi bi-speedometer2" style="font-size:2rem;display:block;opacity:.3;margin-bottom:8px"></i>
+          Loading…
+        </div>
+      </div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">Upcoming Macro Events</div>
+      <div id="macro-events">
+        <div style="color:var(--muted);font-size:.82rem;padding:12px 0">No upcoming events data</div>
+      </div>
+    </div>
+  </div>
 
   <div class="grid-bottom">
     <div class="card">
@@ -584,12 +627,105 @@ function renderPositions(d) {
 }
 
 function renderDataSources(d) {
-  const src=d.data_freshness||{}, map={congress:{label:'Congress Trades'},news:{label:'News Headlines'},market_context:{label:'Market Context'}};
+  const src=d.data_freshness||{};
+  const map={
+    congress:          {label:'Congress Trades'},
+    news:              {label:'News Headlines'},
+    market_context:    {label:'Market Context'},
+    economic_calendar: {label:'Economic Calendar'},
+    insider_trades:    {label:'Insider Trades (Form 4)'},
+  };
   document.getElementById('data-sources').innerHTML=Object.entries(map).map(([k,m])=>{
-    const s=src[k]||{}, dc=s.status==='fresh'?'dot-green':s.status==='warning'?'dot-yellow':'dot-red';
+    const s=src[k]||{};
+    const dc=s.status==='fresh'?'dot-green':s.status==='warning'?'dot-yellow':s.status==='missing'?'dot-gray':'dot-red';
     return `<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(208,215,222,.6)">
       <span class="dot ${dc}"></span><span style="flex:1;font-size:.82rem">${m.label}</span>
-      <span style="font-size:.75rem;color:var(--muted)">${s.age||'unknown'}${s.count!==undefined?' · '+s.count+' records':''}</span></div>`;
+      <span style="font-size:.75rem;color:var(--muted)">${s.age||'—'}${s.count!==undefined?' · '+s.count+' records':''}</span></div>`;
+  }).join('');
+}
+
+/* ── Fear & Greed SVG gauge ── */
+function fgColor(score) {
+  if (score < 25) return '#cf222e';
+  if (score < 45) return '#e07020';
+  if (score < 55) return '#9a6700';
+  if (score < 75) return '#1a7f37';
+  return '#0d6a2d';
+}
+
+function drawFgGauge(score) {
+  const cx = 100, cy = 90, r = 68, ri = 44;
+  const segs = [
+    {from:0,  to:25,  color:'#cf222e'},
+    {from:25, to:45,  color:'#e07020'},
+    {from:45, to:55,  color:'#9a6700'},
+    {from:55, to:75,  color:'#1a7f37'},
+    {from:75, to:100, color:'#0d6a2d'},
+  ];
+  // score N maps to angle π*(1 - N/100): 0→π (left), 50→π/2 (top), 100→0 (right)
+  function pt(pct, rad) {
+    const a = Math.PI * (1 - pct / 100);
+    return [cx + rad * Math.cos(a), cy - rad * Math.sin(a)];
+  }
+  let s = '';
+  // Background donut track (full semicircle)
+  s += `<path d="M ${cx-r} ${cy} A ${r} ${r} 0 0 0 ${cx+r} ${cy} L ${cx+ri} ${cy} A ${ri} ${ri} 0 0 1 ${cx-ri} ${cy} Z" fill="var(--border)" opacity="0.4"/>`;
+  // Colored segments
+  for (const seg of segs) {
+    const [x1,y1]=pt(seg.from,r), [x2,y2]=pt(seg.to,r);
+    const [xi1,yi1]=pt(seg.from,ri), [xi2,yi2]=pt(seg.to,ri);
+    const f = n => n.toFixed(1);
+    s += `<path d="M ${f(x1)} ${f(y1)} A ${r} ${r} 0 0 0 ${f(x2)} ${f(y2)} L ${f(xi2)} ${f(yi2)} A ${ri} ${ri} 0 0 1 ${f(xi1)} ${f(yi1)} Z" fill="${seg.color}" opacity="0.88"/>`;
+  }
+  // Needle
+  const na = Math.PI * (1 - score / 100);
+  const [nx,ny] = [cx + (r-9)*Math.cos(na), cy - (r-9)*Math.sin(na)];
+  s += `<line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"/>`;
+  s += `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--text)"/>`;
+  // End labels
+  s += `<text x="26" y="${cy+13}" text-anchor="middle" font-size="8" fill="var(--muted)">Fear</text>`;
+  s += `<text x="174" y="${cy+13}" text-anchor="middle" font-size="8" fill="var(--muted)">Greed</text>`;
+  return `<svg viewBox="0 0 200 108" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:200px;display:block;margin:0 auto">${s}</svg>`;
+}
+
+function renderMacroBanner(d) {
+  const b = document.getElementById('macro-banner');
+  if (d.macro_blackout_today) {
+    b.style.display = 'flex';
+    document.getElementById('macro-reason').textContent = '— ' + (d.macro_blackout_reason || 'High-impact event today');
+  } else {
+    b.style.display = 'none';
+  }
+}
+
+function renderFearGreed(d) {
+  const fg = d.fear_greed, el = document.getElementById('fg-container');
+  if (!fg || fg.score === null || fg.score === undefined) {
+    el.innerHTML = `<div style="color:var(--muted);font-size:.82rem;padding:20px 0;text-align:center"><i class="bi bi-speedometer2" style="font-size:2rem;display:block;opacity:.3;margin-bottom:8px"></i>Not available</div>`;
+    return;
+  }
+  const score = fg.score;
+  const col = fgColor(score);
+  const rating = (fg.rating||'').replace(/\b\w/g,c=>c.toUpperCase());
+  el.innerHTML = drawFgGauge(score)
+    + `<div style="font-size:1.55rem;font-weight:800;color:${col};margin:2px 0 1px;line-height:1">${score}</div>`
+    + `<div style="font-size:.8rem;font-weight:600;color:${col};margin-bottom:4px">${rating}</div>`;
+}
+
+function renderMacroEvents(d) {
+  const events = d.upcoming_macro_events || [], el = document.getElementById('macro-events');
+  if (!events.length) {
+    el.innerHTML = `<div style="color:var(--muted);font-size:.82rem;padding:16px 0;text-align:center"><i class="bi bi-calendar-check" style="display:block;font-size:1.6rem;opacity:.3;margin-bottom:6px"></i>No high-impact events in the next 14 days</div>`;
+    return;
+  }
+  el.innerHTML = events.slice(0,5).map(ev => {
+    const cls = ev.days_away === 0 ? 'event-badge-today' : ev.days_away <= 2 ? 'event-badge-soon' : 'event-badge-far';
+    const lbl = ev.days_away === 0 ? 'TODAY' : ev.days_away === 1 ? 'tomorrow' : `${ev.days_away} days`;
+    return `<div class="event-row">
+      <span class="event-badge ${cls}">${ev.event}</span>
+      <span style="font-size:.82rem;flex:1;color:var(--text)">${ev.date}</span>
+      <span style="font-size:.75rem;color:var(--muted)">${lbl}</span>
+    </div>`;
   }).join('');
 }
 
@@ -633,8 +769,8 @@ async function loadData() {
     if(!res.ok) throw new Error('HTTP '+res.status);
     const d = await res.json();
     lastData = d;
-    renderHalt(d); renderTopMetrics(d); renderEquityChart(d); renderStrategyChart(d);
-    renderStrategyCards(d); renderHistory(d); renderPositions(d); renderDataSources(d); renderSummary(d);
+    renderHalt(d); renderMacroBanner(d); renderTopMetrics(d); renderEquityChart(d); renderStrategyChart(d);
+    renderStrategyCards(d); renderFearGreed(d); renderMacroEvents(d); renderHistory(d); renderPositions(d); renderDataSources(d); renderSummary(d);
     lastFetchedTs = d.generated_at ? new Date(d.generated_at) : new Date();
     tickRelativeTime();
   } catch(e) {
