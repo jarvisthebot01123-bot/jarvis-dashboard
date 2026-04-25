@@ -195,6 +195,17 @@ body.theme-youtuber {
 .event-badge-soon  { background: #fff8c5; color: var(--yellow); }
 .event-badge-far   { background: var(--bg); color: var(--muted); }
 
+/* ── Backtest chart ── */
+.bt-section { margin-bottom: 20px; }
+.bt-period-btns { display: flex; gap: 6px; }
+.bt-btn { font-size: .72rem; padding: 4px 11px; border-radius: 6px; border: 1px solid var(--border); background: transparent; cursor: pointer; color: var(--muted); transition: all .15s; }
+.bt-btn.active, .bt-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.bt-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.bt-legend-item { display: flex; align-items: center; gap: 6px; font-size: .75rem; color: var(--text); cursor: pointer; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); transition: opacity .15s; user-select: none; }
+.bt-legend-item.hidden { opacity: .4; }
+.bt-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.bt-ret { font-size: .7rem; color: var(--muted); margin-left: 2px; }
+
 /* ── Responsive ── */
 @media (max-width: 1200px) {
   .grid-strats { grid-template-columns: repeat(3,1fr); }
@@ -334,7 +345,12 @@ body.theme-youtuber {
     </div>
   </div>
 
-  <div class="section-header">Strategy Breakdown</div>
+  <div class="section-header" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+    <span>Strategy Breakdown</span>
+    <a href="backtest.html" style="font-size:.76rem;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:var(--accent-soft);border:1px solid rgba(37,99,235,.2);padding:5px 13px;border-radius:8px;transition:background .15s">
+      <i class="bi bi-graph-up-arrow"></i> 1-year backtest →
+    </a>
+  </div>
   <div class="grid-strats" id="strat-cards"></div>
 
   <div class="grid-sentiment">
@@ -386,6 +402,30 @@ body.theme-youtuber {
       <div id="perf-summary" style="font-size:.85rem;color:var(--muted);line-height:1.6">—</div>
       <div id="live-ready-section" style="margin-top:14px"></div>
       <div id="last-routine-section" style="margin-top:10px;font-size:.75rem;color:var(--muted)"></div>
+    </div>
+  </div>
+
+  <!-- 1-Year Strategy Backtest -->
+  <div class="bt-section">
+    <div class="section-header" style="margin-bottom:12px">
+      <i class="bi bi-graph-up-arrow" style="margin-right:5px"></i>1-Year Strategy Backtest
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px">
+        <div>
+          <div style="font-size:.85rem;font-weight:600">Performance vs S&amp;P 500</div>
+          <div style="font-size:.73rem;color:var(--muted);margin-top:2px">Simulated daily OHLC · last 12 months · index = 100 at period start</div>
+        </div>
+        <div class="bt-period-btns">
+          <button class="bt-btn" onclick="setBtPeriod('1M')">1M</button>
+          <button class="bt-btn" onclick="setBtPeriod('3M')">3M</button>
+          <button class="bt-btn" onclick="setBtPeriod('6M')">6M</button>
+          <button class="bt-btn active" onclick="setBtPeriod('1Y')">1Y</button>
+        </div>
+      </div>
+      <div class="bt-legend" id="bt-legend"></div>
+      <canvas id="bt-canvas" height="110"></canvas>
+      <div style="margin-top:10px;font-size:.71rem;color:var(--muted)">Entry=open · exit=close with stop/target caps · Whale &amp; News use market proxies · Past simulation ≠ future results</div>
     </div>
   </div>
 
@@ -785,6 +825,146 @@ async function loadData() {
 loadData();
 setInterval(loadData, REFRESH_SECS * 1000);
 relTimeTimer = setInterval(tickRelativeTime, 1000);
+
+// ── Backtest chart ────────────────────────────────────────────────────────────
+let btChart = null, btRawData = null, btPeriod = '1Y';
+const btHidden = {};
+
+async function loadBacktest() {
+  try {
+    const r = await fetch('backtest-data.json?t=' + Date.now());
+    if (!r.ok) return;
+    btRawData = await r.json();
+    renderBtLegend();
+    renderBtChart();
+  } catch(e) { console.warn('backtest load failed', e); }
+}
+
+function btCutoffDate(period) {
+  const strats = btRawData.strategies;
+  const allDates = strats[Object.keys(strats)[0]].data.map(d => d.date).sort();
+  const last = allDates[allDates.length - 1];
+  const d = new Date(last);
+  if (period === '1M') d.setMonth(d.getMonth() - 1);
+  else if (period === '3M') d.setMonth(d.getMonth() - 3);
+  else if (period === '6M') d.setMonth(d.getMonth() - 6);
+  else d.setFullYear(d.getFullYear() - 1);
+  return d.toISOString().slice(0, 10);
+}
+
+function btSeriesData(key, cutoff) {
+  const raw = btRawData.strategies[key].data.filter(d => d.date >= cutoff);
+  if (!raw.length) return { labels: [], values: [] };
+  const base = raw[0].index;
+  return {
+    labels: raw.map(d => d.date),
+    values: raw.map(d => Math.round((d.index / base) * 1000) / 10),
+  };
+}
+
+function btPeriodReturn(key, cutoff) {
+  const d = btSeriesData(key, cutoff);
+  if (!d.values.length) return null;
+  return ((d.values[d.values.length - 1] - 100)).toFixed(1);
+}
+
+function renderBtLegend() {
+  if (!btRawData) return;
+  const cutoff = btCutoffDate(btPeriod);
+  const el = document.getElementById('bt-legend');
+  el.innerHTML = '';
+  // spy first, then strategies
+  const order = ['spy', ...Object.keys(btRawData.strategies).filter(k => k !== 'spy')];
+  order.forEach(key => {
+    const s = btRawData.strategies[key];
+    const ret = btPeriodReturn(key, cutoff);
+    const sign = ret >= 0 ? '+' : '';
+    const retColor = ret >= 0 ? 'var(--green)' : 'var(--red)';
+    const item = document.createElement('div');
+    item.className = 'bt-legend-item' + (btHidden[key] ? ' hidden' : '');
+    item.dataset.key = key;
+    item.innerHTML = `<span class="bt-dot" style="background:${s.color}"></span>${s.name}<span class="bt-ret" style="color:${retColor}">${sign}${ret}%</span>`;
+    item.onclick = () => {
+      btHidden[key] = !btHidden[key];
+      item.classList.toggle('hidden', !!btHidden[key]);
+      if (btChart) {
+        const ds = btChart.data.datasets.find(d => d.label === s.name);
+        if (ds) { ds.hidden = !!btHidden[key]; btChart.update(); }
+      }
+    };
+    el.appendChild(item);
+  });
+}
+
+function renderBtChart() {
+  if (!btRawData) return;
+  const cutoff = btCutoffDate(btPeriod);
+  // Use spy as x-axis labels (same dates for all)
+  const { labels } = btSeriesData('spy', cutoff);
+  const order = ['spy', ...Object.keys(btRawData.strategies).filter(k => k !== 'spy')];
+  const datasets = order.map(key => {
+    const s = btRawData.strategies[key];
+    const { values } = btSeriesData(key, cutoff);
+    return {
+      label: s.name,
+      data: values,
+      borderColor: s.color,
+      backgroundColor: 'transparent',
+      borderWidth: key === 'spy' ? 1.5 : 2,
+      borderDash: key === 'spy' ? [4, 3] : [],
+      pointRadius: 0,
+      tension: 0.2,
+      hidden: !!btHidden[key],
+    };
+  });
+  const ctx = document.getElementById('bt-canvas');
+  if (btChart) btChart.destroy();
+  btChart = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      animation: false,
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y >= 100 ? '+' : ''}${(ctx.parsed.y - 100).toFixed(1)}%`,
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            maxTicksLimit: 8,
+            color: '#656d76',
+            font: { size: 10 },
+            callback: (_, i, all) => labels[i] ? labels[i].slice(5) : '',
+          },
+          grid: { display: false },
+        },
+        y: {
+          ticks: {
+            color: '#656d76',
+            font: { size: 10 },
+            callback: v => (v >= 100 ? '+' : '') + (v - 100).toFixed(0) + '%',
+          },
+          grid: { color: 'rgba(208,215,222,.4)' },
+        },
+      },
+    },
+  });
+}
+
+function setBtPeriod(p) {
+  btPeriod = p;
+  document.querySelectorAll('.bt-btn').forEach(b => b.classList.toggle('active', b.textContent === p));
+  renderBtLegend();
+  renderBtChart();
+}
+
+loadBacktest();
 </script>
 </body>
 </html>
