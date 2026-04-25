@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T23:47:24.147224Z",
+  "generated_at": "2026-04-25T00:03:01.057777Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -16,35 +16,35 @@
   },
   "strategy_stats": {
     "gap_go": {
-      "name": "S1",
+      "name": "Gap & Go",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     },
     "momentum": {
-      "name": "S2",
+      "name": "Momentum",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     },
     "mean_rev": {
-      "name": "S3",
+      "name": "Mean Reversion",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     },
     "congress": {
-      "name": "S4",
+      "name": "Whale",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     },
     "news": {
-      "name": "S5",
+      "name": "News Catalyst",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
@@ -65,17 +65,17 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "1.3h ago",
+      "age": "1.6h ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "1.3h ago",
+      "age": "1.6h ago",
       "status": "warning",
       "count": 30
     },
     "market_context": {
-      "age": "3.8h ago",
+      "age": "4.1h ago",
       "status": "warning"
     }
   },
