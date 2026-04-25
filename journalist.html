@@ -27,15 +27,19 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 
 /* ── Cinematic Superman banner ── */
 .page-banner{
-  background:linear-gradient(135deg,#1e3a8a 0%,#1e40af 25%,#2563eb 45%,#b91c1c 70%,#ca8a04 100%);
+  background:url('img/newspaper-journalist.svg') center top / cover no-repeat;
   padding:36px 32px 32px;
   position:relative;overflow:hidden;
   margin-bottom:28px;
 }
 .page-banner::before{
   content:'';position:absolute;inset:0;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 4 L44 22 L56 22 L46 34 L50 52 L30 42 L10 52 L14 34 L4 22 L16 22 Z' fill='none' stroke='rgba(255,255,255,.04)' stroke-width='1'/%3E%3C/svg%3E") repeat;
-  background-size:60px 60px;
+  background:linear-gradient(135deg,
+    rgba(30,58,138,.82) 0%,
+    rgba(30,64,175,.76) 25%,
+    rgba(37,99,235,.74) 45%,
+    rgba(185,28,28,.76) 70%,
+    rgba(180,120,5,.82) 100%);
 }
 .page-banner-wrap{
   max-width:1200px;margin:0 auto;

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="400" fill="#f0e6c8"/>
+  <!-- top border -->
+  <rect x="18" y="13" width="1164" height="2.5" fill="#111"/>
+  <!-- MASTHEAD -->
+  <text x="600" y="48" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="bold" letter-spacing="10" fill="#0a0a0a">THE DAILY STARK</text>
+  <text x="22" y="48" font-family="Georgia,serif" font-size="10" fill="#444">VOL. XLVII  ·  NO. 23</text>
+  <text x="1178" y="48" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#444">FRIDAY, APRIL 25, 2026  ·  $2.50</text>
+  <!-- masthead rules -->
+  <rect x="18" y="56" width="1164" height="3.5" fill="#0a0a0a"/>
+  <rect x="18" y="61" width="1164" height="0.9" fill="#0a0a0a"/>
+  <!-- MAIN HEADLINE -->
+  <text x="600" y="103" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="bold" fill="#080808">IRON MAN SAVES MARKETS FROM TOTAL ECONOMIC COLLAPSE</text>
+  <!-- deck -->
+  <text x="600" y="123" text-anchor="middle" font-family="Georgia,serif" font-size="13.5" font-style="italic" fill="#2a2a2a">Stark AI Predicts Crash 4 Hours Early · Hedge Funds Scramble · JARVIS Celebrates Record-Breaking Year</text>
+  <!-- section rule -->
+  <rect x="18" y="133" width="1164" height="0.7" fill="#666"/>
+  <!-- column dividers -->
+  <rect x="415" y="139" width="0.7" height="188" fill="#aaa"/>
+  <rect x="790" y="139" width="0.7" height="188" fill="#aaa"/>
+  <!-- COL 1 -->
+  <text x="24" y="158" font-family="Georgia,serif" font-size="13.5" font-weight="bold" fill="#0a0a0a">JARVIS AI BEATS ALL HEDGE</text>
+  <text x="24" y="175" font-family="Georgia,serif" font-size="13.5" font-weight="bold" fill="#0a0a0a">FUNDS WITH 400% RETURN</text>
+  <rect x="24" y="183" width="374" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="193" width="374" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="203" width="338" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="213" width="374" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="223" width="374" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="233" width="296" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="243" width="374" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="253" width="355" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="263" width="374" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="273" width="280" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="283" width="374" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="24" y="293" width="340" height="5.5" rx="1.5" fill="#b8a882"/>
+  <!-- COL 2 -->
+  <text x="425" y="158" font-family="Georgia,serif" font-size="13.5" font-weight="bold" fill="#0a0a0a">STARK INDUSTRIES SOARS</text>
+  <text x="425" y="175" font-family="Georgia,serif" font-size="13.5" font-weight="bold" fill="#0a0a0a">300% IN A SINGLE WEEK</text>
+  <rect x="425" y="183" width="348" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="193" width="348" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="203" width="310" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="213" width="348" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="223" width="348" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="233" width="276" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="243" width="348" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="253" width="330" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="263" width="348" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="273" width="265" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="283" width="348" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="425" y="293" width="318" height="5.5" rx="1.5" fill="#b8a882"/>
+  <!-- COL 3 -->
+  <text x="800" y="158" font-family="Georgia,serif" font-size="13.5" font-weight="bold" fill="#0a0a0a">SENATORS BUY NVDA; AI</text>
+  <text x="800" y="175" font-family="Georgia,serif" font-size="13.5" font-weight="bold" fill="#0a0a0a">FOLLOWS, BOTH WIN BIG</text>
+  <rect x="800" y="183" width="378" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="193" width="378" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="203" width="340" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="213" width="378" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="223" width="378" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="233" width="305" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="243" width="378" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="253" width="358" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="263" width="378" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="273" width="275" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="283" width="378" height="5.5" rx="1.5" fill="#b8a882"/>
+  <rect x="800" y="293" width="345" height="5.5" rx="1.5" fill="#b8a882"/>
+  <!-- lower section rule -->
+  <rect x="18" y="313" width="1164" height="0.7" fill="#666"/>
+  <!-- lower headlines (3 across) -->
+  <text x="24" y="331" font-family="Georgia,serif" font-size="11.5" font-weight="bold" fill="#111">MARKET RALLY: SENATORS PREDICTED</text>
+  <text x="24" y="346" font-family="Georgia,serif" font-size="11.5" font-weight="bold" fill="#111">S&amp;P 500 SURGE THREE WEEKS EARLY</text>
+  <rect x="24" y="352" width="366" height="4" rx="1" fill="#c8b890"/>
+  <rect x="24" y="359" width="366" height="4" rx="1" fill="#c8b890"/>
+  <rect x="24" y="366" width="290" height="4" rx="1" fill="#c8b890"/>
+  <rect x="408" y="316" width="0.7" height="64" fill="#bbb"/>
+  <text x="418" y="331" font-family="Georgia,serif" font-size="11.5" font-weight="bold" fill="#111">VIX CRASHES 40% AS IRON MAN</text>
+  <text x="418" y="346" font-family="Georgia,serif" font-size="11.5" font-weight="bold" fill="#111">CALMS GLOBAL MARKET PANIC</text>
+  <rect x="418" y="352" width="358" height="4" rx="1" fill="#c8b890"/>
+  <rect x="418" y="359" width="358" height="4" rx="1" fill="#c8b890"/>
+  <rect x="418" y="366" width="280" height="4" rx="1" fill="#c8b890"/>
+  <rect x="793" y="316" width="0.7" height="64" fill="#bbb"/>
+  <text x="803" y="331" font-family="Georgia,serif" font-size="11.5" font-weight="bold" fill="#111">BULL RUN CONFIRMED: TSLA, NVDA</text>
+  <text x="803" y="346" font-family="Georgia,serif" font-size="11.5" font-weight="bold" fill="#111">AND AAPL AT ALL-TIME HIGHS</text>
+  <rect x="803" y="352" width="375" height="4" rx="1" fill="#c8b890"/>
+  <rect x="803" y="359" width="375" height="4" rx="1" fill="#c8b890"/>
+  <rect x="803" y="366" width="295" height="4" rx="1" fill="#c8b890"/>
+  <!-- bottom rules -->
+  <rect x="18" y="384" width="1164" height="2" fill="#111"/>
+  <rect x="18" y="388" width="1164" height="0.7" fill="#555"/>
+</svg>
