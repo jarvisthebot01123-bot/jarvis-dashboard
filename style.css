@@ -9,35 +9,43 @@ body>*{position:relative;z-index:2}
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 6px currentColor}50%{opacity:.6;box-shadow:0 0 20px currentColor}}
 
 /* ─────────────────────────────────────────
-   Persona nav bar  (always dark — cinematic frame)
+   Persona nav bar  (light)
 ───────────────────────────────────────── */
 .pnav-bar{
   position:sticky;top:0;z-index:500;
   display:flex;align-items:center;
   padding:0 24px;height:48px;
-  background:rgba(5,10,25,.97);
+  background:rgba(255,255,255,.97);
   backdrop-filter:blur(24px);
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(0,0,40,.09);
+  box-shadow:0 1px 12px rgba(0,0,40,.06);
   gap:16px
 }
-.pnav-logo{display:flex;align-items:center;gap:8px;color:#c8dff4;text-decoration:none;font-size:.78rem;font-weight:900;letter-spacing:.18em;flex:1}
+.pnav-logo{display:flex;align-items:center;gap:8px;color:#0f1a30;text-decoration:none;font-size:.78rem;font-weight:900;letter-spacing:.18em;flex:1}
 .pnav-links{display:flex;align-items:center;gap:6px}
 .pnav-right{flex:1;display:flex;justify-content:flex-end;align-items:center;gap:6px}
 .pnav-item{
   display:inline-flex;align-items:center;gap:5px;
   padding:5px 13px;border-radius:20px;
-  border:1.5px solid rgba(255,255,255,.08);
+  border:1.5px solid rgba(0,0,40,.10);
   background:transparent;
-  color:rgba(255,255,255,.3);
+  color:rgba(0,0,40,.4);
   text-decoration:none;font-size:.78rem;font-weight:600;
   transition:all .2s;white-space:nowrap;letter-spacing:.03em
 }
-.pnav-item:hover{color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.18)}
-.pnav-item.hub.active,.pnav-item.hub:hover{color:#00c8ff;border-color:rgba(0,200,255,.45);background:rgba(0,200,255,.08)}
-.pnav-item.trader.active,.pnav-item.trader:hover{color:#ff4040;border-color:rgba(255,64,64,.45);background:rgba(255,64,64,.09)}
-.pnav-item.youtuber.active,.pnav-item.youtuber:hover{color:#4f8ef7;border-color:rgba(79,142,247,.45);background:rgba(79,142,247,.09)}
-.pnav-item.journalist.active,.pnav-item.journalist:hover{color:#f59e0b;border-color:rgba(245,158,11,.45);background:rgba(245,158,11,.09)}
-@media(max-width:540px){.pnav-logo span{display:none}.pnav-item{padding:4px 9px;font-size:.72rem}}
+.pnav-item:hover{color:rgba(0,0,40,.75);border-color:rgba(0,0,40,.22)}
+.pnav-item.trader.active,.pnav-item.trader:hover{color:#c41230;border-color:rgba(196,18,48,.35);background:rgba(196,18,48,.06)}
+.pnav-item.youtuber.active,.pnav-item.youtuber:hover{color:#1d4ed8;border-color:rgba(29,78,216,.35);background:rgba(29,78,216,.06)}
+.pnav-item.journalist.active,.pnav-item.journalist:hover{color:#d97706;border-color:rgba(217,119,6,.35);background:rgba(217,119,6,.06)}
+/* Per-page status badge in nav right */
+.pnav-status{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:20px;border:1.5px solid;white-space:nowrap;text-transform:uppercase}
+.pnav-status-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.pnav-status.active{color:#059669;border-color:rgba(5,150,105,.28);background:rgba(5,150,105,.07)}
+.pnav-status.active .pnav-status-dot{background:#00e87a;box-shadow:0 0 6px #00e87a}
+.pnav-status.inactive{color:#d97706;border-color:rgba(217,119,6,.28);background:rgba(217,119,6,.07)}
+.pnav-status.inactive .pnav-status-dot{background:#f59e0b}
+.pnav-status-time{font-weight:500;opacity:.75;font-size:.67rem;letter-spacing:.02em;text-transform:none}
+@media(max-width:540px){.pnav-logo span{display:none}.pnav-item{padding:4px 9px;font-size:.72rem}.pnav-status-time{display:none}}
 
 /* ─────────────────────────────────────────
    Persona page hero bar  (light, branded)
