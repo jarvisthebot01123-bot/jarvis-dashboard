@@ -7,91 +7,159 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="style.css">
 <style>
-/* Hub — bright, airy, cinematic character showcase */
 body{
-  background:#eef3ff;
-  height:100vh;overflow:hidden;
+  background:#f0f2f8;
   display:flex;flex-direction:column;
+  min-height:100vh;
 }
+/* Desktop: no-scroll single viewport */
+@media(min-width:769px){body{height:100vh;overflow:hidden}}
+
 body::before{
   content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='%231d4ed8' stroke-width='0.4' opacity='0.05'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='%231d4ed8' stroke-width='0.4' opacity='0.05'/%3E%3C/svg%3E");
-  background-size:56px 100px
+  background:radial-gradient(ellipse 120% 60% at 50% -10%,rgba(29,78,216,.08) 0%,transparent 70%);
 }
 
-/* Hub body */
-.hub-body{flex:1;display:flex;flex-direction:column;padding:14px 24px 8px;gap:12px;min-height:0;position:relative;z-index:2}
+.hub-body{
+  flex:1;display:flex;flex-direction:column;
+  padding:12px 20px 8px;gap:12px;
+  min-height:0;position:relative;z-index:2
+}
 
-/* Hero */
-.hub-hero{text-align:center;flex-shrink:0}
-.hub-logo{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(0,100,200,.1);border:1.5px solid rgba(0,150,255,.25);margin-bottom:8px}
-.hub-title{font-size:1.55rem;font-weight:900;letter-spacing:.2em;color:#0f1a30}
-.hub-sub{font-size:.6rem;color:#1d4ed8;letter-spacing:.3em;text-transform:uppercase;margin-top:2px;opacity:.75;font-weight:700}
-.hub-tagline{font-size:.82rem;color:#5a7090;margin-top:5px}
+/* ── Compact JARVIS hero ── */
+.hub-hero{text-align:center;flex-shrink:0;padding:4px 0 2px}
+.hub-title{
+  font-size:2rem;font-weight:900;letter-spacing:.22em;
+  background:linear-gradient(135deg,#0f1a30 40%,#1d4ed8 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hub-sub{font-size:.58rem;color:#1d4ed8;letter-spacing:.32em;text-transform:uppercase;margin-top:1px;font-weight:700;opacity:.7}
 .hub-pill{
   display:inline-flex;align-items:center;gap:6px;
-  border-radius:20px;padding:4px 14px;font-size:.68rem;font-weight:700;
-  letter-spacing:.1em;margin-top:8px;border:1.5px solid;text-transform:uppercase
+  border-radius:20px;padding:3px 14px;font-size:.68rem;font-weight:700;
+  letter-spacing:.1em;margin-top:7px;border:1.5px solid;text-transform:uppercase
 }
 .hub-pill-active{background:rgba(5,150,105,.07);border-color:rgba(5,150,105,.3);color:#059669}
 .hub-pill-partial{background:rgba(245,158,11,.07);border-color:rgba(245,158,11,.3);color:#d97706}
-.hub-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;animation:pulse 2s ease-in-out infinite}
+.hub-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 
-/* Cards grid — movie-poster layout */
-.hub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1;min-height:0}
-
-.hub-card{
-  border-radius:16px;overflow:hidden;
-  text-decoration:none;color:#1a2340;
-  display:flex;flex-direction:column;
-  background:#fff;
-  border:1.5px solid rgba(0,0,50,.07);
-  box-shadow:0 4px 24px rgba(0,0,50,.07);
-  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+/* ── Movie-poster card grid ── */
+.hub-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  flex:1;min-height:0;
 }
-.hub-card:hover{transform:translateY(-5px)}
+@media(max-width:900px){.hub-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.hub-grid{grid-template-columns:1fr;gap:12px}}
 
-.card-img-wrap{flex:1;min-height:0;position:relative;overflow:hidden}
-.card-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s ease;display:block}
-.hub-card:hover .card-img-wrap img{transform:scale(1.05)}
-/* gradient fades image to white card footer */
-.card-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(255,255,255,.96) 100%)}
+/* Base card — movie poster style */
+.hub-card{
+  border-radius:18px;overflow:hidden;
+  text-decoration:none;
+  display:flex;flex-direction:column;
+  box-shadow:0 4px 24px rgba(0,0,0,.12);
+  transition:transform .3s ease,box-shadow .4s ease;
+  position:relative;
+  min-height:0;
+}
+.hub-card:hover{transform:translateY(-6px);box-shadow:0 16px 60px rgba(0,0,0,.22)}
 
-.card-foot{padding:12px 14px;background:#fff;flex-shrink:0;border-top:1px solid rgba(0,0,50,.04)}
-.card-foot-name{font-size:.93rem;font-weight:800;margin-bottom:1px;color:#0f1a30}
-.card-foot-hero{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:4px;font-weight:700}
+/* Poster section — gradient always visible */
+.card-poster{
+  flex:1;min-height:200px;
+  position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+/* Character photo — sits on top of gradient */
+.card-poster img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;object-position:top center;
+  transition:transform .5s ease;
+}
+.hub-card:hover .card-poster img{transform:scale(1.04)}
+/* Scrim gradient over image for text */
+.card-poster-scrim{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 50%,transparent 100%);
+  z-index:1
+}
+/* Character label in poster */
+.card-poster-label{
+  position:relative;z-index:2;
+  padding:14px 16px 10px;width:100%;
+}
+.card-poster-persona{
+  font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  font-weight:700;color:rgba(255,255,255,.65);margin-bottom:3px;
+}
+.card-poster-hero{
+  font-size:1.45rem;font-weight:900;color:#fff;
+  letter-spacing:.06em;text-transform:uppercase;
+  line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.5);
+}
+
+/* Info footer */
+.card-foot{
+  padding:12px 16px;background:#fff;flex-shrink:0;
+  border-top:1px solid rgba(0,0,0,.05);
+}
+.card-foot-name{font-size:.88rem;font-weight:800;color:#0f1a30;margin-bottom:3px}
 .card-foot-desc{font-size:.72rem;color:#6a7f9a;margin-bottom:6px;line-height:1.4}
-.card-foot-stats{font-size:.72rem;min-height:16px}
+.card-foot-status{font-size:.72rem;min-height:16px;font-weight:600}
 
-/* Per-character */
-.card-trader{border-color:rgba(204,0,20,.12)}
-.card-trader:hover{border-color:rgba(204,0,20,.4);box-shadow:0 16px 50px rgba(204,0,20,.14)}
-.card-trader .card-foot-hero{color:#cc0014}
+/* ── Per-character gradient backgrounds ── */
+.card-trader .card-poster{
+  background:linear-gradient(160deg,#ff6b35 0%,#c41230 35%,#7b0012 70%,#2a0007 100%);
+}
+.card-trader{border:2px solid rgba(196,18,48,.2)}
+.card-trader:hover{border-color:rgba(196,18,48,.5);box-shadow:0 20px 70px rgba(196,18,48,.25)}
+.card-trader .card-poster-persona{color:rgba(255,180,180,.7)}
+.card-trader .card-foot{border-top-color:rgba(196,18,48,.1)}
 
-.card-youtuber{border-color:rgba(29,78,216,.12)}
-.card-youtuber:hover{border-color:rgba(29,78,216,.4);box-shadow:0 16px 50px rgba(29,78,216,.14)}
-.card-youtuber .card-foot-hero{color:#1d4ed8}
+.card-youtuber .card-poster{
+  background:linear-gradient(160deg,#60a5fa 0%,#1d4ed8 35%,#1e3a8a 70%,#0a1550 100%);
+}
+.card-youtuber{border:2px solid rgba(29,78,216,.2)}
+.card-youtuber:hover{border-color:rgba(29,78,216,.5);box-shadow:0 20px 70px rgba(29,78,216,.25)}
+.card-youtuber .card-poster-persona{color:rgba(180,210,255,.7)}
+.card-youtuber .card-foot{border-top-color:rgba(29,78,216,.1)}
 
-.card-journalist{border-color:rgba(180,130,0,.12)}
-.card-journalist:hover{border-color:rgba(180,130,0,.4);box-shadow:0 16px 50px rgba(180,130,0,.1)}
-.card-journalist .card-foot-hero{color:#b45309}
+.card-journalist .card-poster{
+  background:linear-gradient(160deg,#818cf8 0%,#1e40af 30%,#b91c1c 65%,#78350f 100%);
+}
+.card-journalist{border:2px solid rgba(29,64,175,.2)}
+.card-journalist:hover{border-color:rgba(29,64,175,.5);box-shadow:0 20px 70px rgba(29,64,175,.2)}
+.card-journalist .card-poster-persona{color:rgba(200,200,255,.7)}
+.card-journalist .card-foot{border-top-color:rgba(29,64,175,.1)}
 
 /* Add persona card */
 .hub-card-add{
-  border:2px dashed rgba(0,0,50,.12);background:#f8faff;
-  align-items:center;justify-content:center;text-align:center;
-  box-shadow:none;
+  border:2px dashed rgba(0,0,60,.14);background:#f8faff;
+  box-shadow:none;align-items:center;justify-content:center;text-align:center;
+  min-height:200px;
 }
-.hub-card-add:hover{border-color:rgba(0,0,50,.25);background:#f4f6ff;transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,50,.07)}
-.add-inner{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px}
-.add-plus{font-size:2.4rem;color:rgba(0,0,100,.15);line-height:1}
-.add-label{font-size:.8rem;color:rgba(0,0,80,.35);font-weight:600;letter-spacing:.04em}
+.hub-card-add:hover{border-color:rgba(0,0,60,.28);background:#f3f6ff;box-shadow:0 8px 30px rgba(0,0,80,.08)}
+.add-inner{padding:24px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.add-plus{font-size:2.8rem;color:rgba(0,0,80,.14);line-height:1}
+.add-title{font-size:.88rem;font-weight:800;color:rgba(0,0,80,.3);letter-spacing:.06em}
+.add-desc{font-size:.73rem;color:rgba(0,0,80,.22);line-height:1.5;max-width:160px}
+.add-cta{font-size:.68rem;color:#1d4ed8;font-weight:700;letter-spacing:.08em;opacity:.55}
 
-footer{text-align:center;padding:5px;font-size:.67rem;color:#8090b0;flex-shrink:0;position:relative;z-index:2}
+footer{
+  text-align:center;padding:5px;
+  font-size:.67rem;color:#8090b0;
+  flex-shrink:0;position:relative;z-index:2
+}
 footer a{color:#8090b0;text-decoration:none}
 
-@media(max-width:900px){.hub-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:540px){.hub-grid{grid-template-columns:repeat(2,1fr);gap:10px}.hub-title{font-size:1.2rem}}
+@media(max-width:480px){
+  .hub-body{padding:10px 14px 6px;gap:10px}
+  .hub-title{font-size:1.5rem}
+  .card-poster{min-height:180px}
+  .card-poster-hero{font-size:1.2rem}
+}
 </style>
 </head>
 <body>
@@ -114,14 +182,10 @@ footer a{color:#8090b0;text-decoration:none}
 <div class="hub-body">
 
   <div class="hub-hero">
-    <div class="hub-logo">
-      <svg width="26" height="26" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="#1d4ed8" stroke-width="1.5" opacity=".5"/><polygon points="24,14 31.2,18.5 31.2,27.5 24,32 16.8,27.5 16.8,18.5" fill="rgba(29,78,216,.07)" stroke="#1d4ed8" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="#1d4ed8" opacity=".8"/></svg>
-    </div>
     <div class="hub-title">J.A.R.V.I.S.</div>
     <div class="hub-sub">Just A Rather Very Intelligent System</div>
-    <div class="hub-tagline">Your personal AI operations network — choose a persona to begin</div>
     <div class="hub-pill hub-pill-partial" id="status-pill">
-      <span class="hub-dot" id="status-dot" style="background:#d97706;box-shadow:0 0 6px #f59e0b"></span>
+      <span class="hub-dot" id="status-dot" style="background:#d97706"></span>
       <span id="status-text">CHECKING…</span>
     </div>
   </div>
@@ -129,47 +193,59 @@ footer a{color:#8090b0;text-decoration:none}
   <div class="hub-grid">
 
     <a href="trader.html" class="hub-card card-trader">
-      <div class="card-img-wrap">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Robert_Downey_Jr-2008.JPG/800px-Robert_Downey_Jr-2008.JPG" alt="Iron Man — Robert Downey Jr">
+      <div class="card-poster">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Robert_Downey_Jr-2008.JPG/800px-Robert_Downey_Jr-2008.JPG" alt="" loading="lazy">
+        <div class="card-poster-scrim"></div>
+        <div class="card-poster-label">
+          <div class="card-poster-persona">📈 Trader</div>
+          <div class="card-poster-hero">Iron Man</div>
+        </div>
       </div>
       <div class="card-foot">
-        <div class="card-foot-name">📈 Trader</div>
-        <div class="card-foot-hero">Iron Man · Tony Stark</div>
+        <div class="card-foot-name">Tony Stark</div>
         <div class="card-foot-desc">Autonomous AI day-trading · 5 strategies · $100k paper</div>
-        <div class="card-foot-stats" id="trader-stats">Loading…</div>
+        <div class="card-foot-status" id="trader-stats">Loading…</div>
       </div>
     </a>
 
     <a href="youtuber.html" class="hub-card card-youtuber">
-      <div class="card-img-wrap">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Chris_Evans_as_Steve_Rogers_aka_Captain_America_%2834407349161%29.jpg/800px-Chris_Evans_as_Steve_Rogers_aka_Captain_America_%2834407349161%29.jpg" alt="Captain America — Chris Evans">
+      <div class="card-poster">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Chris_Evans_as_Steve_Rogers_aka_Captain_America_%2834407349161%29.jpg/800px-Chris_Evans_as_Steve_Rogers_aka_Captain_America_%2834407349161%29.jpg" alt="" loading="lazy">
+        <div class="card-poster-scrim"></div>
+        <div class="card-poster-label">
+          <div class="card-poster-persona">🎬 YouTuber</div>
+          <div class="card-poster-hero">Captain America</div>
+        </div>
       </div>
       <div class="card-foot">
-        <div class="card-foot-name">🎬 YouTuber</div>
-        <div class="card-foot-hero">Captain America · Steve Rogers</div>
+        <div class="card-foot-name">Steve Rogers</div>
         <div class="card-foot-desc">AI content analytics · subscriber &amp; video performance</div>
-        <div class="card-foot-stats" id="youtuber-stats">Checking…</div>
+        <div class="card-foot-status" id="youtuber-stats">Checking…</div>
       </div>
     </a>
 
     <a href="journalist.html" class="hub-card card-journalist">
-      <div class="card-img-wrap">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Henry_Cavill_2014_Comic_Con.jpg/800px-Henry_Cavill_2014_Comic_Con.jpg" alt="Superman — Henry Cavill">
+      <div class="card-poster">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Henry_Cavill_2014_Comic_Con.jpg/800px-Henry_Cavill_2014_Comic_Con.jpg" alt="" loading="lazy">
+        <div class="card-poster-scrim"></div>
+        <div class="card-poster-label">
+          <div class="card-poster-persona">📰 Journalist</div>
+          <div class="card-poster-hero">Superman</div>
+        </div>
       </div>
       <div class="card-foot">
-        <div class="card-foot-name">📰 Journalist</div>
-        <div class="card-foot-hero">Superman · Clark Kent</div>
+        <div class="card-foot-name">Clark Kent</div>
         <div class="card-foot-desc">AI editorial intelligence · breaking news &amp; story tracking</div>
-        <div class="card-foot-stats" id="journalist-stats">Checking…</div>
+        <div class="card-foot-status" id="journalist-stats">Checking…</div>
       </div>
     </a>
 
     <a href="NEW_AVATAR.md" class="hub-card hub-card-add">
       <div class="add-inner">
         <div class="add-plus">+</div>
-        <div class="add-label">Add Persona</div>
-        <div style="font-size:.73rem;color:rgba(0,0,80,.3);line-height:1.5;margin-top:4px">Create a new J.A.R.V.I.S. product page with your own superhero theme</div>
-        <div style="font-size:.68rem;color:#1d4ed8;margin-top:10px;font-weight:700;letter-spacing:.06em;opacity:.55">READ GUIDE →</div>
+        <div class="add-title">Add Persona</div>
+        <div class="add-desc">Create a new J.A.R.V.I.S. product page with your own superhero theme</div>
+        <div class="add-cta">READ GUIDE →</div>
       </div>
     </a>
 
@@ -186,15 +262,15 @@ async function checkSystems() {
     const r = await fetch('dashboard-data.json?t='+Date.now());
     if (r.ok) {
       const d = await r.json();
-      const a = d.account||{};
       active.trader = true;
+      const a = d.account||{};
       if (a.total_pct !== undefined && a.total_pct !== 0) {
         const sign = a.total_pct >= 0 ? '+' : '';
         const col  = a.total_pct >= 0 ? '#059669' : '#dc2626';
         document.getElementById('trader-stats').innerHTML =
-          `<span style="color:#059669">● Active</span>&nbsp;<span style="color:${col};font-size:.68rem">${sign}${a.total_pct.toFixed(2)}% all-time</span>`;
+          `<span style="color:#059669">● Active</span>&nbsp;<span style="color:${col}">${sign}${a.total_pct.toFixed(2)}%</span>`;
       } else {
-        document.getElementById('trader-stats').innerHTML = '<span style="color:#059669">● Active — no trades yet</span>';
+        document.getElementById('trader-stats').innerHTML = '<span style="color:#059669">● Active</span>';
       }
     }
   } catch(e) {
@@ -208,7 +284,7 @@ async function checkSystems() {
       active.youtuber = d.connected === true;
       document.getElementById('youtuber-stats').innerHTML = active.youtuber
         ? '<span style="color:#059669">● Live</span>'
-        : '<span style="color:#d97706">● Not configured — push youtuber-data.json</span>';
+        : '<span style="color:#d97706">● Push youtuber-data.json to activate</span>';
     } else throw new Error();
   } catch(e) {
     document.getElementById('youtuber-stats').innerHTML = '<span style="color:#d97706">● Not configured</span>';
@@ -221,7 +297,7 @@ async function checkSystems() {
       active.journalist = d.connected === true;
       document.getElementById('journalist-stats').innerHTML = active.journalist
         ? '<span style="color:#059669">● Live</span>'
-        : '<span style="color:#d97706">● Not configured — push journalist-data.json</span>';
+        : '<span style="color:#d97706">● Push journalist-data.json to activate</span>';
     } else throw new Error();
   } catch(e) {
     document.getElementById('journalist-stats').innerHTML = '<span style="color:#d97706">● Not configured</span>';
@@ -233,15 +309,13 @@ async function checkSystems() {
   const txt  = document.getElementById('status-text');
   if (n === 3) {
     pill.className = 'hub-pill hub-pill-active';
-    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#059669;box-shadow:0 0 8px #00e87a;animation:pulse 2s ease-in-out infinite;flex-shrink:0';
+    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#059669;box-shadow:0 0 8px #00e87a;flex-shrink:0';
     txt.textContent = 'ALL SYSTEMS ACTIVE';
   } else if (n === 0) {
-    pill.className = 'hub-pill hub-pill-partial';
-    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#d97706;flex-shrink:0';
+    dot.style.background = '#d97706';
     txt.textContent = 'SETTING UP';
   } else {
-    pill.className = 'hub-pill hub-pill-partial';
-    dot.style.cssText = 'width:6px;height:6px;border-radius:50%;background:#d97706;flex-shrink:0';
+    dot.style.background = '#d97706';
     txt.textContent = n + '/3 ACTIVE';
   }
 }

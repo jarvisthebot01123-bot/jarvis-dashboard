@@ -69,19 +69,32 @@ body::after {
 }
 body > * { position: relative; z-index: 2; }
 
-/* ── Hero ── */
-.hero { background: linear-gradient(135deg, rgba(253,245,243,.98) 0%, rgba(255,235,230,.95) 100%); border-bottom: 1px solid var(--border); padding: 14px 28px; position: relative; z-index: 100; backdrop-filter: blur(8px); }
-.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #c41230 0%, #d4890a 50%, #c41230 100%); }
-.hero-inner { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; gap: 16px; min-height: 56px; }
-.hero-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
-.hero-text { min-width: 0; }
-.hero-greeting { font-size: 1.25rem; font-weight: 800; color: #1a0a0a; line-height: 1.2; letter-spacing: .08em; }
-.hero-full-form { font-size: .68rem; color: var(--arc); letter-spacing: .14em; text-transform: uppercase; margin-top: 1px; font-weight: 500; opacity: .85; }
-.hero-sub { font-size: .88rem; color: var(--muted); margin-top: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.hero-right { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; font-size: .75rem; color: var(--muted); flex-shrink: 0; }
-.system-status { display: inline-flex; align-items: center; gap: 5px; font-size: .68rem; font-weight: 700; letter-spacing: .1em; color: #00e87a; text-transform: uppercase; }
-.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #00e87a; box-shadow: 0 0 8px #00e87a; animation: pulse-dot 2s ease-in-out infinite; flex-shrink: 0; }
-@keyframes pulse-dot { 0%,100%{box-shadow:0 0 6px #00e87a;opacity:1} 50%{box-shadow:0 0 16px #00e87a;opacity:.65} }
+/* ── Cinematic Iron Man banner ── */
+.hero{
+  background:linear-gradient(135deg,#7b0012 0%,#c41230 30%,#d4890a 65%,#8b5e00 100%);
+  padding:40px 32px 36px;position:relative;z-index:100;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='rgba(255,255,255,.06)' stroke-width='1'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='rgba(255,255,255,.06)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+  background-size:56px 100px}
+.hero-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;gap:28px;position:relative;z-index:1}
+.hero-left{display:flex;align-items:center;gap:24px;flex:1;min-width:0}
+.hero-avatar{
+  width:130px;height:130px;border-radius:50%;overflow:hidden;flex-shrink:0;
+  border:4px solid rgba(255,255,255,.35);
+  box-shadow:0 0 50px rgba(212,137,10,.4),0 8px 40px rgba(0,0,0,.3);
+  background:rgba(255,255,255,.15);
+}
+.hero-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.hero-text{min-width:0}
+.hero-eyebrow{font-size:.63rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:4px}
+.hero-greeting{font-size:2.2rem;font-weight:900;color:#fff;letter-spacing:.06em;text-transform:uppercase;line-height:1;margin-bottom:8px;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero-sub{font-size:.9rem;color:rgba(255,255,255,.8);line-height:1.5}
+.hero-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;font-size:.75rem;flex-shrink:0}
+.system-status{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#00e87a;text-transform:uppercase}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#00e87a;box-shadow:0 0 8px #00e87a;animation:pulse-dot 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 6px #00e87a;opacity:1}50%{box-shadow:0 0 18px #00e87a;opacity:.6}}
+@media(max-width:700px){.hero{padding:24px 20px}.hero-avatar{width:80px;height:80px}.hero-greeting{font-size:1.5rem}.hero-right{display:none}}
 
 /* ── Persona picker ── */
 .persona-wrap { position: relative; display: inline-block; }
@@ -273,18 +286,18 @@ body > * { position: relative; z-index: 2; }
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Robert_Downey_Jr-2008.JPG/300px-Robert_Downey_Jr-2008.JPG" alt="Iron Man" style="width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:top center;flex-shrink:0;box-shadow:0 0 14px rgba(196,18,48,.55);border:2px solid rgba(196,18,48,.4)">
+      <div class="hero-avatar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Robert_Downey_Jr-2008.JPG/800px-Robert_Downey_Jr-2008.JPG" alt="Iron Man" loading="lazy">
+      </div>
       <div class="hero-text">
-        <div class="hero-greeting">J.A.R.V.I.S.<span class="page-tip" id="page-tip" data-tip="Live performance dashboard for an autonomous AI day-trading system. All amounts are shown as index (100 = starting capital).">?</span></div>
-        <div class="hero-full-form">Just A Rather Very Intelligent System</div>
-        <div class="hero-sub" style="font-size:.82rem;color:var(--muted);margin-top:4px">
-          Autonomous AI day-trading · 5 strategies · $100k paper account
-        </div>
+        <div class="hero-eyebrow">J.A.R.V.I.S. · Trader Module</div>
+        <div class="hero-greeting">Iron Man<span class="page-tip" id="page-tip" data-tip="Live performance dashboard for an autonomous AI day-trading system. All amounts shown as index (100 = starting capital).">?</span></div>
+        <div class="hero-sub">Tony Stark &nbsp;·&nbsp; Autonomous AI day-trading &nbsp;·&nbsp; 5 strategies &nbsp;·&nbsp; $100k paper account</div>
       </div>
     </div>
     <div class="hero-right" id="hero-right">
       <div class="system-status"><span class="status-dot"></span>SYSTEM ACTIVE</div>
-      <span id="last-updated" style="font-variant-numeric:tabular-nums">Loading…</span>
+      <span id="last-updated" style="font-variant-numeric:tabular-nums;color:rgba(255,255,255,.5);font-size:.72rem">Loading…</span>
     </div>
   </div>
 </div>
