@@ -3,37 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jarvis — Your Personal AI</title>
+<title>J.A.R.V.I.S. — Your Personal AI</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
 :root {
-  --bg:       #eef1f6;
-  --surface:  #ffffff;
-  --border:   #d0d7de;
-  --muted:    #656d76;
-  --text:     #1f2328;
-  --green:    #1a7f37;
-  --green-bg: #dafbe1;
-  --red:      #cf222e;
-  --red-bg:   #ffebe9;
-  --blue:     #0969da;
-  --blue-bg:  #ddf4ff;
-  --yellow:   #9a6700;
-  --purple:   #8250df;
-  --orange:   #bc4c00;
-  /* persona accent (overridden by body.theme-youtuber) */
-  --accent:    #2563eb;
-  --accent-2:  #6366f1;
-  --accent-3:  #8b5cf6;
-  --accent-bg: #ddf4ff;
-  --accent-soft: rgba(37,99,235,.08);
+  --bg:        #040b18;
+  --surface:   rgba(6,16,40,.88);
+  --border:    rgba(0,200,255,.18);
+  --muted:     #7b93af;
+  --text:      #e8f4fd;
+  --green:     #00e87a;
+  --green-bg:  rgba(0,232,122,.12);
+  --red:       #ff2040;
+  --red-bg:    rgba(255,32,64,.12);
+  --blue:      #00c8ff;
+  --blue-bg:   rgba(0,200,255,.12);
+  --yellow:    #f5a623;
+  --purple:    #8250df;
+  --orange:    #ff6920;
+  --arc:       #00c8ff;
+  --gold:      #f5a623;
+  /* persona accent */
+  --accent:    #00c8ff;
+  --accent-2:  #f5a623;
+  --accent-3:  #ff2040;
+  --accent-bg: rgba(0,200,255,.12);
+  --accent-soft: rgba(0,200,255,.08);
 }
 body.theme-youtuber {
   --accent:    #ff0033;
   --accent-2:  #ec4899;
   --accent-3:  #f97316;
-  --accent-bg: #ffe5ea;
+  --accent-bg: rgba(255,0,51,.12);
   --accent-soft: rgba(255,0,51,.08);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,59 +44,79 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   min-height: 100vh;
-  background:
-    radial-gradient(at 8% 0%,   rgba(37,99,235,.18) 0px, transparent 45%),
-    radial-gradient(at 92% 5%,  rgba(139,92,246,.16) 0px, transparent 45%),
-    radial-gradient(at 50% 100%, rgba(236,72,153,.10) 0px, transparent 55%),
-    radial-gradient(at 0% 100%, rgba(34,197,94,.08) 0px, transparent 50%),
-    #eaeef5;
+  background: #040b18;
   background-attachment: fixed;
   transition: background .35s;
+  position: relative;
 }
-body.theme-youtuber {
-  background:
-    radial-gradient(at 8% 0%,   rgba(255,0,51,.18) 0px, transparent 45%),
-    radial-gradient(at 92% 5%,  rgba(249,115,22,.16) 0px, transparent 45%),
-    radial-gradient(at 50% 100%, rgba(236,72,153,.12) 0px, transparent 55%),
-    radial-gradient(at 0% 100%, rgba(139,92,246,.08) 0px, transparent 50%),
-    #f5edf0;
-  background-attachment: fixed;
+/* Hex-grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='%2300c8ff' stroke-width='0.4' opacity='0.12'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='%2300c8ff' stroke-width='0.4' opacity='0.12'/%3E%3C/svg%3E");
+  background-size: 56px 100px;
 }
+/* Scan-line animation */
+body::after {
+  content: '';
+  position: fixed;
+  left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0,200,255,.3) 40%, rgba(0,200,255,.55) 50%, rgba(0,200,255,.3) 60%, transparent 100%);
+  animation: scan 9s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+@keyframes scan {
+  0%   { top: -4px; opacity: 0; }
+  3%   { opacity: 1; }
+  97%  { opacity: .35; }
+  100% { top: 100vh; opacity: 0; }
+}
+body > * { position: relative; z-index: 2; }
 
 /* ── Hero ── */
-.hero { background: linear-gradient(135deg, var(--surface) 0%, var(--accent-bg) 110%); border-bottom: 1px solid var(--border); padding: 14px 28px; position: relative; z-index: 100; backdrop-filter: blur(6px); }
-.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 50%, var(--accent-3) 100%); transition: background .25s; }
+.hero { background: linear-gradient(135deg, rgba(4,11,24,.97) 0%, rgba(0,30,60,.90) 100%); border-bottom: 1px solid var(--border); padding: 14px 28px; position: relative; z-index: 100; backdrop-filter: blur(8px); }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #00c8ff 0%, #f5a623 50%, #ff2040 100%); }
 .hero-inner { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; gap: 16px; min-height: 56px; }
 .hero-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
 .hero-text { min-width: 0; }
-.hero-greeting { font-size: 1.25rem; font-weight: 800; color: var(--text); line-height: 1.2; }
-.hero-sub { font-size: .88rem; color: var(--muted); margin-top: 2px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.hero-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-size: .75rem; color: var(--muted); flex-shrink: 0; }
+.hero-greeting { font-size: 1.25rem; font-weight: 800; color: #ffffff; line-height: 1.2; letter-spacing: .08em; }
+.hero-full-form { font-size: .68rem; color: var(--arc); letter-spacing: .14em; text-transform: uppercase; margin-top: 1px; font-weight: 500; opacity: .85; }
+.hero-sub { font-size: .88rem; color: var(--muted); margin-top: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.hero-right { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; font-size: .75rem; color: var(--muted); flex-shrink: 0; }
+.system-status { display: inline-flex; align-items: center; gap: 5px; font-size: .68rem; font-weight: 700; letter-spacing: .1em; color: #00e87a; text-transform: uppercase; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #00e87a; box-shadow: 0 0 8px #00e87a; animation: pulse-dot 2s ease-in-out infinite; flex-shrink: 0; }
+@keyframes pulse-dot { 0%,100%{box-shadow:0 0 6px #00e87a;opacity:1} 50%{box-shadow:0 0 16px #00e87a;opacity:.65} }
 
 /* ── Persona picker ── */
 .persona-wrap { position: relative; display: inline-block; }
-.persona-trigger { display: inline-flex; align-items: center; gap: 3px; cursor: pointer; color: var(--accent); font-weight: 700; font-size: .9rem; border-bottom: 2px dashed var(--accent); padding-bottom: 1px; user-select: none; background: none; border-top: none; border-left: none; border-right: none; transition: color .25s, border-color .25s; }
+.persona-trigger { display: inline-flex; align-items: center; gap: 3px; cursor: pointer; color: var(--arc); font-weight: 700; font-size: .9rem; border-bottom: 2px dashed var(--arc); padding-bottom: 1px; user-select: none; background: none; border-top: none; border-left: none; border-right: none; transition: color .25s, border-color .25s; }
 .persona-trigger .arrow { font-size: .7rem; transition: transform .2s; display: inline-block; }
 .persona-trigger.open .arrow { transform: rotate(180deg); }
-.persona-dropdown { position: absolute; top: calc(100% + 10px); left: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 32px rgba(31,35,40,.12); min-width: 170px; z-index: 300; overflow: hidden; display: none; }
+.persona-dropdown { position: absolute; top: calc(100% + 10px); left: 0; background: rgba(6,16,40,.97); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,.5), 0 0 20px rgba(0,200,255,.08); min-width: 170px; z-index: 300; overflow: hidden; display: none; backdrop-filter: blur(12px); }
 .persona-dropdown.open { display: block; }
 .persona-opt { display: flex; align-items: center; gap: 10px; padding: 11px 16px; font-size: .9rem; cursor: pointer; color: var(--text); transition: background .1s; }
-.persona-opt:hover { background: var(--bg); }
-.persona-opt .check { color: var(--accent); opacity: 0; font-size: .85rem; }
+.persona-opt:hover { background: rgba(0,200,255,.07); }
+.persona-opt .check { color: var(--arc); opacity: 0; font-size: .85rem; }
 .persona-opt.active .check { opacity: 1; }
 
 /* ── Cards ── */
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; box-shadow: 0 4px 16px -8px rgba(31,35,40,.10), 0 1px 2px rgba(31,35,40,.04); position: relative; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; position: relative; backdrop-filter: blur(8px); transition: box-shadow .3s, border-color .3s; }
+.card:hover { border-color: rgba(0,200,255,.35); box-shadow: 0 0 30px rgba(0,200,255,.09); }
 .card-sm { padding: 16px; }
-.card-title { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+.card-title { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
 
 /* Colored top stripes on the 4 metric cards */
 .grid-top .card { padding-top: 18px; }
-.grid-top .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 14px 14px 0 0; }
-.grid-top .card:nth-child(1)::before { background: linear-gradient(90deg, #2563eb, #6366f1); }
-.grid-top .card:nth-child(2)::before { background: linear-gradient(90deg, #1a7f37, #22c55e); }
-.grid-top .card:nth-child(3)::before { background: linear-gradient(90deg, #8b5cf6, #ec4899); }
-.grid-top .card:nth-child(4)::before { background: linear-gradient(90deg, #f97316, #f59e0b); }
+.grid-top .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; border-radius: 14px 14px 0 0; }
+.grid-top .card:nth-child(1)::before { background: linear-gradient(90deg, #00c8ff, #0969da); }
+.grid-top .card:nth-child(2)::before { background: linear-gradient(90deg, #00e87a, #1a7f37); }
+.grid-top .card:nth-child(3)::before { background: linear-gradient(90deg, #8250df, #ec4899); }
+.grid-top .card:nth-child(4)::before { background: linear-gradient(90deg, #f5a623, #ff6920); }
 
 /* ── Metrics ── */
 .metric { font-size: 1.8rem; font-weight: 700; line-height: 1.1; }
@@ -104,61 +126,61 @@ body.theme-youtuber {
 .flat { color: var(--muted); }
 
 /* ── Badges ── */
-.badge-paper { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(9,105,218,.3); border-radius: 6px; padding: 3px 10px; font-size: .75rem; font-weight: 600; }
-.badge-live  { background: var(--green-bg); color: var(--green); border: 1px solid rgba(26,127,55,.3); border-radius: 6px; padding: 3px 10px; font-size: .75rem; font-weight: 600; }
+.badge-paper { background: var(--blue-bg); color: var(--blue); border: 1px solid rgba(0,200,255,.3); border-radius: 6px; padding: 3px 10px; font-size: .75rem; font-weight: 600; }
+.badge-live  { background: var(--green-bg); color: var(--green); border: 1px solid rgba(0,232,122,.3); border-radius: 6px; padding: 3px 10px; font-size: .75rem; font-weight: 600; }
 
 /* ── Dots ── */
 .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
-.dot-green  { background: var(--green); }
+.dot-green  { background: var(--green); box-shadow: 0 0 6px var(--green); }
 .dot-yellow { background: var(--yellow); }
 .dot-red    { background: var(--red); }
 .dot-gray   { background: var(--muted); }
 
 /* ── Halt banner ── */
-.halt-banner { background: var(--red-bg); border: 1px solid rgba(207,34,46,.3); border-radius: 10px; padding: 12px 18px; margin-bottom: 20px; display: none; align-items: center; gap: 8px; }
+.halt-banner { background: rgba(255,32,64,.12); border: 1px solid rgba(255,32,64,.4); border-radius: 10px; padding: 12px 18px; margin-bottom: 20px; display: none; align-items: center; gap: 8px; }
 
 /* ── Strategy cards ── */
-.strat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; box-shadow: 0 4px 12px -8px rgba(31,35,40,.12), 0 1px 2px rgba(31,35,40,.04); position: relative; transition: transform .15s, box-shadow .15s; }
-.strat-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -10px rgba(31,35,40,.18); }
-.strat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--strat-color, var(--accent)); border-radius: 12px 12px 0 0; }
-.strat-card::after { content: ''; position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: radial-gradient(circle at top right, var(--strat-color, var(--accent)) 0%, transparent 60%); opacity: .08; pointer-events: none; border-top-right-radius: 12px; }
-.strat-name { font-size: .8rem; font-weight: 600; margin-bottom: 2px; }
+.strat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; position: relative; transition: transform .15s, box-shadow .2s, border-color .2s; backdrop-filter: blur(8px); }
+.strat-card:hover { transform: translateY(-2px); border-color: var(--strat-color, var(--arc)); box-shadow: 0 0 22px rgba(0,200,255,.10), 0 8px 24px -8px rgba(0,0,0,.5); }
+.strat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--strat-color, var(--arc)); border-radius: 12px 12px 0 0; }
+.strat-card::after { content: ''; position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: radial-gradient(circle at top right, var(--strat-color, var(--arc)) 0%, transparent 60%); opacity: .07; pointer-events: none; border-top-right-radius: 12px; }
+.strat-name { font-size: .8rem; font-weight: 600; margin-bottom: 2px; color: var(--text); }
 .strat-alloc { font-size: .68rem; color: var(--muted); }
 .strat-pnl { font-size: 1.2rem; font-weight: 700; margin: 6px 0; }
 .strat-stats { font-size: .72rem; color: var(--muted); }
-.strat-bar-wrap { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; }
+.strat-bar-wrap { height: 4px; background: rgba(255,255,255,.07); border-radius: 2px; margin-top: 8px; }
 .strat-bar { height: 100%; border-radius: 2px; }
 .win-bar-wrap { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
-.win-bar-bg { flex: 1; height: 3px; background: var(--border); border-radius: 2px; }
+.win-bar-bg { flex: 1; height: 3px; background: rgba(255,255,255,.07); border-radius: 2px; }
 .win-bar-fill { height: 100%; border-radius: 2px; }
 
-/* ── Page-level help tooltip (next to greeting) ── */
-.page-tip { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: .7rem; font-weight: 700; margin-left: 8px; cursor: default; user-select: none; vertical-align: middle; position: relative; transition: background .15s; }
+/* ── Page-level help tooltip ── */
+.page-tip { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-soft); color: var(--arc); font-size: .7rem; font-weight: 700; margin-left: 8px; cursor: default; user-select: none; vertical-align: middle; position: relative; transition: background .15s; }
 .page-tip:hover { background: var(--accent-bg); }
-.page-tip::after { content: attr(data-tip); position: absolute; top: calc(100% + 10px); left: 0; background: var(--text); color: var(--surface); border-radius: 10px; padding: 12px 16px; font-size: .8rem; line-height: 1.5; width: 300px; text-align: left; white-space: normal; opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 500; box-shadow: 0 12px 32px rgba(0,0,0,.18); font-weight: 400; }
-.page-tip::before { content: ''; position: absolute; top: calc(100% + 4px); left: 6px; border: 6px solid transparent; border-bottom-color: var(--text); opacity: 0; transition: opacity .15s; pointer-events: none; }
+.page-tip::after { content: attr(data-tip); position: absolute; top: calc(100% + 10px); left: 0; background: rgba(6,16,40,.97); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; font-size: .8rem; line-height: 1.5; width: 300px; text-align: left; white-space: normal; opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 500; box-shadow: 0 12px 32px rgba(0,0,0,.5); font-weight: 400; }
+.page-tip::before { content: ''; position: absolute; top: calc(100% + 4px); left: 6px; border: 6px solid transparent; border-bottom-color: var(--border); opacity: 0; transition: opacity .15s; pointer-events: none; }
 .page-tip:hover::after, .page-tip:hover::before { opacity: 1; }
 
 /* ── Strategy tooltip ── */
-.strat-info-icon { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%; background: var(--border); color: var(--muted); font-size: .6rem; font-weight: 700; cursor: default; user-select: none; flex-shrink: 0; }
-.strat-info-icon::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--text); color: var(--surface); border-radius: 8px; padding: 10px 14px; font-size: .75rem; line-height: 1.5; width: 240px; text-align: left; white-space: normal; opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 400; box-shadow: 0 8px 24px rgba(0,0,0,.15); font-weight: 400; }
+.strat-info-icon { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%; background: rgba(0,200,255,.15); color: var(--arc); font-size: .6rem; font-weight: 700; cursor: default; user-select: none; flex-shrink: 0; }
+.strat-info-icon::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(6,16,40,.97); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: .75rem; line-height: 1.5; width: 240px; text-align: left; white-space: normal; opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 400; box-shadow: 0 8px 24px rgba(0,0,0,.4); font-weight: 400; }
 .strat-info-icon:hover::after { opacity: 1; }
 
 /* ── Tables ── */
 .dash-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
 .dash-table th { color: var(--muted); font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid var(--border); padding: 6px 10px; text-align: left; font-weight: 600; }
-.dash-table td { border-bottom: 1px solid rgba(208,215,222,.6); padding: 8px 10px; vertical-align: middle; }
+.dash-table td { border-bottom: 1px solid rgba(0,200,255,.08); padding: 8px 10px; vertical-align: middle; }
 .dash-table tr:last-child td { border-bottom: none; }
 
 /* ── Positions ── */
-.pos-pill { display: flex; align-items: center; justify-content: space-between; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
-.pos-ticker { font-family: monospace; font-size: .9rem; font-weight: 700; }
+.pos-pill { display: flex; align-items: center; justify-content: space-between; background: rgba(0,200,255,.04); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
+.pos-ticker { font-family: monospace; font-size: .9rem; font-weight: 700; color: var(--arc); }
 .pos-strat { font-size: .68rem; color: var(--muted); }
 
 /* ── Misc ── */
 .mono { font-family: ui-monospace, "Cascadia Code", monospace; }
 .section-header { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; font-weight: 600; }
-#refresh-ring { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--border); border-top-color: var(--blue); border-radius: 50%; animation: spin 1s linear infinite; opacity: 0; transition: opacity .3s; }
+#refresh-ring { display: inline-block; width: 12px; height: 12px; border: 2px solid rgba(0,200,255,.18); border-top-color: var(--arc); border-radius: 50%; animation: spin 1s linear infinite; opacity: 0; transition: opacity .3s; }
 #refresh-ring.active { opacity: 1; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -173,36 +195,36 @@ body.theme-youtuber {
 /* ── YouTube page ── */
 .yt-hero { text-align: center; padding: 40px 24px 28px; }
 .yt-icon { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: #ff0000; border-radius: 18px; margin-bottom: 16px; }
-.yt-hero h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+.yt-hero h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
 .yt-hero p { color: var(--muted); max-width: 420px; margin: 0 auto; font-size: .9rem; }
 .yt-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 24px; }
 .yt-coming { border: 2px dashed var(--border); border-radius: 12px; padding: 56px 24px; text-align: center; color: var(--muted); }
 
 /* ── Macro blackout banner ── */
-.macro-banner { background: #fff8c5; border: 1px solid rgba(154,103,0,.4); border-radius: 10px; padding: 12px 18px; margin-bottom: 16px; display: none; align-items: center; gap: 8px; flex-wrap: wrap; }
+.macro-banner { background: rgba(245,166,35,.10); border: 1px solid rgba(245,166,35,.4); border-radius: 10px; padding: 12px 18px; margin-bottom: 16px; display: none; align-items: center; gap: 8px; flex-wrap: wrap; }
 
-/* ── Sentiment row (Fear & Greed + Macro Events) ── */
+/* ── Sentiment row ── */
 .grid-sentiment { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; margin-bottom: 20px; }
 
 /* ── Fear & Greed gauge ── */
 .fg-container { text-align: center; padding-top: 4px; }
 
 /* ── Macro event rows ── */
-.event-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(208,215,222,.6); }
+.event-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(0,200,255,.08); }
 .event-row:last-child { border-bottom: none; }
 .event-badge { font-size: .68rem; font-weight: 700; padding: 2px 9px; border-radius: 10px; white-space: nowrap; }
-.event-badge-today { background: var(--red-bg); color: var(--red); }
-.event-badge-soon  { background: #fff8c5; color: var(--yellow); }
-.event-badge-far   { background: var(--bg); color: var(--muted); }
+.event-badge-today { background: rgba(255,32,64,.15); color: var(--red); }
+.event-badge-soon  { background: rgba(245,166,35,.15); color: var(--yellow); }
+.event-badge-far   { background: rgba(0,200,255,.06); color: var(--muted); }
 
 /* ── Backtest chart ── */
 .bt-section { margin-bottom: 20px; }
 .bt-period-btns { display: flex; gap: 6px; }
 .bt-btn { font-size: .72rem; padding: 4px 11px; border-radius: 6px; border: 1px solid var(--border); background: transparent; cursor: pointer; color: var(--muted); transition: all .15s; }
-.bt-btn.active, .bt-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.bt-btn.active, .bt-btn:hover { background: var(--arc); color: #000; border-color: var(--arc); font-weight: 600; }
 .bt-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .bt-legend-item { display: flex; align-items: center; gap: 6px; font-size: .75rem; color: var(--text); cursor: pointer; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); transition: opacity .15s; user-select: none; }
-.bt-legend-item.hidden { opacity: .4; }
+.bt-legend-item.hidden { opacity: .35; }
 .bt-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 .bt-ret { font-size: .7rem; color: var(--muted); margin-left: 2px; }
 
@@ -244,18 +266,25 @@ body.theme-youtuber {
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <!-- Jarvis avatar (DiceBear notionists, illustrated person — swaps per persona) -->
-      <img id="jarvis-logo"
-           src="https://api.dicebear.com/9.x/notionists/svg?seed=jarvis-trader&backgroundColor=ddf4ff&radius=50"
-           width="48" height="48" alt="Jarvis"
-           style="border-radius:50%;flex-shrink:0;box-shadow:0 4px 12px -4px var(--accent-soft),0 0 0 2px var(--accent);background:var(--accent-bg);transition:box-shadow .25s, border-color .25s">
-      <!-- Logo URL config used by JS to swap on persona change -->
-      <script id="logo-cfg" type="application/json">{
-        "trader":"https://api.dicebear.com/9.x/notionists/svg?seed=jarvis-trader&backgroundColor=ddf4ff&radius=50",
-        "youtuber":"https://api.dicebear.com/9.x/notionists/svg?seed=jarvis-youtuber&backgroundColor=ffe5ea&radius=50"
-      }</script>
+      <!-- Arc Reactor logo (original SVG — no Marvel IP) -->
+      <svg id="jarvis-logo" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;filter:drop-shadow(0 0 10px rgba(0,200,255,.65))">
+        <circle cx="24" cy="24" r="22" fill="none" stroke="#00c8ff" stroke-width="1.5" opacity="0.55"/>
+        <circle cx="24" cy="24" r="16" fill="none" stroke="#00c8ff" stroke-width="1" opacity="0.45"/>
+        <polygon points="24,14 31.2,18.5 31.2,27.5 24,32 16.8,27.5 16.8,18.5" fill="rgba(0,200,255,.07)" stroke="#00c8ff" stroke-width="1" opacity="0.75"/>
+        <circle cx="24" cy="24" r="8" fill="rgba(0,200,255,.14)" stroke="#00c8ff" stroke-width="1.5" opacity="0.9"/>
+        <circle cx="24" cy="24" r="4" fill="#00c8ff" opacity="0.95"/>
+        <line x1="24" y1="2"    x2="24"   y2="14"   stroke="#00c8ff" stroke-width="1.5" opacity="0.55"/>
+        <line x1="24" y1="34"   x2="24"   y2="46"   stroke="#00c8ff" stroke-width="1.5" opacity="0.55"/>
+        <line x1="10.1" y1="16" x2="16.8" y2="18.5" stroke="#00c8ff" stroke-width="1.5" opacity="0.55"/>
+        <line x1="37.9" y1="32" x2="31.2" y2="29.5" stroke="#00c8ff" stroke-width="1.5" opacity="0.55"/>
+        <line x1="10.1" y1="32" x2="16.8" y2="29.5" stroke="#00c8ff" stroke-width="1.5" opacity="0.55"/>
+        <line x1="37.9" y1="16" x2="31.2" y2="18.5" stroke="#00c8ff" stroke-width="1.5" opacity="0.55"/>
+      </svg>
+      <!-- Preserve logo-cfg for JS persona swap hook (no-op with SVG logo) -->
+      <script id="logo-cfg" type="application/json">{"trader":"","youtuber":""}</script>
       <div class="hero-text">
-        <div class="hero-greeting">Hi I'm Jarvis.<span class="page-tip" id="page-tip" data-tip="Live performance dashboard for an autonomous AI assistant. All amounts are shown as % of starting capital — actual dollar values, positions, and entry rules are kept private.">?</span></div>
+        <div class="hero-greeting">J.A.R.V.I.S.<span class="page-tip" id="page-tip" data-tip="Live performance dashboard for an autonomous AI assistant. All amounts are shown as % of starting capital — actual dollar values, positions, and entry rules are kept private.">?</span></div>
+        <div class="hero-full-form">Just A Rather Very Intelligent System</div>
         <div class="hero-sub">
           Your personal
           <div class="persona-wrap">
@@ -276,9 +305,7 @@ body.theme-youtuber {
       </div>
     </div>
     <div class="hero-right" id="hero-right">
-      <a href="backtest.html" style="font-size:.75rem;color:var(--accent);font-weight:600;text-decoration:none;display:flex;align-items:center;gap:4px;margin-bottom:4px">
-        <i class="bi bi-graph-up-arrow"></i> Strategy Backtest →
-      </a>
+      <div class="system-status"><span class="status-dot"></span>SYSTEM ACTIVE</div>
       <span id="last-updated" style="font-variant-numeric:tabular-nums">Loading…</span>
     </div>
   </div>
@@ -295,10 +322,10 @@ body.theme-youtuber {
   </div>
 
   <div class="macro-banner" id="macro-banner">
-    <i class="bi bi-calendar-event-fill" style="color:#9a6700;flex-shrink:0"></i>
-    <strong style="color:#9a6700">MACRO EVENT TODAY</strong>
+    <i class="bi bi-calendar-event-fill" style="color:var(--yellow);flex-shrink:0"></i>
+    <strong style="color:var(--yellow)">MACRO EVENT TODAY</strong>
     <span id="macro-reason" style="color:var(--muted);margin-left:4px"></span>
-    <span style="font-size:.72rem;color:#9a6700;margin-left:auto;font-weight:600">⚡ Position sizes at 30%</span>
+    <span style="font-size:.72rem;color:var(--yellow);margin-left:auto;font-weight:600">⚡ Position sizes at 30%</span>
   </div>
 
   <div class="grid-top">
@@ -329,8 +356,8 @@ body.theme-youtuber {
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
         <div style="font-size:.85rem;font-weight:600">Equity Curve</div>
         <div style="font-size:.72rem;color:var(--muted)">
-          <span style="color:var(--blue)">▬</span> Jarvis &nbsp;
-          <span style="color:var(--yellow)">▬</span> S&amp;P 500
+          <span style="color:#00c8ff">▬</span> Jarvis &nbsp;
+          <span style="color:#f5a623">▬</span> S&amp;P 500
         </div>
       </div>
       <canvas id="equity-chart" height="90"></canvas>
@@ -347,7 +374,7 @@ body.theme-youtuber {
 
   <div class="section-header" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px">
     <span>Strategy Breakdown</span>
-    <a href="backtest.html" style="font-size:.76rem;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:var(--accent-soft);border:1px solid rgba(37,99,235,.2);padding:5px 13px;border-radius:8px;transition:background .15s">
+    <a href="backtest.html" style="font-size:.76rem;font-weight:600;color:var(--arc);text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:var(--accent-soft);border:1px solid var(--border);padding:5px 13px;border-radius:8px;transition:background .15s">
       <i class="bi bi-graph-up-arrow"></i> 1-year backtest →
     </a>
   </div>
@@ -477,11 +504,11 @@ body.theme-youtuber {
 const DATA_URL = 'dashboard-data.json';
 const REFRESH_SECS = 60;
 const STRAT_COLORS = {
-  gap_go:   '#0969da',
-  momentum: '#1a7f37',
-  mean_rev: '#9a6700',
+  gap_go:   '#00c8ff',
+  momentum: '#f5a623',
+  mean_rev: '#00e87a',
   congress: '#8250df',
-  news:     '#bc4c00',
+  news:     '#ff2040',
 };
 const STRAT_TIPS = {
   gap_go:   'Captures pre-market gap continuations through the open.',
@@ -591,19 +618,19 @@ function renderEquityChart(d) {
   ctx.style.display='block'; nh.style.display='none';
   const spy = d.spy_benchmark || {};
   const datasets = [
-    {label:'Jarvis',data:h.map(x=>x.index),borderColor:'#0969da',backgroundColor:'rgba(9,105,218,.06)',borderWidth:2,tension:.3,pointRadius:3,fill:true},
+    {label:'Jarvis',data:h.map(x=>x.index),borderColor:'#00c8ff',backgroundColor:'rgba(0,200,255,.06)',borderWidth:2,tension:.3,pointRadius:3,fill:true},
   ];
   if (spy.start_date) {
     const spyRate = (spy.return_pct||0)/100, n = h.length;
     const spyLine = h.map((_,i) => +(100*(1+spyRate*(i+1)/n)).toFixed(2));
-    datasets.push({label:'S&P 500',data:spyLine,borderColor:'#9a6700',backgroundColor:'transparent',borderWidth:1.5,borderDash:[4,3],tension:.3,pointRadius:0});
+    datasets.push({label:'S&P 500',data:spyLine,borderColor:'#f5a623',backgroundColor:'transparent',borderWidth:1.5,borderDash:[4,3],tension:.3,pointRadius:0});
   }
   if (charts.equity) charts.equity.destroy();
   charts.equity = new Chart(ctx, { type:'line', data:{ labels:h.map(x=>x.date), datasets },
     options:{ responsive:true, maintainAspectRatio:true,
     plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false,callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}`}}},
-    scales:{x:{grid:{color:'rgba(208,215,222,.8)'},ticks:{color:'#656d76',font:{size:10}}},
-            y:{grid:{color:'rgba(208,215,222,.8)'},ticks:{color:'#656d76',font:{size:10},callback:v=>v.toFixed(0)}}} }});
+    scales:{x:{grid:{color:'rgba(0,200,255,.07)'},ticks:{color:'#7b93af',font:{size:10}}},
+            y:{grid:{color:'rgba(0,200,255,.07)'},ticks:{color:'#7b93af',font:{size:10},callback:v=>v.toFixed(0)}}} }});
 }
 
 function renderStrategyChart(d) {
@@ -615,8 +642,8 @@ function renderStrategyChart(d) {
   charts.strategy = new Chart(ctx, { type:'bar', data:{ labels, datasets:[{data:pnls,backgroundColor:colors.map(c=>c+'22'),borderColor:colors,borderWidth:1.5,borderRadius:6}] },
     options:{ indexAxis:'y', responsive:true, maintainAspectRatio:true,
       plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtPct(c.parsed.x)}`}}},
-      scales:{x:{grid:{color:'rgba(208,215,222,.8)'},ticks:{color:'#656d76',font:{size:10},callback:v=>v.toFixed(2)+'%'}},
-              y:{grid:{display:false},ticks:{color:'#656d76',font:{size:11}}}} }});
+      scales:{x:{grid:{color:'rgba(0,200,255,.07)'},ticks:{color:'#7b93af',font:{size:10},callback:v=>v.toFixed(2)+'%'}},
+              y:{grid:{display:false},ticks:{color:'#7b93af',font:{size:11}}}} }});
 }
 
 function renderStrategyCards(d) {
@@ -681,7 +708,7 @@ function renderDataSources(d) {
   document.getElementById('data-sources').innerHTML=Object.entries(map).map(([k,m])=>{
     const s=src[k]||{};
     const dc=s.status==='fresh'?'dot-green':s.status==='warning'?'dot-yellow':s.status==='missing'?'dot-gray':'dot-red';
-    return `<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(208,215,222,.6)">
+    return `<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(0,200,255,.08)">
       <span class="dot ${dc}"></span><span style="flex:1;font-size:.82rem">${m.label}</span>
       <span style="font-size:.75rem;color:var(--muted)">${s.age||'—'}${s.count!==undefined?' · '+s.count+' records':''}</span></div>`;
   }).join('');
@@ -938,7 +965,7 @@ function renderBtChart() {
         x: {
           ticks: {
             maxTicksLimit: 8,
-            color: '#656d76',
+            color: '#7b93af',
             font: { size: 10 },
             callback: (_, i, all) => labels[i] ? labels[i].slice(5) : '',
           },
@@ -946,11 +973,11 @@ function renderBtChart() {
         },
         y: {
           ticks: {
-            color: '#656d76',
+            color: '#7b93af',
             font: { size: 10 },
             callback: v => (v >= 100 ? '+' : '') + (v - 100).toFixed(0) + '%',
           },
-          grid: { color: 'rgba(208,215,222,.4)' },
+          grid: { color: 'rgba(0,200,255,.07)' },
         },
       },
     },
