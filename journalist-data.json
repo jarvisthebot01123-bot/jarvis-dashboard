@@ -1,8 +1,33 @@
 {
   "connected": true,
-  "generated_at": "2026-04-26T16:20:00Z",
+  "generated_at": "2026-04-26T16:39:03.031279+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-26T1635Z-AI-hisense-tv-picture-settings",
+      "generated_at": "2026-04-26T16:35:00Z",
+      "category": "AI",
+      "headline": "Expert Recommends Display Setting Adjustments to Improve Picture Quality on Hisense Televisions",
+      "neutral_summary": "Technology outlet ZDNet has published guidance advising owners of Hisense television sets to adjust several expert settings beyond the manufacturer's default configuration in order to achieve a noticeable improvement in picture quality. The article suggests that whilst the sets perform well as delivered, targeted adjustments to specific display menu options can yield meaningful gains for viewers.\n\nAs a single-source advisory piece from a single technology publication, no comparison of perspectives is possible.",
+      "corroborated_facts": [
+        "ZDNet published a guide advising Hisense television owners to adjust specific picture settings beyond the manufacturer's default configuration to improve display quality."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "tech",
+          "characterisation": "Framed as practical consumer advice, presenting targeted display adjustments as straightforward improvements available to Hisense television owners."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "ZDNet"
+      ],
+      "source_urls": [
+        "https://www.zdnet.com/article/best-hisense-tv-settings-to-change-better-picture-quality/"
+      ],
+      "confidence": "low"
+    },
     {
       "id": "2026-04-26T1620Z-WORLD-gunman-trump-correspondents-dinner",
       "generated_at": "2026-04-26T16:20:00Z",
@@ -23,7 +48,11 @@
         }
       ],
       "source_count": 3,
-      "outlets": ["DW News", "BBC Top Stories", "Sky News"],
+      "outlets": [
+        "DW News",
+        "BBC Top Stories",
+        "Sky News"
+      ],
       "source_urls": [
         "https://www.dw.com/en/gunman-was-likely-targeting-trump-and-his-team-says-official/live-76938867?maca=en-rss-en-all-1573-rdf",
         "https://www.bbc.com/news/articles/cr717nglye0o?at_medium=RSS&at_campaign=rss",
@@ -46,8 +75,12 @@
       "disputed_facts": [
         {
           "claim": "The pressure applied to Sir Olly Robbins to clear Lord Mandelson was ordinary and appropriate.",
-          "sources_for": ["BBC Politics"],
-          "sources_against": ["Independent"]
+          "sources_for": [
+            "BBC Politics"
+          ],
+          "sources_against": [
+            "Independent"
+          ]
         }
       ],
       "framings": [
@@ -65,7 +98,11 @@
         }
       ],
       "source_count": 3,
-      "outlets": ["BBC Politics", "Guardian", "Independent"],
+      "outlets": [
+        "BBC Politics",
+        "Guardian",
+        "Independent"
+      ],
       "source_urls": [
         "https://www.bbc.com/news/articles/c705228kpx9o?at_medium=RSS&at_campaign=rss",
         "https://www.theguardian.com/politics/2026/apr/26/keir-starmer-vows-lead-labour-general-election-mandelson-vetting",
@@ -96,7 +133,10 @@
         }
       ],
       "source_count": 2,
-      "outlets": ["The Hindu", "Indian Express"],
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
       "source_urls": [
         "https://www.thehindu.com/news/national/andhra-pradesh/naidu-orders-fuel-supply-ramp-up-amid-crunch-in-andhra-pradesh/article70909419.ece",
         "https://indianexpress.com/article/india/petrol-pump-shut-andhra-cm-naidu-panic-buying-10656900/"
@@ -120,7 +160,9 @@
         }
       ],
       "source_count": 1,
-      "outlets": ["TechCrunch"],
+      "outlets": [
+        "TechCrunch"
+      ],
       "source_urls": [
         "https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/"
       ],
