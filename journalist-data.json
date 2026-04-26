@@ -1,8 +1,31 @@
 {
   "connected": true,
-  "generated_at": "2026-04-26T16:38:54.291752+00:00",
+  "generated_at": "2026-04-26T16:53:39.290708+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-26T1651Z-INDIA-dogs-attacked-karnataka",
+      "generated_at": "2026-04-26T16:51:00Z",
+      "category": "INDIA",
+      "headline": "Two Dogs Attacked in Separate Incidents in Karnataka",
+      "neutral_summary": "The Hindu has reported that two dogs were attacked in separate incidents in Karnataka. No additional details regarding the specific locations, circumstances, or individuals involved were provided in the published report.\n\nWith a single source and no elaborating summary, independent verification of the incidents or any comparison of perspectives is not possible.",
+      "corroborated_facts": [],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "Reported as a factual news item without attribution of broader significance or wider context."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "The Hindu"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/karnataka/two-dogs-attacked-in-separate-incidents/article70909453.ece"
+      ],
+      "confidence": "low"
+    },
     {
       "id": "2026-04-26T1635Z-AI-hisense-tv-picture-settings",
       "generated_at": "2026-04-26T16:35:00Z",
