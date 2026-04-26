@@ -417,7 +417,7 @@ body > * { position: relative; z-index: 2; }
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px">
         <div>
           <div style="font-size:.85rem;font-weight:600">Performance vs S&amp;P 500</div>
-          <div style="font-size:.73rem;color:var(--muted);margin-top:2px">Simulated daily OHLC · last 12 months · index = 100 at period start</div>
+          <div style="font-size:.73rem;color:var(--muted);margin-top:2px">Simulated daily OHLC · last 12 months · $100,000 starting capital per strategy</div>
         </div>
         <div class="bt-period-btns">
           <button class="bt-btn" onclick="setBtPeriod('1M')">1M</button>
@@ -428,7 +428,7 @@ body > * { position: relative; z-index: 2; }
       </div>
       <div class="bt-legend" id="bt-legend"></div>
       <canvas id="bt-canvas" height="110"></canvas>
-      <div style="margin-top:10px;font-size:.71rem;color:var(--muted)">Entry=open · exit=close with stop/target caps · Whale &amp; News use market proxies · Past simulation ≠ future results</div>
+      <div style="margin-top:10px;font-size:.71rem;color:var(--muted)">Daily OHLCV from Yahoo Finance · stop/target caps applied per strategy · monthly rebalance where noted · Past simulation ≠ future results</div>
     </div>
   </div>
 
@@ -438,18 +438,18 @@ body > * { position: relative; z-index: 2; }
 const DATA_URL = 'dashboard-data.json';
 const REFRESH_SECS = 60;
 const STRAT_COLORS = {
-  gap_go:   '#00c8ff',
-  momentum: '#f5a623',
-  mean_rev: '#00e87a',
-  congress: '#8250df',
-  news:     '#ff2040',
+  pead:       '#00c8ff',
+  mom6:       '#f5a623',
+  breakout:   '#00e87a',
+  sector_rot: '#8250df',
+  insider:    '#ff6040',
 };
 const STRAT_TIPS = {
-  gap_go:   'Captures pre-market gap continuations through the open.',
-  momentum: 'Rides intraday trend continuations on confirmed strength.',
-  mean_rev: 'Fades sharp intraday selloffs in fundamentally strong names.',
-  congress: 'Mirrors disclosed positions from public market participants.',
-  news:     'Reacts to high-conviction, time-sensitive news catalysts.',
+  pead:       'Monthly rebalance into top-5 S&P stocks by 3-month trailing return.',
+  mom6:       'Monthly rebalance into top-10 S&P stocks by 6-month trailing return.',
+  breakout:   'Bi-weekly rebalance into top-3 S&P stocks by 21-day trailing return.',
+  sector_rot: 'Monthly rotation into top-3 of 11 SPDR sector ETFs by 60-day return.',
+  insider:    'Pullbacks in high-momentum stocks on quiet volume — smart money accumulation.',
 };
 let charts = {}, lastData = null, lastFetchedTs = null, relTimeTimer = null;
 
@@ -782,17 +782,18 @@ function btCutoffDate(period) {
 function btSeriesData(key, cutoff) {
   const raw = btRawData.strategies[key].data.filter(d => d.date >= cutoff);
   if (!raw.length) return { labels: [], values: [] };
+  // Normalise all series to $100k at the start of the selected period
   const base = raw[0].index;
   return {
     labels: raw.map(d => d.date),
-    values: raw.map(d => Math.round((d.index / base) * 1000) / 10),
+    values: raw.map(d => Math.round((d.index / base) * 100_000)),
   };
 }
 
-function btPeriodReturn(key, cutoff) {
+function btPeriodDollarGain(key, cutoff) {
   const d = btSeriesData(key, cutoff);
   if (!d.values.length) return null;
-  return ((d.values[d.values.length - 1] - 100)).toFixed(1);
+  return d.values[d.values.length - 1] - 100_000;
 }
 
 function renderBtLegend() {
@@ -800,17 +801,17 @@ function renderBtLegend() {
   const cutoff = btCutoffDate(btPeriod);
   const el = document.getElementById('bt-legend');
   el.innerHTML = '';
-  // spy first, then strategies
   const order = ['spy', ...Object.keys(btRawData.strategies).filter(k => k !== 'spy')];
   order.forEach(key => {
     const s = btRawData.strategies[key];
-    const ret = btPeriodReturn(key, cutoff);
-    const sign = ret >= 0 ? '+' : '';
-    const retColor = ret >= 0 ? 'var(--green)' : 'var(--red)';
+    const gain = btPeriodDollarGain(key, cutoff);
+    const gainFmt = gain === null ? '—'
+      : (gain >= 0 ? '+' : '−') + '$' + Math.abs(gain).toLocaleString('en-US', { maximumFractionDigits: 0 });
+    const retColor = gain === null ? 'var(--muted)' : gain >= 0 ? 'var(--green)' : 'var(--red)';
     const item = document.createElement('div');
     item.className = 'bt-legend-item' + (btHidden[key] ? ' hidden' : '');
     item.dataset.key = key;
-    item.innerHTML = `<span class="bt-dot" style="background:${s.color}"></span>${s.name}<span class="bt-ret" style="color:${retColor}">${sign}${ret}%</span>`;
+    item.innerHTML = `<span class="bt-dot" style="background:${s.color}"></span>${s.name}<span class="bt-ret" style="color:${retColor}">${gainFmt}</span>`;
     item.onclick = () => {
       btHidden[key] = !btHidden[key];
       item.classList.toggle('hidden', !!btHidden[key]);
@@ -857,7 +858,12 @@ function renderBtChart() {
         legend: { display: false },
         tooltip: {
           callbacks: {
-            label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y >= 100 ? '+' : ''}${(ctx.parsed.y - 100).toFixed(1)}%`,
+            label: ctx => {
+              const v = ctx.parsed.y;
+              const gain = v - 100_000;
+              const gainStr = (gain >= 0 ? '+' : '−') + '$' + Math.abs(gain).toLocaleString('en-US', { maximumFractionDigits: 0 });
+              return `${ctx.dataset.label}: $${v.toLocaleString('en-US', { maximumFractionDigits: 0 })} (${gainStr})`;
+            }
           }
         }
       },
@@ -867,7 +873,7 @@ function renderBtChart() {
             maxTicksLimit: 8,
             color: '#8a6a6a',
             font: { size: 10 },
-            callback: (_, i, all) => labels[i] ? labels[i].slice(5) : '',
+            callback: (_, i) => labels[i] ? labels[i].slice(5) : '',
           },
           grid: { display: false },
         },
@@ -875,7 +881,7 @@ function renderBtChart() {
           ticks: {
             color: '#8a6a6a',
             font: { size: 10 },
-            callback: v => (v >= 100 ? '+' : '') + (v - 100).toFixed(0) + '%',
+            callback: v => '$' + (v / 1000).toFixed(0) + 'k',
           },
           grid: { color: 'rgba(196,18,48,.07)' },
         },

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T14:01:56.542409Z",
+  "generated_at": "2026-04-26T08:58:28.172612Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -15,75 +15,67 @@
     "start_date": "2026-04-24"
   },
   "strategy_stats": {
-    "gap_go": {
-      "name": "Gap & Go",
+    "pead": {
+      "name": "3M Momentum",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     },
-    "momentum": {
-      "name": "Momentum",
+    "mom6": {
+      "name": "6M Momentum",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     },
-    "mean_rev": {
-      "name": "Mean Reversion",
+    "breakout": {
+      "name": "1M Momentum",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     },
-    "congress": {
-      "name": "Whale",
+    "sector_rot": {
+      "name": "Sector Rotation",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     },
-    "news": {
-      "name": "News Catalyst",
+    "insider": {
+      "name": "Insider Accum.",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
       "pnl_pct": 0.0
     }
   },
-  "equity_curve": [
-    {
-      "date": "2026-04-24",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    }
-  ],
+  "equity_curve": [],
   "open_positions": [],
-  "performance_summary": "Day 2 of paper trading. No trades executed yet. Equity $100,000. SPY +0.0% since start ($710.14 on 2026-04-24). All strategies enabled. Building track record.",
+  "performance_summary": "Swing trading system initialised. 5 momentum strategies. No trades yet. $100k paper account.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "15.6h ago",
+      "age": "34.5h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "15.6h ago",
+      "age": "34.5h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "18.1h ago",
+      "age": "37.0h ago",
       "status": "stale"
     },
     "economic_calendar": {
-      "age": "38.0h ago",
+      "age": "57.0h ago",
       "status": "stale"
     },
     "insider_trades": {
-      "age": "38.0h ago",
+      "age": "57.0h ago",
       "status": "stale",
       "count": 0
     }
@@ -93,16 +85,15 @@
   "macro_blackout_reason": null,
   "upcoming_macro_events": [],
   "last_routine": {
-    "ts": "2026-04-24T21:15Z",
-    "routine": "end_of_day",
-    "daily_pnl": 0.0,
-    "trades": 0
+    "ts": "2026-04-25T17:00Z",
+    "routine": "system_init",
+    "notes": "Rebuilt as swing trading system. 5 momentum strategies."
   },
   "strategies_enabled": {
-    "gap_go": true,
-    "momentum": true,
-    "mean_rev": true,
-    "congress": true,
-    "news": true
+    "pead": true,
+    "mom6": true,
+    "breakout": true,
+    "sector_rot": true,
+    "insider": true
   }
 }

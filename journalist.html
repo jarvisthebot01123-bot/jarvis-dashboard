@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="style.css">
 <style>
-/* Superman / Clark Kent — page-specific theme only */
+/* Superman / Clark Kent — DC tri-color theme */
 :root {
   --bg:         #eef3ff;
   --surface:    #ffffff;
@@ -25,9 +25,14 @@
 body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='%231e40af' stroke-width='0.4' opacity='0.05'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='%23ca8a04' stroke-width='0.3' opacity='0.04'/%3E%3C/svg%3E");
   background-size:56px 100px}
+
+/* ── Cinematic Superman banner ── */
 .page-banner{
   background:url('img/newspaper-journalist.svg') center top / cover no-repeat;
-  padding:36px 32px 32px;position:relative;overflow:hidden;margin-bottom:28px}
+  padding:36px 32px 32px;
+  position:relative;overflow:hidden;
+  margin-bottom:28px;
+}
 .page-banner::before{
   content:'';position:absolute;inset:0;
   background:linear-gradient(135deg,
@@ -35,34 +40,43 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     rgba(30,64,175,.76) 25%,
     rgba(37,99,235,.74) 45%,
     rgba(185,28,28,.76) 70%,
-    rgba(180,120,5,.82) 100%)}
-.page-banner-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;position:relative;z-index:1}
-.page-banner-avatar{width:110px;height:110px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,.35);box-shadow:0 0 40px rgba(255,200,0,.2),0 6px 30px rgba(0,0,0,.3);background:rgba(255,255,255,.15)}
+    rgba(180,120,5,.82) 100%);
+}
+.page-banner-wrap{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;gap:28px;
+  position:relative;z-index:1;
+}
+.page-banner-avatar{
+  width:110px;height:110px;border-radius:50%;
+  overflow:hidden;flex-shrink:0;
+  border:3px solid rgba(255,255,255,.35);
+  box-shadow:0 0 40px rgba(255,200,0,.2),0 6px 30px rgba(0,0,0,.3);
+  background:rgba(255,255,255,.15);
+}
 .page-banner-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center}
-.page-banner-eyebrow{font-size:.63rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:4px}
-.page-banner-title{font-size:2rem;font-weight:900;color:#fff;letter-spacing:.05em;text-transform:uppercase;line-height:1;margin-bottom:6px;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.page-banner-eyebrow{
+  font-size:.63rem;letter-spacing:.25em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);font-weight:700;margin-bottom:4px;
+}
+.page-banner-title{
+  font-size:2rem;font-weight:900;color:#fff;
+  letter-spacing:.05em;text-transform:uppercase;
+  line-height:1;margin-bottom:6px;
+  text-shadow:0 2px 20px rgba(0,0,0,.3);
+}
 .page-banner-sub{font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.5}
 @media(max-width:600px){
   .page-banner{padding:24px 20px}
   .page-banner-wrap{flex-direction:column;text-align:center;gap:14px}
   .page-banner-avatar{width:80px;height:80px}
-  .page-banner-title{font-size:1.6rem}}
-.card:hover{border-color:rgba(29,64,175,.28);box-shadow:0 8px 40px rgba(29,64,175,.1)}
+  .page-banner-title{font-size:1.6rem}
+}
 
-/* Briefing card content */
-.bcard-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-.bcard-region{display:inline-block;padding:.15rem .45rem;border-radius:4px;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.bcard-uk{background:#ddf4ff;color:#0969da}
-.bcard-tn{background:#fff8c5;color:#9a6700}
-.bcard-time{font-size:.72rem;color:var(--muted);margin-left:auto;white-space:nowrap}
-.bcard-headline{font-size:1rem;font-weight:700;line-height:1.45;margin-bottom:10px;color:var(--text)}
-.bcard-body{font-size:.875rem;line-height:1.7;color:var(--text);margin-bottom:12px}
-.bcard-body p{margin:0 0 .6em}
-.bcard-body p:last-child{margin-bottom:0}
-.bcard-sources{font-size:.78rem;color:var(--muted);display:flex;align-items:baseline;gap:.3rem;flex-wrap:wrap;padding-top:10px;border-top:1px solid var(--border)}
-.bcard-sources a{color:var(--arc);text-decoration:none;font-weight:500}
-.bcard-sources a:hover{text-decoration:underline}
-.bcard-sep{color:var(--border)}
+.card:hover{border-color:rgba(29,64,175,.28);box-shadow:0 8px 40px rgba(29,64,175,.1)}
+.headline-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(29,64,175,.07)}
+.headline-row:last-child{border-bottom:none}
+.headline-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
 </style>
 </head>
 <body>
@@ -82,6 +96,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   </div>
 </header>
 
+<!-- Cinematic Superman banner -->
 <div class="page-banner">
   <div class="page-banner-wrap">
     <div class="page-banner-avatar">
@@ -90,126 +105,106 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     <div>
       <div class="page-banner-eyebrow">J.A.R.V.I.S. · Journalist Module</div>
       <div class="page-banner-title">Clark Kent</div>
-      <div class="page-banner-sub">AI editorial intelligence &nbsp;·&nbsp; unbiased political briefings &nbsp;·&nbsp; UK &amp; Tamil Nadu</div>
+      <div class="page-banner-sub">Clark Kent &nbsp;·&nbsp; AI editorial intelligence &nbsp;·&nbsp; breaking news &amp; ticker tracking</div>
     </div>
   </div>
 </div>
 
 <div class="main" style="padding-top:0">
 
-  <div class="grid-3" style="margin-bottom:20px">
+  <div class="grid-3">
     <div class="card card-sm" style="text-align:center">
-      <div class="card-title"><i class="bi bi-flag"></i> UK</div>
-      <div class="metric" id="stat-uk">—</div>
-      <div class="metric-sub">briefings</div>
+      <div class="card-title"><i class="bi bi-rss-fill"></i> Sources</div>
+      <div class="metric" id="sources">8</div>
+      <div class="metric-sub">RSS feeds monitored</div>
     </div>
     <div class="card card-sm" style="text-align:center">
-      <div class="card-title">🇮🇳 Tamil Nadu</div>
-      <div class="metric" id="stat-tn">—</div>
-      <div class="metric-sub">briefings</div>
+      <div class="card-title"><i class="bi bi-lightning-fill"></i> Headlines</div>
+      <div class="metric" id="headlines-count">30</div>
+      <div class="metric-sub">Per refresh cycle</div>
     </div>
     <div class="card card-sm" style="text-align:center">
-      <div class="card-title"><i class="bi bi-clock"></i> Last Run</div>
-      <div class="metric" id="stat-lastrun" style="font-size:1.1rem">—</div>
-      <div class="metric-sub">UTC</div>
+      <div class="card-title"><i class="bi bi-clock-history"></i> Refresh</div>
+      <div class="metric" id="refresh-rate">30m</div>
+      <div class="metric-sub">During market hours</div>
     </div>
   </div>
 
-  <div id="feed">
-    <div class="coming-soon">
-      <i class="bi bi-newspaper"></i>
-      <h3>Awaiting First Briefing</h3>
-      <p>The routine will populate this feed after its first run.</p>
+  <div class="connect-block">
+    <h3><i class="bi bi-plug-fill" style="color:var(--arc);margin-right:6px"></i>How to connect your news feed</h3>
+    <p>Push <code style="background:rgba(29,64,175,.08);padding:1px 6px;border-radius:4px;font-size:.85rem;color:var(--arc)">journalist-data.json</code> to <strong>jarvis-dashboard</strong> from your news collector. Auto-refreshes every 60 seconds.</p>
+    <div class="code-block">
+# Your news collector pushes this JSON:
+{
+  "generated_at": "ISO timestamp",
+  "connected": true,
+  "stats": { "articles_today": 142, "breaking_alerts": 3, "tickers_tracked": 28 },
+  "headlines": [
+    {
+      "title": "Fed holds rates steady...",
+      "source": "Reuters",
+      "published": "2026-04-25T10:30Z",
+      "tickers": ["SPY", "TLT"],
+      "impact": "high"
+    }
+  ]
+}</div>
+  </div>
+
+  <div class="card" id="headlines-card" style="margin-bottom:24px;display:none">
+    <div style="font-size:.85rem;font-weight:700;margin-bottom:14px;letter-spacing:.04em">
+      <i class="bi bi-lightning-fill" style="color:var(--arc);margin-right:6px"></i>Live Headlines
     </div>
+    <div id="headlines-body"></div>
+  </div>
+
+  <div class="coming-soon" id="coming-soon">
+    <i class="bi bi-newspaper"></i>
+    <h3>Awaiting Connection</h3>
+    <p>Push <code style="background:rgba(29,64,175,.07);padding:1px 6px;border-radius:4px;color:var(--arc)">journalist-data.json</code> to jarvis-dashboard to activate live headlines.</p>
   </div>
 
 </div>
 
 <script>
-(function () {
-  function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-
-  function fmtDate(iso){
-    if(!iso)return'';
-    try{return new Date(iso).toLocaleString('en-GB',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZoneName:'short'});}
-    catch(e){return iso;}
+const IMPACT_COLOR = { high:'#dc2626', medium:'#f59e0b', low:'#6b82a8' };
+function timeAgo(iso){const m=Math.floor((Date.now()-new Date(iso))/60000);return m<1?'just now':m<60?m+'m ago':Math.floor(m/60)+'h ago'}
+function setNavStatus(active, iso){
+  const el=document.getElementById('nav-status');
+  if(active){
+    const t=iso?timeAgo(iso):'';
+    el.className='pnav-status active';
+    el.innerHTML=`<span class="pnav-status-dot"></span>System Active<span class="pnav-status-time">&nbsp;·&nbsp;${t}</span>`;
+  } else {
+    el.className='pnav-status inactive';
+    el.innerHTML='<span class="pnav-status-dot"></span>Not Configured';
   }
-
-  function timeAgo(iso){
-    var m=Math.floor((Date.now()-new Date(iso))/60000);
-    return m<1?'just now':m<60?m+'m ago':m<1440?Math.floor(m/60)+'h ago':Math.floor(m/1440)+'d ago';
-  }
-
-  function setNavStatus(active,iso){
-    var el=document.getElementById('nav-status');
-    if(active){
-      var t=iso?timeAgo(iso):'';
-      el.className='pnav-status active';
-      el.innerHTML='<span class="pnav-status-dot"></span>Live<span class="pnav-status-time">&nbsp;&middot;&nbsp;'+t+'</span>';
-    } else {
-      el.className='pnav-status inactive';
-      el.innerHTML='<span class="pnav-status-dot"></span>Not Configured';
+}
+async function load() {
+  try {
+    const r = await fetch('journalist-data.json?t='+Date.now());
+    if (!r.ok) { setNavStatus(false); return; }
+    const d = await r.json();
+    setNavStatus(d.connected === true, d.generated_at);
+    if (d.sources_monitored) document.getElementById('sources').textContent = d.sources_monitored;
+    if (d.headlines_per_refresh) document.getElementById('headlines-count').textContent = d.headlines_per_refresh;
+    if (d.refresh_interval_min) document.getElementById('refresh-rate').textContent = d.refresh_interval_min+'m';
+    if (d.connected && d.headlines && d.headlines.length) {
+      document.getElementById('coming-soon').style.display = 'none';
+      document.getElementById('headlines-card').style.display = 'block';
+      document.getElementById('headlines-body').innerHTML = d.headlines.slice(0,10).map(h => `
+        <div class="headline-row">
+          <div class="headline-dot" style="background:${IMPACT_COLOR[h.impact]||'#6b82a8'}"></div>
+          <div>
+            <div style="font-size:.85rem;color:var(--text);line-height:1.45">${h.title}</div>
+            <div style="font-size:.72rem;color:var(--muted);margin-top:3px">${h.source||''} ${h.tickers&&h.tickers.length ? '· '+h.tickers.join(', ') : ''}</div>
+          </div>
+        </div>`).join('');
     }
-  }
-
-  function renderSources(outlets, urls){
-    var pairs=[];
-    (outlets||[]).slice(0,6).forEach(function(name,i){
-      var url=(urls||[])[i];
-      pairs.push(url
-        ? '<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(name)+'</a>'
-        : '<span>'+esc(name)+'</span>');
-    });
-    if(!pairs.length)return'';
-    return '<div class="bcard-sources"><i class="bi bi-link-45deg"></i>&nbsp;'
-      +pairs.join('<span class="bcard-sep"> &middot; </span>')
-      +'</div>';
-  }
-
-  function renderCard(b){
-    var regionCls=b.region==='UK'?'bcard-uk':'bcard-tn';
-    var paras=(b.neutral_summary||'').split(/\n\n+/).map(function(p){
-      return p.trim()?'<p>'+esc(p.trim())+'</p>':'';
-    }).join('');
-    if(!paras&&b.neutral_summary){paras='<p>'+esc(b.neutral_summary)+'</p>';}
-    return '<div class="card" style="margin-bottom:14px">'
-      +'<div class="bcard-meta">'
-      +  '<span class="bcard-region '+regionCls+'">'+esc(b.region)+'</span>'
-      +  '<span class="bcard-time">'+fmtDate(b.generated_at)+'</span>'
-      +'</div>'
-      +'<div class="bcard-headline">'+esc(b.headline||'')+'</div>'
-      +'<div class="bcard-body">'+paras+'</div>'
-      +renderSources(b.outlets, b.source_urls)
-      +'</div>';
-  }
-
-  function load(){
-    fetch('journalist-data.json?t='+Date.now())
-      .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
-      .then(function(d){
-        var briefings=(d.briefings||[]).slice(0,20);
-        var uk=briefings.filter(function(b){return b.region==='UK';}).length;
-        var tn=briefings.filter(function(b){return b.region==='TN';}).length;
-        document.getElementById('stat-uk').textContent=uk||'—';
-        document.getElementById('stat-tn').textContent=tn||'—';
-        var lr=document.getElementById('stat-lastrun');
-        if(lr&&d.generated_at){
-          lr.textContent=new Date(d.generated_at).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-        }
-        setNavStatus(briefings.length>0, d.generated_at);
-        if(!briefings.length){
-          document.getElementById('feed').innerHTML=
-            '<div class="coming-soon"><i class="bi bi-newspaper"></i><h3>Awaiting First Briefing</h3><p>The routine will populate this feed after its first run.</p></div>';
-          return;
-        }
-        document.getElementById('feed').innerHTML=briefings.map(renderCard).join('');
-      })
-      .catch(function(){setNavStatus(false);});
-  }
-
-  load();
-  setInterval(load,60000);
-}());
+  } catch(e) { setNavStatus(false); }
+}
+load();
+setInterval(load, 60000);
 </script>
 </body>
 </html>
