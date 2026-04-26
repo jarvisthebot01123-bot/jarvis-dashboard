@@ -1,6 +1,6 @@
 {
   "connected": true,
-  "generated_at": "2026-04-26T14:03:00+00:00",
+  "generated_at": "2026-04-26T14:07:00+00:00",
   "persona": "journalist",
   "briefings": [
     {
@@ -15,40 +15,44 @@
         "https://www.bbc.com/news/articles/cm29m98md2do?at_medium=RSS&at_campaign=rss",
         "https://news.sky.com/story/higher-food-and-fuel-prices-could-last-for-more-than-eight-months-after-iran-war-ends-darren-jones-warns-13536709"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "region": "UK"
     },
     {
       "id": "2026-04-26T1035Z-UK-gloucester-base-fire",
       "generated_at": "2026-04-26T10:35:00Z",
       "region": "UK",
       "headline": "Fire breaks out at Gloucestershire base used by US Air Force for Iran operations",
-      "neutral_summary": "A fire broke out at a military base in Gloucestershire that the United States Air Force has been using to conduct operations against Iran. No injuries were reported in connection with the incident.\n\nOnly the BBC has reported the story. No details about the cause or extent of the fire have been released, and no official statement from the Ministry of Defence or the US Air Force had been published at the time of reporting.",
+      "neutral_summary": "A fire broke out at a military base in Gloucestershire that the United States Air Force has been using to conduct operations against Iran. No injuries were reported in connection with the incident.\n\nOnly the BBC has reported the story. No details about the cause or extent of the fire have been released.",
       "outlets": ["BBC News"],
       "source_urls": ["https://www.bbc.com/news/articles/czjwj78gr7go?at_medium=RSS&at_campaign=rss"],
-      "confidence": "low"
+      "confidence": "low",
+      "region": "UK"
     },
     {
       "id": "2026-04-26T1035Z-UK-belfast-explosion",
       "generated_at": "2026-04-26T10:35:00Z",
       "region": "UK",
       "headline": "Belfast police station blast described as deliberate attempt to kill officers",
-      "neutral_summary": "An explosion occurred outside a police station on the outskirts of Belfast late on Saturday night. Authorities described the incident as a deliberate attempt to kill police officers, with a security response continuing into Sunday.\n\nOnly the BBC has reported the incident. No group has claimed responsibility, and no details about the nature of the device or the suspected perpetrators have been made public.",
+      "neutral_summary": "An explosion occurred outside a police station on the outskirts of Belfast late on Saturday night. Authorities described the incident as a deliberate attempt to kill police officers, with a security response continuing into Sunday.\n\nOnly the BBC has reported the incident. No group has claimed responsibility.",
       "outlets": ["BBC News"],
       "source_urls": ["https://www.bbc.com/news/articles/cp846668401o?at_medium=RSS&at_campaign=rss"],
-      "confidence": "low"
+      "confidence": "low",
+      "region": "UK"
     },
     {
       "id": "2026-04-25T2000Z-UK-mandelson-vetting",
       "generated_at": "2026-04-25T20:00:00Z",
       "region": "UK",
       "headline": "Ian Collard declines to give oral evidence to MPs over Mandelson vetting row",
-      "neutral_summary": "Ian Collard, identified as a key figure in the row over the vetting of Peter Mandelson as Britain's ambassador to Washington, has informed the Foreign Affairs Committee that he will provide evidence only in writing and will not appear in person before MPs.\n\nFormer prime minister Rishi Sunak has argued that Sir Keir Starmer must take personal responsibility for the vetting controversy. Labour mayors contend the row is driving voters away ahead of local elections.",
+      "neutral_summary": "Ian Collard has informed the Foreign Affairs Committee that he will provide evidence only in writing and will not appear in person before MPs. The committee is conducting scrutiny of the circumstances surrounding Mandelson's appointment as ambassador to Washington.\n\nFormer prime minister Rishi Sunak has argued Sir Keir Starmer must take personal responsibility. Labour mayors contend the row is driving voters away ahead of local elections.",
       "outlets": ["BBC News", "Independent"],
       "source_urls": [
         "https://www.bbc.com/news/articles/cvg32z7jv7yo",
         "https://www.independent.co.uk/news/uk/politics/peter-mandelson-keir-starmer-rishi-sunak-b2964867.html"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "region": "UK"
     },
     {
       "id": "2026-04-25T2000Z-TN-vck-party-posts",
@@ -58,7 +62,8 @@
       "neutral_summary": "The Viduthalai Chiruthaigal Katchi has given state-level party posts to S.S. Balaji and Aloor Shanavas, two MLAs who were not allocated seats to contest in the most recent assembly election.\n\nNo opposition reaction or internal dissent has been reported in connection with the appointments.",
       "outlets": ["The Hindu"],
       "source_urls": ["https://www.thehindu.com/news/national/tamil-nadu/ss-balaji-aloor-shanavas-of-vck-get-state-level-party-posts/article70906319.ece"],
-      "confidence": "low"
+      "confidence": "low",
+      "region": "TN"
     }
   ]
 }

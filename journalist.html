@@ -8,7 +8,6 @@
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="style.css">
 <style>
-/* Superman / Clark Kent — page-specific theme only */
 :root {
   --bg:         #eef3ff;
   --surface:    #ffffff;
@@ -47,23 +46,38 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   .page-banner-wrap{flex-direction:column;text-align:center;gap:14px}
   .page-banner-avatar{width:80px;height:80px}
   .page-banner-title{font-size:1.6rem}}
-.card:hover{border-color:rgba(29,64,175,.28);box-shadow:0 8px 40px rgba(29,64,175,.1)}
 
-/* Feed sections */
-.feed-section{margin-bottom:32px}
-.feed-section-title{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:8px;border-bottom:2px solid var(--border);margin-bottom:14px;display:flex;align-items:center;gap:6px}
+/* Feed table */
+.feed-section-hdr{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted);padding:14px 16px 12px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:6px}
 
-/* Briefing card content */
-.bcard-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-.bcard-time{font-size:.72rem;color:var(--muted);white-space:nowrap}
-.bcard-headline{font-size:1rem;font-weight:700;line-height:1.45;margin-bottom:10px;color:var(--text)}
-.bcard-body{font-size:.875rem;line-height:1.7;color:var(--text);margin-bottom:12px}
-.bcard-body p{margin:0 0 .6em}
-.bcard-body p:last-child{margin-bottom:0}
-.bcard-sources{font-size:.78rem;color:var(--muted);display:flex;align-items:baseline;gap:.3rem;flex-wrap:wrap;padding-top:10px;border-top:1px solid var(--border)}
-.bcard-sources a{color:var(--arc);text-decoration:none;font-weight:500}
-.bcard-sources a:hover{text-decoration:underline}
-.bcard-sep{color:var(--border)}
+/* Accordion rows */
+details{display:block;border-bottom:1px solid var(--border)}
+details:last-child{border-bottom:none}
+details summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;
+  gap:10px;padding:11px 16px;user-select:none}
+details summary::-webkit-details-marker{display:none}
+.sum-arrow{flex-shrink:0;font-size:.6rem;color:var(--muted);transition:transform .15s;margin-top:3px}
+details[open] .sum-arrow{transform:rotate(90deg)}
+.sum-headline{flex:1;font-size:.875rem;font-weight:600;color:var(--text);line-height:1.4}
+.sum-meta{flex-shrink:0;font-size:.68rem;color:var(--muted);white-space:nowrap;text-align:right;line-height:1.6;padding-left:12px}
+.sum-outlet{display:block;font-weight:500}
+.sum-date{display:block}
+details summary:hover .sum-headline{color:var(--arc)}
+details[open] summary{background:var(--arc-soft)}
+details[open] .sum-headline{color:var(--arc)}
+
+/* Expanded body */
+.story-body{padding:4px 16px 16px 38px;font-size:.855rem;line-height:1.7;color:var(--text)}
+.story-body p{margin:0 0 .65em}
+.story-body p:last-child{margin-bottom:.4em}
+.story-sources{margin-top:10px;padding-top:8px;border-top:1px solid var(--border);
+  font-size:.76rem;color:var(--muted);display:flex;align-items:baseline;gap:.25rem;flex-wrap:wrap}
+.story-sources a{color:var(--arc);text-decoration:none;font-weight:500}
+.story-sources a:hover{text-decoration:underline}
+.story-sep{opacity:.4}
+.feed-empty{font-size:.85rem;color:var(--muted);padding:18px 16px;font-style:italic}
 </style>
 </head>
 <body>
@@ -98,16 +112,16 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 
 <div class="main" style="padding-top:0">
 
-  <div class="grid-3" style="margin-bottom:28px">
+  <div class="grid-3" style="margin-bottom:20px">
     <div class="card card-sm" style="text-align:center">
       <div class="card-title"><i class="bi bi-flag"></i> UK Politics</div>
       <div class="metric" id="stat-uk">—</div>
-      <div class="metric-sub">briefings</div>
+      <div class="metric-sub">stories</div>
     </div>
     <div class="card card-sm" style="text-align:center">
       <div class="card-title">🇮🇳 Tamil Nadu</div>
       <div class="metric" id="stat-tn">—</div>
-      <div class="metric-sub">briefings</div>
+      <div class="metric-sub">stories</div>
     </div>
     <div class="card card-sm" style="text-align:center">
       <div class="card-title"><i class="bi bi-clock"></i> Last Run</div>
@@ -116,14 +130,14 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     </div>
   </div>
 
-  <div id="feed-uk" class="feed-section">
-    <div class="feed-section-title"><i class="bi bi-flag"></i> UK Politics</div>
-    <div id="feed-uk-cards"><div class="coming-soon"><i class="bi bi-newspaper"></i><h3>Awaiting First Briefing</h3></div></div>
+  <div class="card" style="padding:0;overflow:hidden;margin-bottom:20px">
+    <div class="feed-section-hdr"><i class="bi bi-flag"></i> UK Politics</div>
+    <div id="feed-uk"><div class="feed-empty">Awaiting first briefing…</div></div>
   </div>
 
-  <div id="feed-tn" class="feed-section">
-    <div class="feed-section-title">🇮🇳 Tamil Nadu Politics</div>
-    <div id="feed-tn-cards"><div class="coming-soon"><i class="bi bi-newspaper"></i><h3>Awaiting First Briefing</h3></div></div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="feed-section-hdr">🇮🇳 Tamil Nadu Politics</div>
+    <div id="feed-tn"><div class="feed-empty">Awaiting first briefing…</div></div>
   </div>
 
 </div>
@@ -131,87 +145,80 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 <script>
 (function () {
   function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-
-  function fmtDate(iso){
+  function fmtDay(iso){
     if(!iso)return'';
-    try{return new Date(iso).toLocaleString('en-GB',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZoneName:'short'});}
-    catch(e){return iso;}
+    try{return new Date(iso).toLocaleDateString('en-GB',{day:'numeric',month:'short'});}
+    catch(e){return '';}
   }
-
   function timeAgo(iso){
     var m=Math.floor((Date.now()-new Date(iso))/60000);
     return m<1?'just now':m<60?m+'m ago':m<1440?Math.floor(m/60)+'h ago':Math.floor(m/1440)+'d ago';
   }
-
   function setNavStatus(active,iso){
     var el=document.getElementById('nav-status');
     if(active){
-      var t=iso?timeAgo(iso):'';
       el.className='pnav-status active';
-      el.innerHTML='<span class="pnav-status-dot"></span>Live<span class="pnav-status-time">&nbsp;&middot;&nbsp;'+t+'</span>';
+      el.innerHTML='<span class="pnav-status-dot"></span>Live<span class="pnav-status-time">&nbsp;&middot;&nbsp;'+(iso?timeAgo(iso):'')+'</span>';
     } else {
       el.className='pnav-status inactive';
       el.innerHTML='<span class="pnav-status-dot"></span>Not Configured';
     }
   }
-
-  function renderSources(outlets, urls){
+  function renderSources(outlets,urls){
     var pairs=[];
     (outlets||[]).slice(0,6).forEach(function(name,i){
       var url=(urls||[])[i];
       pairs.push(url
-        ? '<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(name)+'</a>'
-        : '<span>'+esc(name)+'</span>');
+        ?'<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(name)+'</a>'
+        :'<span>'+esc(name)+'</span>');
     });
     if(!pairs.length)return'';
-    return '<div class="bcard-sources"><i class="bi bi-link-45deg"></i>&nbsp;'
-      +pairs.join('<span class="bcard-sep"> &middot; </span>')
+    return '<div class="story-sources"><i class="bi bi-link-45deg"></i>&nbsp;'
+      +pairs.join('<span class="story-sep"> &middot; </span>')
       +'</div>';
   }
-
   function renderCard(b){
     var paras=(b.neutral_summary||'').split(/\n\n+/).map(function(p){
       return p.trim()?'<p>'+esc(p.trim())+'</p>':'';
     }).join('');
     if(!paras&&b.neutral_summary){paras='<p>'+esc(b.neutral_summary)+'</p>';}
-    return '<div class="card" style="margin-bottom:14px">'
-      +'<div class="bcard-meta">'
-      +  '<span class="bcard-time">'+fmtDate(b.generated_at)+'</span>'
-      +'</div>'
-      +'<div class="bcard-headline">'+esc(b.headline||'')+'</div>'
-      +'<div class="bcard-body">'+paras+'</div>'
-      +renderSources(b.outlets, b.source_urls)
-      +'</div>';
+    var primaryOutlet=esc((b.outlets||[])[0]||'');
+    var extraCount=(b.outlets||[]).length-1;
+    var outletStr=primaryOutlet+(extraCount>0?' +'+extraCount:'');
+    return '<details>'
+      +'<summary>'
+      +'<span class="sum-arrow">&#9654;</span>'
+      +'<span class="sum-headline">'+esc(b.headline||'')+'</span>'
+      +'<span class="sum-meta">'
+      +(outletStr?'<span class="sum-outlet">'+outletStr+'</span>':'')
+      +'<span class="sum-date">'+fmtDay(b.generated_at)+'</span>'
+      +'</span>'
+      +'</summary>'
+      +'<div class="story-body">'+paras+renderSources(b.outlets,b.source_urls)+'</div>'
+      +'</details>';
   }
-
-  function renderSection(cards, briefings){
-    if(!briefings.length){
-      cards.innerHTML='<div class="coming-soon"><i class="bi bi-newspaper"></i><h3>No briefings this cycle</h3></div>';
-    } else {
-      cards.innerHTML=briefings.map(renderCard).join('');
-    }
+  function renderSection(el,briefings){
+    el.innerHTML=briefings.length
+      ?briefings.map(renderCard).join('')
+      :'<div class="feed-empty">No stories this cycle.</div>';
   }
-
   function load(){
     fetch('journalist-data.json?t='+Date.now())
       .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
       .then(function(d){
-        var briefings=(d.briefings||[]).slice(0,30);
-        var uk=briefings.filter(function(b){return b.region==='UK';});
-        var tn=briefings.filter(function(b){return b.region==='TN';});
+        var b=(d.briefings||[]).slice(0,40);
+        var uk=b.filter(function(x){return x.region==='UK';});
+        var tn=b.filter(function(x){return x.region==='TN';});
         document.getElementById('stat-uk').textContent=uk.length||'—';
         document.getElementById('stat-tn').textContent=tn.length||'—';
         var lr=document.getElementById('stat-lastrun');
-        if(lr&&d.generated_at){
-          lr.textContent=new Date(d.generated_at).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-        }
-        setNavStatus(briefings.length>0, d.generated_at);
-        renderSection(document.getElementById('feed-uk-cards'), uk);
-        renderSection(document.getElementById('feed-tn-cards'), tn);
+        if(lr&&d.generated_at)lr.textContent=new Date(d.generated_at).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+        setNavStatus(b.length>0,d.generated_at);
+        renderSection(document.getElementById('feed-uk'),uk);
+        renderSection(document.getElementById('feed-tn'),tn);
       })
       .catch(function(){setNavStatus(false);});
   }
-
   load();
   setInterval(load,60000);
 }());
