@@ -1,6 +1,146 @@
 {
-  "connected": false,
-  "generated_at": "2026-04-26T18:22:15.674031+00:00",
+  "connected": true,
+  "generated_at": "2026-04-26T18:28:22.686345+00:00",
   "persona": "journalist",
-  "briefings": []
+  "briefings": [
+    {
+      "id": "2026-04-26T1830Z-WORLD-trump-correspondents-dinner-shooting",
+      "generated_at": "2026-04-26T18:30:00Z",
+      "category": "WORLD",
+      "headline": "Gunman Arrested at White House Correspondents' Dinner After Opening Fire Near Trump",
+      "neutral_summary": "A gunman opened fire at the White House Correspondents' Dinner in Washington DC on Saturday, 26 April 2026, prompting Secret Service agents to remove President Donald Trump and Vice-President JD Vance from the stage. Authorities subsequently identified the suspect as Cole Tomas Allen, 31, from California, stating he appeared to have been targeting Trump and members of his administration. Reports across all outlets agreed on the core sequence of events; divergence arose in framing Trump's subsequent statements, with Al Jazeera foregrounding his claim that the suspect had written an anti-Christian declaration, whilst BBC and DW News centred their coverage on the security response and suspect identification. Trump's assertion that the attack would not have occurred had his proposed ballroom been completed was reported by Sky News but was not addressed by law enforcement.",
+      "corroborated_facts": [
+        "A shooting occurred at the White House Correspondents' Dinner in Washington DC on 26 April 2026.",
+        "President Trump and Vice-President Vance were escorted from the stage by security personnel after shots were fired.",
+        "US authorities identified the suspect as Cole Tomas Allen, a 31-year-old from California.",
+        "Officials stated the suspect was believed to have been targeting Trump and members of his administration."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "Trump said the attack would not have occurred had his proposed ballroom been built.",
+          "sources_for": [
+            "Sky News"
+          ],
+          "sources_against": []
+        }
+      ],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "Al Jazeera foregrounded Trump's characterisation of the suspect's alleged anti-Christian manifesto, placing his statements within a broader political narrative."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC, DW News, and Sky News reported the incident in a factual, chronological manner, focusing on the security response and the suspect's identification."
+        }
+      ],
+      "source_count": 5,
+      "outlets": [
+        "Al Jazeera",
+        "DW News",
+        "Sky News",
+        "BBC Top Stories",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/4/26/trump-his-administration-likely-targets-at-media-dinner-us-official?traffic_source=rss",
+        "https://www.dw.com/en/gunman-was-likely-targeting-trump-team-says-official/live-76938867?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/donald-trump-claims-shooting-would-never-have-happened-if-ballroom-had-been-built-13536816"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-26T1830Z-UK-starmer-defends-leadership-mandelson-vetting",
+      "generated_at": "2026-04-26T18:30:00Z",
+      "category": "UK",
+      "headline": "Starmer Insists Majority of Labour MPs Back Him Amid Mandelson Vetting Controversy",
+      "neutral_summary": "Prime Minister Sir Keir Starmer stated publicly on Sunday, 26 April 2026, that the vast majority of Labour MPs support his leadership, following a turbulent week of internal party speculation triggered by controversy over the vetting process for Peter Mandelson's appointment. Starmer defended his decision to sack senior civil servant Olly Robbins in connection with the matter, and declared his intention to lead the Labour Party into the next general election. Coverage diverged in characterising the severity of his position: the Guardian and the Independent used more urgent terms — the latter referring to existential questions about his future in power — whilst BBC Politics and Sky News presented his stance as defiant rather than imperilled.",
+      "corroborated_facts": [
+        "Keir Starmer publicly asserted that the majority of Labour MPs support his leadership.",
+        "The controversy centres on the vetting process for Peter Mandelson's appointment.",
+        "Starmer defended his decision to sack senior civil servant Olly Robbins over the Mandelson vetting process.",
+        "Starmer stated his intention to lead the Labour Party into the next general election."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "left",
+          "characterisation": "The Guardian framed Starmer as defending against claims of wrongdoing, emphasising the political damage inflicted by the Mandelson affair."
+        },
+        {
+          "lean": "centre-left",
+          "characterisation": "The Independent described Starmer as confronting existential questions about his future in power."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC Politics and Sky News presented Starmer as resolute and intent on continuing, without suggesting his position was fundamentally threatened."
+        }
+      ],
+      "source_count": 4,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/keir-starmer-peter-mandelson-labour-mps-b2965148.html",
+        "https://www.bbc.com/news/articles/c705228kpx9o?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/2026/apr/26/keir-starmer-vows-lead-labour-general-election-mandelson-vetting"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-26T1830Z-INDIA-kochi-police-custody-escape",
+      "generated_at": "2026-04-26T18:30:00Z",
+      "category": "INDIA",
+      "headline": "Two Suspects Flee Police Custody in Kochi; One Subsequently Recaptured",
+      "neutral_summary": "Two individuals escaped from police custody in Kochi, Kerala, on 26 April 2026, according to a report by The Hindu. One of the two was subsequently recaptured by authorities. No further details regarding the identities of those involved, the circumstances of the escape, or the charges they faced were available from reporting at the time of publication.",
+      "corroborated_facts": [
+        "Two individuals fled police custody in Kochi, Kerala, on 26 April 2026.",
+        "One of the two escapees was subsequently apprehended by authorities."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "The Hindu reported the incident factually without political framing."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "The Hindu"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/kerala/two-flee-police-custody-in-kochi-one-nabbed/article70909681.ece"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-04-26T1830Z-AI-anthropic-agent-commerce-marketplace",
+      "generated_at": "2026-04-26T18:30:00Z",
+      "category": "AI",
+      "headline": "Anthropic Runs Experimental Marketplace Pitting AI Agents Against One Another as Buyers and Sellers",
+      "neutral_summary": "Anthropic conducted an experimental classified marketplace in which artificial intelligence agents acted as both buyers and sellers, according to a TechCrunch report published on 25 April 2026, exploring how AI agents might conduct autonomous commercial transactions with one another. A separate TechCrunch report noted an unusual property listing in Mill Valley, north of San Francisco, in which prospective buyers are required to hold equity in Anthropic — a condition reflecting the company's elevated valuation and its prominent position in the Bay Area technology sector.",
+      "corroborated_facts": [
+        "Anthropic ran an experimental marketplace in which AI agents represented buyers and sellers in simulated commercial transactions."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "tech",
+          "characterisation": "TechCrunch covered both items in a neutral, descriptive register, treating them as notable developments in the AI industry."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "TechCrunch"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+        "https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/"
+      ],
+      "confidence": "low"
+    }
+  ]
 }
