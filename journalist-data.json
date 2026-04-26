@@ -1,8 +1,132 @@
 {
   "connected": true,
-  "generated_at": "2026-04-26T18:28:22.686345+00:00",
+  "generated_at": "2026-04-26T18:46:17.777330+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-26T1845Z-WORLD-shooter-targeted-trump-administration-correspondents-dinner",
+      "generated_at": "2026-04-26T18:45:00Z",
+      "category": "WORLD",
+      "headline": "Californian Suspect in Correspondents' Dinner Shooting Said to Have Targeted Trump and Officials",
+      "neutral_summary": "A gunman opened fire at the White House Correspondents' Dinner in Washington DC on 26 April 2026, prompting Secret Service personnel to remove President Donald Trump and Vice-President JD Vance from the stage. Authorities identified the suspect as Cole Tomas Allen, a 31-year-old from California, with officials stating he appeared to have been targeting Trump and senior members of his administration. Outlets concurred on the core sequence of events but diverged in emphasis: Al Jazeera foregrounded Trump's assertion that the suspect had penned an anti-Christian declaration and his characterisation of the accused as a sick individual, whilst BBC correspondents and DW News focused on the security response, eyewitness accounts, and the formal identification of the suspect. Sky News gave prominence to Trump's claim that the incident would not have occurred had his proposed White House ballroom been constructed — a contention not addressed by law enforcement or other outlets.",
+      "corroborated_facts": [
+        "A shooting occurred at the White House Correspondents' Dinner in Washington DC on 26 April 2026.",
+        "President Trump and Vice-President Vance were escorted from the stage by Secret Service personnel after shots were fired.",
+        "US authorities identified the suspect as Cole Tomas Allen, a 31-year-old man from California.",
+        "Officials stated the suspect was believed to have been targeting Trump and members of his administration."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "Trump asserted the attack would not have occurred had his proposed ballroom been built.",
+          "sources_for": [
+            "Sky News"
+          ],
+          "sources_against": []
+        },
+        {
+          "claim": "Trump stated the suspect had written an anti-Christian declaration.",
+          "sources_for": [
+            "Al Jazeera"
+          ],
+          "sources_against": []
+        }
+      ],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "Al Jazeera foregrounded Trump's political characterisation of the suspect's alleged motives, including his description of an anti-Christian declaration."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC News, DW News, and Sky News prioritised the security response, eyewitness testimony, and the formal identification of the suspect."
+        }
+      ],
+      "source_count": 5,
+      "outlets": [
+        "Al Jazeera",
+        "DW News",
+        "Sky News",
+        "BBC Top Stories",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/4/26/trump-his-administration-likely-targets-at-media-dinner-us-official?traffic_source=rss",
+        "https://www.dw.com/en/gunman-was-likely-targeting-trump-team-says-official/live-76938867?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/donald-trump-claims-shooting-would-never-have-happened-if-ballroom-had-been-built-13536816",
+        "https://www.bbc.com/news/articles/cr717nglye0o?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/videos/cgqkq18qqeeo?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-26T1845Z-UK-starmer-vows-lead-labour-next-election-mandelson-row",
+      "generated_at": "2026-04-26T18:45:00Z",
+      "category": "UK",
+      "headline": "Starmer Vows to Lead Labour into Next Election After Bruising Week Over Mandelson Affair",
+      "neutral_summary": "Prime Minister Sir Keir Starmer declared publicly on 26 April 2026 that the majority of Labour MPs support his leadership and that he intends to lead the party into the next general election. The statements followed a turbulent week of internal speculation prompted by controversy over the vetting process for Peter Mandelson's appointment as US ambassador, which led to the dismissal of senior civil servant Olly Robbins. Reporting diverged over the gravity of Starmer's position: the Independent described him as facing existential questions about his future in power, and the Guardian emphasised his determination to rebuff claims of wrongdoing, whilst BBC Politics and Sky News characterised his stance as resolute without implying that his leadership was acutely threatened.",
+      "corroborated_facts": [
+        "Sir Keir Starmer publicly asserted that the majority of Labour MPs support his leadership.",
+        "The controversy centres on the vetting process surrounding Peter Mandelson's appointment.",
+        "Starmer defended his decision to dismiss senior civil servant Olly Robbins over the Mandelson vetting process.",
+        "Starmer declared his intention to lead the Labour Party into the next general election."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "left",
+          "characterisation": "The Guardian framed Starmer as actively rebutting allegations of wrongdoing in relation to the Mandelson affair."
+        },
+        {
+          "lean": "centre-left",
+          "characterisation": "The Independent presented Starmer as confronting serious questions about his long-term viability as prime minister."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC Politics and Sky News portrayed Starmer as defiant and committed to continuing, with no suggestion that his position was immediately at risk."
+        }
+      ],
+      "source_count": 4,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/keir-starmer-peter-mandelson-labour-mps-b2965148.html",
+        "https://www.bbc.com/news/articles/c705228kpx9o?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/2026/apr/26/keir-starmer-vows-lead-labour-general-election-mandelson-vetting",
+        "https://news.sky.com/story/defiant-sir-keir-starmer-stands-by-sacking-of-olly-robbins-and-signals-intention-to-fight-on-13536614"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-26T1845Z-AI-anthropic-agent-commerce-bay-area-property",
+      "generated_at": "2026-04-26T18:45:00Z",
+      "category": "AI",
+      "headline": "Anthropic Tests Agent-on-Agent Commerce in Experimental Marketplace",
+      "neutral_summary": "Anthropic conducted an experimental classified marketplace in which artificial intelligence agents acted simultaneously as buyers and sellers, exploring the potential for autonomous commercial interactions between AI systems, according to TechCrunch reporting from 25 April 2026. A separate TechCrunch report noted that a 13-acre property in Mill Valley, north of San Francisco, has been listed with the unusual condition that prospective buyers must hold equity in Anthropic — a stipulation indicative of the company's high profile and perceived value in the Bay Area technology sector. Both items originated from a single outlet; no divergent framing or analysis was available from other sources.",
+      "corroborated_facts": [
+        "Anthropic ran an experimental marketplace in which AI agents acted as both buyers and sellers in simulated commercial transactions."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "tech",
+          "characterisation": "TechCrunch covered both items in a neutral, descriptive register consistent with technology trade journalism."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "TechCrunch"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+        "https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/"
+      ],
+      "confidence": "low"
+    },
     {
       "id": "2026-04-26T1830Z-WORLD-trump-correspondents-dinner-shooting",
       "generated_at": "2026-04-26T18:30:00Z",
