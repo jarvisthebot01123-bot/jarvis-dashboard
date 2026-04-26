@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T10:14:31.265649Z",
+  "generated_at": "2026-04-26T15:52:41.529148Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -57,37 +57,51 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "35.8h ago",
+      "age": "41.4h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "35.8h ago",
+      "age": "41.4h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "38.3h ago",
-      "status": "stale"
+      "age": "2m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "58.2h ago",
-      "status": "stale"
+      "age": "2m ago",
+      "status": "fresh"
     },
     "insider_trades": {
-      "age": "58.2h ago",
+      "age": "63.9h ago",
       "status": "stale",
       "count": 0
     }
   },
-  "fear_greed": null,
+  "fear_greed": {
+    "score": 66.0,
+    "rating": "greed"
+  },
   "macro_blackout_today": false,
   "macro_blackout_reason": null,
-  "upcoming_macro_events": [],
+  "upcoming_macro_events": [
+    {
+      "event": "FOMC Statement",
+      "date": "2026-04-29",
+      "days_away": 3
+    },
+    {
+      "event": "NFP",
+      "date": "2026-05-01",
+      "days_away": 5
+    }
+  ],
   "last_routine": {
-    "ts": "2026-04-25T17:00Z",
-    "routine": "system_init",
-    "notes": "Rebuilt as swing trading system. 5 momentum strategies."
+    "ts": "2026-04-26T15:52:40.571699Z",
+    "routine": "pre_market",
+    "notes": "All strats rebalanced. bias=NEUTRAL. Alpaca API 503 \u2014 equity from cache."
   },
   "strategies_enabled": {
     "pead": true,
