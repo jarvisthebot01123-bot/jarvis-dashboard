@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="style.css">
 <style>
-/* Superman / Clark Kent — DC tri-color theme */
+/* Superman / Clark Kent — page-specific theme only */
 :root {
   --bg:         #eef3ff;
   --surface:    #ffffff;
@@ -19,18 +19,15 @@
   --gold:       #ca8a04;
   --arc-soft:   rgba(29,64,175,.09);
   --arc-border: rgba(29,64,175,.2);
+  --code-bg:    rgba(29,64,175,.05);
+  --code-text:  #1e3a8a;
 }
 body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='%231e40af' stroke-width='0.4' opacity='0.05'/%3E%3Cpolygon points='28,52 54,67 54,97 28,112 2,97 2,67' fill='none' stroke='%23ca8a04' stroke-width='0.3' opacity='0.04'/%3E%3C/svg%3E");
   background-size:56px 100px}
-
-/* ── Cinematic Superman banner ── */
 .page-banner{
   background:url('img/newspaper-journalist.svg') center top / cover no-repeat;
-  padding:36px 32px 32px;
-  position:relative;overflow:hidden;
-  margin-bottom:28px;
-}
+  padding:36px 32px 32px;position:relative;overflow:hidden;margin-bottom:28px}
 .page-banner::before{
   content:'';position:absolute;inset:0;
   background:linear-gradient(135deg,
@@ -38,20 +35,9 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     rgba(30,64,175,.76) 25%,
     rgba(37,99,235,.74) 45%,
     rgba(185,28,28,.76) 70%,
-    rgba(180,120,5,.82) 100%);
-}
-.page-banner-wrap{
-  max-width:1200px;margin:0 auto;
-  display:flex;align-items:center;gap:28px;
-  position:relative;z-index:1;
-}
-.page-banner-avatar{
-  width:110px;height:110px;border-radius:50%;
-  overflow:hidden;flex-shrink:0;
-  border:3px solid rgba(255,255,255,.35);
-  box-shadow:0 0 40px rgba(255,200,0,.2),0 6px 30px rgba(0,0,0,.3);
-  background:rgba(255,255,255,.15);
-}
+    rgba(180,120,5,.82) 100%)}
+.page-banner-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;position:relative;z-index:1}
+.page-banner-avatar{width:110px;height:110px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,.35);box-shadow:0 0 40px rgba(255,200,0,.2),0 6px 30px rgba(0,0,0,.3);background:rgba(255,255,255,.15)}
 .page-banner-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center}
 .page-banner-eyebrow{font-size:.63rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:4px}
 .page-banner-title{font-size:2rem;font-weight:900;color:#fff;letter-spacing:.05em;text-transform:uppercase;line-height:1;margin-bottom:6px;text-shadow:0 2px 20px rgba(0,0,0,.3)}
@@ -60,40 +46,24 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   .page-banner{padding:24px 20px}
   .page-banner-wrap{flex-direction:column;text-align:center;gap:14px}
   .page-banner-avatar{width:80px;height:80px}
-  .page-banner-title{font-size:1.6rem}
-}
-
+  .page-banner-title{font-size:1.6rem}}
 .card:hover{border-color:rgba(29,64,175,.28);box-shadow:0 8px 40px rgba(29,64,175,.1)}
 
-/* ── Briefing cards ── */
-.bcard-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:8px}
-.bcard-badge{display:inline-flex;align-items:center;gap:3px;padding:.18rem .5rem;border-radius:4px;font-size:.72rem;font-weight:600;line-height:1.4}
-.bcard-uk{background:#ddf4ff;color:#0969da}
-.bcard-tn{background:#fff8c5;color:#9a6700}
-.bcard-high{background:#dafbe1;color:#1a7f37}
-.bcard-medium{background:#ddf4ff;color:#0969da}
-.bcard-low{background:#fff8c5;color:#9a6700}
-.bcard-headline{font-size:.97rem;font-weight:700;line-height:1.4;margin-bottom:10px;color:var(--text)}
-.bcard-summary{font-size:.875rem;line-height:1.65;color:var(--text);margin-bottom:10px}
-.bcard-disputed{background:#ffebe9;border:1px solid #f1aeb5;border-radius:6px;padding:.55rem .8rem;margin-bottom:10px}
-.bcard-disputed-title{font-size:.75rem;font-weight:700;color:#cf222e;display:flex;align-items:center;gap:.25rem;margin-bottom:.3rem}
-.bcard-disputed-item{font-size:.82rem;line-height:1.55;color:var(--text);margin-bottom:.2rem}
-.bcard-disputed-item:last-child{margin-bottom:0}
-.bcard-outlets{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:10px}
-.bcard-outlet{background:var(--arc-soft);border:1px solid var(--arc-border);border-radius:20px;padding:.12rem .5rem;font-size:.72rem;color:var(--muted)}
-.bcard-foot{display:flex;align-items:center;gap:.8rem;padding-top:10px;border-top:1px solid var(--border);flex-wrap:wrap}
-.bcard-foot-count{font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:.25rem;white-space:nowrap}
-.lean-bar{flex:1;display:flex;align-items:center;gap:.35rem;min-width:80px}
-.lean-label{font-size:.7rem;color:var(--muted);white-space:nowrap}
-.lean-track{flex:1;height:5px;border-radius:3px;background:var(--border);display:flex;overflow:hidden;gap:1px}
-.ls{height:100%}
-.ls-left{background:#1d4ed8}
-.ls-centre-left{background:#60a5fa}
-.ls-centre{background:#9ca3af}
-.ls-wire{background:#6b7280}
-.ls-centre-right{background:#f97316}
-.ls-right{background:#dc2626}
-.bcard-time{font-size:.72rem;color:var(--muted);margin-left:auto;white-space:nowrap}
+/* Feed sections */
+.feed-section{margin-bottom:32px}
+.feed-section-title{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:8px;border-bottom:2px solid var(--border);margin-bottom:14px;display:flex;align-items:center;gap:6px}
+
+/* Briefing card content */
+.bcard-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.bcard-time{font-size:.72rem;color:var(--muted);white-space:nowrap}
+.bcard-headline{font-size:1rem;font-weight:700;line-height:1.45;margin-bottom:10px;color:var(--text)}
+.bcard-body{font-size:.875rem;line-height:1.7;color:var(--text);margin-bottom:12px}
+.bcard-body p{margin:0 0 .6em}
+.bcard-body p:last-child{margin-bottom:0}
+.bcard-sources{font-size:.78rem;color:var(--muted);display:flex;align-items:baseline;gap:.3rem;flex-wrap:wrap;padding-top:10px;border-top:1px solid var(--border)}
+.bcard-sources a{color:var(--arc);text-decoration:none;font-weight:500}
+.bcard-sources a:hover{text-decoration:underline}
+.bcard-sep{color:var(--border)}
 </style>
 </head>
 <body>
@@ -121,16 +91,16 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     <div>
       <div class="page-banner-eyebrow">J.A.R.V.I.S. · Journalist Module</div>
       <div class="page-banner-title">Clark Kent</div>
-      <div class="page-banner-sub">AI editorial intelligence  ·  unbiased political briefings  ·  UK &amp; Tamil Nadu</div>
+      <div class="page-banner-sub">AI editorial intelligence &nbsp;·&nbsp; unbiased political briefings &nbsp;·&nbsp; UK &amp; Tamil Nadu</div>
     </div>
   </div>
 </div>
 
 <div class="main" style="padding-top:0">
 
-  <div class="grid-3" style="margin-bottom:20px">
+  <div class="grid-3" style="margin-bottom:28px">
     <div class="card card-sm" style="text-align:center">
-      <div class="card-title"><i class="bi bi-flag"></i> UK</div>
+      <div class="card-title"><i class="bi bi-flag"></i> UK Politics</div>
       <div class="metric" id="stat-uk">—</div>
       <div class="metric-sub">briefings</div>
     </div>
@@ -140,28 +110,26 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
       <div class="metric-sub">briefings</div>
     </div>
     <div class="card card-sm" style="text-align:center">
-      <div class="card-title"><i class="bi bi-patch-check-fill" style="color:#1a7f37"></i> High Confidence</div>
-      <div class="metric" id="stat-high">—</div>
-      <div class="metric-sub">of <span id="stat-total">—</span> total</div>
+      <div class="card-title"><i class="bi bi-clock"></i> Last Run</div>
+      <div class="metric" id="stat-lastrun" style="font-size:1.1rem">—</div>
+      <div class="metric-sub">UTC</div>
     </div>
   </div>
 
-  <div id="feed">
-    <div class="coming-soon">
-      <i class="bi bi-newspaper"></i>
-      <h3>Awaiting First Briefing</h3>
-      <p>The routine will populate this feed after its first run.</p>
-    </div>
+  <div id="feed-uk" class="feed-section">
+    <div class="feed-section-title"><i class="bi bi-flag"></i> UK Politics</div>
+    <div id="feed-uk-cards"><div class="coming-soon"><i class="bi bi-newspaper"></i><h3>Awaiting First Briefing</h3></div></div>
+  </div>
+
+  <div id="feed-tn" class="feed-section">
+    <div class="feed-section-title">🇮🇳 Tamil Nadu Politics</div>
+    <div id="feed-tn-cards"><div class="coming-soon"><i class="bi bi-newspaper"></i><h3>Awaiting First Briefing</h3></div></div>
   </div>
 
 </div>
 
 <script>
 (function () {
-  var LEAN_ORDER = ['left','centre-left','centre','wire','centre-right','right'];
-  var LEAN_CLS = {'left':'ls-left','centre-left':'ls-centre-left','centre':'ls-centre',
-                  'wire':'ls-wire','centre-right':'ls-centre-right','right':'ls-right'};
-
   function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 
   function fmtDate(iso){
@@ -170,7 +138,10 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     catch(e){return iso;}
   }
 
-  function timeAgo(iso){var m=Math.floor((Date.now()-new Date(iso))/60000);return m<1?'just now':m<60?m+'m ago':Math.floor(m/60)+'h ago'}
+  function timeAgo(iso){
+    var m=Math.floor((Date.now()-new Date(iso))/60000);
+    return m<1?'just now':m<60?m+'m ago':m<1440?Math.floor(m/60)+'h ago':Math.floor(m/1440)+'d ago';
+  }
 
   function setNavStatus(active,iso){
     var el=document.getElementById('nav-status');
@@ -184,75 +155,59 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     }
   }
 
-  function leanBar(framings){
-    var counts={};
-    (framings||[]).forEach(function(f){counts[f.lean]=(counts[f.lean]||0)+1;});
-    var total=Object.values(counts).reduce(function(a,b){return a+b;},0)||1;
-    var segs=LEAN_ORDER.filter(function(l){return counts[l];}).map(function(l){
-      var pct=Math.round((counts[l]/total)*100);
-      return '<div class="ls '+LEAN_CLS[l]+'" style="width:'+pct+'%" title="'+l+': '+counts[l]+'"></div>';
-    }).join('');
-    return '<div class="lean-bar"><span class="lean-label"><i class="bi bi-bar-chart-steps"></i></span>'
-         + '<div class="lean-track">'+segs+'</div></div>';
-  }
-
-  function disputedHtml(facts){
-    if(!facts||!facts.length)return'';
-    var items=facts.map(function(f){
-      var forStr=(f.sources_for||[]).join(', ')||'Unknown';
-      var againstStr=(f.sources_against||[]).join(' and ')||'others';
-      var wire=f.wire_position||'not reported';
-      return '<div class="bcard-disputed-item"><strong>'+esc(forStr)+'</strong> reports: &ldquo;'+esc(f.claim)
-           +'&rdquo; &mdash; contested by '+esc(againstStr)+'. Wire: '+esc(wire)+'.</div>';
-    }).join('');
-    return '<div class="bcard-disputed"><div class="bcard-disputed-title"><i class="bi bi-exclamation-triangle-fill"></i> Disputed</div>'+items+'</div>';
+  function renderSources(outlets, urls){
+    var pairs=[];
+    (outlets||[]).slice(0,6).forEach(function(name,i){
+      var url=(urls||[])[i];
+      pairs.push(url
+        ? '<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(name)+'</a>'
+        : '<span>'+esc(name)+'</span>');
+    });
+    if(!pairs.length)return'';
+    return '<div class="bcard-sources"><i class="bi bi-link-45deg"></i>&nbsp;'
+      +pairs.join('<span class="bcard-sep"> &middot; </span>')
+      +'</div>';
   }
 
   function renderCard(b){
-    var regionCls=b.region==='UK'?'bcard-uk':'bcard-tn';
-    var confCls=b.confidence==='high'?'bcard-high':b.confidence==='medium'?'bcard-medium':'bcard-low';
-    var confIco=b.confidence==='high'?'bi-patch-check-fill':b.confidence==='medium'?'bi-patch-check':'bi-patch-exclamation';
-    var pills=(b.outlets||[]).slice(0,7).map(function(o){
-      return '<span class="bcard-outlet">'+esc(o)+'</span>';
+    var paras=(b.neutral_summary||'').split(/\n\n+/).map(function(p){
+      return p.trim()?'<p>'+esc(p.trim())+'</p>':'';
     }).join('');
-    var summary=esc(b.neutral_summary||'').replace(/\n/g,'<br>');
-    return '<div class="card" style="margin-bottom:16px">'
+    if(!paras&&b.neutral_summary){paras='<p>'+esc(b.neutral_summary)+'</p>';}
+    return '<div class="card" style="margin-bottom:14px">'
       +'<div class="bcard-meta">'
-      +  '<span class="bcard-badge '+regionCls+'">'+esc(b.region)+'</span>'
-      +  '<span class="bcard-badge '+confCls+'"><i class="bi '+confIco+'"></i> '+esc(b.confidence)+'</span>'
-      +  '<span style="font-size:.72rem;color:var(--muted);margin-left:auto">'+(b.source_count||0)+' sources</span>'
-      +'</div>'
-      +'<div class="bcard-headline">'+esc(b.headline||'')+'</div>'
-      +'<div class="bcard-summary">'+summary+'</div>'
-      +disputedHtml(b.disputed_facts)
-      +(pills?'<div class="bcard-outlets">'+pills+'</div>':'')
-      +'<div class="bcard-foot">'
-      +  '<span class="bcard-foot-count"><i class="bi bi-journals"></i> '+(b.source_count||0)+' outlets</span>'
-      +  leanBar(b.framings)
       +  '<span class="bcard-time">'+fmtDate(b.generated_at)+'</span>'
       +'</div>'
+      +'<div class="bcard-headline">'+esc(b.headline||'')+'</div>'
+      +'<div class="bcard-body">'+paras+'</div>'
+      +renderSources(b.outlets, b.source_urls)
       +'</div>';
+  }
+
+  function renderSection(cards, briefings){
+    if(!briefings.length){
+      cards.innerHTML='<div class="coming-soon"><i class="bi bi-newspaper"></i><h3>No briefings this cycle</h3></div>';
+    } else {
+      cards.innerHTML=briefings.map(renderCard).join('');
+    }
   }
 
   function load(){
     fetch('journalist-data.json?t='+Date.now())
       .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
       .then(function(d){
-        var briefings=(d.briefings||[]).slice(0,10);
-        var uk=briefings.filter(function(b){return b.region==='UK';}).length;
-        var tn=briefings.filter(function(b){return b.region==='TN';}).length;
-        var high=briefings.filter(function(b){return b.confidence==='high';}).length;
-        document.getElementById('stat-uk').textContent=uk;
-        document.getElementById('stat-tn').textContent=tn;
-        document.getElementById('stat-high').textContent=high;
-        document.getElementById('stat-total').textContent=briefings.length;
-        setNavStatus(briefings.length>0, d.generated_at);
-        if(!briefings.length){
-          document.getElementById('feed').innerHTML=
-            '<div class="coming-soon"><i class="bi bi-newspaper"></i><h3>Awaiting First Briefing</h3><p>The routine will populate this feed after its first run.</p></div>';
-          return;
+        var briefings=(d.briefings||[]).slice(0,30);
+        var uk=briefings.filter(function(b){return b.region==='UK';});
+        var tn=briefings.filter(function(b){return b.region==='TN';});
+        document.getElementById('stat-uk').textContent=uk.length||'—';
+        document.getElementById('stat-tn').textContent=tn.length||'—';
+        var lr=document.getElementById('stat-lastrun');
+        if(lr&&d.generated_at){
+          lr.textContent=new Date(d.generated_at).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
         }
-        document.getElementById('feed').innerHTML=briefings.map(renderCard).join('');
+        setNavStatus(briefings.length>0, d.generated_at);
+        renderSection(document.getElementById('feed-uk-cards'), uk);
+        renderSection(document.getElementById('feed-tn-cards'), tn);
       })
       .catch(function(){setNavStatus(false);});
   }
