@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T10:14:31.265649Z",
+  "generated_at": "2026-04-27T09:55:58.757393Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -12,7 +12,7 @@
     "return_pct": 0.0,
     "our_return_pct": 0.0,
     "alpha_pct": 0.0,
-    "start_date": "2026-04-24"
+    "start_date": null
   },
   "strategy_stats": {
     "pead": {
@@ -57,25 +57,25 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "35.8h ago",
+      "age": "59.5h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "35.8h ago",
+      "age": "59.5h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "38.3h ago",
+      "age": "17.8h ago",
       "status": "stale"
     },
     "economic_calendar": {
-      "age": "58.2h ago",
+      "age": "17.8h ago",
       "status": "stale"
     },
     "insider_trades": {
-      "age": "58.2h ago",
+      "age": "17.8h ago",
       "status": "stale",
       "count": 0
     }
@@ -83,11 +83,22 @@
   "fear_greed": null,
   "macro_blackout_today": false,
   "macro_blackout_reason": null,
-  "upcoming_macro_events": [],
+  "upcoming_macro_events": [
+    {
+      "event": "FOMC Statement",
+      "date": "2026-04-29",
+      "days_away": 3
+    },
+    {
+      "event": "NFP",
+      "date": "2026-05-01",
+      "days_away": 5
+    }
+  ],
   "last_routine": {
-    "ts": "2026-04-25T17:00Z",
-    "routine": "system_init",
-    "notes": "Rebuilt as swing trading system. 5 momentum strategies."
+    "ts": "2026-04-26T16:09:47Z",
+    "routine": "pre_market",
+    "notes": "All 4 momentum strats due (last_rebalance null). 18 total entries planned. Exposure $82.7k. VIX 18.71. No insider signals."
   },
   "strategies_enabled": {
     "pead": true,
