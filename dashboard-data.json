@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T14:12:44.593967Z",
+  "generated_at": "2026-04-27T14:40:22.860482Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -14,6 +14,8 @@
     "alpha_pct": 0.0,
     "start_date": null
   },
+  "open_position_count": 14,
+  "unrealized_pnl_pct": -0.012,
   "strategy_stats": {
     "pead": {
       "name": "3M Momentum",
@@ -51,156 +53,57 @@
       "pnl_pct": 0.0
     }
   },
-  "equity_curve": [
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    },
-    {
-      "date": "2026-04-27",
-      "index": 100.0,
-      "daily_pct": 0.0,
-      "trades": 0,
-      "strategies": []
-    }
-  ],
+  "equity_curve": [],
   "open_positions": [
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.0
+      "pnl_pct": -0.01
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.006
+      "pnl_pct": -0.12
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.006
+      "pnl_pct": -0.11
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.001
+      "pnl_pct": -0.03
     },
     {
       "ticker": "***",
       "strategy": "mom6",
+      "pnl_pct": 0.01
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": -0.01
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": -0.02
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
       "pnl_pct": 0.0
-    },
-    {
-      "ticker": "***",
-      "strategy": "mom6",
-      "pnl_pct": -0.0
-    },
-    {
-      "ticker": "***",
-      "strategy": "mom6",
-      "pnl_pct": -0.0
-    },
-    {
-      "ticker": "***",
-      "strategy": "pead",
-      "pnl_pct": -0.0
     },
     {
       "ticker": "***",
       "strategy": "breakout",
-      "pnl_pct": 0.002
+      "pnl_pct": 0.04
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 0.001
+      "pnl_pct": 0.02
     },
     {
       "ticker": "***",
@@ -210,42 +113,42 @@
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -0.001
+      "pnl_pct": -0.02
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -0.001
+      "pnl_pct": -0.01
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 0.001
+      "pnl_pct": 0.05
     }
   ],
   "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). All near entry. Daily P&L $0.00. $100k paper account.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "63.8h ago",
+      "age": "64.2h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "63.8h ago",
+      "age": "64.2h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "1.5h ago",
+      "age": "2.0h ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1.5h ago",
+      "age": "2.0h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "1.5h ago",
+      "age": "1.9h ago",
       "status": "fresh",
       "count": 0
     }

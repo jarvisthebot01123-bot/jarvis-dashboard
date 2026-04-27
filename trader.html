@@ -457,27 +457,42 @@ let charts = {}, lastData = null, lastFetchedTs = null, relTimeTimer = null;
 function fmtPct(v) { return (v >= 0 ? '+' : '') + (v||0).toFixed(2) + '%'; }
 function cls(v)    { return v > 0 ? 'gain' : v < 0 ? 'loss' : 'flat'; }
 function hasTraded(d) { return (d.equity_curve||[]).some(r => (r.trades||0) > 0); }
+function hasPositions(d) { return (d.open_position_count || 0) > 0; }
 
 /* ── Render functions ── */
 function renderTopMetrics(d) {
   const a = d.account, spy = d.spy_benchmark;
   const traded = hasTraded(d);
+  const positioned = hasPositions(d);
+  const unrealPct = d.unrealized_pnl_pct || 0;
   // Card 1: Portfolio Index (100 = baseline)
   document.getElementById('equity').textContent = a.index.toFixed(2);
   document.getElementById('equity').className = 'metric';
-  document.getElementById('equity-sub').textContent = traded ? (fmtPct(a.total_pct) + ' all-time') : 'baseline';
+  document.getElementById('equity-sub').textContent = traded ? (fmtPct(a.total_pct) + ' all-time') : (positioned ? (d.open_position_count + ' positions open') : 'baseline');
   document.getElementById('equity-sub').className = 'metric-sub ' + (traded ? cls(a.total_pct) : 'flat');
-  // Card 2: Today
+  // Card 2: Today — show unrealized P&L when positions open but no closed trades yet
   const dp = document.getElementById('daily-pnl');
-  dp.textContent = traded ? fmtPct(a.daily_pct) : '—';
-  dp.className = 'metric ' + (traded ? cls(a.daily_pct) : 'flat');
-  document.getElementById('daily-pnl-pct').innerHTML = '&nbsp;';
-  document.getElementById('daily-pnl-pct').className = 'metric-sub flat';
+  if (traded) {
+    dp.textContent = fmtPct(a.daily_pct);
+    dp.className = 'metric ' + cls(a.daily_pct);
+  } else if (positioned) {
+    dp.textContent = fmtPct(unrealPct);
+    dp.className = 'metric ' + cls(unrealPct);
+    document.getElementById('daily-pnl-pct').textContent = 'unrealised';
+    document.getElementById('daily-pnl-pct').className = 'metric-sub flat';
+  } else {
+    dp.textContent = '—';
+    dp.className = 'metric flat';
+  }
+  if (traded) {
+    document.getElementById('daily-pnl-pct').innerHTML = '&nbsp;';
+    document.getElementById('daily-pnl-pct').className = 'metric-sub flat';
+  }
   // Card 3: All-Time
   const tp = document.getElementById('total-pnl');
   tp.textContent = traded ? fmtPct(a.total_pct) : '—';
   tp.className = 'metric ' + (traded ? cls(a.total_pct) : 'flat');
-  document.getElementById('total-pnl-pct').textContent = traded ? 'since start' : 'no trades yet';
+  document.getElementById('total-pnl-pct').textContent = traded ? 'since start' : (positioned ? 'awaiting first close' : 'no trades yet');
   document.getElementById('total-pnl-pct').className = 'metric-sub flat';
   // Card 4: vs SPY — only meaningful once we have actual trade history
   const ae = document.getElementById('alpha');
