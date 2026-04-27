@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-04-27T19:10:58.893354Z",
+  "generated_at": "2026-04-27T20:29:45.690310Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 99.829,
+    "index": 99.764,
     "opening_index": 100.0,
-    "daily_pct": -0.171,
-    "total_pct": 0.0
+    "daily_pct": -0.236,
+    "total_pct": -0.236
   },
   "spy_benchmark": {
     "return_pct": 0.0,
-    "our_return_pct": 0.0,
+    "our_return_pct": -0.236,
     "alpha_pct": 0.0,
-    "start_date": null
+    "start_date": "2026-04-27"
   },
   "open_position_count": 14,
-  "unrealized_pnl_pct": -0.175,
+  "unrealized_pnl_pct": -0.236,
   "strategy_stats": {
     "pead": {
       "name": "3M Momentum",
@@ -53,52 +53,60 @@
       "pnl_pct": 0.0
     }
   },
-  "equity_curve": [],
+  "equity_curve": [
+    {
+      "date": "2026-04-27",
+      "index": 99.764,
+      "daily_pct": -0.236,
+      "trades": 14,
+      "strategies": [
+        "pead",
+        "mom6",
+        "breakout",
+        "sector_rot"
+      ]
+    }
+  ],
   "open_positions": [
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 0.2
+      "pnl_pct": -0.25
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.89
+      "pnl_pct": -0.43
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 0.34
+      "pnl_pct": 0.0
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -1.15
+      "pnl_pct": -0.69
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": -0.79
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -0.37
+      "pnl_pct": -0.81
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 0.85
+      "pnl_pct": 0.29
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -1.18
-    },
-    {
-      "ticker": "***",
-      "strategy": "pead",
-      "pnl_pct": -0.7
-    },
-    {
-      "ticker": "***",
-      "strategy": "breakout",
-      "pnl_pct": 0.73
+      "pnl_pct": -1.56
     },
     {
       "ticker": "***",
@@ -107,48 +115,53 @@
     },
     {
       "ticker": "***",
-      "strategy": "sector_rot",
-      "pnl_pct": -0.52
-    },
-    {
-      "ticker": "***",
-      "strategy": "sector_rot",
-      "pnl_pct": 0.12
-    },
-    {
-      "ticker": "***",
-      "strategy": "sector_rot",
-      "pnl_pct": -0.21
-    },
-    {
-      "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -0.64
+      "pnl_pct": -1.11
+    },
+    {
+      "ticker": "***",
+      "strategy": "breakout",
+      "pnl_pct": 0.82
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": -1.0
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": 0.37
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": -0.31
     }
   ],
-  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). All near entry. Daily P&L -$171.37. $100k paper account.",
+  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). EOD equity $99,763.93. Daily P&L -$236.07. SPY benchmark set at $708.72. Paper day 1.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "3.7h ago",
-      "status": "warning",
+      "age": "5.1h ago",
+      "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "1.2h ago",
-      "status": "warning",
+      "age": "2.5h ago",
+      "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "2.0h ago",
-      "status": "fresh"
+      "age": "3.3h ago",
+      "status": "warning"
     },
     "economic_calendar": {
-      "age": "2.0h ago",
+      "age": "3.3h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "2.0h ago",
+      "age": "3.3h ago",
       "status": "fresh",
       "count": 0
     }
@@ -172,9 +185,10 @@
     }
   ],
   "last_routine": {
-    "ts": "2026-04-27T19:09:36Z",
-    "routine": "intraday",
-    "notes": "No rebalance plan. No new insider signals (0 filings). 14 positions monitored \u2014 all within normal range (worst: WMT -1.27%). No bracket overrides. Daily P&L -$171.37."
+    "ts": "2026-04-27T20:25:00Z",
+    "routine": "end_of_day",
+    "daily_pnl": -236.07,
+    "trades": 14
   },
   "strategies_enabled": {
     "pead": true,
