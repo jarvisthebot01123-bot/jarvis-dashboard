@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:45:47.841875Z",
+  "generated_at": "2026-04-27T14:08:24.412009Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -17,30 +17,30 @@
   "strategy_stats": {
     "pead": {
       "name": "3M Momentum",
-      "trades": 0,
+      "trades": 5,
       "wins": 0,
-      "win_rate": 0,
+      "win_rate": 0.0,
       "pnl_pct": 0.0
     },
     "mom6": {
       "name": "6M Momentum",
-      "trades": 0,
+      "trades": 5,
       "wins": 0,
-      "win_rate": 0,
+      "win_rate": 0.0,
       "pnl_pct": 0.0
     },
     "breakout": {
       "name": "1M Momentum",
-      "trades": 0,
+      "trades": 1,
       "wins": 0,
-      "win_rate": 0,
+      "win_rate": 0.0,
       "pnl_pct": 0.0
     },
     "sector_rot": {
       "name": "Sector Rotation",
-      "trades": 0,
+      "trades": 3,
       "wins": 0,
-      "win_rate": 0,
+      "win_rate": 0.0,
       "pnl_pct": 0.0
     },
     "insider": {
@@ -51,31 +51,201 @@
       "pnl_pct": 0.0
     }
   },
-  "equity_curve": [],
-  "open_positions": [],
-  "performance_summary": "Swing trading system initialised. 5 momentum strategies. No trades yet. $100k paper account.",
+  "equity_curve": [
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-27",
+      "index": 100.0,
+      "daily_pct": 0.0,
+      "trades": 0,
+      "strategies": []
+    }
+  ],
+  "open_positions": [
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": -0.0
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": -0.006
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": -0.006
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": -0.001
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": 0.0
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": -0.0
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": -0.0
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": -0.0
+    },
+    {
+      "ticker": "***",
+      "strategy": "breakout",
+      "pnl_pct": 0.002
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": 0.001
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": 0.0
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": -0.001
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": -0.001
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": 0.001
+    }
+  ],
+  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). All near entry. Daily P&L $0.00. $100k paper account.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "62.3h ago",
+      "age": "63.7h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "62.3h ago",
+      "age": "63.7h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "2m ago",
+      "age": "1.4h ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "2m ago",
+      "age": "1.4h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "2m ago",
+      "age": "1.4h ago",
       "status": "fresh",
       "count": 0
     }
@@ -96,9 +266,9 @@
     }
   ],
   "last_routine": {
-    "ts": "2026-04-27T12:45:32Z",
-    "routine": "pre_market",
-    "notes": "All 5 strats due. 21 entries planned. Exposure $83,336. VIX 19.06. No insider signals."
+    "ts": "2026-04-27T14:08:10Z",
+    "routine": "intraday",
+    "notes": "14 entries placed (pead:5 AMD/TXN/CAT/AVGO/CSCO, mom6:5 GOOGL/XOM/MRK/WMT/CVX, breakout:1 UNH, sector_rot:3 XLE/XLK/XLU). Skipped 7 duplicate-position errors (CAT/TXN/AMD/CSCO/AVGO mom6, AMD/TXN breakout). 0 insider signals. Daily P&L $0.00."
   },
   "strategies_enabled": {
     "pead": true,
