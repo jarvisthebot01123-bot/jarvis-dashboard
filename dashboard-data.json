@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T09:55:58.757393Z",
+  "generated_at": "2026-04-27T12:45:47.841875Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -57,26 +57,26 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "59.5h ago",
+      "age": "62.3h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "59.5h ago",
+      "age": "62.3h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "17.8h ago",
-      "status": "stale"
+      "age": "2m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "17.8h ago",
-      "status": "stale"
+      "age": "2m ago",
+      "status": "fresh"
     },
     "insider_trades": {
-      "age": "17.8h ago",
-      "status": "stale",
+      "age": "2m ago",
+      "status": "fresh",
       "count": 0
     }
   },
@@ -87,18 +87,18 @@
     {
       "event": "FOMC Statement",
       "date": "2026-04-29",
-      "days_away": 3
+      "days_away": 2
     },
     {
       "event": "NFP",
       "date": "2026-05-01",
-      "days_away": 5
+      "days_away": 4
     }
   ],
   "last_routine": {
-    "ts": "2026-04-26T16:09:47Z",
+    "ts": "2026-04-27T12:45:32Z",
     "routine": "pre_market",
-    "notes": "All 4 momentum strats due (last_rebalance null). 18 total entries planned. Exposure $82.7k. VIX 18.71. No insider signals."
+    "notes": "All 5 strats due. 21 entries planned. Exposure $83,336. VIX 19.06. No insider signals."
   },
   "strategies_enabled": {
     "pead": true,
