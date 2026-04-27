@@ -1,15 +1,136 @@
 {
-  "generated_at": "2026-04-25T00:00:00Z",
-  "connected": false,
-  "sources_monitored": 8,
-  "headlines_per_refresh": 30,
-  "refresh_interval_min": 30,
-  "stats": {
-    "articles_today": null,
-    "breaking_alerts": null,
-    "tickers_tracked": null
-  },
-  "breaking_stories": [],
-  "headlines": [],
-  "tracked_tickers": []
+  "connected": true,
+  "generated_at": "2026-04-27T17:35:00Z",
+  "persona": "journalist",
+  "briefings": [
+    {
+      "id": "2026-04-27T1005Z-WORLD-russia-ukraine-odesa-zaporizhzhia",
+      "generated_at": "2026-04-27T10:05:00Z",
+      "category": "WORLD",
+      "headline": "Russia Strikes Odesa as Ukraine Reported to Have Hit Zaporizhzhia Nuclear Plant; North Korea Honours Troops Killed in Ukraine",
+      "neutral_summary": "Russia launched strikes on the southern Ukrainian city of Odesa on 27 April 2026, as managers installed by Moscow at the occupied Zaporizhzhia nuclear power plant claimed that a Ukrainian attack on the facility had killed one worker. North Korea simultaneously opened a museum in Pyongyang in memory of its soldiers who died fighting alongside Russian forces in Ukraine, with Pyongyang and Moscow announcing plans to deepen military cooperation. In a rare interview published separately, Ukraine’s drone operations commander, Colonel Robert Brovdi, stated that his unit was responsible for approximately one third of all targets destroyed on the battlefield.\n\nThe two Al Jazeera reports framed the developments within a narrative of Russian military aggression and expanding international alliance. BBC News took a different angle, foregrounding Ukrainian military capability through its profile of Commander Brovdi. The claim that the Zaporizhzhia nuclear plant was struck by Ukraine originated solely from plant managers appointed by Moscow; Kyiv’s account was not available at the time of publication.",
+      "corroborated_facts": [
+        "Russia launched strikes on Odesa on 27 April 2026.",
+        "North Korea opened a museum in Pyongyang commemorating soldiers killed fighting for Russia in Ukraine.",
+        "Russia and North Korea announced plans to deepen military cooperation.",
+        "Ukraine drone commander Robert Brovdi stated his unit accounts for approximately a third of all targets destroyed on the battlefield."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "A Ukrainian strike on the Zaporizhzhia nuclear power plant killed one worker on 27 April 2026.",
+          "sources_for": ["Al Jazeera (citing Russia-installed plant managers)"],
+          "sources_against": []
+        }
+      ],
+      "framings": [
+        {"lean": "centre-left", "characterisation": "Al Jazeera foregrounded Russian offensive action and the expanding Russia–North Korea military alliance."},
+        {"lean": "centre", "characterisation": "BBC News focused on Ukrainian military capability, profiling the drone commander’s campaign against Russian infrastructure."}
+      ],
+      "source_count": 3,
+      "outlets": ["Al Jazeera", "BBC News"],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/4/27/russia-attacks-odesa-claims-ukraine-hit-zaporizhzhia-nuclear-plant?traffic_source=rss",
+        "https://www.aljazeera.com/gallery/2026/4/27/north-korea-opens-museum-for-troops-killed-fighting-for-russia?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c1d9wvd2e4ro?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-27T1005Z-UK-starmer-cobra-iran-war-mandelson",
+      "generated_at": "2026-04-27T10:05:00Z",
+      "category": "UK",
+      "headline": "Starmer Convenes Emergency Cobra Meeting Over Iran War Economic Impact as Mandelson Inquiry Vote Looms",
+      "neutral_summary": "Prime Minister Sir Keir Starmer convened an emergency Cobra meeting on 27 April 2026 to address the economic impact of the Iran war, warning that the financial consequences could persist \"for some time\". Simultaneously, the Conservatives were preparing to force a House of Commons vote on whether to refer claims that Starmer misled parliament over the vetting of Peter Mandelson to the privileges committee — a move that senior Labour figures dismissed as a political stunt.\n\nThe Independent led with the Cobra meeting and economic crisis. The Guardian devoted its principal focus to the Mandelson inquiry vote. BBC Politics reported Starmer’s assertion of majority Labour support in a measured register.",
+      "corroborated_facts": [
+        "Starmer convened an emergency Cobra meeting on 27 April 2026 to address the economic impact of the Iran war.",
+        "The Conservatives called for a Commons vote on referring Mandelson vetting claims to the privileges committee.",
+        "Senior Labour figures characterised the Conservative demand as a political stunt.",
+        "Esther Ghey expressed distress that the PM had met technology executives before families campaigning for online safety."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "Starmer misled parliament over the vetting process for Peter Mandelson’s appointment.",
+          "sources_for": ["Guardian (citing Conservative claims)"],
+          "sources_against": ["Guardian (citing Labour allies)", "Independent (citing Labour allies)"]
+        }
+      ],
+      "framings": [
+        {"lean": "left", "characterisation": "The Guardian treated the Conservative push for a privileges committee inquiry as a significant challenge to Starmer."},
+        {"lean": "centre-left", "characterisation": "The Independent led with the Iran war economic crisis, presenting the Mandelson row as one of several concurrent pressures."},
+        {"lean": "centre", "characterisation": "BBC Politics reported Starmer’s assertion of majority Labour support without suggesting his leadership was immediately at risk."}
+      ],
+      "source_count": 5,
+      "outlets": ["Independent", "Guardian", "BBC Politics"],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/keir-starmer-emergency-cobra-meeting-iran-war-economic-crisis-b2965510.html",
+        "https://www.theguardian.com/politics/live/2026/apr/27/keir-starmer-peter-mandelson-inquiry-speaker-shoplifting-latest-news-updates",
+        "https://www.independent.co.uk/news/uk/politics/brianna-esther-ghey-starmer-tiktok-facebook-b2965496.html",
+        "https://www.theguardian.com/politics/2026/apr/27/senior-labour-figures-call-new-mandelson-investigation-political-stunt",
+        "https://www.bbc.com/news/articles/c705228kpx9o?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-27T1005Z-INDIA-tmc-bjp-car-attack-west-bengal",
+      "generated_at": "2026-04-27T10:05:00Z",
+      "category": "INDIA",
+      "headline": "Election Commission Seeks Report After TMC MP Alleges BJP Supporters Attacked Her Car in West Bengal",
+      "neutral_summary": "Trinamool Congress MP Mithali Bag alleged in a live video on 27 April 2026 that her vehicle was attacked by BJP supporters near a BJP candidate’s election office in West Bengal. The Election Commission subsequently sought an official report. In a separate development, a BJP MLA warned the central government that plans to rename Lansdowne would damage local tourism.\n\nBoth stories were reported by a single outlet each, with no cross-outlet corroboration available.",
+      "corroborated_facts": [
+        "TMC MP Mithali Bag alleged in a live video that her car was attacked by BJP supporters in West Bengal.",
+        "The Election Commission sought an official report following the allegation.",
+        "A BJP MLA warned the central government that renaming Lansdowne would damage local tourism."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "TMC MP Mithali Bag’s vehicle was attacked by BJP supporters.",
+          "sources_for": ["The Hindu (citing Bag’s allegation)"],
+          "sources_against": []
+        }
+      ],
+      "framings": [
+        {"lean": "centre-left", "characterisation": "The Hindu reported the alleged attack factually, noting the Election Commission’s intervention."},
+        {"lean": "centre", "characterisation": "The Indian Express reported the BJP MLA’s objection to renaming neutrally."}
+      ],
+      "source_count": 2,
+      "outlets": ["The Hindu", "Indian Express"],
+      "source_urls": [
+        "https://www.thehindu.com/elections/west-bengal-assembly/tmc-mp-alleges-attack-on-car-by-bjp-ec-seeks-report/article70911512.ece",
+        "https://indianexpress.com/article/india/lansdowne-rename-row-bjp-mla-opposes-centres-move-flags-tourism-hit-10658112/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-27T1005Z-AI-openai-musk-altman-court-codex-chips",
+      "generated_at": "2026-04-27T10:05:00Z",
+      "category": "AI",
+      "headline": "Musk and Altman Face Off in Court Over OpenAI’s Founding Mission as Company Retires Codex and Develops Smartphone Chips",
+      "neutral_summary": "Elon Musk and OpenAI chief executive Sam Altman appeared before a court on 27 April 2026 in a lawsuit in which Musk alleges fraud, claiming Altman departed from OpenAI’s founding non-profit mission. OpenAI rejected the allegations, characterising Musk’s action as motivated by jealousy. OpenAI was also reported to be developing custom smartphone processors with MediaTek and Qualcomm, and retired its dedicated Codex coding model, folding its capabilities into GPT-5.5.\n\nGuardian Tech covered the court confrontation giving equal weight to each side’s claims. The Decoder reported the chip development and Codex retirement in a neutral, technical register.",
+      "corroborated_facts": [
+        "Elon Musk’s lawsuit against OpenAI alleges fraud over departure from its founding non-profit mission.",
+        "OpenAI stated Musk’s lawsuit is motivated by jealousy.",
+        "OpenAI retired its dedicated Codex coding model, folding its capabilities into GPT-5.5.",
+        "OpenAI is reportedly developing custom smartphone chips with MediaTek and Qualcomm."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "OpenAI acted fraudulently in departing from its founding non-profit mission.",
+          "sources_for": ["Guardian Tech (citing Musk’s court filings)"],
+          "sources_against": ["Guardian Tech (citing OpenAI’s defence)"]
+        }
+      ],
+      "framings": [
+        {"lean": "centre-left", "characterisation": "Guardian Tech framed the lawsuit as a high-profile Silicon Valley confrontation, reporting both parties’ characterisations of motive."},
+        {"lean": "tech", "characterisation": "The Decoder reported OpenAI’s chip development and Codex retirement in a neutral technical register."}
+      ],
+      "source_count": 3,
+      "outlets": ["The Decoder", "Guardian Tech"],
+      "source_urls": [
+        "https://the-decoder.com/openai-reportedly-developing-its-own-smartphone-chips-with-mediatek-and-qualcomm/",
+        "https://www.theguardian.com/technology/2026/apr/27/elon-musk-sam-altman-open-ai-lawsuit",
+        "https://the-decoder.com/openai-kills-its-dedicated-coding-model-codex-again-folding-it-into-gpt-5-5/"
+      ],
+      "confidence": "medium"
+    }
+  ]
 }
