@@ -1,15 +1,538 @@
 {
-  "generated_at": "2026-04-25T00:00:00Z",
-  "connected": false,
-  "sources_monitored": 8,
-  "headlines_per_refresh": 30,
-  "refresh_interval_min": 30,
-  "stats": {
-    "articles_today": null,
-    "breaking_alerts": null,
-    "tickers_tracked": null
-  },
-  "breaking_stories": [],
-  "headlines": [],
-  "tracked_tickers": []
+  "connected": true,
+  "generated_at": "2026-04-28T08:03:19.557610+00:00",
+  "persona": "journalist",
+  "briefings": [
+    {
+      "id": "2026-04-28T0802Z-WORLD-suspect-charged-with-attempted-assassina",
+      "generated_at": "2026-04-28T08:02:55Z",
+      "category": "WORLD",
+      "headline": "Suspect charged with attempted assassination of Trump at Washington dinner",
+      "neutral_summary": "Investigators say the man who attacked Trump wanted to kill as many White House officials as possible.",
+      "source_count": 4,
+      "outlets": [
+        "BBC Top Stories",
+        "Al Jazeera",
+        "BBC News",
+        "DW News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/cew7wez72vxo?at_medium=RSS&at_campaign=rss",
+        "https://www.aljazeera.com/video/newsfeed/2026/4/27/leavitt-blames-democrats-for-cult-of-hatred-against-trump?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c04x40d4424o?at_medium=RSS&at_campaign=rss",
+        "https://www.dw.com/en/gala-shooting-suspect-charged-with-attempt-to-murder-trump/live-76948331?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/c4gjger58jzo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-28T0802Z-UK-starmer-says-iran-war-could-impact-shopp",
+      "generated_at": "2026-04-28T08:02:55Z",
+      "category": "UK",
+      "headline": "Starmer says Iran war could impact shopping habits and holiday plans – but tells Brits, ‘Don’t panic’",
+      "neutral_summary": "The Prime Minister, who will lead a meeting of the ministerial Iran crisis committee on Tuesday, said “at the moment” th.",
+      "source_count": 4,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Sky News Politics",
+        "Guardian"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/starmer-iran-war-holidays-shopping-uk-b2966026.html",
+        "https://www.bbc.com/news/articles/c3r3r2vzjp1o?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/day-of-drama-could-deliver-double-whammy-to-starmers-survival-hopes-13537383",
+        "https://www.theguardian.com/politics/2026/apr/27/top-foreign-office-official-felt-pressure-for-rapid-outcome-on-mandelson-vetting",
+        "https://www.theguardian.com/politics/2026/apr/27/starmer-mps-vote-commons-mandelson-standards-investigation",
+        "https://www.independent.co.uk/tv/news/keir-starmer-peter-mandelson-vetting-scandal-wife-victoria-b2965935.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-28T0802Z-INDIA-centre-picks-former-union-minister-dines",
+      "generated_at": "2026-04-28T08:02:55Z",
+      "category": "INDIA",
+      "headline": "Centre picks former Union minister Dinesh Trivedi as Indian envoy to Dhaka",
+      "neutral_summary": "Centre picks former Union minister Dinesh Trivedi as Indian envoy to Dhaka.",
+      "source_count": 1,
+      "outlets": [
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://indianexpress.com/article/india/centre-picks-former-union-minister-dinesh-trivedi-as-indian-envoy-to-dhaka-10659162/",
+        "https://indianexpress.com/article/india/rajnath-leads-indian-delegation-at-sco-defence-ministers-meet-today-10659144/"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-04-28T0802Z-AI-microsoft-and-openai-gut-their-exclusive",
+      "generated_at": "2026-04-28T08:02:55Z",
+      "category": "AI",
+      "headline": "Microsoft and OpenAI gut their exclusive deal, freeing OpenAI to sell on AWS and Google Cloud",
+      "neutral_summary": "Microsoft and OpenAI on Monday announced a sweeping overhaul of the partnership that has defined the commercial AI era.",
+      "source_count": 5,
+      "outlets": [
+        "VentureBeat",
+        "Guardian Tech",
+        "The Verge",
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://venturebeat.com/technology/microsoft-and-openai-gut-their-exclusive-deal-freeing-openai-to-sell-on-aws-and-google-cloud",
+        "https://www.theguardian.com/technology/2026/apr/27/elon-musk-sam-altman-open-ai-lawsuit",
+        "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter",
+        "https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/",
+        "https://www.theverge.com/ai-artificial-intelligence/918981/openai-microsoft-renegotiate-contract",
+        "https://the-decoder.com/openai-and-microsoft-rewrite-their-deal-no-more-exclusivity-no-more-agi-clause/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-27T1005Z-WORLD-russia-ukraine-odesa-zaporizhzhia",
+      "generated_at": "2026-04-27T10:05:00Z",
+      "category": "WORLD",
+      "headline": "Russia Strikes Odesa as Ukraine Reported to Have Hit Zaporizhzhia Nuclear Plant; North Korea Honours Troops Killed in Ukraine",
+      "neutral_summary": "Russia launched strikes on the southern Ukrainian city of Odesa on 27 April 2026, as managers installed by Moscow at the occupied Zaporizhzhia nuclear power plant claimed that a Ukrainian attack on the facility had killed one worker. North Korea simultaneously opened a museum in Pyongyang in memory of its soldiers who died fighting alongside Russian forces in Ukraine, with Pyongyang and Moscow announcing plans to deepen military cooperation. In a rare interview published separately, Ukraine's drone operations commander, Colonel Robert Brovdi, stated that his unit was responsible for approximately one third of all targets destroyed on the battlefield, identifying Russian oil infrastructure, frontline troops, and enemy morale as his principal objectives.\n\nThe two Al Jazeera reports framed the developments within a narrative of Russian military aggression and expanding international alliance, presenting the North Korean museum as evidence of a deepening Russia–North Korea axis. BBC News took a different angle, foregrounding Ukrainian military capability through its profile of Commander Brovdi, whose account emphasised the effectiveness of the drone campaign rather than Russian offensive action. The claim that the Zaporizhzhia nuclear plant was struck by Ukraine originated solely from plant managers appointed by Moscow; Kyiv's account of the incident was not available at the time of publication.",
+      "corroborated_facts": [
+        "Russia launched strikes on Odesa on 27 April 2026.",
+        "North Korea opened a museum in Pyongyang commemorating soldiers killed fighting for Russia in Ukraine.",
+        "Russia and North Korea announced plans to deepen military cooperation.",
+        "Ukraine drone commander Robert Brovdi stated his unit accounts for approximately a third of all targets destroyed on the battlefield."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "A Ukrainian strike on the Zaporizhzhia nuclear power plant killed one worker on 27 April 2026.",
+          "sources_for": [
+            "Al Jazeera (citing Russia-installed plant managers)"
+          ],
+          "sources_against": []
+        }
+      ],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "Al Jazeera foregrounded Russian offensive action and the expanding Russia–North Korea military alliance, presenting the conflict in the context of Moscow's growing international partnerships."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC News focused on Ukrainian military capability, profiling the drone commander's campaign against Russian infrastructure and personnel."
+        }
+      ],
+      "source_count": 3,
+      "outlets": [
+        "Al Jazeera",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/4/27/russia-attacks-odesa-claims-ukraine-hit-zaporizhzhia-nuclear-plant?traffic_source=rss",
+        "https://www.aljazeera.com/gallery/2026/4/27/north-korea-opens-museum-for-troops-killed-fighting-for-russia?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c1d9wvd2e4ro?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-27T1005Z-UK-starmer-cobra-iran-war-mandelson",
+      "generated_at": "2026-04-27T10:05:00Z",
+      "category": "UK",
+      "headline": "Starmer Convenes Emergency Cobra Meeting Over Iran War Economic Impact as Mandelson Inquiry Vote Looms",
+      "neutral_summary": "Prime Minister Sir Keir Starmer convened an emergency Cobra meeting on 27 April 2026 to address the economic impact of the Iran war, warning that the financial consequences could persist \"for some time\". Simultaneously, the Conservatives were preparing to force a House of Commons vote on whether to refer claims that Starmer misled parliament over the vetting of Peter Mandelson to the privileges committee — a move that senior Labour figures dismissed as a political stunt. The mother of murdered teenager Brianna Ghey, Esther Ghey, separately expressed distress upon learning that the Prime Minister had met executives from major technology companies before receiving families who had campaigned for stronger online safety protections.\n\nThe Independent led its coverage with the Cobra meeting and the economic crisis, contextualising the Mandelson row as one of several simultaneous pressures on the Prime Minister. The Guardian devoted its principal focus to the Mandelson inquiry vote and Labour's defensive response, treating the Conservative push for a privileges committee investigation as politically significant. BBC Politics reported Starmer's assertion of majority Labour support in a measured register, without characterising his position as acutely threatened.",
+      "corroborated_facts": [
+        "Starmer convened an emergency Cobra meeting on 27 April 2026 to address the economic impact of the Iran war.",
+        "Starmer warned that the economic impact of the war could continue \"for some time\".",
+        "The Conservatives called for a Commons vote on referring claims regarding Mandelson's vetting to the privileges committee.",
+        "Senior Labour figures characterised the Conservative demand for a new Mandelson investigation as a political stunt.",
+        "Esther Ghey expressed distress that the Prime Minister had met technology company executives before families campaigning for online safety."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "Starmer misled parliament over the vetting process for Peter Mandelson's appointment.",
+          "sources_for": [
+            "Guardian (citing Conservative claims)"
+          ],
+          "sources_against": [
+            "Guardian (citing Labour allies)",
+            "Independent (citing Labour allies)"
+          ]
+        }
+      ],
+      "framings": [
+        {
+          "lean": "left",
+          "characterisation": "The Guardian treated the Conservative push for a privileges committee inquiry as a politically significant challenge to Starmer, foregrounding the claims of misleading parliament."
+        },
+        {
+          "lean": "centre-left",
+          "characterisation": "The Independent led with the Iran war economic crisis and Cobra meeting, presenting the Mandelson row as one of several concurrent pressures on the Prime Minister."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC Politics reported Starmer's assertion of majority Labour support in a measured register, without suggesting his leadership was immediately at risk."
+        }
+      ],
+      "source_count": 5,
+      "outlets": [
+        "Independent",
+        "Guardian",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/keir-starmer-emergency-cobra-meeting-iran-war-economic-crisis-b2965510.html",
+        "https://www.theguardian.com/politics/live/2026/apr/27/keir-starmer-peter-mandelson-inquiry-speaker-shoplifting-latest-news-updates",
+        "https://www.independent.co.uk/news/uk/politics/brianna-esther-ghey-starmer-tiktok-facebook-b2965496.html",
+        "https://www.theguardian.com/politics/2026/apr/27/senior-labour-figures-call-new-mandelson-investigation-political-stunt",
+        "https://www.bbc.com/news/articles/c705228kpx9o?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-27T1005Z-INDIA-tmc-bjp-car-attack-west-bengal",
+      "generated_at": "2026-04-27T10:05:00Z",
+      "category": "INDIA",
+      "headline": "Election Commission Seeks Report After TMC MP Alleges BJP Supporters Attacked Her Car in West Bengal",
+      "neutral_summary": "Trinamool Congress (TMC) Member of Parliament Mithali Bag alleged in a live video broadcast on 27 April 2026 that her vehicle was attacked by Bharatiya Janata Party (BJP) supporters as it passed the election office of a BJP candidate in West Bengal. A visibly distressed Bag made the allegation whilst filming, and the Election Commission subsequently sought an official report on the incident. In a separate development, a BJP Member of the Legislative Assembly warned the central government that plans to rename the hill-station town of Lansdowne would inflict significant damage on the local tourism industry.\n\nBoth stories were reported by a single outlet each, with The Hindu covering the alleged car attack and the Election Commission's response, and the Indian Express covering the Lansdowne renaming dispute. No cross-outlet corroboration was available for either story, and the BJP had not issued a public response to the car attack allegation at the time of publication.",
+      "corroborated_facts": [
+        "TMC MP Mithali Bag alleged in a live video that her car was attacked by BJP supporters near a BJP candidate's election office in West Bengal.",
+        "The Election Commission sought an official report following the allegation.",
+        "A BJP MLA warned the central government that renaming Lansdowne would damage local tourism."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "TMC MP Mithali Bag's vehicle was attacked by BJP supporters.",
+          "sources_for": [
+            "The Hindu (citing Bag's allegation)"
+          ],
+          "sources_against": []
+        }
+      ],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "The Hindu reported the alleged attack in a factual register, noting the Election Commission's intervention without editorialising on the BJP's culpability."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "The Indian Express reported the BJP MLA's objection to the Lansdowne renaming plan neutrally, presenting it as a practical concern about economic impact."
+        }
+      ],
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/elections/west-bengal-assembly/tmc-mp-alleges-attack-on-car-by-bjp-ec-seeks-report/article70911512.ece",
+        "https://indianexpress.com/article/india/lansdowne-rename-row-bjp-mla-opposes-centres-move-flags-tourism-hit-10658112/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-27T1005Z-AI-openai-musk-altman-court-codex-chips",
+      "generated_at": "2026-04-27T10:05:00Z",
+      "category": "AI",
+      "headline": "Musk and Altman Face Off in Court Over OpenAI's Founding Mission as Company Retires Codex and Develops Smartphone Chips",
+      "neutral_summary": "Elon Musk and OpenAI chief executive Sam Altman appeared before a court on 27 April 2026 in a lawsuit in which Musk alleges fraud, claiming that Altman departed from OpenAI's founding mission as a non-profit organisation. OpenAI rejected the allegations, characterising Musk's legal action as motivated by jealousy. In separate developments, OpenAI was reported to be developing custom smartphone processors in collaboration with chip manufacturers MediaTek and Qualcomm, according to industry analyst Ming-Chi Kuo. The company also retired its dedicated Codex coding model for the second time, folding its capabilities into the main GPT-5.5 model.\n\nGuardian Tech covered the Musk–Altman court confrontation by presenting both parties' characterisations of motive, framing the lawsuit as a confrontation between two of Silicon Valley's most consequential figures whilst giving equal weight to each side's claims. The Decoder reported the chip development and Codex retirement in a neutral, technical register, treating both as operational product decisions rather than strategic inflection points.",
+      "corroborated_facts": [
+        "Elon Musk's lawsuit against OpenAI alleges fraud over the company's departure from its founding non-profit mission.",
+        "OpenAI stated in court that Musk's lawsuit is motivated by jealousy.",
+        "OpenAI retired its dedicated Codex coding model, folding its capabilities into GPT-5.5.",
+        "OpenAI is reportedly developing custom smartphone chips in collaboration with MediaTek and Qualcomm."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "OpenAI acted fraudulently in departing from its founding non-profit mission.",
+          "sources_for": [
+            "Guardian Tech (citing Musk's court filings)"
+          ],
+          "sources_against": [
+            "Guardian Tech (citing OpenAI's defence)"
+          ]
+        }
+      ],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "Guardian Tech framed the Musk–Altman lawsuit as a high-profile Silicon Valley confrontation, reporting both parties' characterisations of motive without favouring either."
+        },
+        {
+          "lean": "tech",
+          "characterisation": "The Decoder reported OpenAI's chip development and Codex retirement in a neutral technical register, focusing on product and strategic implications."
+        }
+      ],
+      "source_count": 3,
+      "outlets": [
+        "The Decoder",
+        "Guardian Tech"
+      ],
+      "source_urls": [
+        "https://the-decoder.com/openai-reportedly-developing-its-own-smartphone-chips-with-mediatek-and-qualcomm/",
+        "https://www.theguardian.com/technology/2026/apr/27/elon-musk-sam-altman-open-ai-lawsuit",
+        "https://the-decoder.com/openai-kills-its-dedicated-coding-model-codex-again-folding-it-into-gpt-5-5/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-26T1845Z-WORLD-shooter-targeted-trump-administration-correspondents-dinner",
+      "generated_at": "2026-04-26T18:45:00Z",
+      "category": "WORLD",
+      "headline": "Californian Suspect in Correspondents' Dinner Shooting Said to Have Targeted Trump and Officials",
+      "neutral_summary": "A gunman opened fire at the White House Correspondents' Dinner in Washington DC on 26 April 2026, prompting Secret Service personnel to remove President Donald Trump and Vice-President JD Vance from the stage. Authorities identified the suspect as Cole Tomas Allen, a 31-year-old from California, with officials stating he appeared to have been targeting Trump and senior members of his administration. Outlets concurred on the core sequence of events but diverged in emphasis: Al Jazeera foregrounded Trump's assertion that the suspect had penned an anti-Christian declaration and his characterisation of the accused as a sick individual, whilst BBC correspondents and DW News focused on the security response, eyewitness accounts, and the formal identification of the suspect. Sky News gave prominence to Trump's claim that the incident would not have occurred had his proposed White House ballroom been constructed — a contention not addressed by law enforcement or other outlets.",
+      "corroborated_facts": [
+        "A shooting occurred at the White House Correspondents' Dinner in Washington DC on 26 April 2026.",
+        "President Trump and Vice-President Vance were escorted from the stage by Secret Service personnel after shots were fired.",
+        "US authorities identified the suspect as Cole Tomas Allen, a 31-year-old man from California.",
+        "Officials stated the suspect was believed to have been targeting Trump and members of his administration."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "Trump asserted the attack would not have occurred had his proposed ballroom been built.",
+          "sources_for": [
+            "Sky News"
+          ],
+          "sources_against": []
+        },
+        {
+          "claim": "Trump stated the suspect had written an anti-Christian declaration.",
+          "sources_for": [
+            "Al Jazeera"
+          ],
+          "sources_against": []
+        }
+      ],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "Al Jazeera foregrounded Trump's political characterisation of the suspect's alleged motives, including his description of an anti-Christian declaration."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC News, DW News, and Sky News prioritised the security response, eyewitness testimony, and the formal identification of the suspect."
+        }
+      ],
+      "source_count": 5,
+      "outlets": [
+        "Al Jazeera",
+        "DW News",
+        "Sky News",
+        "BBC Top Stories",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/4/26/trump-his-administration-likely-targets-at-media-dinner-us-official?traffic_source=rss",
+        "https://www.dw.com/en/gunman-was-likely-targeting-trump-team-says-official/live-76938867?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/donald-trump-claims-shooting-would-never-have-happened-if-ballroom-had-been-built-13536816",
+        "https://www.bbc.com/news/articles/cr717nglye0o?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/videos/cgqkq18qqeeo?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-26T1845Z-UK-starmer-vows-lead-labour-next-election-mandelson-row",
+      "generated_at": "2026-04-26T18:45:00Z",
+      "category": "UK",
+      "headline": "Starmer Vows to Lead Labour into Next Election After Bruising Week Over Mandelson Affair",
+      "neutral_summary": "Prime Minister Sir Keir Starmer declared publicly on 26 April 2026 that the majority of Labour MPs support his leadership and that he intends to lead the party into the next general election. The statements followed a turbulent week of internal speculation prompted by controversy over the vetting process for Peter Mandelson's appointment as US ambassador, which led to the dismissal of senior civil servant Olly Robbins. Reporting diverged over the gravity of Starmer's position: the Independent described him as facing existential questions about his future in power, and the Guardian emphasised his determination to rebuff claims of wrongdoing, whilst BBC Politics and Sky News characterised his stance as resolute without implying that his leadership was acutely threatened.",
+      "corroborated_facts": [
+        "Sir Keir Starmer publicly asserted that the majority of Labour MPs support his leadership.",
+        "The controversy centres on the vetting process surrounding Peter Mandelson's appointment.",
+        "Starmer defended his decision to dismiss senior civil servant Olly Robbins over the Mandelson vetting process.",
+        "Starmer declared his intention to lead the Labour Party into the next general election."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "left",
+          "characterisation": "The Guardian framed Starmer as actively rebutting allegations of wrongdoing in relation to the Mandelson affair."
+        },
+        {
+          "lean": "centre-left",
+          "characterisation": "The Independent presented Starmer as confronting serious questions about his long-term viability as prime minister."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC Politics and Sky News portrayed Starmer as defiant and committed to continuing, with no suggestion that his position was immediately at risk."
+        }
+      ],
+      "source_count": 4,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/keir-starmer-peter-mandelson-labour-mps-b2965148.html",
+        "https://www.bbc.com/news/articles/c705228kpx9o?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/2026/apr/26/keir-starmer-vows-lead-labour-general-election-mandelson-vetting",
+        "https://news.sky.com/story/defiant-sir-keir-starmer-stands-by-sacking-of-olly-robbins-and-signals-intention-to-fight-on-13536614"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-26T1845Z-AI-anthropic-agent-commerce-bay-area-property",
+      "generated_at": "2026-04-26T18:45:00Z",
+      "category": "AI",
+      "headline": "Anthropic Tests Agent-on-Agent Commerce in Experimental Marketplace",
+      "neutral_summary": "Anthropic conducted an experimental classified marketplace in which artificial intelligence agents acted simultaneously as buyers and sellers, exploring the potential for autonomous commercial interactions between AI systems, according to TechCrunch reporting from 25 April 2026. A separate TechCrunch report noted that a 13-acre property in Mill Valley, north of San Francisco, has been listed with the unusual condition that prospective buyers must hold equity in Anthropic — a stipulation indicative of the company's high profile and perceived value in the Bay Area technology sector. Both items originated from a single outlet; no divergent framing or analysis was available from other sources.",
+      "corroborated_facts": [
+        "Anthropic ran an experimental marketplace in which AI agents acted as both buyers and sellers in simulated commercial transactions."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "tech",
+          "characterisation": "TechCrunch covered both items in a neutral, descriptive register consistent with technology trade journalism."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "TechCrunch"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+        "https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-04-26T1830Z-WORLD-trump-correspondents-dinner-shooting",
+      "generated_at": "2026-04-26T18:30:00Z",
+      "category": "WORLD",
+      "headline": "Gunman Arrested at White House Correspondents' Dinner After Opening Fire Near Trump",
+      "neutral_summary": "A gunman opened fire at the White House Correspondents' Dinner in Washington DC on Saturday, 26 April 2026, prompting Secret Service agents to remove President Donald Trump and Vice-President JD Vance from the stage. Authorities subsequently identified the suspect as Cole Tomas Allen, 31, from California, stating he appeared to have been targeting Trump and members of his administration. Reports across all outlets agreed on the core sequence of events; divergence arose in framing Trump's subsequent statements, with Al Jazeera foregrounding his claim that the suspect had written an anti-Christian declaration, whilst BBC and DW News centred their coverage on the security response and suspect identification. Trump's assertion that the attack would not have occurred had his proposed ballroom been completed was reported by Sky News but was not addressed by law enforcement.",
+      "corroborated_facts": [
+        "A shooting occurred at the White House Correspondents' Dinner in Washington DC on 26 April 2026.",
+        "President Trump and Vice-President Vance were escorted from the stage by security personnel after shots were fired.",
+        "US authorities identified the suspect as Cole Tomas Allen, a 31-year-old from California.",
+        "Officials stated the suspect was believed to have been targeting Trump and members of his administration."
+      ],
+      "disputed_facts": [
+        {
+          "claim": "Trump said the attack would not have occurred had his proposed ballroom been built.",
+          "sources_for": [
+            "Sky News"
+          ],
+          "sources_against": []
+        }
+      ],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "Al Jazeera foregrounded Trump's characterisation of the suspect's alleged anti-Christian manifesto, placing his statements within a broader political narrative."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC, DW News, and Sky News reported the incident in a factual, chronological manner, focusing on the security response and the suspect's identification."
+        }
+      ],
+      "source_count": 5,
+      "outlets": [
+        "Al Jazeera",
+        "DW News",
+        "Sky News",
+        "BBC Top Stories",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/4/26/trump-his-administration-likely-targets-at-media-dinner-us-official?traffic_source=rss",
+        "https://www.dw.com/en/gunman-was-likely-targeting-trump-team-says-official/live-76938867?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/donald-trump-claims-shooting-would-never-have-happened-if-ballroom-had-been-built-13536816"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-26T1830Z-UK-starmer-defends-leadership-mandelson-vetting",
+      "generated_at": "2026-04-26T18:30:00Z",
+      "category": "UK",
+      "headline": "Starmer Insists Majority of Labour MPs Back Him Amid Mandelson Vetting Controversy",
+      "neutral_summary": "Prime Minister Sir Keir Starmer stated publicly on Sunday, 26 April 2026, that the vast majority of Labour MPs support his leadership, following a turbulent week of internal party speculation triggered by controversy over the vetting process for Peter Mandelson's appointment. Starmer defended his decision to sack senior civil servant Olly Robbins in connection with the matter, and declared his intention to lead the Labour Party into the next general election. Coverage diverged in characterising the severity of his position: the Guardian and the Independent used more urgent terms — the latter referring to existential questions about his future in power — whilst BBC Politics and Sky News presented his stance as defiant rather than imperilled.",
+      "corroborated_facts": [
+        "Keir Starmer publicly asserted that the majority of Labour MPs support his leadership.",
+        "The controversy centres on the vetting process for Peter Mandelson's appointment.",
+        "Starmer defended his decision to sack senior civil servant Olly Robbins over the Mandelson vetting process.",
+        "Starmer stated his intention to lead the Labour Party into the next general election."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "left",
+          "characterisation": "The Guardian framed Starmer as defending against claims of wrongdoing, emphasising the political damage inflicted by the Mandelson affair."
+        },
+        {
+          "lean": "centre-left",
+          "characterisation": "The Independent described Starmer as confronting existential questions about his future in power."
+        },
+        {
+          "lean": "centre",
+          "characterisation": "BBC Politics and Sky News presented Starmer as resolute and intent on continuing, without suggesting his position was fundamentally threatened."
+        }
+      ],
+      "source_count": 4,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/keir-starmer-peter-mandelson-labour-mps-b2965148.html",
+        "https://www.bbc.com/news/articles/c705228kpx9o?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/2026/apr/26/keir-starmer-vows-lead-labour-general-election-mandelson-vetting"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-26T1830Z-INDIA-kochi-police-custody-escape",
+      "generated_at": "2026-04-26T18:30:00Z",
+      "category": "INDIA",
+      "headline": "Two Suspects Flee Police Custody in Kochi; One Subsequently Recaptured",
+      "neutral_summary": "Two individuals escaped from police custody in Kochi, Kerala, on 26 April 2026, according to a report by The Hindu. One of the two was subsequently recaptured by authorities. No further details regarding the identities of those involved, the circumstances of the escape, or the charges they faced were available from reporting at the time of publication.",
+      "corroborated_facts": [
+        "Two individuals fled police custody in Kochi, Kerala, on 26 April 2026.",
+        "One of the two escapees was subsequently apprehended by authorities."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "centre-left",
+          "characterisation": "The Hindu reported the incident factually without political framing."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "The Hindu"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/kerala/two-flee-police-custody-in-kochi-one-nabbed/article70909681.ece"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-04-26T1830Z-AI-anthropic-agent-commerce-marketplace",
+      "generated_at": "2026-04-26T18:30:00Z",
+      "category": "AI",
+      "headline": "Anthropic Runs Experimental Marketplace Pitting AI Agents Against One Another as Buyers and Sellers",
+      "neutral_summary": "Anthropic conducted an experimental classified marketplace in which artificial intelligence agents acted as both buyers and sellers, according to a TechCrunch report published on 25 April 2026, exploring how AI agents might conduct autonomous commercial transactions with one another. A separate TechCrunch report noted an unusual property listing in Mill Valley, north of San Francisco, in which prospective buyers are required to hold equity in Anthropic — a condition reflecting the company's elevated valuation and its prominent position in the Bay Area technology sector.",
+      "corroborated_facts": [
+        "Anthropic ran an experimental marketplace in which AI agents represented buyers and sellers in simulated commercial transactions."
+      ],
+      "disputed_facts": [],
+      "framings": [
+        {
+          "lean": "tech",
+          "characterisation": "TechCrunch covered both items in a neutral, descriptive register, treating them as notable developments in the AI industry."
+        }
+      ],
+      "source_count": 1,
+      "outlets": [
+        "TechCrunch"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/",
+        "https://techcrunch.com/2026/04/26/to-buy-this-bay-area-home-youll-need-anthropic-equity/"
+      ],
+      "confidence": "low"
+    }
+  ]
 }
