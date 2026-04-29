@@ -1,8 +1,84 @@
 {
   "connected": true,
-  "generated_at": "2026-04-29T08:08:56.183388+00:00",
+  "generated_at": "2026-04-29T14:14:24.489005+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-29T1413Z-WORLD-faisal-islam-why-the-uae-s-exit-from-ope",
+      "generated_at": "2026-04-29T14:13:59Z",
+      "category": "WORLD",
+      "headline": "Faisal Islam: Why the UAE's exit from Opec is a big deal",
+      "neutral_summary": "It will have little effect on the current oil blockades, but it could change everything afterwards.",
+      "source_count": 2,
+      "outlets": [
+        "BBC News",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/cj4pxyklw1jo?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/uae-exits-saudi-controlled-opec-cartels-in-fresh-oil-market-shock-13537642"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-29T1413Z-UK-starmer-latest-pm-could-bring-rayner-bac",
+      "generated_at": "2026-04-29T14:13:59Z",
+      "category": "UK",
+      "headline": "Starmer latest: PM ‘could bring Rayner back into Cabinet’ to avoid Labour leadership challenge",
+      "neutral_summary": "It comes after Sir Keir Starmer survived a vote by MPs to launch ‘sleaze’ inquiry over the Peter Mandelson vetting row.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "Guardian",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/starmer-labour-mps-pmqs-mandelson-live-updates-b2966940.html",
+        "https://www.theguardian.com/politics/2026/apr/28/starmer-sees-off-tory-calls-for-inquiry-into-mandelson-role-after-no-10-flexes-muscle",
+        "https://www.bbc.com/news/articles/cx21lx9ne83o?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-29T1413Z-INDIA-people-voting-fearlessly-in-west-bengal-",
+      "generated_at": "2026-04-29T14:13:59Z",
+      "category": "INDIA",
+      "headline": "‘People voting fearlessly in West Bengal after 6-7 decades’: PM Modi",
+      "neutral_summary": "‘People voting fearlessly in West Bengal after 6-7 decades’: PM Modi.",
+      "source_count": 2,
+      "outlets": [
+        "Indian Express",
+        "NDTV"
+      ],
+      "source_urls": [
+        "https://indianexpress.com/article/india/people-voting-fearlessly-in-west-bengal-after-6-7-decades-pm-modi-10661908/",
+        "https://www.ndtv.com/india-news/west-bengal-election-2026-phase-2-voting-live-updates-mamata-banerjee-vs-suvendu-adhikari-bhabanipur-south-bengal-trinamool-bjp-jhalmuri-pm-modi-11423264#publisher=newsstand"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-29T1413Z-AI-gpt-5-5-is-openai-s-most-capable-agentic",
+      "generated_at": "2026-04-29T14:13:59Z",
+      "category": "AI",
+      "headline": "GPT-5.5 is OpenAI’s most capable agentic AI model yet–at twice the API price",
+      "neutral_summary": "OpenAI launched GPT-5.5 on April 23 as what it calls &#8220;a new class of intelligence for real work and powering agent.",
+      "source_count": 4,
+      "outlets": [
+        "AI News",
+        "TechCrunch",
+        "The Verge",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://www.artificialintelligence-news.com/news/gpt-5-5-is-openais-most-capable-agentic-ai-model-yet-at-twice-the-api-price/",
+        "https://techcrunch.com/2026/04/28/at-his-openai-trial-musk-relitigates-an-old-friendship/",
+        "https://www.theverge.com/ai-artificial-intelligence/920048/elon-musk-testimony-save-humanity",
+        "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
+        "https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/",
+        "https://the-decoder.com/mistral-ai-takes-on-enterprise-ai-orchestration-with-workflows/"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-04-29T0210Z-WORLD-comey-charged-with-threatening-trump-s-l",
       "generated_at": "2026-04-29T02:10:43Z",
