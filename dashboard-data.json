@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T17:03:46.209156Z",
+  "generated_at": "2026-04-29T17:04:39.181585Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -143,12 +143,12 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "59m ago",
+      "age": "1.0h ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "17.8h ago",
+      "age": "17.9h ago",
       "status": "stale",
       "count": 30
     },
