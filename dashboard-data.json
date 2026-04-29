@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-28T23:13:09.157378Z",
+  "generated_at": "2026-04-29T12:45:29.369720Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 99.764,
-    "opening_index": 100.0,
-    "daily_pct": -0.236,
+    "index": 99.736,
+    "opening_index": 99.736,
+    "daily_pct": 0.0,
     "total_pct": -0.236
   },
   "spy_benchmark": {
@@ -143,25 +143,25 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "2.3h ago",
-      "status": "warning",
+      "age": "1m ago",
+      "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "4.0h ago",
+      "age": "13.5h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "2.3h ago",
+      "age": "1m ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1.5h ago",
+      "age": "1m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "58m ago",
+      "age": "1m ago",
       "status": "fresh",
       "count": 0
     }
@@ -170,25 +170,24 @@
     "score": 63.8,
     "rating": "greed"
   },
-  "macro_blackout_today": false,
-  "macro_blackout_reason": "FOMC Statement (tomorrow)",
+  "macro_blackout_today": true,
+  "macro_blackout_reason": "FOMC Statement",
   "upcoming_macro_events": [
     {
       "event": "FOMC Statement",
       "date": "2026-04-29",
-      "days_away": 1
+      "days_away": 0
     },
     {
       "event": "NFP",
       "date": "2026-05-01",
-      "days_away": 3
+      "days_away": 2
     }
   ],
   "last_routine": {
-    "ts": "2026-04-27T20:25:00Z",
-    "routine": "end_of_day",
-    "daily_pnl": -236.07,
-    "trades": 14
+    "ts": "2026-04-29T12:45:19Z",
+    "routine": "pre_market",
+    "notes": "FOMC macro blackout \u2014 0 entries planned. No strategies due (all rebalanced 2 days ago). 0 insider signals. 14 positions held. VIX 17.99."
   },
   "strategies_enabled": {
     "pead": true,
