@@ -1,8 +1,78 @@
 {
   "connected": true,
-  "generated_at": "2026-04-29T14:14:11.801586+00:00",
+  "generated_at": "2026-04-29T20:25:03.814872+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-29T2024Z-WORLD-comey-surrenders-over-charge-of-threaten",
+      "generated_at": "2026-04-29T20:24:41Z",
+      "category": "WORLD",
+      "headline": "Comey surrenders over charge of threatening Trump's life in Instagram post",
+      "neutral_summary": "Prosecutors say a 2025 seashell photo posted by the former FBI director was a call for violence against Trump.",
+      "source_count": 1,
+      "outlets": [
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/c70vzj1nrddo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-04-29T2024Z-UK-farage-received-5m-from-donor-before-he-",
+      "generated_at": "2026-04-29T20:24:41Z",
+      "category": "UK",
+      "headline": "Farage received £5m from donor before he became MP",
+      "neutral_summary": "The Reform leader says the gift was for his personal security - but opponents say he should have declared it.",
+      "source_count": 3,
+      "outlets": [
+        "BBC Politics",
+        "Guardian",
+        "Independent"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/cn5pr0gp3gro?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/2026/apr/29/nigel-farage-referred-standards-watchdog-undisclosed-gift",
+        "https://www.independent.co.uk/news/uk/politics/nigel-farage-crypto-christopher-harborne-reform-donations-b2967144.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-29T2024Z-INDIA-uae-reviewing-role-in-other-groups-after",
+      "generated_at": "2026-04-29T20:24:41Z",
+      "category": "INDIA",
+      "headline": "UAE Reviewing Role In Other Groups After OPEC Exit, No Withdrawal Plan Now",
+      "neutral_summary": "Abu Dhabi announced its withdrawal from OPEC on Tuesday.",
+      "source_count": 2,
+      "outlets": [
+        "NDTV",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.ndtv.com/world-news/uae-reviewing-role-in-other-groups-after-opec-exit-no-withdrawal-plan-now-11427282#publisher=newsstand",
+        "https://indianexpress.com/article/india/kerala-election-exit-poll-result-2026-live-updates-10660748/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-29T2024Z-AI-musk-laments-being-a-fool-for-funding-op",
+      "generated_at": "2026-04-29T20:24:41Z",
+      "category": "AI",
+      "headline": "Musk laments being a ‘fool’ for funding OpenAI on day two of court testimony",
+      "neutral_summary": "Lawyers for Musk, the world’s richest person, sought to paint him as a tech pioneer who wanted to aid humanityAfter a dr.",
+      "source_count": 3,
+      "outlets": [
+        "Guardian Tech",
+        "The Decoder",
+        "AI News"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/technology/2026/apr/29/elon-musk-openai-sam-altman-lawsuit",
+        "https://the-decoder.com/openai-researchers-explain-why-math-is-the-road-to-agi/",
+        "https://www.artificialintelligence-news.com/news/gpt-5-5-is-openais-most-capable-agentic-ai-model-yet-at-twice-the-api-price/"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-04-29T1413Z-WORLD-faisal-islam-why-the-uae-s-exit-from-ope",
       "generated_at": "2026-04-29T14:13:59Z",
