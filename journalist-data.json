@@ -1,8 +1,84 @@
 {
   "connected": true,
-  "generated_at": "2026-04-28T08:03:12.267717+00:00",
+  "generated_at": "2026-04-29T02:11:15.514885+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-29T0210Z-WORLD-comey-charged-with-threatening-trump-s-l",
+      "generated_at": "2026-04-29T02:10:43Z",
+      "category": "WORLD",
+      "headline": "Comey charged with threatening Trump's life in Instagram post",
+      "neutral_summary": "The charge stems from a 2025 seashell photo posted by the former FBI director that the justice department says calls for.",
+      "source_count": 2,
+      "outlets": [
+        "BBC News",
+        "DW News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/cvgz4rvlem5o?at_medium=RSS&at_campaign=rss",
+        "https://www.dw.com/en/ex-fbi-director-james-comey-indicted-again-official/a-76973087?maca=en-rss-en-all-1573-rdf"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-29T0210Z-UK-starmer-sees-off-major-labour-rebellion-",
+      "generated_at": "2026-04-29T02:10:43Z",
+      "category": "UK",
+      "headline": "Starmer sees off major Labour rebellion over call for Mandelson inquiry",
+      "neutral_summary": "No 10 deploys full weight to block parliamentary inquiry bid as MPs warn PM running out of political capitalKeir Starmer.",
+      "source_count": 3,
+      "outlets": [
+        "Guardian",
+        "Independent",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/politics/2026/apr/28/starmer-sees-off-tory-calls-for-inquiry-into-mandelson-role-after-no-10-flexes-muscle",
+        "https://www.independent.co.uk/news/uk/politics/uk-social-media-ban-under-16-government-peers-b2966689.html",
+        "https://www.bbc.com/news/articles/cx21lx9ne83o?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/live/2026/apr/28/keir-starmer-labour-peter-mandelson-vetting-morgan-mcsweeney-kemi-badenoch-vote-uk-politics-latest-news-updates"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-29T0210Z-INDIA-uttarakhand-cm-pushkar-singh-dhami-to-ho",
+      "generated_at": "2026-04-29T02:10:43Z",
+      "category": "INDIA",
+      "headline": "Uttarakhand CM Pushkar Singh Dhami to House: Pass resolution backing Centre’s women’s quota bid",
+      "neutral_summary": "Uttarakhand CM Pushkar Singh Dhami to House: Pass resolution backing Centre’s women’s quota bid.",
+      "source_count": 1,
+      "outlets": [
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://indianexpress.com/article/india/uttarakhand-cm-pushkar-singh-dhami-to-house-pass-resolution-backing-centres-womens-quota-bid-10661253/"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-04-29T0210Z-AI-amazon-is-already-offering-new-openai-pr",
+      "generated_at": "2026-04-29T02:10:43Z",
+      "category": "AI",
+      "headline": "Amazon is already offering new OpenAI products on AWS",
+      "neutral_summary": "A day after OpenAI got Microsoft to agree to end exclusive rights, AWS announced a slate of OpenAI model offerings, incl.",
+      "source_count": 5,
+      "outlets": [
+        "TechCrunch",
+        "The Verge",
+        "The Decoder",
+        "MIT Tech Review",
+        "VentureBeat"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/04/28/amazon-is-already-offering-new-openai-products-on-aws/",
+        "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
+        "https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/",
+        "https://the-decoder.com/mistral-ai-takes-on-enterprise-ai-orchestration-with-workflows/",
+        "https://www.technologyreview.com/2026/04/28/1136479/the-download-musk-altman-openai-trial-ai-profit-problem/",
+        "https://venturebeat.com/technology/mistral-ai-launches-workflows-a-temporal-powered-orchestration-engine-already-running-millions-of-daily-executions"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-04-28T0802Z-WORLD-suspect-charged-with-attempted-assassina",
       "generated_at": "2026-04-28T08:02:55Z",
