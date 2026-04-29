@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-29T16:15:09.208687Z",
+  "generated_at": "2026-04-29T17:03:46.209156Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 99.962,
+    "index": 99.971,
     "opening_index": 99.736,
-    "daily_pct": 0.501,
+    "daily_pct": 0.511,
     "total_pct": -0.236
   },
   "spy_benchmark": {
@@ -71,98 +71,98 @@
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -2.2
+      "pnl_pct": -1.37
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -4.79
+      "pnl_pct": -5.23
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -2.02
+      "pnl_pct": -2.26
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 0.16
+      "pnl_pct": -0.02
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.46
+      "pnl_pct": -0.98
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 2.94
+      "pnl_pct": 3.1
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 0.28
+      "pnl_pct": -0.45
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -1.55
+      "pnl_pct": -1.57
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -1.28
+      "pnl_pct": -1.21
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 2.63
+      "pnl_pct": 3.25
     },
     {
       "ticker": "***",
       "strategy": "breakout",
-      "pnl_pct": 5.31
+      "pnl_pct": 5.3
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": 2.59
+      "pnl_pct": 3.06
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -0.84
+      "pnl_pct": -1.15
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -0.68
+      "pnl_pct": -0.46
     }
   ],
-  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). Equity $99,961.50. Daily P&L +$499.75.",
+  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). Equity $99,971.14. Daily P&L +$509.39.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "11m ago",
+      "age": "59m ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "17.0h ago",
+      "age": "17.8h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "3.5h ago",
+      "age": "4.3h ago",
       "status": "warning"
     },
     "economic_calendar": {
-      "age": "3.5h ago",
+      "age": "4.3h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "3.5h ago",
-      "status": "fresh",
+      "age": "4.3h ago",
+      "status": "warning",
       "count": 0
     }
   },
@@ -185,9 +185,9 @@
     }
   ],
   "last_routine": {
-    "ts": "2026-04-29T16:13:24Z",
+    "ts": "2026-04-29T17:02:07Z",
     "routine": "intraday",
-    "notes": "No rebalance plan. No insider signals (0 filings). 14 positions monitored \u2014 all within normal range (best: UNH +5.31%, worst: AVGO -4.79%). No bracket overrides. Daily P&L +$499.75."
+    "notes": "No rebalance plan. No insider signals (0 filings, data >4h old skipped). 14 positions monitored \u2014 all within normal range (best: UNH +5.30%, worst: AVGO -5.23%). No bracket overrides. Daily P&L +$509.39."
   },
   "strategies_enabled": {
     "pead": true,
