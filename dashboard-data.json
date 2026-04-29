@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-04-29T17:10:37.934536Z",
+  "generated_at": "2026-04-29T18:07:45.624330Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 99.971,
-    "opening_index": 99.736,
-    "daily_pct": 0.511,
-    "total_pct": -0.236
+    "index": 100.011,
+    "opening_index": 100.0,
+    "daily_pct": 0.549,
+    "total_pct": 0.313
   },
   "spy_benchmark": {
-    "return_pct": 0.0,
-    "our_return_pct": -0.236,
-    "alpha_pct": 0.0,
+    "return_pct": 0.351,
+    "our_return_pct": 0.313,
+    "alpha_pct": -0.038,
     "start_date": "2026-04-27"
   },
   "open_position_count": 14,
-  "unrealized_pnl_pct": -0.034,
+  "unrealized_pnl_pct": 0.01,
   "strategy_stats": {
     "pead": {
       "name": "3M Momentum",
@@ -65,109 +65,116 @@
         "breakout",
         "sector_rot"
       ]
+    },
+    {
+      "date": "2026-04-29",
+      "index": 100.313,
+      "daily_pct": 0.549,
+      "trades": 0,
+      "strategies": []
     }
   ],
   "open_positions": [
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -1.37
+      "pnl_pct": -0.03
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -5.23
+      "pnl_pct": -4.8
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -2.26
+      "pnl_pct": -1.94
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.02
+      "pnl_pct": -0.16
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.98
+      "pnl_pct": -0.93
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 3.1
+      "pnl_pct": 2.87
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -0.45
+      "pnl_pct": -0.16
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -1.57
+      "pnl_pct": -1.33
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -1.21
+      "pnl_pct": -1.1
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 3.25
+      "pnl_pct": 2.79
     },
     {
       "ticker": "***",
       "strategy": "breakout",
-      "pnl_pct": 5.3
+      "pnl_pct": 5.0
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": 3.06
+      "pnl_pct": 2.81
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -1.15
+      "pnl_pct": -1.03
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -0.46
+      "pnl_pct": -0.85
     }
   ],
-  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). Equity $99,971.14. Daily P&L +$509.39.",
+  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). EOD equity $100,010.51. Daily P&L +$548.76 unrealised. All-time +$312.69. Paper day 2.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "1.1h ago",
-      "status": "fresh",
+      "age": "2.1h ago",
+      "status": "warning",
       "count": 50
     },
     "news": {
-      "age": "18.0h ago",
+      "age": "18.9h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "4.4h ago",
-      "status": "warning"
+      "age": "57m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1m ago",
+      "age": "58m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "4.4h ago",
-      "status": "warning",
+      "age": "56m ago",
+      "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 63.8,
+    "score": 63.4,
     "rating": "greed"
   },
   "macro_blackout_today": true,
@@ -185,9 +192,10 @@
     }
   ],
   "last_routine": {
-    "ts": "2026-04-29T17:02:07Z",
-    "routine": "intraday",
-    "notes": "No rebalance plan. No insider signals (0 filings, data >4h old skipped). 14 positions monitored \u2014 all within normal range (best: UNH +5.30%, worst: AVGO -5.23%). No bracket overrides. Daily P&L +$509.39."
+    "ts": "2026-04-29T20:15:00Z",
+    "routine": "end_of_day",
+    "daily_pnl": 548.76,
+    "trades": 0
   },
   "strategies_enabled": {
     "pead": true,
