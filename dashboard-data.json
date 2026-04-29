@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-29T18:12:27.117893Z",
+  "generated_at": "2026-04-29T19:14:03.797949Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 99.915,
+    "index": 100.104,
     "opening_index": 100.0,
-    "daily_pct": 0.453,
+    "daily_pct": 0.642,
     "total_pct": 0.313
   },
   "spy_benchmark": {
@@ -15,7 +15,7 @@
     "start_date": "2026-04-27"
   },
   "open_position_count": 14,
-  "unrealized_pnl_pct": -0.088,
+  "unrealized_pnl_pct": 0.106,
   "strategy_stats": {
     "pead": {
       "name": "3M Momentum",
@@ -78,97 +78,97 @@
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.41
+      "pnl_pct": 0.96
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -5.16
+      "pnl_pct": -4.19
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -2.32
+      "pnl_pct": -2.03
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.2
+      "pnl_pct": 0.23
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -1.1
+      "pnl_pct": -0.65
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 2.9
+      "pnl_pct": 2.74
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -0.26
+      "pnl_pct": 0.47
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -1.53
+      "pnl_pct": -0.94
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -1.17
+      "pnl_pct": -1.24
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 2.9
+      "pnl_pct": 2.72
     },
     {
       "ticker": "***",
       "strategy": "breakout",
-      "pnl_pct": 4.96
+      "pnl_pct": 5.26
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": 2.83
+      "pnl_pct": 2.58
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -1.23
+      "pnl_pct": -0.61
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -1.06
+      "pnl_pct": -1.57
     }
   ],
-  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). Equity $99,914.68. Daily P&L +$452.93. AVGO -5.16% worst, UNH +4.96% best.",
+  "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). Equity $100,104.02. Daily P&L +$642.27. AVGO -4.19% worst, UNH +5.26% best.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "2.1h ago",
+      "age": "3.2h ago",
       "status": "warning",
       "count": 50
     },
     "news": {
-      "age": "19.0h ago",
-      "status": "stale",
+      "age": "14m ago",
+      "status": "fresh",
       "count": 30
     },
     "market_context": {
-      "age": "1.0h ago",
+      "age": "2.1h ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1.1h ago",
+      "age": "2.1h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "1.0h ago",
+      "age": "2.1h ago",
       "status": "fresh",
       "count": 0
     }
@@ -192,9 +192,9 @@
     }
   ],
   "last_routine": {
-    "ts": "2026-04-29T18:10:09Z",
+    "ts": "2026-04-29T19:13:54Z",
     "routine": "intraday",
-    "notes": "14 positions monitored. No trades. Daily P&L +$452.93. No insider signals (0 filings). All positions within normal range."
+    "notes": "14 positions monitored. No trades. Daily P&L +$642.27. No insider signals (0 new filings). All positions within normal range."
   },
   "strategies_enabled": {
     "pead": true,
