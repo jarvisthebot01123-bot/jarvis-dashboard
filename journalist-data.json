@@ -1,8 +1,87 @@
 {
   "connected": true,
-  "generated_at": "2026-04-30T14:30:55.131596+00:00",
+  "generated_at": "2026-04-30T20:12:09.460898+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-30T2011Z-WORLD-saudi-arabia-s-public-fund-to-withdraw-l",
+      "generated_at": "2026-04-30T20:11:50Z",
+      "category": "WORLD",
+      "headline": "Saudi Arabia's public fund to withdraw LIV Golf funding",
+      "neutral_summary": "Public Investment Fund cites \"current macro dynamics\" as it slashes funding for breakaway golf tour.",
+      "source_count": 2,
+      "outlets": [
+        "DW News",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.dw.com/en/saudi-arabia-s-public-fund-to-withdraw-liv-golf-funding/a-77005158?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/saudi-arabias-public-investment-fund-to-withdraw-funding-for-liv-golf-after-1631bn-loss-13538285"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-30T2011Z-UK-green-party-candidate-arrested-over-anti",
+      "generated_at": "2026-04-30T20:11:50Z",
+      "category": "UK",
+      "headline": "Green Party candidate arrested over antisemitic social media posts",
+      "neutral_summary": "Met Police made the arrest after receiving reports about online antisemitic material.",
+      "source_count": 4,
+      "outlets": [
+        "Independent",
+        "Guardian",
+        "BBC Politics",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/green-party-candidates-arrested-antisemitism-b2968145.html",
+        "https://www.theguardian.com/uk-news/2026/apr/30/uk-terrorism-threat-level-raised-to-severe-after-golders-green-attack",
+        "https://www.bbc.com/news/articles/cpvp27njvpwo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/live/2026/apr/30/local-election-campaign-labour-reform-conservatives-tories-greens-lib-dems-latest-news-updates",
+        "https://news.sky.com/story/era-of-two-party-politics-has-gone-kemi-badenoch-tells-cathy-newman-13538191"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-30T2011Z-INDIA-bjp-opposition-spar-at-special-session-o",
+      "generated_at": "2026-04-30T20:11:50Z",
+      "category": "INDIA",
+      "headline": "BJP, Opposition spar at special session on women’s empowerment in Uttar Pradesh Assembly",
+      "neutral_summary": "By opposing Nari Shakti Vandan Bill, Opposition aims to hinder political rights of women, says Yogi Adityanath; SP accus.",
+      "source_count": 3,
+      "outlets": [
+        "The Hindu",
+        "NDTV",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/uttar-pradesh/women-quota-bill-sp-mlas-stage-protest-against-bjp-in-uttar-pradesh-assembly-premises/article70923501.ece",
+        "https://www.ndtv.com/india-news/4-dead-as-cruise-boat-with-31-on-board-sinks-in-madhya-pradeshs-jabalpur-11431977#publisher=newsstand",
+        "https://indianexpress.com/article/india/bjp-mla-assault-public-hearing-govt-engineer-staff-arrested-10664590/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-30T2011Z-AI-musk-faces-third-day-of-questioning-in-c",
+      "generated_at": "2026-04-30T20:11:50Z",
+      "category": "AI",
+      "headline": "Musk faces third day of questioning in contentious trial over OpenAI’s founding",
+      "neutral_summary": "Trial continues after heated back and forth during OpenAI’s cross-examination of the Tesla CEO on WednesdayElon Musk’s c.",
+      "source_count": 4,
+      "outlets": [
+        "Guardian Tech",
+        "VentureBeat",
+        "The Verge",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/technology/2026/apr/30/openai-founding-trial-elon-musk-sam-altman",
+        "https://venturebeat.com/technology/why-openais-goblin-problem-matters-and-how-you-can-release-the-goblins-on-your-own",
+        "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
+        "https://the-decoder.com/openai-says-it-hit-its-10-gigawatt-compute-goal-years-ahead-of-schedule/"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-04-30T1430Z-WORLD-pakistan-opens-up-road-trade-routes-into",
       "generated_at": "2026-04-30T14:30:44Z",
