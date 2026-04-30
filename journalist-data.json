@@ -1,8 +1,67 @@
 {
   "connected": true,
-  "generated_at": "2026-04-30T02:16:06.437767+00:00",
+  "generated_at": "2026-04-30T14:31:15.179031+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-30T1430Z-WORLD-pakistan-opens-up-road-trade-routes-into",
+      "generated_at": "2026-04-30T14:30:44Z",
+      "category": "WORLD",
+      "headline": "Pakistan opens up road trade routes into Iran amid Hormuz blockade",
+      "neutral_summary": "With shipping disrupted by US-Iran tensions, Islamabad activates overland corridor to move stranded cargo into Iran.",
+      "source_count": 5,
+      "outlets": [
+        "Al Jazeera",
+        "BBC News",
+        "BBC Top Stories",
+        "DW News",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/4/30/pakistan-opens-up-road-trade-routes-into-iran-amid-hormuz-blockade?traffic_source=rss",
+        "https://www.bbc.com/news/articles/cx21m88rd14o?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/articles/cx21m88rd14o?at_medium=RSS&at_campaign=rss",
+        "https://www.dw.com/en/germany-news-economy-shows-surprise-growth-despite-iran-war/live-76991183?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/trump-threatens-to-withdraw-troops-from-germany-13538254",
+        "https://www.bbc.com/news/articles/c70vzj1nrddo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-30T1430Z-UK-keir-starmer-s-terrible-to-do-list-mps-c",
+      "generated_at": "2026-04-30T14:30:44Z",
+      "category": "UK",
+      "headline": "Keir Starmer’s terrible to-do list: MPs, cost of living, and looming local elections",
+      "neutral_summary": "His own MPs are turning on him, the civil service is raging at him, and at next week’s local elections, the public will.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/tv/in-the-room/keir-starmer-mandelson-in-the-room-podcast-b2967852.html",
+        "https://www.bbc.com/news/articles/cn5pr0gp3gro?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/tories-refer-farage-to-parliamentary-watchdog-over-seven-figure-gift-from-british-businessman-based-in-thailand-13538143"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-04-30T1430Z-INDIA-congress-decides-to-not-contest-maharash",
+      "generated_at": "2026-04-30T14:30:44Z",
+      "category": "INDIA",
+      "headline": "Congress decides to not contest Maharashtra Legislative Council polls; to support MVA candidate",
+      "neutral_summary": "The Congress had said it would contest the polls, however, appears to have relented after a call between the party’s Mah.",
+      "source_count": 1,
+      "outlets": [
+        "The Hindu"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/maharashtra/congress-decides-to-not-contest-maharashtra-legislative-council-polls-to-support-mva-candidate/article70924013.ece",
+        "https://www.thehindu.com/videos/shows/mumbai-pune-expressways-biggest-upgrade-yet-missing-link-project-explained/article70924014.ece"
+      ],
+      "confidence": "low"
+    },
     {
       "id": "2026-04-30T0215Z-WORLD-king-charles-commemorates-9-11-victims-i",
       "generated_at": "2026-04-30T02:15:29Z",
