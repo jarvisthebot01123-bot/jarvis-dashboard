@@ -311,8 +311,8 @@ body > * { position: relative; z-index: 2; }
 
   <div class="grid-top">
     <div class="card card-sm">
-      <div class="card-title">Account Value</div>
-      <div class="metric" id="equity">$100,000</div>
+      <div class="card-title">Portfolio Index</div>
+      <div class="metric" id="equity">100.00</div>
       <div class="metric-sub" id="equity-sub">&nbsp;</div>
     </div>
     <div class="card card-sm">
@@ -378,17 +378,14 @@ body > * { position: relative; z-index: 2; }
     <div class="card">
       <div style="font-size:.85rem;font-weight:600;margin-bottom:14px">Daily P&amp;L History</div>
       <table class="dash-table">
-        <thead><tr><th>Date</th><th>P&amp;L ($)</th><th>P&amp;L (%)</th><th>Index</th><th>Trades</th></tr></thead>
+        <thead><tr><th>Date</th><th>Today</th><th>Index</th><th>Trades</th><th>Strategies</th></tr></thead>
         <tbody id="history-body">
           <tr><td colspan="5" style="text-align:center;color:var(--muted);padding:24px">No history yet</td></tr>
         </tbody>
       </table>
     </div>
     <div class="card">
-      <div style="font-size:.85rem;font-weight:600;margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline">
-        Open Positions
-        <span id="deployed-label" style="font-size:.75rem;color:var(--muted);font-weight:400"></span>
-      </div>
+      <div style="font-size:.85rem;font-weight:600;margin-bottom:14px">Open Positions</div>
       <div id="positions-container">
         <div style="text-align:center;color:var(--muted);padding:24px;font-size:.85rem">
           <i class="bi bi-collection" style="font-size:1.8rem;display:block;opacity:.3;margin-bottom:8px"></i>
@@ -459,8 +456,6 @@ let charts = {}, lastData = null, lastFetchedTs = null, relTimeTimer = null;
 /* ── Helpers ── */
 function fmtPct(v) { return (v >= 0 ? '+' : '') + (v||0).toFixed(2) + '%'; }
 function cls(v)    { return v > 0 ? 'gain' : v < 0 ? 'loss' : 'flat'; }
-function fmtDollar(v) { return '$' + Math.round(Math.abs(v||0)).toLocaleString('en-US'); }
-function fmtSignedDollar(v) { return (v >= 0 ? '+$' : '−$') + Math.round(Math.abs(v||0)).toLocaleString('en-US'); }
 function hasTraded(d) { return (d.equity_curve||[]).some(r => (r.trades||0) > 0); }
 function hasPositions(d) { return (d.open_position_count || 0) > 0; }
 
@@ -469,55 +464,36 @@ function renderTopMetrics(d) {
   const a = d.account, spy = d.spy_benchmark;
   const traded = hasTraded(d);
   const positioned = hasPositions(d);
-  const unrealDollars = d.unrealized_pnl_dollars || 0;
-  const unrealPct     = d.unrealized_pnl_pct || 0;
-
-  // Card 1: Account Value — dollars primary, deployed capital as sub
-  document.getElementById('equity').textContent = fmtDollar(a.equity_dollars || (a.index / 100 * 100000));
+  const unrealPct = d.unrealized_pnl_pct || 0;
+  // Card 1: Portfolio Index (100 = baseline)
+  document.getElementById('equity').textContent = a.index.toFixed(2);
   document.getElementById('equity').className = 'metric';
-  const deployed = a.capital_deployed;
-  const deploySub = deployed ? `$${Math.round(deployed/1000)}k of $100k deployed` : (d.open_position_count ? d.open_position_count + ' positions' : 'no positions');
-  document.getElementById('equity-sub').textContent = deploySub;
-  document.getElementById('equity-sub').className = 'metric-sub flat';
-
-  // Card 2: Today — dollar P&L primary, % as sub
+  document.getElementById('equity-sub').textContent = traded ? (fmtPct(a.total_pct) + ' all-time') : (positioned ? (d.open_position_count + ' positions open') : 'baseline');
+  document.getElementById('equity-sub').className = 'metric-sub ' + (traded ? cls(a.total_pct) : 'flat');
+  // Card 2: Today — show unrealized P&L when positions open but no closed trades yet
   const dp = document.getElementById('daily-pnl');
   if (traded) {
-    const dollars = a.daily_pnl_dollars || 0;
-    dp.textContent = fmtSignedDollar(dollars);
-    dp.className = 'metric ' + cls(dollars);
-    document.getElementById('daily-pnl-pct').textContent = fmtPct(a.daily_pct);
-    document.getElementById('daily-pnl-pct').className = 'metric-sub ' + cls(a.daily_pct);
+    dp.textContent = fmtPct(a.daily_pct);
+    dp.className = 'metric ' + cls(a.daily_pct);
   } else if (positioned) {
-    dp.textContent = fmtSignedDollar(unrealDollars);
-    dp.className = 'metric ' + cls(unrealDollars);
-    document.getElementById('daily-pnl-pct').textContent = fmtPct(unrealPct) + ' unrealised';
+    dp.textContent = fmtPct(unrealPct);
+    dp.className = 'metric ' + cls(unrealPct);
+    document.getElementById('daily-pnl-pct').textContent = 'unrealised';
     document.getElementById('daily-pnl-pct').className = 'metric-sub flat';
   } else {
     dp.textContent = '—';
     dp.className = 'metric flat';
+  }
+  if (traded) {
     document.getElementById('daily-pnl-pct').innerHTML = '&nbsp;';
     document.getElementById('daily-pnl-pct').className = 'metric-sub flat';
   }
-
-  // Card 3: All-Time — dollar P&L primary, % as sub
+  // Card 3: All-Time
   const tp = document.getElementById('total-pnl');
-  const totalDollars = a.total_pnl_dollars;
-  if (traded || (totalDollars !== undefined && totalDollars !== 0)) {
-    tp.textContent = fmtSignedDollar(totalDollars || 0);
-    tp.className = 'metric ' + cls(totalDollars || 0);
-    document.getElementById('total-pnl-pct').textContent = fmtPct(a.total_pct) + ' of $100k';
-  } else if (positioned) {
-    tp.textContent = fmtSignedDollar(unrealDollars);
-    tp.className = 'metric ' + cls(unrealDollars);
-    document.getElementById('total-pnl-pct').textContent = 'unrealised — no closes yet';
-  } else {
-    tp.textContent = '—';
-    tp.className = 'metric flat';
-    document.getElementById('total-pnl-pct').textContent = 'no trades yet';
-  }
+  tp.textContent = traded ? fmtPct(a.total_pct) : '—';
+  tp.className = 'metric ' + (traded ? cls(a.total_pct) : 'flat');
+  document.getElementById('total-pnl-pct').textContent = traded ? 'since start' : (positioned ? 'awaiting first close' : 'no trades yet');
   document.getElementById('total-pnl-pct').className = 'metric-sub flat';
-
   // Card 4: vs SPY — only meaningful once we have actual trade history
   const ae = document.getElementById('alpha');
   if (traded && spy.start_date) {
@@ -601,24 +577,21 @@ function renderHistory(d) {
   }
   tbody.innerHTML=[...rows].reverse().map(r=>`<tr>
     <td class="mono">${r.date}</td>
-    <td class="${cls(r.daily_pnl_dollars ?? r.daily_pct)}" style="font-weight:600">${fmtSignedDollar(r.daily_pnl_dollars ?? 0)}</td>
     <td class="${cls(r.daily_pct)}">${fmtPct(r.daily_pct)}</td>
     <td>${r.index.toFixed(2)}</td>
     <td>${r.trades}</td>
+    <td style="color:var(--muted);font-size:.75rem">${(r.strategies||[]).join(', ')||'—'}</td>
   </tr>`).join('');
 }
 
 function renderPositions(d) {
   const pos=d.open_positions||[], c=document.getElementById('positions-container');
   const stats=d.strategy_stats||{};
-  const deployed = (d.account||{}).capital_deployed;
-  const deployedEl = document.getElementById('deployed-label');
-  if (deployedEl) deployedEl.textContent = deployed ? `$${Math.round(deployed/1000)}k of $100k deployed` : '';
   if(!pos.length){c.innerHTML=`<div style="text-align:center;color:var(--muted);padding:24px;font-size:.85rem"><i class="bi bi-collection" style="font-size:1.8rem;display:block;opacity:.3;margin-bottom:8px"></i>No open positions</div>`;return;}
   c.innerHTML=pos.map(p=>{
     const stratLabel = (stats[p.strategy]||{}).name || '—';
     const stratColor = STRAT_COLORS[p.strategy]||'#0969da';
-    return `<div class="pos-pill"><div><div class="pos-ticker mono">${p.ticker}</div><div class="pos-strat" style="color:${stratColor}">${stratLabel}</div></div><div style="text-align:right"><div class="${cls(p.pnl_dollars??p.pnl_pct)}" style="font-weight:600">${fmtSignedDollar(p.pnl_dollars??0)}</div><div style="font-size:.7rem;color:var(--muted)">${fmtPct(p.pnl_pct)}</div></div></div>`;
+    return `<div class="pos-pill"><div><div class="pos-ticker mono">${p.ticker}</div><div class="pos-strat" style="color:${stratColor}">${stratLabel}</div></div><div class="${cls(p.pnl_pct)}" style="font-weight:600">${fmtPct(p.pnl_pct)}</div></div>`;
   }).join('');
 }
 
