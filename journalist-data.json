@@ -1,8 +1,78 @@
 {
   "connected": true,
-  "generated_at": "2026-04-29T20:24:54.487305+00:00",
+  "generated_at": "2026-04-30T02:16:12.599404+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-04-30T0215Z-WORLD-king-charles-commemorates-9-11-victims-i",
+      "generated_at": "2026-04-30T02:15:29Z",
+      "category": "WORLD",
+      "headline": "King Charles commemorates 9/11 victims in New York visit",
+      "neutral_summary": "The royal couple laid a bouquet at the September 11 Memorial and met with victim's families.",
+      "source_count": 2,
+      "outlets": [
+        "DW News",
+        "BBC Top Stories"
+      ],
+      "source_urls": [
+        "https://www.dw.com/en/king-charles-commemorates-9-11-victims-in-new-york-visit/a-76987864?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/cd7pxnv4j7ro?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-30T0215Z-UK-a-href-https-news-sky-com-video-kemi-bad",
+      "generated_at": "2026-04-30T02:15:29Z",
+      "category": "UK",
+      "headline": "<a href=\"https://news.sky.com/video/kemi-badenoch-defends-record-as-tory-leader-and-says-golders-green-attack-is-a-national-emergency-13538163\">Era of two-party politics has gone, Badenoch tells Cathy Newman</a>",
+      "neutral_summary": "<a href=\"https://news.sky.com/video/kemi-badenoch-defends-record-as-tory-leader-and-says-golders-green-attack-is-a-national-emergency-13538163\">Era of two-party politics has gone, Badenoch tells Cathy Newman</a>.",
+      "source_count": 2,
+      "outlets": [
+        "Sky News Politics",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://news.sky.com/story/era-of-two-party-politics-has-gone-kemi-badenoch-tells-cathy-newman-13538191",
+        "https://www.bbc.com/news/articles/cx2182v12e4o?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-30T0215Z-INDIA-murder-masked-as-bathroom-fall-ranchi-te",
+      "generated_at": "2026-04-30T02:15:29Z",
+      "category": "INDIA",
+      "headline": "Murder masked as bathroom fall: Ranchi teen accused of killing mother with boyfriend’s help",
+      "neutral_summary": "Murder masked as bathroom fall: Ranchi teen accused of killing mother with boyfriend’s help.",
+      "source_count": 2,
+      "outlets": [
+        "Indian Express",
+        "The Hindu"
+      ],
+      "source_urls": [
+        "https://indianexpress.com/article/india/murder-masked-as-bathroom-fall-ranchi-teen-accused-of-killing-mother-with-boyfriends-help-10663053/",
+        "https://www.thehindu.com/news/national/meghalaya/honeymoon-murder-meghalaya-court-reserves-order-on-bail-plea-of-key-accused/article70922341.ece"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-04-30T0215Z-AI-amazon-s-openai-gambit-signals-a-new-pha",
+      "generated_at": "2026-04-30T02:15:29Z",
+      "category": "AI",
+      "headline": "Amazon’s OpenAI gambit signals a new phase in the cloud wars — one where exclusivity no longer applies",
+      "neutral_summary": "Amazon Web Services on Tuesday launched one of the most consequential enterprise AI plays in the company&#x27;s 20-year.",
+      "source_count": 3,
+      "outlets": [
+        "VentureBeat",
+        "The Decoder",
+        "AI News"
+      ],
+      "source_urls": [
+        "https://venturebeat.com/technology/amazons-openai-gambit-signals-a-new-phase-in-the-cloud-wars-one-where-exclusivity-no-longer-applies",
+        "https://the-decoder.com/openai-researchers-explain-why-math-is-the-road-to-agi/",
+        "https://www.artificialintelligence-news.com/news/gpt-5-5-is-openais-most-capable-agentic-ai-model-yet-at-twice-the-api-price/"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-04-29T2024Z-WORLD-comey-surrenders-over-charge-of-threaten",
       "generated_at": "2026-04-29T20:24:41Z",
