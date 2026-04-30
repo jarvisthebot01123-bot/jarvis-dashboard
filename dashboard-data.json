@@ -1,17 +1,12 @@
 {
-  "generated_at": "2026-04-30T12:16:10.435657Z",
+  "generated_at": "2026-04-30T12:44:43.032277Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 100.231,
-    "opening_index": 100.0,
-    "daily_pct": 0.769,
-    "total_pct": 0.533,
-    "equity_dollars": 100230.91,
-    "daily_pnl_dollars": 769.16,
-    "total_pnl_dollars": 533.09,
-    "unrealized_pnl_dollars": 227.16,
-    "capital_deployed": 61400.0
+    "index": 100.817,
+    "opening_index": 100.817,
+    "daily_pct": 0.589,
+    "total_pct": 0.533
   },
   "spy_benchmark": {
     "return_pct": 0.351,
@@ -20,8 +15,7 @@
     "start_date": "2026-04-27"
   },
   "open_position_count": 14,
-  "unrealized_pnl_pct": 0.227,
-  "unrealized_pnl_dollars": 227.16,
+  "unrealized_pnl_pct": 0.817,
   "strategy_stats": {
     "pead": {
       "name": "3M Momentum",
@@ -64,7 +58,6 @@
       "date": "2026-04-27",
       "index": 99.764,
       "daily_pct": -0.236,
-      "daily_pnl_dollars": -236.07,
       "trades": 14,
       "strategies": [
         "pead",
@@ -77,7 +70,6 @@
       "date": "2026-04-29",
       "index": 100.533,
       "daily_pct": 0.769,
-      "daily_pnl_dollars": 769.16,
       "trades": 0,
       "strategies": []
     }
@@ -86,138 +78,123 @@
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.14,
-      "pnl_dollars": -6.58
+      "pnl_pct": 1.83
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -3.27,
-      "pnl_dollars": -150.64
+      "pnl_pct": -1.5
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -2.65,
-      "pnl_dollars": -131.94
+      "pnl_pct": 4.76
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 0.79,
-      "pnl_dollars": 39.26
+      "pnl_pct": 1.1
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -1.16,
-      "pnl_dollars": -56.52
+      "pnl_pct": -0.55
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 3.19,
-      "pnl_dollars": 77.26
+      "pnl_pct": 2.34
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 3.71,
-      "pnl_dollars": 90.79
+      "pnl_pct": 7.53
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -0.25,
-      "pnl_dollars": -6.27
+      "pnl_pct": -0.45
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -0.94,
-      "pnl_dollars": -22.99
+      "pnl_pct": -1.42
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 3.31,
-      "pnl_dollars": 79.36
+      "pnl_pct": 2.37
     },
     {
       "ticker": "***",
       "strategy": "breakout",
-      "pnl_pct": 5.58,
-      "pnl_dollars": 273.7
+      "pnl_pct": 5.23
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": 3.0,
-      "pnl_dollars": 201.24
+      "pnl_pct": 1.97
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -1.14,
-      "pnl_dollars": -74.62
+      "pnl_pct": 0.15
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -1.27,
-      "pnl_dollars": -84.89
+      "pnl_pct": -1.73
     }
   ],
   "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). Equity $100,230.91. Daily P&L +$769.16. AVGO -3.27% worst, UNH +5.58% best.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "15.6h ago",
-      "status": "stale",
+      "age": "1m ago",
+      "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "14.0h ago",
+      "age": "14.5h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "15.5h ago",
-      "status": "stale"
+      "age": "1m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "14.5h ago",
-      "status": "warning"
+      "age": "1m ago",
+      "status": "fresh"
     },
     "insider_trades": {
-      "age": "14.0h ago",
-      "status": "stale",
+      "age": "1m ago",
+      "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 63.7,
+    "score": 63.4,
     "rating": "greed"
   },
-  "macro_blackout_today": true,
-  "macro_blackout_reason": "FOMC Statement",
+  "macro_blackout_today": false,
+  "macro_blackout_reason": "NFP (tomorrow)",
   "upcoming_macro_events": [
-    {
-      "event": "FOMC Statement",
-      "date": "2026-04-29",
-      "days_away": 0
-    },
     {
       "event": "NFP",
       "date": "2026-05-01",
-      "days_away": 2
+      "days_away": 1
+    },
+    {
+      "event": "CPI",
+      "date": "2026-05-13",
+      "days_away": 13
     }
   ],
   "last_routine": {
-    "ts": "2026-04-29T20:15:30Z",
-    "routine": "end_of_day",
-    "daily_pnl": 769.16,
-    "trades": 0
+    "ts": "2026-04-30T12:44:29Z",
+    "routine": "pre_market",
+    "notes": "No rebalance due (all strategies < 14d since last run). No insider signals. 14 positions held. Equity $100,817.47. Bias BULLISH."
   },
   "strategies_enabled": {
     "pead": true,
