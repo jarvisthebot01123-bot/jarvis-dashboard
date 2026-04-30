@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T20:20:50.686031Z",
+  "generated_at": "2026-04-30T20:25:16.375653Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -28,35 +28,60 @@
       "trades": 5,
       "wins": 0,
       "win_rate": 0.0,
-      "pnl_pct": 0.0
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 915.24,
+      "unrealized_pnl_pct": 0.915,
+      "open_positions": 5,
+      "allocated_capital": 25000
     },
     "mom6": {
       "name": "6M Momentum",
       "trades": 5,
       "wins": 0,
       "win_rate": 0.0,
-      "pnl_pct": 0.0
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 375.63,
+      "unrealized_pnl_pct": 0.376,
+      "open_positions": 5,
+      "allocated_capital": 25000
     },
     "breakout": {
       "name": "1M Momentum",
       "trades": 1,
       "wins": 0,
       "win_rate": 0.0,
-      "pnl_pct": 0.0
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 263.34,
+      "unrealized_pnl_pct": 0.263,
+      "open_positions": 1,
+      "allocated_capital": 15000
     },
     "sector_rot": {
       "name": "Sector Rotation",
       "trades": 3,
       "wins": 0,
       "win_rate": 0.0,
-      "pnl_pct": 0.0
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 296.06,
+      "unrealized_pnl_pct": 0.296,
+      "open_positions": 3,
+      "allocated_capital": 20000
     },
     "insider": {
       "name": "Insider Accum.",
       "trades": 0,
       "wins": 0,
       "win_rate": 0,
-      "pnl_pct": 0.0
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 0,
+      "unrealized_pnl_pct": 0.0,
+      "open_positions": 0,
+      "allocated_capital": 15000
     }
   },
   "equity_curve": [
@@ -177,12 +202,12 @@
       "count": 50
     },
     "news": {
-      "age": "1.4h ago",
+      "age": "1.5h ago",
       "status": "warning",
       "count": 30
     },
     "market_context": {
-      "age": "3.3h ago",
+      "age": "3.4h ago",
       "status": "warning"
     },
     "economic_calendar": {
@@ -190,7 +215,7 @@
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "3.3h ago",
+      "age": "3.4h ago",
       "status": "fresh",
       "count": 0
     }

@@ -168,6 +168,13 @@ body > * { position: relative; z-index: 2; }
 .strat-info-icon::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #1a2340; color: #dbe8ff; border: 1px solid rgba(100,150,255,.2); border-radius: 8px; padding: 10px 14px; font-size: .75rem; line-height: 1.5; width: 240px; text-align: left; white-space: normal; opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 400; box-shadow: 0 8px 24px rgba(0,0,0,.35); font-weight: 400; }
 .strat-info-icon:hover::after { opacity: 1; }
 
+/* ── Generic inline tooltip (reusable anywhere) ── */
+.tip { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 13px; height: 13px; border-radius: 50%; background: rgba(196,18,48,.1); color: var(--muted); font-size: .56rem; font-weight: 700; cursor: default; user-select: none; margin-left: 4px; vertical-align: middle; flex-shrink: 0; }
+.tip::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #1a2340; color: #dbe8ff; border: 1px solid rgba(100,150,255,.2); border-radius: 8px; padding: 10px 14px; font-size: .75rem; line-height: 1.5; width: 230px; text-align: left; white-space: normal; opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 500; box-shadow: 0 8px 24px rgba(0,0,0,.35); font-weight: 400; }
+.tip:hover::after { opacity: 1; }
+/* flip up-side-down tooltip for table headers */
+th .tip::after { bottom: auto; top: calc(100% + 8px); }
+
 /* ── Tables ── */
 .dash-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
 .dash-table th { color: var(--muted); font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid var(--border); padding: 6px 10px; text-align: left; font-weight: 600; }
@@ -311,22 +318,22 @@ body > * { position: relative; z-index: 2; }
 
   <div class="grid-top">
     <div class="card card-sm">
-      <div class="card-title">Account Value</div>
+      <div class="card-title">Account Value<span class="tip" data-tip="Current total equity in your Alpaca paper account, starting at $100,000. Sub-line shows how much capital is currently invested in open positions.">?</span></div>
       <div class="metric" id="equity">$100,000</div>
       <div class="metric-sub" id="equity-sub">&nbsp;</div>
     </div>
     <div class="card card-sm">
-      <div class="card-title">Today</div>
-      <div class="metric" id="daily-pnl">+0.00%</div>
+      <div class="card-title">Today<span class="tip" data-tip="Unrealised P&L change since market open today. For swing positions this is the mark-to-market gain/loss — it becomes realised only when positions close.">?</span></div>
+      <div class="metric" id="daily-pnl">—</div>
       <div class="metric-sub" id="daily-pnl-pct">&nbsp;</div>
     </div>
     <div class="card card-sm">
-      <div class="card-title">All-Time</div>
-      <div class="metric" id="total-pnl">+0.00%</div>
+      <div class="card-title">All-Time<span class="tip" data-tip="Total realised P&L since the account started. While positions are open the figure shown is unrealised — it will lock in when positions are closed.">?</span></div>
+      <div class="metric" id="total-pnl">—</div>
       <div class="metric-sub" id="total-pnl-pct">since start</div>
     </div>
     <div class="card card-sm">
-      <div class="card-title">vs S&amp;P 500</div>
+      <div class="card-title">vs S&amp;P 500<span class="tip" data-tip="Alpha vs a buy-and-hold SPY position of the same $100k since the first trade date. Positive means Jarvis is outperforming the index.">?</span></div>
       <div class="metric" id="alpha">—</div>
       <div class="metric-sub" id="spy-line">SPY: —</div>
     </div>
@@ -376,16 +383,25 @@ body > * { position: relative; z-index: 2; }
 
   <div class="grid-bottom">
     <div class="card">
-      <div style="font-size:.85rem;font-weight:600;margin-bottom:14px">Daily P&amp;L History</div>
+      <div style="font-size:.85rem;font-weight:600;margin-bottom:14px">Daily P&amp;L History<span class="tip" data-tip="One row per trading day. 'Hold' days had no new entries but existing positions still moved the equity. All figures are mark-to-market (unrealised until positions close).">?</span></div>
       <table class="dash-table">
-        <thead><tr><th>Date</th><th>P&amp;L ($)</th><th>P&amp;L (%)</th><th>Index</th><th>Trades</th></tr></thead>
+        <thead><tr>
+          <th>Date</th>
+          <th>P&amp;L ($)<span class="tip" data-tip="Daily change in account equity in dollars. Includes unrealised mark-to-market moves for swing positions still open.">?</span></th>
+          <th>P&amp;L (%)<span class="tip" data-tip="Daily P&L as a percentage of the $100k starting capital.">?</span></th>
+          <th>Index<span class="tip" data-tip="Portfolio index value — starts at 100.00. Each point = 0.1% of $100k. So 101.85 means the account is up $1,850.">?</span></th>
+          <th>New trades<span class="tip" data-tip="Number of new positions opened that day. Zero on hold days — existing positions still move the P&L.">?</span></th>
+        </tr></thead>
         <tbody id="history-body">
           <tr><td colspan="5" style="text-align:center;color:var(--muted);padding:24px">No history yet</td></tr>
         </tbody>
       </table>
     </div>
     <div class="card">
-      <div style="font-size:.85rem;font-weight:600;margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline">Open Positions<span id="deployed-label" style="font-size:.75rem;color:var(--muted);font-weight:400"></span></div>
+      <div style="font-size:.85rem;font-weight:600;margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline">
+        Open Positions<span class="tip" data-tip="Swing positions currently held overnight. Each pill shows dollar P&L and % change from entry price. Positions close when stop-loss or profit target is hit.">?</span>
+        <span id="deployed-label" style="font-size:.75rem;color:var(--muted);font-weight:400"></span>
+      </div>
       <div id="positions-container">
         <div style="text-align:center;color:var(--muted);padding:24px;font-size:.85rem">
           <i class="bi bi-collection" style="font-size:1.8rem;display:block;opacity:.3;margin-bottom:8px"></i>
@@ -570,8 +586,25 @@ function renderStrategyCards(d) {
   const stats=d.strategy_stats, enabled=d.strategies_enabled||{};
   const el=document.getElementById('strat-cards'); el.innerHTML='';
   for (const [key,s] of Object.entries(stats)) {
-    const color=STRAT_COLORS[key]||'#0969da', pnlCls=cls(s.pnl_pct), on=enabled[key]!==false;
+    const color=STRAT_COLORS[key]||'#0969da', on=enabled[key]!==false;
     const tip=(STRAT_TIPS[key]||'').replace(/"/g,'&quot;');
+
+    // Primary P&L figure: prefer realised if trades have closed, else show unrealised
+    const hasRealised = s.trades > 0 && s.pnl_dollars !== 0;
+    const displayDollars = hasRealised ? s.pnl_dollars : (s.unrealized_pnl_dollars || 0);
+    const displayCls = cls(displayDollars);
+    const pnlLabel = hasRealised ? fmtSignedDollar(displayDollars) : fmtSignedDollar(displayDollars);
+    const pnlSub = hasRealised
+      ? `${s.trades} closed · ${s.win_rate}% win`
+      : `${s.open_positions || 0} open position${(s.open_positions||0)!==1?'s':''} · unrealised`;
+
+    // Bar: win % when closed trades exist, else deployed % of allocation
+    const alloc = s.allocated_capital || 0;
+    const barPct = hasRealised
+      ? s.win_rate
+      : (alloc > 0 ? Math.min(100, Math.round((s.open_positions||0) * (alloc/(5||1)) / alloc * 100)) : 0);
+    const barLabel = hasRealised ? `${s.win_rate}% win rate` : (alloc ? `$${Math.round(alloc/1000)}k allocated` : '');
+
     el.innerHTML += `<div class="strat-card" style="--strat-color:${color};${!on?'opacity:.45':''}">
       <div style="display:flex;justify-content:space-between;align-items:flex-start">
         <div>
@@ -580,29 +613,34 @@ function renderStrategyCards(d) {
         </div>
         <div class="dot ${on?'dot-green':'dot-gray'}" style="margin-top:4px" title="${on?'Active':'Disabled'}"></div>
       </div>
-      <div class="strat-pnl ${pnlCls}">${fmtPct(s.pnl_pct)}</div>
-      <div class="strat-stats">${s.trades} trades &bull; ${s.win_rate}% win</div>
+      <div class="strat-pnl ${displayCls}">${pnlLabel}</div>
+      <div class="strat-stats">${pnlSub}</div>
       <div class="win-bar-wrap">
-        <div class="win-bar-bg"><div class="win-bar-fill" style="width:${s.win_rate}%;background:${color}"></div></div>
-        <span style="font-size:.68rem;color:var(--muted)">${s.win_rate}%</span>
+        <div class="win-bar-bg"><div class="win-bar-fill" style="width:${hasRealised?s.win_rate:100}%;background:${color};opacity:${hasRealised?1:.25}"></div></div>
+        <span style="font-size:.68rem;color:var(--muted)">${barLabel}</span>
       </div></div>`;
   }
 }
 
 function renderHistory(d) {
   const tbody = document.getElementById('history-body');
-  const rows=(d.equity_curve||[]).filter(r => (r.trades||0) > 0);
+  const rows = d.equity_curve || [];
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:24px">No history yet</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:24px">No history yet — data appears after the first trading day</td></tr>`;
     return;
   }
-  tbody.innerHTML=[...rows].reverse().map(r=>`<tr>
-    <td class="mono">${r.date}</td>
-    <td class="${cls(r.daily_pnl_dollars ?? r.daily_pct)}" style="font-weight:600">${fmtSignedDollar(r.daily_pnl_dollars ?? 0)}</td>
-    <td class="${cls(r.daily_pct)}">${fmtPct(r.daily_pct)}</td>
-    <td>${r.index.toFixed(2)}</td>
-    <td>${r.trades}</td>
-  </tr>`).join('');
+  tbody.innerHTML=[...rows].reverse().map(r=>{
+    const tradesCell = r.trades > 0
+      ? `<span style="font-weight:600">${r.trades}</span>`
+      : `<span style="color:var(--muted);font-size:.75rem">hold</span>`;
+    return `<tr>
+      <td class="mono">${r.date}</td>
+      <td class="${cls(r.daily_pnl_dollars ?? r.daily_pct)}" style="font-weight:600">${fmtSignedDollar(r.daily_pnl_dollars ?? 0)}</td>
+      <td class="${cls(r.daily_pct)}">${fmtPct(r.daily_pct)}</td>
+      <td class="mono">${r.index.toFixed(2)}</td>
+      <td>${tradesCell}</td>
+    </tr>`;
+  }).join('');
 }
 
 function renderPositions(d) {
