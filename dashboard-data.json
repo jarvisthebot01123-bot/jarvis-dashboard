@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-01T07:39:39.290028Z",
+  "generated_at": "2026-05-01T12:46:58.215474Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 101.962,
-    "opening_index": 100.817,
-    "daily_pct": 1.724,
+    "index": 101.905,
+    "opening_index": 101.905,
+    "daily_pct": -0.037,
     "total_pct": 2.272,
-    "equity_dollars": 101962.36,
-    "daily_pnl_dollars": 1738.51,
+    "equity_dollars": 101905.03,
+    "daily_pnl_dollars": -37.5,
     "total_pnl_dollars": 2271.6,
     "unrealized_pnl_dollars": 1962.36,
     "capital_deployed": 63135.0
@@ -205,52 +205,56 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "11.0h ago",
-      "status": "stale",
+      "age": "40m ago",
+      "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "9.4h ago",
+      "age": "14.6h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "10.9h ago",
-      "status": "stale"
+      "age": "1m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "10.0h ago",
-      "status": "warning"
+      "age": "1m ago",
+      "status": "fresh"
     },
     "insider_trades": {
-      "age": "9.4h ago",
-      "status": "stale",
+      "age": "1m ago",
+      "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 66.6,
+    "score": 66.7,
     "rating": "greed"
   },
-  "macro_blackout_today": false,
-  "macro_blackout_reason": "NFP (tomorrow)",
+  "macro_blackout_today": true,
+  "macro_blackout_reason": "NFP",
   "upcoming_macro_events": [
     {
       "event": "NFP",
       "date": "2026-05-01",
-      "days_away": 1
+      "days_away": 0
     },
     {
       "event": "CPI",
       "date": "2026-05-13",
+      "days_away": 12
+    },
+    {
+      "event": "PPI",
+      "date": "2026-05-14",
       "days_away": 13
     }
   ],
   "last_routine": {
-    "ts": "2026-04-30T20:25:00Z",
-    "routine": "end_of_day",
-    "daily_pnl": 1738.51,
-    "trades": 0
+    "ts": "2026-05-01T12:46:46Z",
+    "routine": "pre_market",
+    "notes": "No rebalance due (all strategies 4d since last run). 0 insider filings. NFP blackout \u2014 all entries blocked. 14 positions held. Equity $101,905.03. Bias BULLISH."
   },
   "strategies_enabled": {
     "pead": true,
