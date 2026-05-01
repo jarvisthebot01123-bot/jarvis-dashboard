@@ -1,8 +1,81 @@
 {
   "connected": true,
-  "generated_at": "2026-05-01T14:02:14.050671+00:00",
+  "generated_at": "2026-05-01T20:08:19.494909+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-01T2007Z-WORLD-uae-exit-from-opec-signals-closer-alignm",
+      "generated_at": "2026-05-01T20:07:51Z",
+      "category": "WORLD",
+      "headline": "UAE exit from OPEC signals closer alignment with US interests, experts say",
+      "neutral_summary": "UAE wants to supply more oil than its OPEC quota and that could help push down prices once the Strait of Hormuz opens.",
+      "source_count": 1,
+      "outlets": [
+        "Al Jazeera"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/economy/2026/5/1/uae-exit-from-opec-signals-closer-alignment-with-us-interests-experts-say?traffic_source=rss"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-05-01T2007Z-UK-zack-polanski-apologises-for-sharing-twe",
+      "generated_at": "2026-05-01T20:07:51Z",
+      "category": "UK",
+      "headline": "Zack Polanski apologises for sharing tweet criticising police at Golders Green stabbings",
+      "neutral_summary": "Apology comes after head of Met police said Green party leader risked undermining public confidence in his officersZack.",
+      "source_count": 3,
+      "outlets": [
+        "Guardian",
+        "Independent",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/politics/2026/may/01/zack-polanski-apologises-criticising-police-golders-green-stabbings",
+        "https://www.theguardian.com/politics/live/2026/may/01/golders-green-attack-zack-polanski-green-party-uk-politics-latest-news-updates",
+        "https://www.independent.co.uk/news/uk/politics/zack-polanski-golders-green-party-b2968965.html",
+        "https://www.bbc.com/news/articles/cp8p7k4k8xno?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-01T2007Z-INDIA-law-stands-tall-above-says-congress-as-i",
+      "generated_at": "2026-05-01T20:07:51Z",
+      "category": "INDIA",
+      "headline": "Law stands tall above, says Congress as it urges Assam CM to express regret for using inappropriate language",
+      "neutral_summary": "Assam CM Himanta Biswa Sarma says he does not need lessons on decency and targets the Congress for maligning his wife wh.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/congress-reaction-on-pawan-khera-supreme-court-anticipatory-bail/article70928103.ece",
+        "https://indianexpress.com/article/india/khera-anticipatory-bail-supreme-court-himanta-sarma-defamation-10666454/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-01T2007Z-AI-eight-tech-giants-sign-pentagon-deals-to",
+      "generated_at": "2026-05-01T20:07:51Z",
+      "category": "AI",
+      "headline": "Eight tech giants sign Pentagon deals to build an \"AI-first fighting force\" across classified networks",
+      "neutral_summary": "Eight tech companies are supplying AI for classified US military networks, part of the Pentagon's push to build an \"AI-f.",
+      "source_count": 4,
+      "outlets": [
+        "The Decoder",
+        "Guardian Tech",
+        "TechCrunch",
+        "The Verge"
+      ],
+      "source_urls": [
+        "https://the-decoder.com/eight-tech-giants-sign-pentagon-deals-to-build-an-ai-first-fighting-force-across-classified-networks/",
+        "https://www.theguardian.com/us-news/2026/may/01/pentagon-us-military-pairs-with-spacex-google-openai",
+        "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
+        "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-01T1401Z-WORLD-billions-of-meals-at-risk-due-to-iran-wa",
       "generated_at": "2026-05-01T14:01:57Z",
