@@ -1,8 +1,81 @@
 {
   "connected": true,
-  "generated_at": "2026-05-01T02:10:10.588935+00:00",
+  "generated_at": "2026-05-01T14:02:31.709622+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-01T1401Z-WORLD-billions-of-meals-at-risk-due-to-iran-wa",
+      "generated_at": "2026-05-01T14:01:57Z",
+      "category": "WORLD",
+      "headline": "Billions of meals at risk due to Iran war, says fertiliser boss",
+      "neutral_summary": "A shortage of fertiliser due to the Iran conflict could reduce crop yields and push prices higher, says the boss of Yara.",
+      "source_count": 3,
+      "outlets": [
+        "BBC Top Stories",
+        "Al Jazeera",
+        "DW News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/cpwp50v4ye7o?at_medium=RSS&at_campaign=rss",
+        "https://www.aljazeera.com/news/2026/5/1/iran-vows-long-painful-response-if-us-renews-attacks?traffic_source=rss",
+        "https://www.dw.com/en/iran-war-truce-stops-clock-on-congress-approval-says-trump-s-white-house/live-77007473?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/c4g7rmrlm17o?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-01T1401Z-UK-on-the-ground-in-london-as-the-greens-su",
+      "generated_at": "2026-05-01T14:01:57Z",
+      "category": "UK",
+      "headline": "On the ground in London as the Greens surge",
+      "neutral_summary": "Helen Pidd visits Hackney in east London, just one part of the capital where the Green party hopes to oust Labour.",
+      "source_count": 3,
+      "outlets": [
+        "Guardian",
+        "BBC Politics",
+        "Independent"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/news/audio/2026/may/01/will-the-greens-win-over-hackney-podcast",
+        "https://www.bbc.com/news/articles/c74r9rlw9ngo?at_medium=RSS&at_campaign=rss",
+        "https://www.independent.co.uk/news/uk/politics/mark-rowley-met-police-zack-polanski-letter-golders-green-b2968421.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-01T1401Z-INDIA-tamil-nadu-election-results-2026-date-ti",
+      "generated_at": "2026-05-01T14:01:57Z",
+      "category": "INDIA",
+      "headline": "Tamil Nadu Election Results 2026: Date, time, when and where to check TN Assembly results",
+      "neutral_summary": "Tamil Nadu Election Results 2026: Date, time, when and where to check TN Assembly results.",
+      "source_count": 2,
+      "outlets": [
+        "Indian Express",
+        "NDTV"
+      ],
+      "source_urls": [
+        "https://indianexpress.com/article/india/tamil-nadu-election-results-2026-date-time-10665519/",
+        "https://www.ndtv.com/world-news/us-man-started-la-wildfire-as-he-was-angry-for-not-having-date-for-new-years-11434673#publisher=newsstand"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-01T1401Z-AI-elon-musk-confirms-xai-used-openai-s-mod",
+      "generated_at": "2026-05-01T14:01:57Z",
+      "category": "AI",
+      "headline": "Elon Musk confirms xAI used OpenAI’s models to train Grok",
+      "neutral_summary": "In a federal courtroom in California on Thursday, Elon Musk testified that his own AI startup, xAI, has used OpenAI's mo.",
+      "source_count": 2,
+      "outlets": [
+        "The Verge",
+        "VentureBeat"
+      ],
+      "source_urls": [
+        "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation",
+        "https://venturebeat.com/technology/why-openais-goblin-problem-matters-and-how-you-can-release-the-goblins-on-your-own"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "2026-05-01T0209Z-WORLD-us-house-votes-to-end-record-shutdown-ov",
       "generated_at": "2026-05-01T02:09:53Z",
