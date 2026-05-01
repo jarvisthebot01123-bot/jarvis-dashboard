@@ -1,8 +1,59 @@
 {
   "connected": true,
-  "generated_at": "2026-04-30T20:12:03.048551+00:00",
+  "generated_at": "2026-05-01T02:10:28.548164+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-01T0209Z-WORLD-us-house-votes-to-end-record-shutdown-ov",
+      "generated_at": "2026-05-01T02:09:53Z",
+      "category": "WORLD",
+      "headline": "US House votes to end record shutdown over immigration enforcement",
+      "neutral_summary": "The vote provides funding for most Department of Homeland Security agencies, except for two subagencies responsible for.",
+      "source_count": 2,
+      "outlets": [
+        "BBC News",
+        "DW News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/ce3pw5x3z54o?at_medium=RSS&at_campaign=rss",
+        "https://www.dw.com/en/us-house-passes-dhs-funding-bill-to-end-partial-shutdown/a-77005913?maca=en-rss-en-all-1573-rdf"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-01T0209Z-UK-met-chief-defends-knife-attack-officers-",
+      "generated_at": "2026-05-01T02:09:53Z",
+      "category": "UK",
+      "headline": "Met chief defends knife attack officers after Greens criticism",
+      "neutral_summary": "Sir Mark Rowley says he is \"disappointed\" that Green Party leader Zack Polanski shared a post condemning how police subd.",
+      "source_count": 3,
+      "outlets": [
+        "BBC Politics",
+        "Independent",
+        "Guardian"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/c74r9rlw9ngo?at_medium=RSS&at_campaign=rss",
+        "https://www.independent.co.uk/news/uk/politics/mark-rowley-met-police-zack-polanski-letter-golders-green-b2968421.html",
+        "https://www.theguardian.com/uk-news/2026/apr/30/zack-polanskis-criticism-of-golders-green-attack-arrest-will-have-chilling-effect-says-met-chief"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-01T0209Z-INDIA-mha-updates-citizenship-rules-tightens-n",
+      "generated_at": "2026-05-01T02:09:53Z",
+      "category": "INDIA",
+      "headline": "MHA updates citizenship rules, tightens norms on dual passports for minors",
+      "neutral_summary": "MHA updates citizenship rules, tightens norms on dual passports for minors.",
+      "source_count": 1,
+      "outlets": [
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://indianexpress.com/article/india/mha-updates-citizenship-rules-tightens-norms-on-dual-passports-for-minors-10664888/"
+      ],
+      "confidence": "low"
+    },
     {
       "id": "2026-04-30T2011Z-WORLD-saudi-arabia-s-public-fund-to-withdraw-l",
       "generated_at": "2026-04-30T20:11:50Z",
