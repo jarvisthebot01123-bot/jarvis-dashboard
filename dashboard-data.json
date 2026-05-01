@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-01T12:47:41.882041Z",
+  "generated_at": "2026-05-01T14:15:51.731658Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 101.905,
+    "index": 102.101,
     "opening_index": 101.905,
-    "daily_pct": -0.037,
+    "daily_pct": 0.155,
     "total_pct": 2.272,
-    "equity_dollars": 101905.03,
-    "daily_pnl_dollars": -37.5,
+    "equity_dollars": 102100.74,
+    "daily_pnl_dollars": 158.21,
     "total_pnl_dollars": 2271.6,
-    "unrealized_pnl_dollars": 1962.36,
-    "capital_deployed": 63135.0
+    "unrealized_pnl_dollars": 2089.57,
+    "capital_deployed": 63262.0
   },
   "spy_benchmark": {
     "return_pct": -0.038,
@@ -20,8 +20,8 @@
     "start_date": "2026-04-27"
   },
   "open_position_count": 14,
-  "unrealized_pnl_pct": 1.962,
-  "unrealized_pnl_dollars": 1962.36,
+  "unrealized_pnl_pct": 2.09,
+  "unrealized_pnl_dollars": 2089.57,
   "strategy_stats": {
     "pead": {
       "name": "3M Momentum",
@@ -30,8 +30,8 @@
       "win_rate": 0.0,
       "pnl_pct": 0.0,
       "pnl_dollars": 0,
-      "unrealized_pnl_dollars": 949.77,
-      "unrealized_pnl_pct": 0.95,
+      "unrealized_pnl_dollars": 1028.64,
+      "unrealized_pnl_pct": 1.029,
       "open_positions": 5,
       "allocated_capital": 25000
     },
@@ -42,8 +42,8 @@
       "win_rate": 0.0,
       "pnl_pct": 0.0,
       "pnl_dollars": 0,
-      "unrealized_pnl_dollars": 402.94,
-      "unrealized_pnl_pct": 0.403,
+      "unrealized_pnl_dollars": 443.9,
+      "unrealized_pnl_pct": 0.444,
       "open_positions": 5,
       "allocated_capital": 25000
     },
@@ -54,8 +54,8 @@
       "win_rate": 0.0,
       "pnl_pct": 0.0,
       "pnl_dollars": 0,
-      "unrealized_pnl_dollars": 271.04,
-      "unrealized_pnl_pct": 0.271,
+      "unrealized_pnl_dollars": 265.16,
+      "unrealized_pnl_pct": 0.265,
       "open_positions": 1,
       "allocated_capital": 15000
     },
@@ -66,8 +66,8 @@
       "win_rate": 0.0,
       "pnl_pct": 0.0,
       "pnl_dollars": 0,
-      "unrealized_pnl_dollars": 338.61,
-      "unrealized_pnl_pct": 0.339,
+      "unrealized_pnl_dollars": 351.87,
+      "unrealized_pnl_pct": 0.352,
       "open_positions": 3,
       "allocated_capital": 20000
     },
@@ -119,111 +119,111 @@
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 5.36,
-      "pnl_dollars": 251.71
+      "pnl_pct": 5.55,
+      "pnl_dollars": 260.89
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -0.6,
-      "pnl_dollars": -27.44
+      "pnl_pct": 0.24,
+      "pnl_dollars": 11.06
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 7.3,
-      "pnl_dollars": 363.06
+      "pnl_pct": 8.34,
+      "pnl_dollars": 414.96
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 3.47,
-      "pnl_dollars": 172.54
+      "pnl_pct": 4.32,
+      "pnl_dollars": 215.1
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 3.89,
-      "pnl_dollars": 189.9
+      "pnl_pct": 2.6,
+      "pnl_dollars": 126.63
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 3.59,
-      "pnl_dollars": 87.01
+      "pnl_pct": 2.26,
+      "pnl_dollars": 54.77
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 9.98,
-      "pnl_dollars": 243.95
+      "pnl_pct": 9.88,
+      "pnl_dollars": 241.64
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -2.45,
-      "pnl_dollars": -60.5
+      "pnl_pct": 1.48,
+      "pnl_dollars": 36.52
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 2.39,
-      "pnl_dollars": 58.71
+      "pnl_pct": 3.0,
+      "pnl_dollars": 73.53
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 3.08,
-      "pnl_dollars": 73.77
+      "pnl_pct": 1.56,
+      "pnl_dollars": 37.44
     },
     {
       "ticker": "***",
       "strategy": "breakout",
-      "pnl_pct": 5.52,
-      "pnl_dollars": 271.04
+      "pnl_pct": 5.41,
+      "pnl_dollars": 265.16
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": 4.14,
-      "pnl_dollars": 277.29
+      "pnl_pct": 2.27,
+      "pnl_dollars": 152.1
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -0.07,
-      "pnl_dollars": -4.92
+      "pnl_pct": 1.26,
+      "pnl_dollars": 82.41
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": 0.99,
-      "pnl_dollars": 66.24
+      "pnl_pct": 1.76,
+      "pnl_dollars": 117.36
     }
   ],
   "performance_summary": "14 open swing positions (pead:5, mom6:5, breakout:1, sector_rot:3). Equity $101,962.36. Daily P&L +$1,738.51. AVGO -0.60% worst, GOOGL +9.98% best.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "41m ago",
-      "status": "fresh",
+      "age": "2.2h ago",
+      "status": "warning",
       "count": 50
     },
     "news": {
-      "age": "14.6h ago",
+      "age": "16.0h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "1m ago",
+      "age": "1.5h ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1m ago",
+      "age": "1.5h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "1m ago",
+      "age": "1.5h ago",
       "status": "fresh",
       "count": 0
     }
@@ -252,9 +252,9 @@
     }
   ],
   "last_routine": {
-    "ts": "2026-05-01T12:46:46Z",
-    "routine": "pre_market",
-    "notes": "No rebalance due (all strategies 4d since last run). 0 insider filings. NFP blackout \u2014 all entries blocked. 14 positions held. Equity $101,905.03. Bias BULLISH."
+    "ts": "2026-05-01T14:15:37Z",
+    "routine": "intraday",
+    "notes": "14 positions monitored. No trades. Daily P&L +$158.21. No insider signals (0 filings). All positions within normal range. GOOGL +9.88% best, AVGO +0.24% worst."
   },
   "strategies_enabled": {
     "pead": true,
