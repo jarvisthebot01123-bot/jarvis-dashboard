@@ -1,8 +1,51 @@
 {
   "connected": true,
-  "generated_at": "2026-05-02T08:22:00.951867+00:00",
+  "generated_at": "2026-05-02T14:12:24.036022+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-02T1411Z-WORLD-iran-jailed-nobel-winner-narges-mohammad",
+      "generated_at": "2026-05-02T14:11:53Z",
+      "category": "WORLD",
+      "headline": "Iran: Jailed Nobel winner Narges Mohammadi hospitalized",
+      "neutral_summary": "Iranian activist Narges Mohammadi is in hospital after suffering a \"cardiac crisis\" in prison, her family says.",
+      "source_count": 3,
+      "outlets": [
+        "DW News",
+        "BBC News",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.dw.com/en/iran-jailed-nobel-winner-narges-mohammadi-hospitalized/a-77017010?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/c0729d374mxo?at_medium=RSS&at_campaign=rss",
+        "https://www.dw.com/en/how-the-iran-war-is-hurting-travelers-airline-industry/a-77000742?maca=en-rss-en-all-1573-rdf",
+        "https://www.dw.com/en/us-to-withdraw-thousands-of-troops-from-germany/a-77016071?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/c4g4xexy4w7o?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/eu-hits-back-at-8216unacceptable8217-donald-trump-over-plans-to-increase-tariffs-13539002"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-02T1411Z-AI-nvidia-ceo-jensen-huang-calls-out-tech-l",
+      "generated_at": "2026-05-02T14:11:53Z",
+      "category": "AI",
+      "headline": "Nvidia CEO Jensen Huang calls out tech leaders' \"god complex\" over reckless AI job loss predictions",
+      "neutral_summary": "AI scaremongering costs jobs instead of protecting them, says Nvidia CEO Jensen Huang.",
+      "source_count": 4,
+      "outlets": [
+        "The Decoder",
+        "VentureBeat",
+        "Guardian Tech",
+        "The Verge"
+      ],
+      "source_urls": [
+        "https://the-decoder.com/nvidia-ceo-jensen-huang-calls-out-tech-leaders-god-complex-over-reckless-ai-job-loss-predictions/",
+        "https://venturebeat.com/security/mcp-stdio-flaw-200000-ai-agent-servers-exposed-ox-security-audit",
+        "https://www.theguardian.com/us-news/2026/may/01/pentagon-us-military-pairs-with-spacex-google-openai",
+        "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-02T0821Z-WORLD-the-significance-of-us-military-bases-in",
       "generated_at": "2026-05-02T08:21:46Z",
