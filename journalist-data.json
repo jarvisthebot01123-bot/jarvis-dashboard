@@ -1,8 +1,44 @@
 {
   "connected": true,
-  "generated_at": "2026-05-02T14:12:09.507633+00:00",
+  "generated_at": "2026-05-02T20:03:22.261522+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-02T2002Z-WORLD-why-ukraine-and-israel-are-arguing-over-",
+      "generated_at": "2026-05-02T20:02:59Z",
+      "category": "WORLD",
+      "headline": "Why Ukraine and Israel are arguing over grain",
+      "neutral_summary": "Cargo ships have docked in Haifa, Israel, carrying grain thought to originate from Russian-occupied parts of Ukraine.",
+      "source_count": 3,
+      "outlets": [
+        "DW News",
+        "BBC Top Stories",
+        "Al Jazeera"
+      ],
+      "source_urls": [
+        "https://www.dw.com/en/why-ukraine-and-israel-are-arguing-over-grain/a-77018771?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/cj9pn2v7m2wo?at_medium=RSS&at_campaign=rss",
+        "https://www.aljazeera.com/news/2026/5/2/israels-two-tier-policing-and-the-crime-epidemic-in-palestinian-towns?traffic_source=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-02T2002Z-UK-badenoch-apologises-after-bloody-sunday-",
+      "generated_at": "2026-05-02T20:02:59Z",
+      "category": "UK",
+      "headline": "Badenoch apologises after Bloody Sunday footage used in post defending UK veterans",
+      "neutral_summary": "Tory leader says she did not sign off on video attacking Labour’s Troubles legacy proposals Kemi Badenoch has apologised.",
+      "source_count": 2,
+      "outlets": [
+        "Guardian",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/politics/2026/may/02/kemi-badenoch-social-media-posts-bloody-sunday-footage",
+        "https://www.bbc.com/news/articles/cp8p7k4k8xno?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "2026-05-02T1411Z-WORLD-iran-jailed-nobel-winner-narges-mohammad",
       "generated_at": "2026-05-02T14:11:53Z",
