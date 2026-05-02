@@ -1,8 +1,90 @@
 {
   "connected": true,
-  "generated_at": "2026-05-02T02:12:00.864964+00:00",
+  "generated_at": "2026-05-02T08:22:10.977914+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-02T0821Z-WORLD-the-significance-of-us-military-bases-in",
+      "generated_at": "2026-05-02T08:21:46Z",
+      "category": "WORLD",
+      "headline": "The significance of US military bases in Germany",
+      "neutral_summary": "President Trump is planning to cut US troop numbers in Germany.",
+      "source_count": 4,
+      "outlets": [
+        "DW News",
+        "Al Jazeera",
+        "BBC News",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.dw.com/en/the-significance-of-us-military-bases-in-germany/a-77015428?maca=en-rss-en-all-1573-rdf",
+        "https://www.aljazeera.com/news/2026/5/2/iran-war-whats-happening-on-day-64-as-trump-rejects-tehrans-proposal?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c4g4xexy4w7o?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/articles/c0729d374mxo?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/eu-hits-back-at-8216unacceptable8217-donald-trump-over-plans-to-increase-tariffs-13539002"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-02T0821Z-UK-starmer-urges-ban-on-some-protests-in-an",
+      "generated_at": "2026-05-02T08:21:46Z",
+      "category": "UK",
+      "headline": "Starmer urges ban on some protests in antisemitism crackdown",
+      "neutral_summary": "The prime minister called on marchers who hear chants of ‘globalise the Intifada’ to stop and ask themselves ‘why am I n.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "Guardian",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/starmer-ban-protest-antisemitism-palestine-b2969129.html",
+        "https://www.independent.co.uk/news/uk/politics/andy-burnham-westminster-return-plan-b2969220.html",
+        "https://www.theguardian.com/politics/2026/may/01/keir-starmer-condemns-zack-polanski-sharing-post-criticising-police-golders-green-stabbings",
+        "https://www.bbc.com/news/articles/cp8p7k4k8xno?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-02T0821Z-INDIA-hyderabadis-receive-test-alert-messages-",
+      "generated_at": "2026-05-02T08:21:46Z",
+      "category": "INDIA",
+      "headline": "Hyderabadis receive test alert messages on May 2 as nationwide test rolls out",
+      "neutral_summary": "Unlike routine SMS alerts, the broadcast came with a loud, distinct tone and full-screen notification.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/cities/Hyderabad/hyderabadis-receive-test-alert-messages-on-phones-may-2-as-nationwide-test-rolls-out/article70930997.ece",
+        "https://www.thehindu.com/elections/kerala-assembly/kerala-assembly-elections-counting-arrangements-in-place-for-may-4/article70930957.ece",
+        "https://www.thehindu.com/news/national/assembly-elections-live-updates-may-2-2026-tamil-nadu-west-bengal-assam-kerala-pondicherry-results/article70930663.ece",
+        "https://indianexpress.com/article/india/assembly-election-2026-live-updates-wb-repoll-exit-poll-result-date-assam-tamil-nadu-kerala-west-bengal-10667165/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-02T0821Z-AI-200-000-mcp-servers-expose-a-command-exe",
+      "generated_at": "2026-05-02T08:21:46Z",
+      "category": "AI",
+      "headline": "200,000 MCP servers expose a command execution flaw that Anthropic calls a feature",
+      "neutral_summary": "Anthropic created the Model Context Protocol as the open standard for AI agent-to-tool communication.",
+      "source_count": 4,
+      "outlets": [
+        "VentureBeat",
+        "The Decoder",
+        "Guardian Tech",
+        "The Verge"
+      ],
+      "source_urls": [
+        "https://venturebeat.com/security/mcp-stdio-flaw-200000-ai-agent-servers-exposed-ox-security-audit",
+        "https://the-decoder.com/eight-tech-giants-sign-pentagon-deals-to-build-an-ai-first-fighting-force-across-classified-networks/",
+        "https://www.theguardian.com/us-news/2026/may/01/pentagon-us-military-pairs-with-spacex-google-openai",
+        "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-02T0211Z-WORLD-us-to-cut-troop-levels-in-germany-by-5-0",
       "generated_at": "2026-05-02T02:11:47Z",
