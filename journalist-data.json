@@ -1,8 +1,68 @@
 {
   "connected": true,
-  "generated_at": "2026-05-01T20:08:03.556599+00:00",
+  "generated_at": "2026-05-02T02:12:22.273630+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-02T0211Z-WORLD-us-to-cut-troop-levels-in-germany-by-5-0",
+      "generated_at": "2026-05-02T02:11:47Z",
+      "category": "WORLD",
+      "headline": "US to cut troop levels in Germany by 5,000 amid Trump spat with Merz",
+      "neutral_summary": "The decision to reduce the US deployment to Germany comes amid a row between the two allies over Iran.",
+      "source_count": 4,
+      "outlets": [
+        "BBC News",
+        "DW News",
+        "Al Jazeera",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/c0729d374mxo?at_medium=RSS&at_campaign=rss",
+        "https://www.dw.com/en/us-to-withdraw-thousands-of-troops-from-germany/a-77016071?maca=en-rss-en-all-1573-rdf",
+        "https://www.aljazeera.com/news/2026/5/1/trump-expands-red-snapper-fishing-as-critics-warn-of-overfishing?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c4g4xexy4w7o?at_medium=RSS&at_campaign=rss",
+        "https://www.dw.com/en/can-iran-withstand-the-us-naval-blockade/a-77014627?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/eu-hits-back-at-8216unacceptable8217-donald-trump-over-plans-to-increase-tariffs-13539002"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-02T0211Z-UK-andy-burnham-planning-return-to-westmins",
+      "generated_at": "2026-05-02T02:11:47Z",
+      "category": "UK",
+      "headline": "Andy Burnham planning return to Westminster ‘within weeks to challenge Starmer for Labour leadership’",
+      "neutral_summary": "The Labour Mayor of Greater Manchester has reportedly identified several seats where MPs are prepared to step aside, tri.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "Guardian",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/andy-burnham-westminster-return-plan-b2969220.html",
+        "https://www.independent.co.uk/news/uk/politics/zack-polanski-golders-green-party-b2968965.html",
+        "https://www.theguardian.com/politics/2026/may/01/keir-starmer-condemns-zack-polanski-sharing-post-criticising-police-golders-green-stabbings",
+        "https://www.bbc.com/news/articles/cp8p7k4k8xno?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-02T0211Z-INDIA-burglars-drill-into-jewellery-shop-flee-",
+      "generated_at": "2026-05-02T02:11:47Z",
+      "category": "INDIA",
+      "headline": "Burglars drill into jewellery shop, flee with valuables worth ₹1.2 crore",
+      "neutral_summary": "Burglars drill into jewellery shop, flee with valuables worth ₹1.2 crore.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/cities/bangalore/burglars-drill-into-jewellery-shop-flee-with-valuables-worth-12-crore/article70928923.ece",
+        "https://indianexpress.com/article/india/operation-white-strike-ncb-busts-cocaine-syndicate-involving-mumbai-logistics-corridor-drug-concealed-under-cricket-gear-seized-10666386/"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "2026-05-01T2007Z-WORLD-uae-exit-from-opec-signals-closer-alignm",
       "generated_at": "2026-05-01T20:07:51Z",
