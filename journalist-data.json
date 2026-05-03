@@ -1,8 +1,76 @@
 {
   "connected": true,
-  "generated_at": "2026-05-02T20:03:14.310585+00:00",
+  "generated_at": "2026-05-03T02:14:18.699610+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-03T0213Z-WORLD-timmy-the-humpback-whale-escapes-to-the-",
+      "generated_at": "2026-05-03T02:13:58Z",
+      "category": "WORLD",
+      "headline": "Timmy the humpback whale escapes to the North Sea",
+      "neutral_summary": "The whale calf&#039;s repeated stranding off the coast of Germany sparked widespread concern and extensive media coverag.",
+      "source_count": 2,
+      "outlets": [
+        "Al Jazeera",
+        "DW News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/5/2/timmy-the-humpback-whale-escapes-to-the-north-sea?traffic_source=rss",
+        "https://www.dw.com/en/why-russia-s-northern-sea-route-remains-a-risky-bet-for-global-shipping/a-76987400?maca=en-rss-en-all-1573-rdf"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-03T0213Z-UK-row-over-starmer-s-call-to-ban-some-pro-",
+      "generated_at": "2026-05-03T02:13:58Z",
+      "category": "UK",
+      "headline": "Row over Starmer’s call to ban some pro-Palestine protests",
+      "neutral_summary": "The prime minister called on marchers who hear chants of ‘globalise the Intifada’ to stop and ask themselves: ‘Why am I.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/starmer-ban-protest-palestine-antisemitism-b2969500.html",
+        "https://www.bbc.com/news/articles/cj9pn2v7m2wo?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/starmer-says-some-pro-palestine-marches-could-be-stopped-13539282"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-03T0213Z-INDIA-operation-sindoor-reflected-india-s-reso",
+      "generated_at": "2026-05-03T02:13:58Z",
+      "category": "INDIA",
+      "headline": "Operation Sindoor Reflected India's Resolve To Eliminate Terrorism: Rajnath Singh",
+      "neutral_summary": "The defence minister underlined that the marching songs by military bands unify soldiers.",
+      "source_count": 2,
+      "outlets": [
+        "NDTV",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.ndtv.com/india-news/operation-sindoor-reflected-indias-resolve-to-eliminate-terrorism-rajnath-singh-11440902#publisher=newsstand",
+        "https://indianexpress.com/article/india/minister-of-state-kirti-vardhan-singh-to-attend-migration-forum-at-un-10667970/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-03T0213Z-AI-ai-generated-actors-and-scripts-are-now-",
+      "generated_at": "2026-05-03T02:13:58Z",
+      "category": "AI",
+      "headline": "AI-generated actors and scripts are now ineligible for Oscars",
+      "neutral_summary": "Bad news for Tilly Norwood.",
+      "source_count": 1,
+      "outlets": [
+        "TechCrunch"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/"
+      ],
+      "confidence": "low"
+    },
     {
       "id": "2026-05-02T2002Z-WORLD-why-ukraine-and-israel-are-arguing-over-",
       "generated_at": "2026-05-02T20:02:59Z",
