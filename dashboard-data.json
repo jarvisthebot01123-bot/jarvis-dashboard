@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T23:13:01.151977Z",
+  "generated_at": "2026-05-05T17:11:03.481815Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -213,31 +213,31 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "2.3h ago",
-      "status": "warning",
+      "age": "4.9h ago",
+      "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "4.1h ago",
+      "age": "18.0h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "2.3h ago",
+      "age": "1m ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1.5h ago",
+      "age": "2m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "37m ago",
-      "status": "fresh",
+      "age": "18.6h ago",
+      "status": "stale",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 62.9,
+    "score": 67.1,
     "rating": "greed"
   },
   "macro_blackout_today": false,
@@ -246,12 +246,12 @@
     {
       "event": "CPI",
       "date": "2026-05-13",
-      "days_away": 9
+      "days_away": 8
     },
     {
       "event": "PPI",
       "date": "2026-05-14",
-      "days_away": 10
+      "days_away": 9
     }
   ],
   "last_routine": {
