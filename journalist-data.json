@@ -1,8 +1,80 @@
 {
   "connected": true,
-  "generated_at": "2026-05-06T08:09:41.074807+00:00",
+  "generated_at": "2026-05-06T14:13:27.326278+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-06T1412Z-WORLD-israeli-attacks-on-southern-eastern-leba",
+      "generated_at": "2026-05-06T14:12:48Z",
+      "category": "WORLD",
+      "headline": "Israeli attacks on southern, eastern Lebanon kill at least six people",
+      "neutral_summary": "Israel issues forced displacement orders for 12 villages in southern Lebanon.",
+      "source_count": 2,
+      "outlets": [
+        "Al Jazeera",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/5/6/israeli-attacks-on-southern-eastern-lebanon-kill-at-least-six-people?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c202652vvnjo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-06T1412Z-UK-local-elections-2026-live-polanski-admit",
+      "generated_at": "2026-05-06T14:12:48Z",
+      "category": "UK",
+      "headline": "Local elections 2026 live: Polanski admits he was wrong to claim he was British Red Cross spokesperson after backlash",
+      "neutral_summary": "The Green Party leader also defended his response to footage of the alleged Golders Green attacker being tackled by poli.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/local-elections-may-2026-live-updates-uk-scotland-wales-labour-greens-reform-b2971313.html",
+        "https://www.bbc.com/news/articles/cq5pgv35y7eo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/live/2026/may/06/local-elections-labour-starmer-greens-polanski-red-cross-reform-tories-conservatives-lib-dems-latest-news-updates",
+        "https://www.independent.co.uk/tv/in-the-room/local-elections-reform-greens-labour-stramer-vote-b2971368.html",
+        "https://www.theguardian.com/politics/2026/may/06/zack-polanski-says-he-was-wrong-to-call-himself-a-red-cross-spokesperson"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-06T1412Z-INDIA-karnataka-s-adopt-a-monument-sees-muted-",
+      "generated_at": "2026-05-06T14:12:48Z",
+      "category": "INDIA",
+      "headline": "Karnataka’s ‘Adopt a Monument’ sees muted response three years after launch",
+      "neutral_summary": "Poor publicity, limited connectivity to several heritage locations, lack of detailed development plans, and the absence.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "NDTV"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/karnataka/karnatakas-adopt-a-monument-sees-muted-response-three-years-after-launch/article70942955.ece",
+        "https://www.ndtv.com/india-news/on-camera-stray-dog-attacks-drags-child-for-30-metres-in-karnatakas-vijayapura-11456220#publisher=newsstand"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-06T1412Z-AI-google-tests-remy-ai-agent-for-gemini-as",
+      "generated_at": "2026-05-06T14:12:48Z",
+      "category": "AI",
+      "headline": "Google tests Remy AI agent for Gemini as focus turns to user control",
+      "neutral_summary": "Google is testing Remy, a new AI personal agent for Gemini, according to Business Insider.",
+      "source_count": 2,
+      "outlets": [
+        "AI News",
+        "VentureBeat"
+      ],
+      "source_urls": [
+        "https://www.artificialintelligence-news.com/news/google-remy-ai-agent-gemini-user-control/",
+        "https://venturebeat.com/security/one-command-open-source-repo-ai-agent-backdoor-openclaw-supply-chain-scanner"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "2026-05-06T0205Z-WORLD-iran-war-operation-epic-fury-is-over-rub",
       "generated_at": "2026-05-06T02:05:48Z",
