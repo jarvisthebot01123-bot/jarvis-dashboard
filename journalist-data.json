@@ -1,13 +1,13 @@
 {
   "connected": true,
-  "generated_at": "2026-05-06T20:05:06.058146+00:00",
+  "generated_at": "2026-05-06T20:04:56.776327+00:00",
   "persona": "journalist",
   "briefings": [
     {
       "id": "2026-05-06T2004Z-WORLD-why-are-pentagon-officials-talking-about",
       "generated_at": "2026-05-06T20:04:45Z",
       "category": "WORLD",
-      "headline": "Why are Pentagon officials talking about Iran’s ‘deadly dolphins’?",
+      "headline": "Why are Pentagon officials talking about Iran's 'deadly dolphins'?",
       "neutral_summary": "Soraya Lennie discusses false claims about Iran using marine life in warfare.",
       "source_count": 3,
       "outlets": [
@@ -44,8 +44,8 @@
       "id": "2026-05-06T2004Z-INDIA-suvendu-adhikari-s-personal-assistant-sh",
       "generated_at": "2026-05-06T20:04:45Z",
       "category": "INDIA",
-      "headline": "Suvendu Adhikari’s personal assistant shot dead",
-      "neutral_summary": "Suvendu Adhikari’s personal assistant Chandranath Rath was shot three times by unidentified gunmen in Madhyamgram area o.",
+      "headline": "Suvendu Adhikari's personal assistant shot dead",
+      "neutral_summary": "Suvendu Adhikari's personal assistant Chandranath Rath was shot three times by unidentified gunmen in Madhyamgram area o.",
       "source_count": 2,
       "outlets": [
         "The Hindu",
@@ -120,7 +120,7 @@
       "id": "2026-05-06T1412Z-INDIA-karnataka-s-adopt-a-monument-sees-muted-",
       "generated_at": "2026-05-06T14:12:48Z",
       "category": "INDIA",
-      "headline": "Karnataka’s ‘Adopt a Monument’ sees muted response three years after launch",
+      "headline": "Karnataka's 'Adopt a Monument' sees muted response three years after launch",
       "neutral_summary": "Poor publicity, limited connectivity to several heritage locations, lack of detailed development plans, and the absence.",
       "source_count": 2,
       "outlets": [
@@ -194,8 +194,8 @@
       "id": "2026-05-06T0205Z-INDIA-3-indians-in-uae-injured-in-iran-drone-s",
       "generated_at": "2026-05-06T02:05:48Z",
       "category": "INDIA",
-      "headline": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is ‘unacceptable’",
-      "neutral_summary": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is ‘unacceptable’.",
+      "headline": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is 'unacceptable'",
+      "neutral_summary": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is 'unacceptable'.",
       "source_count": 2,
       "outlets": [
         "Indian Express",
@@ -211,7 +211,7 @@
       "id": "2026-05-06T0205Z-AI-openai-president-s-deeply-personal-diary",
       "generated_at": "2026-05-06T02:05:48Z",
       "category": "AI",
-      "headline": "OpenAI president’s ‘deeply personal’ diary becomes focus in Musk’s case against Altman",
+      "headline": "OpenAI president's 'deeply personal' diary becomes focus in Musk's case against Altman",
       "neutral_summary": "Greg Brockman has faced questions about his emails, texts and writings in his personal diary in second week of the trial.",
       "source_count": 3,
       "outlets": [
@@ -248,8 +248,8 @@
       "id": "2026-05-03T0213Z-UK-row-over-starmer-s-call-to-ban-some-pro-",
       "generated_at": "2026-05-03T02:13:58Z",
       "category": "UK",
-      "headline": "Row over Starmer’s call to ban some pro-Palestine protests",
-      "neutral_summary": "The prime minister called on marchers who hear chants of ‘globalise the Intifada’ to stop and ask themselves: ‘Why am I.",
+      "headline": "Row over Starmer's call to ban some pro-Palestine protests",
+      "neutral_summary": "The prime minister called on marchers who hear chants of 'globalise the Intifada' to stop and ask themselves: 'Why am I.",
       "source_count": 3,
       "outlets": [
         "Independent",
@@ -319,7 +319,7 @@
       "generated_at": "2026-05-02T20:02:59Z",
       "category": "UK",
       "headline": "Badenoch apologises after Bloody Sunday footage used in post defending UK veterans",
-      "neutral_summary": "Tory leader says she did not sign off on video attacking Labour’s Troubles legacy proposals Kemi Badenoch has apologised.",
+      "neutral_summary": "Tory leader says she did not sign off on video attacking Labour's Troubles legacy proposals Kemi Badenoch has apologised.",
       "source_count": 2,
       "outlets": [
         "Guardian",
@@ -401,7 +401,7 @@
       "generated_at": "2026-05-02T08:21:46Z",
       "category": "UK",
       "headline": "Starmer urges ban on some protests in antisemitism crackdown",
-      "neutral_summary": "The prime minister called on marchers who hear chants of ‘globalise the Intifada’ to stop and ask themselves ‘why am I n.",
+      "neutral_summary": "The prime minister called on marchers who hear chants of 'globalise the Intifada' to stop and ask themselves 'why am I n.",
       "source_count": 3,
       "outlets": [
         "Independent",
@@ -483,7 +483,7 @@
       "id": "2026-05-02T0211Z-UK-andy-burnham-planning-return-to-westmins",
       "generated_at": "2026-05-02T02:11:47Z",
       "category": "UK",
-      "headline": "Andy Burnham planning return to Westminster ‘within weeks to challenge Starmer for Labour leadership’",
+      "headline": "Andy Burnham planning return to Westminster 'within weeks to challenge Starmer for Labour leadership'",
       "neutral_summary": "The Labour Mayor of Greater Manchester has reportedly identified several seats where MPs are prepared to step aside, tri.",
       "source_count": 3,
       "outlets": [
@@ -649,7 +649,7 @@
       "id": "2026-05-01T1401Z-AI-elon-musk-confirms-xai-used-openai-s-mod",
       "generated_at": "2026-05-01T14:01:57Z",
       "category": "AI",
-      "headline": "Elon Musk confirms xAI used OpenAI’s models to train Grok",
+      "headline": "Elon Musk confirms xAI used OpenAI's models to train Grok",
       "neutral_summary": "In a federal courtroom in California on Thursday, Elon Musk testified that his own AI startup, xAI, has used OpenAI's mo.",
       "source_count": 2,
       "outlets": [
@@ -756,7 +756,7 @@
       "id": "2026-04-30T2011Z-INDIA-bjp-opposition-spar-at-special-session-o",
       "generated_at": "2026-04-30T20:11:50Z",
       "category": "INDIA",
-      "headline": "BJP, Opposition spar at special session on women’s empowerment in Uttar Pradesh Assembly",
+      "headline": "BJP, Opposition spar at special session on women's empowerment in Uttar Pradesh Assembly",
       "neutral_summary": "By opposing Nari Shakti Vandan Bill, Opposition aims to hinder political rights of women, says Yogi Adityanath; SP accus.",
       "source_count": 3,
       "outlets": [
@@ -775,8 +775,8 @@
       "id": "2026-04-30T2011Z-AI-musk-faces-third-day-of-questioning-in-c",
       "generated_at": "2026-04-30T20:11:50Z",
       "category": "AI",
-      "headline": "Musk faces third day of questioning in contentious trial over OpenAI’s founding",
-      "neutral_summary": "Trial continues after heated back and forth during OpenAI’s cross-examination of the Tesla CEO on WednesdayElon Musk’s c.",
+      "headline": "Musk faces third day of questioning in contentious trial over OpenAI's founding",
+      "neutral_summary": "Trial continues after heated back and forth during OpenAI's cross-examination of the Tesla CEO on WednesdayElon Musk's c.",
       "source_count": 4,
       "outlets": [
         "Guardian Tech",
@@ -820,8 +820,8 @@
       "id": "2026-04-30T1430Z-UK-keir-starmer-s-terrible-to-do-list-mps-c",
       "generated_at": "2026-04-30T14:30:44Z",
       "category": "UK",
-      "headline": "Keir Starmer’s terrible to-do list: MPs, cost of living, and looming local elections",
-      "neutral_summary": "His own MPs are turning on him, the civil service is raging at him, and at next week’s local elections, the public will.",
+      "headline": "Keir Starmer's terrible to-do list: MPs, cost of living, and looming local elections",
+      "neutral_summary": "His own MPs are turning on him, the civil service is raging at him, and at next week's local elections, the public will.",
       "source_count": 3,
       "outlets": [
         "Independent",
@@ -840,7 +840,7 @@
       "generated_at": "2026-04-30T14:30:44Z",
       "category": "INDIA",
       "headline": "Congress decides to not contest Maharashtra Legislative Council polls; to support MVA candidate",
-      "neutral_summary": "The Congress had said it would contest the polls, however, appears to have relented after a call between the party’s Mah.",
+      "neutral_summary": "The Congress had said it would contest the polls, however, appears to have relented after a call between the party's Mah.",
       "source_count": 1,
       "outlets": [
         "The Hindu"
@@ -889,8 +889,8 @@
       "id": "2026-04-30T0215Z-INDIA-murder-masked-as-bathroom-fall-ranchi-te",
       "generated_at": "2026-04-30T02:15:29Z",
       "category": "INDIA",
-      "headline": "Murder masked as bathroom fall: Ranchi teen accused of killing mother with boyfriend’s help",
-      "neutral_summary": "Murder masked as bathroom fall: Ranchi teen accused of killing mother with boyfriend’s help.",
+      "headline": "Murder masked as bathroom fall: Ranchi teen accused of killing mother with boyfriend's help",
+      "neutral_summary": "Murder masked as bathroom fall: Ranchi teen accused of killing mother with boyfriend's help.",
       "source_count": 2,
       "outlets": [
         "Indian Express",
@@ -906,7 +906,7 @@
       "id": "2026-04-30T0215Z-AI-amazon-s-openai-gambit-signals-a-new-pha",
       "generated_at": "2026-04-30T02:15:29Z",
       "category": "AI",
-      "headline": "Amazon’s OpenAI gambit signals a new phase in the cloud wars — one where exclusivity no longer applies",
+      "headline": "Amazon's OpenAI gambit signals a new phase in the cloud wars — one where exclusivity no longer applies",
       "neutral_summary": "Amazon Web Services on Tuesday launched one of the most consequential enterprise AI plays in the company&#x27;s 20-year.",
       "source_count": 3,
       "outlets": [
@@ -976,8 +976,8 @@
       "id": "2026-04-29T2024Z-AI-musk-laments-being-a-fool-for-funding-op",
       "generated_at": "2026-04-29T20:24:41Z",
       "category": "AI",
-      "headline": "Musk laments being a ‘fool’ for funding OpenAI on day two of court testimony",
-      "neutral_summary": "Lawyers for Musk, the world’s richest person, sought to paint him as a tech pioneer who wanted to aid humanityAfter a dr.",
+      "headline": "Musk laments being a 'fool' for funding OpenAI on day two of court testimony",
+      "neutral_summary": "Lawyers for Musk, the world's richest person, sought to paint him as a tech pioneer who wanted to aid humanityAfter a dr.",
       "source_count": 3,
       "outlets": [
         "Guardian Tech",
