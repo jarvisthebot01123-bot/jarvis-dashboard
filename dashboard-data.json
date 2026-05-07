@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-05-07T19:09:03.861528Z",
+  "generated_at": "2026-05-07T20:18:31.658960Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 102.184,
+    "index": 102.396,
     "opening_index": 102.802,
-    "daily_pct": -1.005,
-    "total_pct": 3.128,
-    "equity_dollars": 102183.95,
-    "daily_pnl_dollars": -1032.95,
-    "total_pnl_dollars": 3128.02,
-    "unrealized_pnl_dollars": 2188.93,
-    "capital_deployed": 63361.0
+    "daily_pct": -0.799,
+    "total_pct": 2.307,
+    "equity_dollars": 102396.01,
+    "daily_pnl_dollars": -820.89,
+    "total_pnl_dollars": 2307.13,
+    "unrealized_pnl_dollars": 2396.01,
+    "capital_deployed": 63568.0
   },
   "spy_benchmark": {
-    "return_pct": 0.404,
-    "our_return_pct": 3.128,
-    "alpha_pct": 2.724,
+    "return_pct": 1.403,
+    "our_return_pct": 2.307,
+    "alpha_pct": 0.904,
     "start_date": "2026-04-27"
   },
   "open_position_count": 14,
-  "unrealized_pnl_pct": 2.189,
-  "unrealized_pnl_dollars": 2188.93,
+  "unrealized_pnl_pct": 2.396,
+  "unrealized_pnl_dollars": 2396.01,
   "strategy_stats": {
     "pead": {
       "name": "3M Momentum",
@@ -30,8 +30,8 @@
       "win_rate": 0.0,
       "pnl_pct": 0.0,
       "pnl_dollars": 0,
-      "unrealized_pnl_dollars": 1670.79,
-      "unrealized_pnl_pct": 1.671,
+      "unrealized_pnl_dollars": 1814.92,
+      "unrealized_pnl_pct": 1.815,
       "open_positions": 5,
       "allocated_capital": 25000
     },
@@ -42,8 +42,8 @@
       "win_rate": 0.0,
       "pnl_pct": 0.0,
       "pnl_dollars": 0,
-      "unrealized_pnl_dollars": 219.66,
-      "unrealized_pnl_pct": 0.22,
+      "unrealized_pnl_dollars": 257.86,
+      "unrealized_pnl_pct": 0.258,
       "open_positions": 5,
       "allocated_capital": 25000
     },
@@ -54,8 +54,8 @@
       "win_rate": 0.0,
       "pnl_pct": 0.0,
       "pnl_dollars": 0,
-      "unrealized_pnl_dollars": 249.13,
-      "unrealized_pnl_pct": 0.249,
+      "unrealized_pnl_dollars": 254.53,
+      "unrealized_pnl_pct": 0.255,
       "open_positions": 1,
       "allocated_capital": 15000
     },
@@ -66,8 +66,8 @@
       "win_rate": 0.0,
       "pnl_pct": 0.0,
       "pnl_dollars": 0,
-      "unrealized_pnl_dollars": 49.35,
-      "unrealized_pnl_pct": 0.049,
+      "unrealized_pnl_dollars": 68.7,
+      "unrealized_pnl_pct": 0.069,
       "open_positions": 3,
       "allocated_capital": 20000
     },
@@ -129,117 +129,125 @@
       "daily_pnl_dollars": 799.04,
       "trades": 0,
       "strategies": []
+    },
+    {
+      "date": "2026-05-07",
+      "index": 102.307,
+      "daily_pct": -0.821,
+      "daily_pnl_dollars": -820.89,
+      "trades": 0,
+      "strategies": []
     }
   ],
   "open_positions": [
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 21.15,
-      "pnl_dollars": 993.86
+      "pnl_pct": 21.81,
+      "pnl_dollars": 1024.52
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": -1.67,
-      "pnl_dollars": -76.83
+      "pnl_pct": -1.41,
+      "pnl_dollars": -64.84
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 7.18,
-      "pnl_dollars": 357.3
+      "pnl_pct": 8.14,
+      "pnl_dollars": 405.06
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 3.69,
-      "pnl_dollars": 183.43
+      "pnl_pct": 3.92,
+      "pnl_dollars": 194.94
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -2.05,
-      "pnl_dollars": -49.75
+      "pnl_pct": -2.12,
+      "pnl_dollars": -51.44
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 12.88,
-      "pnl_dollars": 315.14
+      "pnl_pct": 13.88,
+      "pnl_dollars": 339.57
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -0.21,
-      "pnl_dollars": -5.06
+      "pnl_pct": 0.05,
+      "pnl_dollars": 1.32
     },
     {
       "ticker": "***",
       "strategy": "pead",
-      "pnl_pct": 4.37,
-      "pnl_dollars": 213.03
+      "pnl_pct": 5.23,
+      "pnl_dollars": 255.24
     },
     {
       "ticker": "***",
       "strategy": "breakout",
-      "pnl_pct": 5.08,
-      "pnl_dollars": 249.13
+      "pnl_pct": 5.19,
+      "pnl_dollars": 254.53
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": 0.68,
-      "pnl_dollars": 16.77
+      "pnl_pct": 0.89,
+      "pnl_dollars": 21.85
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -2.35,
-      "pnl_dollars": -157.37
+      "pnl_pct": -2.39,
+      "pnl_dollars": -160.29
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": 5.93,
-      "pnl_dollars": 388.88
+      "pnl_pct": 6.18,
+      "pnl_dollars": 404.67
     },
     {
       "ticker": "***",
       "strategy": "sector_rot",
-      "pnl_pct": -2.73,
-      "pnl_dollars": -182.16
+      "pnl_pct": -2.63,
+      "pnl_dollars": -175.68
     },
     {
       "ticker": "***",
       "strategy": "mom6",
-      "pnl_pct": -2.4,
-      "pnl_dollars": -57.44
+      "pnl_pct": -2.23,
+      "pnl_dollars": -53.44
     }
   ],
-  "performance_summary": "14 open swing positions. Equity $103,261.27. Daily P&L +$799.04. AMD best (+26.17%), XLU worst (-1.36%). All-time realised: +$3,128.02.",
+  "performance_summary": "14 open swing positions. Equity $102,396.01. Daily P&L -$820.89. AMD best (+21.81%), XLU worst (-2.63%). All-time realised: +$2,307.13.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "2.8h ago",
+      "age": "4.0h ago",
       "status": "warning",
       "count": 50
     },
     "news": {
-      "age": "20.5h ago",
-      "status": "stale",
+      "age": "21m ago",
+      "status": "fresh",
       "count": 30
     },
     "market_context": {
-      "age": "1.1h ago",
+      "age": "2.3h ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1.7h ago",
+      "age": "2.8h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "1.1h ago",
+      "age": "2.3h ago",
       "status": "fresh",
       "count": 0
     }
@@ -263,9 +271,10 @@
     }
   ],
   "last_routine": {
-    "ts": "2026-05-07T19:06:40Z",
-    "routine": "intraday",
-    "notes": "14 positions monitored. No trades. Daily P&L -$1,032.95. No insider signals (0 filings, data fresh). AMD +21.15% on track (>15%). GOOGL +12.88% approaching target. All other positions within normal range. AMD best (+21.15%), XLU worst (-2.73%)."
+    "ts": "2026-05-07T20:15:00Z",
+    "routine": "end_of_day",
+    "daily_pnl": -820.89,
+    "trades": 0
   },
   "strategies_enabled": {
     "pead": true,
