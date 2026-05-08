@@ -1,8 +1,85 @@
 {
   "connected": true,
-  "generated_at": "2026-05-08T02:03:26.059352+00:00",
+  "generated_at": "2026-05-08T08:08:13.209805+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-08T0807Z-WORLD-oil-prices-rise-after-us-and-iran-exchan",
+      "generated_at": "2026-05-08T08:07:40Z",
+      "category": "WORLD",
+      "headline": "Oil prices rise after US and Iran exchange fire in Hormuz strait",
+      "neutral_summary": "US President Donald Trump says the ceasefire between Washington and Tehran is still in place.",
+      "source_count": 3,
+      "outlets": [
+        "BBC News",
+        "Al Jazeera",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/c86dp85g59xo?at_medium=RSS&at_campaign=rss",
+        "https://www.aljazeera.com/news/2026/5/8/iran-war-day-70-us-iran-trade-fire-in-hormuz-amid-ceasefire-tensions?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c626zyywxjno?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/has-trumps-iran-ceasefire-just-collapsed-13541328"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-08T0807Z-UK-local-elections-results-in-full-live-map",
+      "generated_at": "2026-05-08T08:07:40Z",
+      "category": "UK",
+      "headline": "Local elections results in full: Live map for every seat across England, Wales and Scotland",
+      "neutral_summary": "Live election results for England, Scotland and Wales in one place.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/local-elections-2026-live-results-map-uk-today-b2972031.html",
+        "https://www.independent.co.uk/news/uk/politics/london-mayor-council-elections-2026-live-results-map-b2972032.html",
+        "https://www.independent.co.uk/news/uk/politics/local-elections-2026-uk-live-updates-results-b2972615.html",
+        "https://www.bbc.com/news/articles/c0ljrp76ywxo?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/articles/cvgz155y9exo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/ng-interactive/2026/may/07/local-elections-2026-may-full-results-england-scotland-wales"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-08T0807Z-INDIA-t-n-government-formation-live-cpi-cpi-m-",
+      "generated_at": "2026-05-08T08:07:40Z",
+      "category": "INDIA",
+      "headline": "T.N. Government formation LIVE: CPI, CPI(M) hold executive committee meetings in Chennai",
+      "neutral_summary": "MP Manickam Tagore claims Congress exited alliance after realising DMK’s intent to join hands with AIADMK ‘for power’ in.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/elections/tamil-nadu-assembly/tamil-nadu-government-formation-live-updates-cpi-cpim-vck-key-to-govt-formation-dmk-aiadmk-tvk-politics/article70953684.ece",
+        "https://www.thehindu.com/elections/tamil-nadu-assembly/tamil-nadu-government-formation-tvk-vck-cpi-cpim-dmk-aiadmk/article70954244.ece",
+        "https://indianexpress.com/article/india/tamil-nadu-government-formation-live-updates-tvk-vijay-party-alliance-stalin-dmk-aiadmk-10678643/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-08T0807Z-AI-being-human-helps-despite-rise-of-ai-is-",
+      "generated_at": "2026-05-08T08:07:40Z",
+      "category": "AI",
+      "headline": "‘Being human helps’: despite rise of AI is there still hope for Europe’s translators?",
+      "neutral_summary": "A booming tech sector has disrupted translation jobs in publishing – but they could be needed for a while longer yetIn F.",
+      "source_count": 2,
+      "outlets": [
+        "Guardian Tech",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/technology/2026/may/08/being-human-helps-despite-rise-of-ai-is-there-still-hope-for-europes-translators",
+        "https://the-decoder.com/europes-answer-to-ai-regulation-complexity-is-to-just-delay-most-of-it/"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "2026-05-08T0203Z-WORLD-trump-gives-eu-until-jul-4-to-implement-",
       "generated_at": "2026-05-08T02:03:02Z",
@@ -931,57 +1008,6 @@
         "https://venturebeat.com/technology/why-openais-goblin-problem-matters-and-how-you-can-release-the-goblins-on-your-own"
       ],
       "confidence": "medium"
-    },
-    {
-      "id": "2026-05-01T0209Z-WORLD-us-house-votes-to-end-record-shutdown-ov",
-      "generated_at": "2026-05-01T02:09:53Z",
-      "category": "WORLD",
-      "headline": "US House votes to end record shutdown over immigration enforcement",
-      "neutral_summary": "The vote provides funding for most Department of Homeland Security agencies, except for two subagencies responsible for.",
-      "source_count": 2,
-      "outlets": [
-        "BBC News",
-        "DW News"
-      ],
-      "source_urls": [
-        "https://www.bbc.com/news/articles/ce3pw5x3z54o?at_medium=RSS&at_campaign=rss",
-        "https://www.dw.com/en/us-house-passes-dhs-funding-bill-to-end-partial-shutdown/a-77005913?maca=en-rss-en-all-1573-rdf"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-01T0209Z-UK-met-chief-defends-knife-attack-officers-",
-      "generated_at": "2026-05-01T02:09:53Z",
-      "category": "UK",
-      "headline": "Met chief defends knife attack officers after Greens criticism",
-      "neutral_summary": "Sir Mark Rowley says he is \"disappointed\" that Green Party leader Zack Polanski shared a post condemning how police subd.",
-      "source_count": 3,
-      "outlets": [
-        "BBC Politics",
-        "Independent",
-        "Guardian"
-      ],
-      "source_urls": [
-        "https://www.bbc.com/news/articles/c74r9rlw9ngo?at_medium=RSS&at_campaign=rss",
-        "https://www.independent.co.uk/news/uk/politics/mark-rowley-met-police-zack-polanski-letter-golders-green-b2968421.html",
-        "https://www.theguardian.com/uk-news/2026/apr/30/zack-polanskis-criticism-of-golders-green-attack-arrest-will-have-chilling-effect-says-met-chief"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-01T0209Z-INDIA-mha-updates-citizenship-rules-tightens-n",
-      "generated_at": "2026-05-01T02:09:53Z",
-      "category": "INDIA",
-      "headline": "MHA updates citizenship rules, tightens norms on dual passports for minors",
-      "neutral_summary": "MHA updates citizenship rules, tightens norms on dual passports for minors.",
-      "source_count": 1,
-      "outlets": [
-        "Indian Express"
-      ],
-      "source_urls": [
-        "https://indianexpress.com/article/india/mha-updates-citizenship-rules-tightens-norms-on-dual-passports-for-minors-10664888/"
-      ],
-      "confidence": "low"
     }
   ]
 }
