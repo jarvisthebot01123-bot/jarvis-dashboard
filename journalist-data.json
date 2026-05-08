@@ -1,8 +1,82 @@
 {
   "connected": true,
-  "generated_at": "2026-05-07T20:09:34.414599+00:00",
+  "generated_at": "2026-05-08T02:03:26.059352+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-08T0203Z-WORLD-trump-gives-eu-until-jul-4-to-implement-",
+      "generated_at": "2026-05-08T02:03:02Z",
+      "category": "WORLD",
+      "headline": "Trump gives EU until Jul 4 to implement trade deal",
+      "neutral_summary": "Trump has threatened to impose higher tariffs on the bloc if it doesn't implement the trade deal agreed last year by his.",
+      "source_count": 2,
+      "outlets": [
+        "DW News",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.dw.com/en/trump-gives-eu-until-jul-4-to-implement-trade-deal/a-77087158?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/cwy2d0v3p2po?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-08T0203Z-UK-sir-john-curtice-delivers-blunt-verdict-",
+      "generated_at": "2026-05-08T02:03:02Z",
+      "category": "UK",
+      "headline": "Sir John Curtice delivers blunt verdict on Starmer as Labour braces for election losses",
+      "neutral_summary": "Sir Keir Starmer has “never been as popular” as his Labour Party,  elections expert Professor Sir John Curtice said as h.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "Guardian",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/tv/news/election-results-keir-starmer-prime-minister-john-curtice-b2972679.html",
+        "https://www.theguardian.com/politics/live/2026/may/07/elections-2026-local-scotland-wales-reform-green-labour-conservatives-live-news-updates",
+        "https://www.independent.co.uk/news/uk/politics/local-elections-2026-uk-live-updates-results-b2972615.html",
+        "https://www.independent.co.uk/news/uk/politics/andy-burnham-starmer-labour-leadership-streeting-rayner-b2972419.html",
+        "https://www.bbc.com/news/articles/cdrpxvz61vko?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/2026/may/07/polls-close-elections-england-scotland-wales-labour-reform-greens-lib-dems-conservatives"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-08T0203Z-INDIA-west-bengal-governor-dissolves-state-leg",
+      "generated_at": "2026-05-08T02:03:02Z",
+      "category": "INDIA",
+      "headline": "West Bengal Governor dissolves State Legislative Assembly",
+      "neutral_summary": "The 17th West Bengal Legislative Assembly which was sworn in after the 2021 assembly elections stands dissolved; swearin.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/elections/west-bengal-assembly/west-bengal-governor-dissolves-state-legislative-assembly/article70952247.ece",
+        "https://indianexpress.com/article/india/kerala-election-2026-shashi-tharoor-kerala-story-communal-harmony-10677971/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-08T0203Z-AI-openai-launches-new-voice-intelligence-f",
+      "generated_at": "2026-05-08T02:03:02Z",
+      "category": "AI",
+      "headline": "OpenAI launches new voice intelligence features in its API",
+      "neutral_summary": "The new features could be handy for customer service systems, but OpenAI says they have applications that work across a.",
+      "source_count": 2,
+      "outlets": [
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/",
+        "https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/",
+        "https://the-decoder.com/openais-new-voice-model-brings-gpt-5-level-reasoning-to-real-time-conversations/"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "2026-05-07T2009Z-WORLD-can-china-help-end-the-iran-war",
       "generated_at": "2026-05-07T20:09:03Z",
@@ -908,85 +982,6 @@
         "https://indianexpress.com/article/india/mha-updates-citizenship-rules-tightens-norms-on-dual-passports-for-minors-10664888/"
       ],
       "confidence": "low"
-    },
-    {
-      "id": "2026-04-30T2011Z-WORLD-saudi-arabia-s-public-fund-to-withdraw-l",
-      "generated_at": "2026-04-30T20:11:50Z",
-      "category": "WORLD",
-      "headline": "Saudi Arabia's public fund to withdraw LIV Golf funding",
-      "neutral_summary": "Public Investment Fund cites \"current macro dynamics\" as it slashes funding for breakaway golf tour.",
-      "source_count": 2,
-      "outlets": [
-        "DW News",
-        "Sky News"
-      ],
-      "source_urls": [
-        "https://www.dw.com/en/saudi-arabia-s-public-fund-to-withdraw-liv-golf-funding/a-77005158?maca=en-rss-en-all-1573-rdf",
-        "https://news.sky.com/story/saudi-arabias-public-investment-fund-to-withdraw-funding-for-liv-golf-after-1631bn-loss-13538285"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-04-30T2011Z-UK-green-party-candidate-arrested-over-anti",
-      "generated_at": "2026-04-30T20:11:50Z",
-      "category": "UK",
-      "headline": "Green Party candidate arrested over antisemitic social media posts",
-      "neutral_summary": "Met Police made the arrest after receiving reports about online antisemitic material.",
-      "source_count": 4,
-      "outlets": [
-        "Independent",
-        "Guardian",
-        "BBC Politics",
-        "Sky News Politics"
-      ],
-      "source_urls": [
-        "https://www.independent.co.uk/news/uk/politics/green-party-candidates-arrested-antisemitism-b2968145.html",
-        "https://www.theguardian.com/uk-news/2026/apr/30/uk-terrorism-threat-level-raised-to-severe-after-golders-green-attack",
-        "https://www.bbc.com/news/articles/cpvp27njvpwo?at_medium=RSS&at_campaign=rss",
-        "https://www.theguardian.com/politics/live/2026/apr/30/local-election-campaign-labour-reform-conservatives-tories-greens-lib-dems-latest-news-updates",
-        "https://news.sky.com/story/era-of-two-party-politics-has-gone-kemi-badenoch-tells-cathy-newman-13538191"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-04-30T2011Z-INDIA-bjp-opposition-spar-at-special-session-o",
-      "generated_at": "2026-04-30T20:11:50Z",
-      "category": "INDIA",
-      "headline": "BJP, Opposition spar at special session on women’s empowerment in Uttar Pradesh Assembly",
-      "neutral_summary": "By opposing Nari Shakti Vandan Bill, Opposition aims to hinder political rights of women, says Yogi Adityanath; SP accus.",
-      "source_count": 3,
-      "outlets": [
-        "The Hindu",
-        "NDTV",
-        "Indian Express"
-      ],
-      "source_urls": [
-        "https://www.thehindu.com/news/national/uttar-pradesh/women-quota-bill-sp-mlas-stage-protest-against-bjp-in-uttar-pradesh-assembly-premises/article70923501.ece",
-        "https://www.ndtv.com/india-news/4-dead-as-cruise-boat-with-31-on-board-sinks-in-madhya-pradeshs-jabalpur-11431977#publisher=newsstand",
-        "https://indianexpress.com/article/india/bjp-mla-assault-public-hearing-govt-engineer-staff-arrested-10664590/"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-04-30T2011Z-AI-musk-faces-third-day-of-questioning-in-c",
-      "generated_at": "2026-04-30T20:11:50Z",
-      "category": "AI",
-      "headline": "Musk faces third day of questioning in contentious trial over OpenAI’s founding",
-      "neutral_summary": "Trial continues after heated back and forth during OpenAI’s cross-examination of the Tesla CEO on WednesdayElon Musk’s c.",
-      "source_count": 4,
-      "outlets": [
-        "Guardian Tech",
-        "VentureBeat",
-        "The Verge",
-        "The Decoder"
-      ],
-      "source_urls": [
-        "https://www.theguardian.com/technology/2026/apr/30/openai-founding-trial-elon-musk-sam-altman",
-        "https://venturebeat.com/technology/why-openais-goblin-problem-matters-and-how-you-can-release-the-goblins-on-your-own",
-        "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
-        "https://the-decoder.com/openai-says-it-hit-its-10-gigawatt-compute-goal-years-ahead-of-schedule/"
-      ],
-      "confidence": "high"
     }
   ]
 }
