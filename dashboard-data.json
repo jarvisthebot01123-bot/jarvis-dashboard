@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-07T23:14:37.567904Z",
+  "generated_at": "2026-05-08T12:39:31.313016Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 102.396,
-    "opening_index": 102.802,
-    "daily_pct": -0.799,
+    "index": 102.876,
+    "opening_index": 102.876,
+    "daily_pct": 0.0,
     "total_pct": 2.307,
-    "equity_dollars": 102396.01,
-    "daily_pnl_dollars": -820.89,
+    "equity_dollars": 102875.79,
+    "daily_pnl_dollars": 0.0,
     "total_pnl_dollars": 2307.13,
     "unrealized_pnl_dollars": 2396.01,
     "capital_deployed": 63568.0
@@ -229,31 +229,31 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "2.4h ago",
-      "status": "warning",
+      "age": "1m ago",
+      "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "3.3h ago",
+      "age": "13.4h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "2.4h ago",
+      "age": "1m ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1.7h ago",
+      "age": "1m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "32m ago",
+      "age": "1m ago",
       "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 67.6,
+    "score": 66.8,
     "rating": "greed"
   },
   "macro_blackout_today": false,
@@ -262,19 +262,18 @@
     {
       "event": "CPI",
       "date": "2026-05-13",
-      "days_away": 6
+      "days_away": 5
     },
     {
       "event": "PPI",
       "date": "2026-05-14",
-      "days_away": 7
+      "days_away": 6
     }
   ],
   "last_routine": {
-    "ts": "2026-05-07T20:15:00Z",
-    "routine": "end_of_day",
-    "daily_pnl": -820.89,
-    "trades": 0
+    "ts": "2026-05-08T12:39:19Z",
+    "routine": "pre_market",
+    "notes": "No rebalance due (11d since last; breakout due in 3d, pead/mom6/sector_rot in 17d). 0 insider filings. VIX 17.0 normal. F&G 66.8 greed. 14 positions held. Equity $102,875.79. Bias BULLISH."
   },
   "strategies_enabled": {
     "pead": true,
