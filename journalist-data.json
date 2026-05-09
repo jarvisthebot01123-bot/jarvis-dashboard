@@ -1,13 +1,88 @@
 {
   "connected": true,
-  "generated_at": "2026-05-08T14:06:55.922821+00:00",
+  "generated_at": "2026-05-09T14:13:48.764448+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-09T1409Z-WORLD-spain-s-canary-islands-brace-for-incomin",
+      "generated_at": "2026-05-09T14:09:19Z",
+      "category": "WORLD",
+      "headline": "Spain's Canary Islands brace for incoming hantavirus-stricken cruise ship",
+      "neutral_summary": "140 passengers and crew on the MV Hondius vessel will be &#039;completely isolated&#039; and evacuated, say Spanish auth.",
+      "source_count": 2,
+      "outlets": [
+        "Al Jazeera",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/5/9/spains-canary-islands-brace-for-incoming-hantavirus-stricken-cruise-ship?traffic_source=rss",
+        "https://www.bbc.com/news/articles/c5y0gkg038yo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-09T1409Z-UK-the-records-broken-in-historic-local-ele",
+      "generated_at": "2026-05-09T14:09:19Z",
+      "category": "UK",
+      "headline": "The records broken in historic local elections that rocked Labour as Reform surges",
+      "neutral_summary": "New records were set by Reform and the Green Party, while Labour suffered historic losses in this week's local elections.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "Guardian",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/local-elections-records-labour-reform-starmer-farage-b2973476.html",
+        "https://www.independent.co.uk/news/uk/politics/local-elections-2026-live-updates-uk-results-b2973465.html",
+        "https://www.theguardian.com/politics/live/2026/may/09/may-elections-results-keir-starmer-labour-nigel-farage-reform-uk-politics-latest-news-updates",
+        "https://www.independent.co.uk/news/uk/politics/london-mayor-council-elections-2026-live-map-results-b2973469.html",
+        "https://www.theguardian.com/politics/ng-interactive/2026/may/08/2026-elections-mapped-labour-reform-uk-greens-scotland-wales-england-local",
+        "https://news.sky.com/story/starmer-should-carry-on-as-pm-but-more-of-the-same-is-not-acceptable-says-harriet-harman-13541756"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-09T1409Z-INDIA-bengaluru-civic-polls-parties-divided-ov",
+      "generated_at": "2026-05-09T14:09:19Z",
+      "category": "INDIA",
+      "headline": "Bengaluru civic polls: Parties divided over timing",
+      "neutral_summary": "While former councillors say that all preliminary groundwork has been completed, they remain divided over the SEC's deci.",
+      "source_count": 1,
+      "outlets": [
+        "The Hindu"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/cities/bangalore/bengaluru-civic-polls-parties-divided-over-timing/article70956448.ece"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-05-09T1409Z-AI-musk-v-altman-week-2-openai-fires-back-a",
+      "generated_at": "2026-05-09T14:09:19Z",
+      "category": "AI",
+      "headline": "Musk v. Altman week 2: OpenAI fires back, and Shivon Zilis reveals that Musk tried to poach Sam Altman",
+      "neutral_summary": "In the second week of the landmark trial between Elon Musk and OpenAI, Musk's motivations for bringing the suit were und.",
+      "source_count": 4,
+      "outlets": [
+        "MIT Tech Review",
+        "VentureBeat",
+        "The Decoder",
+        "The Verge"
+      ],
+      "source_urls": [
+        "https://www.technologyreview.com/2026/05/08/1137008/musk-v-altman-week-2-openai-fires-back-and-shivon-zilis-reveals-that-musk-tried-to-poach-sam-altman/",
+        "https://venturebeat.com/orchestration/openai-brings-gpt-5-class-reasoning-to-real-time-voice-and-it-changes-what-voice-agents-can-actually-orchestrate",
+        "https://the-decoder.com/softbank-reportedly-slashes-openai-backed-loan-from-10-billion-to-6-billion-as-lenders-balk-at-private-ai-valuations/",
+        "https://www.theverge.com/report/926771/microsoft-openai-amazon-worries-shit-talk-azure"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-08T1406Z-WORLD-what-we-know-about-iran-s-response-to-th",
       "generated_at": "2026-05-08T14:06:41Z",
       "category": "WORLD",
-      "headline": "What we know about Iran’s response to the latest US ceasefire proposal",
+      "headline": "What we know about Iran's response to the latest US ceasefire proposal",
       "neutral_summary": "Iran has not formally responded, but officials indicate a large divide remains between the two sides.",
       "source_count": 3,
       "outlets": [
@@ -68,8 +143,8 @@
       "id": "2026-05-08T1406Z-AI-how-dangerous-is-anthropic-s-mythos-ai-b",
       "generated_at": "2026-05-08T14:06:41Z",
       "category": "AI",
-      "headline": "How dangerous is Anthropic’s Mythos AI? | Bruce Schneier",
-      "neutral_summary": "The system’s power is comparable to others – but it still has frightening implications for the future of hackingLast mon.",
+      "headline": "How dangerous is Anthropic's Mythos AI? | Bruce Schneier",
+      "neutral_summary": "The system's power is comparable to others – but it still has frightening implications for the future of hackingLast mon.",
       "source_count": 3,
       "outlets": [
         "Guardian Tech",
@@ -130,7 +205,7 @@
       "generated_at": "2026-05-08T08:07:40Z",
       "category": "INDIA",
       "headline": "T.N. Government formation LIVE: CPI, CPI(M) hold executive committee meetings in Chennai",
-      "neutral_summary": "MP Manickam Tagore claims Congress exited alliance after realising DMK’s intent to join hands with AIADMK ‘for power’ in.",
+      "neutral_summary": "MP Manickam Tagore claims Congress exited alliance after realising DMK's intent to join hands with AIADMK 'for power' in.",
       "source_count": 2,
       "outlets": [
         "The Hindu",
@@ -147,7 +222,7 @@
       "id": "2026-05-08T0807Z-AI-being-human-helps-despite-rise-of-ai-is-",
       "generated_at": "2026-05-08T08:07:40Z",
       "category": "AI",
-      "headline": "‘Being human helps’: despite rise of AI is there still hope for Europe’s translators?",
+      "headline": "'Being human helps': despite rise of AI is there still hope for Europe's translators?",
       "neutral_summary": "A booming tech sector has disrupted translation jobs in publishing – but they could be needed for a while longer yetIn F.",
       "source_count": 2,
       "outlets": [
@@ -182,7 +257,7 @@
       "generated_at": "2026-05-08T02:03:02Z",
       "category": "UK",
       "headline": "Sir John Curtice delivers blunt verdict on Starmer as Labour braces for election losses",
-      "neutral_summary": "Sir Keir Starmer has “never been as popular” as his Labour Party,  elections expert Professor Sir John Curtice said as h.",
+      "neutral_summary": "Sir Keir Starmer has \"never been as popular\" as his Labour Party,  elections expert Professor Sir John Curtice said as h.",
       "source_count": 3,
       "outlets": [
         "Independent",
@@ -379,7 +454,7 @@
       "generated_at": "2026-05-07T02:11:00Z",
       "category": "UK",
       "headline": "Keir Starmer makes late pitch to voters turning to Greens and Reform",
-      "neutral_summary": "As Labour faces record-breaking losses in Thursday’s local elections, prime minister says rivals are unfit to leadLabour.",
+      "neutral_summary": "As Labour faces record-breaking losses in Thursday's local elections, prime minister says rivals are unfit to leadLabour.",
       "source_count": 3,
       "outlets": [
         "Guardian",
@@ -434,7 +509,7 @@
       "id": "2026-05-06T2004Z-WORLD-why-are-pentagon-officials-talking-about",
       "generated_at": "2026-05-06T20:04:45Z",
       "category": "WORLD",
-      "headline": "Why are Pentagon officials talking about Iran’s ‘deadly dolphins’?",
+      "headline": "Why are Pentagon officials talking about Iran's 'deadly dolphins'?",
       "neutral_summary": "Soraya Lennie discusses false claims about Iran using marine life in warfare.",
       "source_count": 3,
       "outlets": [
@@ -471,8 +546,8 @@
       "id": "2026-05-06T2004Z-INDIA-suvendu-adhikari-s-personal-assistant-sh",
       "generated_at": "2026-05-06T20:04:45Z",
       "category": "INDIA",
-      "headline": "Suvendu Adhikari’s personal assistant shot dead",
-      "neutral_summary": "Suvendu Adhikari’s personal assistant Chandranath Rath was shot three times by unidentified gunmen in Madhyamgram area o.",
+      "headline": "Suvendu Adhikari's personal assistant shot dead",
+      "neutral_summary": "Suvendu Adhikari's personal assistant Chandranath Rath was shot three times by unidentified gunmen in Madhyamgram area o.",
       "source_count": 2,
       "outlets": [
         "The Hindu",
@@ -547,7 +622,7 @@
       "id": "2026-05-06T1412Z-INDIA-karnataka-s-adopt-a-monument-sees-muted-",
       "generated_at": "2026-05-06T14:12:48Z",
       "category": "INDIA",
-      "headline": "Karnataka’s ‘Adopt a Monument’ sees muted response three years after launch",
+      "headline": "Karnataka's 'Adopt a Monument' sees muted response three years after launch",
       "neutral_summary": "Poor publicity, limited connectivity to several heritage locations, lack of detailed development plans, and the absence.",
       "source_count": 2,
       "outlets": [
@@ -621,8 +696,8 @@
       "id": "2026-05-06T0205Z-INDIA-3-indians-in-uae-injured-in-iran-drone-s",
       "generated_at": "2026-05-06T02:05:48Z",
       "category": "INDIA",
-      "headline": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is ‘unacceptable’",
-      "neutral_summary": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is ‘unacceptable’.",
+      "headline": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is 'unacceptable'",
+      "neutral_summary": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is 'unacceptable'.",
       "source_count": 2,
       "outlets": [
         "Indian Express",
@@ -638,7 +713,7 @@
       "id": "2026-05-06T0205Z-AI-openai-president-s-deeply-personal-diary",
       "generated_at": "2026-05-06T02:05:48Z",
       "category": "AI",
-      "headline": "OpenAI president’s ‘deeply personal’ diary becomes focus in Musk’s case against Altman",
+      "headline": "OpenAI president's 'deeply personal' diary becomes focus in Musk's case against Altman",
       "neutral_summary": "Greg Brockman has faced questions about his emails, texts and writings in his personal diary in second week of the trial.",
       "source_count": 3,
       "outlets": [
@@ -675,8 +750,8 @@
       "id": "2026-05-03T0213Z-UK-row-over-starmer-s-call-to-ban-some-pro-",
       "generated_at": "2026-05-03T02:13:58Z",
       "category": "UK",
-      "headline": "Row over Starmer’s call to ban some pro-Palestine protests",
-      "neutral_summary": "The prime minister called on marchers who hear chants of ‘globalise the Intifada’ to stop and ask themselves: ‘Why am I.",
+      "headline": "Row over Starmer's call to ban some pro-Palestine protests",
+      "neutral_summary": "The prime minister called on marchers who hear chants of 'globalise the Intifada' to stop and ask themselves: 'Why am I.",
       "source_count": 3,
       "outlets": [
         "Independent",
@@ -746,7 +821,7 @@
       "generated_at": "2026-05-02T20:02:59Z",
       "category": "UK",
       "headline": "Badenoch apologises after Bloody Sunday footage used in post defending UK veterans",
-      "neutral_summary": "Tory leader says she did not sign off on video attacking Labour’s Troubles legacy proposals Kemi Badenoch has apologised.",
+      "neutral_summary": "Tory leader says she did not sign off on video attacking Labour's Troubles legacy proposals Kemi Badenoch has apologised.",
       "source_count": 2,
       "outlets": [
         "Guardian",
@@ -797,221 +872,6 @@
         "https://the-decoder.com/nvidia-ceo-jensen-huang-calls-out-tech-leaders-god-complex-over-reckless-ai-job-loss-predictions/",
         "https://venturebeat.com/security/mcp-stdio-flaw-200000-ai-agent-servers-exposed-ox-security-audit",
         "https://www.theguardian.com/us-news/2026/may/01/pentagon-us-military-pairs-with-spacex-google-openai",
-        "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-02T0821Z-WORLD-the-significance-of-us-military-bases-in",
-      "generated_at": "2026-05-02T08:21:46Z",
-      "category": "WORLD",
-      "headline": "The significance of US military bases in Germany",
-      "neutral_summary": "President Trump is planning to cut US troop numbers in Germany.",
-      "source_count": 4,
-      "outlets": [
-        "DW News",
-        "Al Jazeera",
-        "BBC News",
-        "Sky News"
-      ],
-      "source_urls": [
-        "https://www.dw.com/en/the-significance-of-us-military-bases-in-germany/a-77015428?maca=en-rss-en-all-1573-rdf",
-        "https://www.aljazeera.com/news/2026/5/2/iran-war-whats-happening-on-day-64-as-trump-rejects-tehrans-proposal?traffic_source=rss",
-        "https://www.bbc.com/news/articles/c4g4xexy4w7o?at_medium=RSS&at_campaign=rss",
-        "https://www.bbc.com/news/articles/c0729d374mxo?at_medium=RSS&at_campaign=rss",
-        "https://news.sky.com/story/eu-hits-back-at-8216unacceptable8217-donald-trump-over-plans-to-increase-tariffs-13539002"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-02T0821Z-UK-starmer-urges-ban-on-some-protests-in-an",
-      "generated_at": "2026-05-02T08:21:46Z",
-      "category": "UK",
-      "headline": "Starmer urges ban on some protests in antisemitism crackdown",
-      "neutral_summary": "The prime minister called on marchers who hear chants of ‘globalise the Intifada’ to stop and ask themselves ‘why am I n.",
-      "source_count": 3,
-      "outlets": [
-        "Independent",
-        "Guardian",
-        "BBC Politics"
-      ],
-      "source_urls": [
-        "https://www.independent.co.uk/news/uk/politics/starmer-ban-protest-antisemitism-palestine-b2969129.html",
-        "https://www.independent.co.uk/news/uk/politics/andy-burnham-westminster-return-plan-b2969220.html",
-        "https://www.theguardian.com/politics/2026/may/01/keir-starmer-condemns-zack-polanski-sharing-post-criticising-police-golders-green-stabbings",
-        "https://www.bbc.com/news/articles/cp8p7k4k8xno?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-02T0821Z-INDIA-hyderabadis-receive-test-alert-messages-",
-      "generated_at": "2026-05-02T08:21:46Z",
-      "category": "INDIA",
-      "headline": "Hyderabadis receive test alert messages on May 2 as nationwide test rolls out",
-      "neutral_summary": "Unlike routine SMS alerts, the broadcast came with a loud, distinct tone and full-screen notification.",
-      "source_count": 2,
-      "outlets": [
-        "The Hindu",
-        "Indian Express"
-      ],
-      "source_urls": [
-        "https://www.thehindu.com/news/cities/Hyderabad/hyderabadis-receive-test-alert-messages-on-phones-may-2-as-nationwide-test-rolls-out/article70930997.ece",
-        "https://www.thehindu.com/elections/kerala-assembly/kerala-assembly-elections-counting-arrangements-in-place-for-may-4/article70930957.ece",
-        "https://www.thehindu.com/news/national/assembly-elections-live-updates-may-2-2026-tamil-nadu-west-bengal-assam-kerala-pondicherry-results/article70930663.ece",
-        "https://indianexpress.com/article/india/assembly-election-2026-live-updates-wb-repoll-exit-poll-result-date-assam-tamil-nadu-kerala-west-bengal-10667165/"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-02T0821Z-AI-200-000-mcp-servers-expose-a-command-exe",
-      "generated_at": "2026-05-02T08:21:46Z",
-      "category": "AI",
-      "headline": "200,000 MCP servers expose a command execution flaw that Anthropic calls a feature",
-      "neutral_summary": "Anthropic created the Model Context Protocol as the open standard for AI agent-to-tool communication.",
-      "source_count": 4,
-      "outlets": [
-        "VentureBeat",
-        "The Decoder",
-        "Guardian Tech",
-        "The Verge"
-      ],
-      "source_urls": [
-        "https://venturebeat.com/security/mcp-stdio-flaw-200000-ai-agent-servers-exposed-ox-security-audit",
-        "https://the-decoder.com/eight-tech-giants-sign-pentagon-deals-to-build-an-ai-first-fighting-force-across-classified-networks/",
-        "https://www.theguardian.com/us-news/2026/may/01/pentagon-us-military-pairs-with-spacex-google-openai",
-        "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-02T0211Z-WORLD-us-to-cut-troop-levels-in-germany-by-5-0",
-      "generated_at": "2026-05-02T02:11:47Z",
-      "category": "WORLD",
-      "headline": "US to cut troop levels in Germany by 5,000 amid Trump spat with Merz",
-      "neutral_summary": "The decision to reduce the US deployment to Germany comes amid a row between the two allies over Iran.",
-      "source_count": 4,
-      "outlets": [
-        "BBC News",
-        "DW News",
-        "Al Jazeera",
-        "Sky News"
-      ],
-      "source_urls": [
-        "https://www.bbc.com/news/articles/c0729d374mxo?at_medium=RSS&at_campaign=rss",
-        "https://www.dw.com/en/us-to-withdraw-thousands-of-troops-from-germany/a-77016071?maca=en-rss-en-all-1573-rdf",
-        "https://www.aljazeera.com/news/2026/5/1/trump-expands-red-snapper-fishing-as-critics-warn-of-overfishing?traffic_source=rss",
-        "https://www.bbc.com/news/articles/c4g4xexy4w7o?at_medium=RSS&at_campaign=rss",
-        "https://www.dw.com/en/can-iran-withstand-the-us-naval-blockade/a-77014627?maca=en-rss-en-all-1573-rdf",
-        "https://news.sky.com/story/eu-hits-back-at-8216unacceptable8217-donald-trump-over-plans-to-increase-tariffs-13539002"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-02T0211Z-UK-andy-burnham-planning-return-to-westmins",
-      "generated_at": "2026-05-02T02:11:47Z",
-      "category": "UK",
-      "headline": "Andy Burnham planning return to Westminster ‘within weeks to challenge Starmer for Labour leadership’",
-      "neutral_summary": "The Labour Mayor of Greater Manchester has reportedly identified several seats where MPs are prepared to step aside, tri.",
-      "source_count": 3,
-      "outlets": [
-        "Independent",
-        "Guardian",
-        "BBC Politics"
-      ],
-      "source_urls": [
-        "https://www.independent.co.uk/news/uk/politics/andy-burnham-westminster-return-plan-b2969220.html",
-        "https://www.independent.co.uk/news/uk/politics/zack-polanski-golders-green-party-b2968965.html",
-        "https://www.theguardian.com/politics/2026/may/01/keir-starmer-condemns-zack-polanski-sharing-post-criticising-police-golders-green-stabbings",
-        "https://www.bbc.com/news/articles/cp8p7k4k8xno?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-02T0211Z-INDIA-burglars-drill-into-jewellery-shop-flee-",
-      "generated_at": "2026-05-02T02:11:47Z",
-      "category": "INDIA",
-      "headline": "Burglars drill into jewellery shop, flee with valuables worth ₹1.2 crore",
-      "neutral_summary": "Burglars drill into jewellery shop, flee with valuables worth ₹1.2 crore.",
-      "source_count": 2,
-      "outlets": [
-        "The Hindu",
-        "Indian Express"
-      ],
-      "source_urls": [
-        "https://www.thehindu.com/news/cities/bangalore/burglars-drill-into-jewellery-shop-flee-with-valuables-worth-12-crore/article70928923.ece",
-        "https://indianexpress.com/article/india/operation-white-strike-ncb-busts-cocaine-syndicate-involving-mumbai-logistics-corridor-drug-concealed-under-cricket-gear-seized-10666386/"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-01T2007Z-WORLD-uae-exit-from-opec-signals-closer-alignm",
-      "generated_at": "2026-05-01T20:07:51Z",
-      "category": "WORLD",
-      "headline": "UAE exit from OPEC signals closer alignment with US interests, experts say",
-      "neutral_summary": "UAE wants to supply more oil than its OPEC quota and that could help push down prices once the Strait of Hormuz opens.",
-      "source_count": 1,
-      "outlets": [
-        "Al Jazeera"
-      ],
-      "source_urls": [
-        "https://www.aljazeera.com/economy/2026/5/1/uae-exit-from-opec-signals-closer-alignment-with-us-interests-experts-say?traffic_source=rss"
-      ],
-      "confidence": "low"
-    },
-    {
-      "id": "2026-05-01T2007Z-UK-zack-polanski-apologises-for-sharing-twe",
-      "generated_at": "2026-05-01T20:07:51Z",
-      "category": "UK",
-      "headline": "Zack Polanski apologises for sharing tweet criticising police at Golders Green stabbings",
-      "neutral_summary": "Apology comes after head of Met police said Green party leader risked undermining public confidence in his officersZack.",
-      "source_count": 3,
-      "outlets": [
-        "Guardian",
-        "Independent",
-        "BBC Politics"
-      ],
-      "source_urls": [
-        "https://www.theguardian.com/politics/2026/may/01/zack-polanski-apologises-criticising-police-golders-green-stabbings",
-        "https://www.theguardian.com/politics/live/2026/may/01/golders-green-attack-zack-polanski-green-party-uk-politics-latest-news-updates",
-        "https://www.independent.co.uk/news/uk/politics/zack-polanski-golders-green-party-b2968965.html",
-        "https://www.bbc.com/news/articles/cp8p7k4k8xno?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-01T2007Z-INDIA-law-stands-tall-above-says-congress-as-i",
-      "generated_at": "2026-05-01T20:07:51Z",
-      "category": "INDIA",
-      "headline": "Law stands tall above, says Congress as it urges Assam CM to express regret for using inappropriate language",
-      "neutral_summary": "Assam CM Himanta Biswa Sarma says he does not need lessons on decency and targets the Congress for maligning his wife wh.",
-      "source_count": 2,
-      "outlets": [
-        "The Hindu",
-        "Indian Express"
-      ],
-      "source_urls": [
-        "https://www.thehindu.com/news/national/congress-reaction-on-pawan-khera-supreme-court-anticipatory-bail/article70928103.ece",
-        "https://indianexpress.com/article/india/khera-anticipatory-bail-supreme-court-himanta-sarma-defamation-10666454/"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-01T2007Z-AI-eight-tech-giants-sign-pentagon-deals-to",
-      "generated_at": "2026-05-01T20:07:51Z",
-      "category": "AI",
-      "headline": "Eight tech giants sign Pentagon deals to build an \"AI-first fighting force\" across classified networks",
-      "neutral_summary": "Eight tech companies are supplying AI for classified US military networks, part of the Pentagon's push to build an \"AI-f.",
-      "source_count": 4,
-      "outlets": [
-        "The Decoder",
-        "Guardian Tech",
-        "TechCrunch",
-        "The Verge"
-      ],
-      "source_urls": [
-        "https://the-decoder.com/eight-tech-giants-sign-pentagon-deals-to-build-an-ai-first-fighting-force-across-classified-networks/",
-        "https://www.theguardian.com/us-news/2026/may/01/pentagon-us-military-pairs-with-spacex-google-openai",
-        "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
         "https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia"
       ],
       "confidence": "high"
