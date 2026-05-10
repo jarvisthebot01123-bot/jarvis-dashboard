@@ -1,8 +1,83 @@
 {
   "connected": true,
-  "generated_at": "2026-05-10T02:12:15.649730+00:00",
+  "generated_at": "2026-05-10T14:15:29.593686+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-10T1410Z-WORLD-putin-says-he-thinks-ukraine-conflict-co",
+      "generated_at": "2026-05-10T14:10:46Z",
+      "category": "WORLD",
+      "headline": "Putin says he thinks Ukraine conflict 'coming to an end'",
+      "neutral_summary": "The Russian leader sees potential for Ukraine negotiations, but condemns the West's backing for President Zelensky.",
+      "source_count": 3,
+      "outlets": [
+        "BBC News",
+        "Sky News",
+        "BBC Top Stories"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/cn8p4j2jzwwo?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/russias-scaled-down-victory-day-parade-felt-more-like-a-display-of-weakness-for-vladimir-putin-13542067",
+        "https://www.bbc.com/news/articles/cj9pem481rwo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-10T1410Z-UK-starmer-insists-he-won-t-quit-as-pm-as-l",
+      "generated_at": "2026-05-10T14:10:46Z",
+      "category": "UK",
+      "headline": "Starmer insists he won't quit as PM as Labour MP challenges ministers to trigger leadership contest – UK politics live",
+      "neutral_summary": "Former junior minister Catherine West says that unless a cabinet minister comes forward to challenge the PM by Monday, s.",
+      "source_count": 4,
+      "outlets": [
+        "Guardian",
+        "Independent",
+        "Sky News Politics",
+        "BBC Politics"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/politics/live/2026/may/10/may-elections-keir-starmer-catherine-west-labour-leadership-nigel-farage-reform-conservatives-kemi-badenoch-richard-tice-bridget-phillipson-uk-politics-latest-news-updates",
+        "https://www.independent.co.uk/news/uk/politics/starmer-resignation-labour-live-updates-leadership-challenge-b2973746.html",
+        "https://news.sky.com/story/who-is-the-labour-mp-threatening-to-oust-starmer-13542190",
+        "https://www.bbc.com/news/articles/c8d81m665q5o?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/live/2026/may/09/may-elections-results-keir-starmer-labour-nigel-farage-reform-uk-politics-latest-news-updates",
+        "https://www.theguardian.com/politics/2026/may/09/mps-from-labours-left-to-urge-ed-miliband-to-consider-leadership-bid"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-10T1410Z-INDIA-tamil-nadu-government-formation-live-mon",
+      "generated_at": "2026-05-10T14:10:46Z",
+      "category": "INDIA",
+      "headline": "Tamil Nadu government formation LIVE: Money is there; what is required is efficient administration, Stalin reacts on Vijay's speech",
+      "neutral_summary": "Tamil Nadu set for coalition government; nine other Ministers take oath.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "NDTV"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/elections/tamil-nadu-assembly/tamil-nadu-government-formation-tvk-swearing-in-vijay-oath-ceremony-new-chief-minister-live-updates-may-10-2026/article70960233.ece",
+        "https://www.ndtv.com/india-news/i-am-not-an-angel-but-a-common-man-vijays-first-address-as-tamil-nadu-chief-minister-11473846#publisher=newsstand",
+        "https://www.ndtv.com/india-news/vijay-makes-only-1-power-pitch-in-tamil-nadu-thanks-dmk-allies-for-support-vijay-oath-taking-vijay-tvk-government-rahul-gandhi-11474193#publisher=newsstand"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-10T1410Z-AI-gpt-5-5-costs-49-to-92-percent-more-than",
+      "generated_at": "2026-05-10T14:10:46Z",
+      "category": "AI",
+      "headline": "GPT-5.5 costs 49 to 92 percent more than its predecessor, depending on the input length",
+      "neutral_summary": "OpenAI doubled GPT-5.5's list price compared to GPT-5.4, claiming shorter responses would offset the increase.",
+      "source_count": 1,
+      "outlets": [
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://the-decoder.com/gpt-5-5-costs-49-to-92-percent-more-than-its-predecessor-depending-on-the-input-length/"
+      ],
+      "confidence": "low"
+    },
     {
       "id": "2026-05-10T0207Z-WORLD-for-the-first-time-putin-says-he-s-open-",
       "generated_at": "2026-05-10T02:07:00Z",
@@ -735,74 +810,6 @@
         "https://venturebeat.com/technology/openai-turns-its-sold-out-gpt-5-5-party-into-a-monthlong-codex-giveaway-for-8-000-developers"
       ],
       "confidence": "high"
-    },
-    {
-      "id": "2026-05-03T0213Z-WORLD-timmy-the-humpback-whale-escapes-to-the-",
-      "generated_at": "2026-05-03T02:13:58Z",
-      "category": "WORLD",
-      "headline": "Timmy the humpback whale escapes to the North Sea",
-      "neutral_summary": "The whale calf&#039;s repeated stranding off the coast of Germany sparked widespread concern and extensive media coverag.",
-      "source_count": 2,
-      "outlets": [
-        "Al Jazeera",
-        "DW News"
-      ],
-      "source_urls": [
-        "https://www.aljazeera.com/news/2026/5/2/timmy-the-humpback-whale-escapes-to-the-north-sea?traffic_source=rss",
-        "https://www.dw.com/en/why-russia-s-northern-sea-route-remains-a-risky-bet-for-global-shipping/a-76987400?maca=en-rss-en-all-1573-rdf"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-03T0213Z-UK-row-over-starmer-s-call-to-ban-some-pro-",
-      "generated_at": "2026-05-03T02:13:58Z",
-      "category": "UK",
-      "headline": "Row over Starmer's call to ban some pro-Palestine protests",
-      "neutral_summary": "The prime minister called on marchers who hear chants of 'globalise the Intifada' to stop and ask themselves: 'Why am I.",
-      "source_count": 3,
-      "outlets": [
-        "Independent",
-        "BBC Politics",
-        "Sky News Politics"
-      ],
-      "source_urls": [
-        "https://www.independent.co.uk/news/uk/politics/starmer-ban-protest-palestine-antisemitism-b2969500.html",
-        "https://www.bbc.com/news/articles/cj9pn2v7m2wo?at_medium=RSS&at_campaign=rss",
-        "https://news.sky.com/story/starmer-says-some-pro-palestine-marches-could-be-stopped-13539282"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-03T0213Z-INDIA-operation-sindoor-reflected-india-s-reso",
-      "generated_at": "2026-05-03T02:13:58Z",
-      "category": "INDIA",
-      "headline": "Operation Sindoor Reflected India's Resolve To Eliminate Terrorism: Rajnath Singh",
-      "neutral_summary": "The defence minister underlined that the marching songs by military bands unify soldiers.",
-      "source_count": 2,
-      "outlets": [
-        "NDTV",
-        "Indian Express"
-      ],
-      "source_urls": [
-        "https://www.ndtv.com/india-news/operation-sindoor-reflected-indias-resolve-to-eliminate-terrorism-rajnath-singh-11440902#publisher=newsstand",
-        "https://indianexpress.com/article/india/minister-of-state-kirti-vardhan-singh-to-attend-migration-forum-at-un-10667970/"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-03T0213Z-AI-ai-generated-actors-and-scripts-are-now-",
-      "generated_at": "2026-05-03T02:13:58Z",
-      "category": "AI",
-      "headline": "AI-generated actors and scripts are now ineligible for Oscars",
-      "neutral_summary": "Bad news for Tilly Norwood.",
-      "source_count": 1,
-      "outlets": [
-        "TechCrunch"
-      ],
-      "source_urls": [
-        "https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/"
-      ],
-      "confidence": "low"
     }
   ]
 }
