@@ -1,8 +1,83 @@
 {
   "connected": true,
-  "generated_at": "2026-05-10T14:15:22.926242+00:00",
+  "generated_at": "2026-05-10T20:09:24.491268+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-10T2003Z-WORLD-russia-kills-three-ukrainians-in-24-hour",
+      "generated_at": "2026-05-10T20:03:02Z",
+      "category": "WORLD",
+      "headline": "Russia kills three Ukrainians in 24 hours, accuses Kyiv of violating truce",
+      "neutral_summary": "Russia claims Ukraine has committed more than 1,000 violations since the three-day truce came into effect on Saturday.",
+      "source_count": 2,
+      "outlets": [
+        "Al Jazeera",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/5/10/russia-kills-three-ukrainians-in-24-hours-accuses-kyiv-of-violating-truce?traffic_source=rss",
+        "https://www.aljazeera.com/news/2026/5/10/putin-hints-at-ending-russias-war-in-ukraine-but-why-now?traffic_source=rss",
+        "https://news.sky.com/story/ukraine-and-russia-accuse-each-other-of-breaking-ceasefire-13542242"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-10T2003Z-UK-rayner-issues-last-chance-warning-to-sta",
+      "generated_at": "2026-05-10T20:03:02Z",
+      "category": "UK",
+      "headline": "Rayner issues 'last chance' warning to Starmer and backs Burnham's return",
+      "neutral_summary": "In her first comments since Labour's election defeats, the ex-deputy PM calls for bolder action from the prime minister.",
+      "source_count": 3,
+      "outlets": [
+        "BBC Politics",
+        "Guardian",
+        "Independent"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/c5yekp5j36zo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/live/2026/may/10/may-elections-keir-starmer-catherine-west-labour-leadership-nigel-farage-reform-conservatives-kemi-badenoch-richard-tice-bridget-phillipson-uk-politics-latest-news-updates",
+        "https://www.bbc.com/news/articles/cr7pz99l370o?at_medium=RSS&at_campaign=rss",
+        "https://www.independent.co.uk/news/uk/politics/starmer-resign-live-leadership-challenge-labour-local-elections-b2973790.html",
+        "https://www.independent.co.uk/news/uk/politics/starmer-angela-rayner-statement-labour-leadership-b2973872.html",
+        "https://www.theguardian.com/politics/2026/may/10/starmer-faces-perilous-24-hours-streeting-readying-leadership-bid"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-10T2003Z-INDIA-refrain-from-foreign-travel-buying-gold-",
+      "generated_at": "2026-05-10T20:03:02Z",
+      "category": "INDIA",
+      "headline": "Refrain from foreign travel, buying gold for a year: PM Modi's appeal amid West Asia crisis",
+      "neutral_summary": "Refrain from foreign travel, buying gold for a year: PM Modi's appeal amid West Asia crisis.",
+      "source_count": 2,
+      "outlets": [
+        "Indian Express",
+        "NDTV"
+      ],
+      "source_urls": [
+        "https://indianexpress.com/article/india/pm-modi-hyderabad-speech-west-asia-crisis-petrol-diesel-gold-reduction-10682817/",
+        "https://www.ndtv.com/india-news/pm-narendra-modis-stabs-own-leaders-in-back-jibe-at-congress-over-kerala-cm-indecision-11475639#publisher=newsstand",
+        "https://indianexpress.com/article/india/better-if-you-join-me-pm-modi-jokes-with-cm-revanth-reddy-at-hyderabad-event-10682738/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-10T2003Z-AI-we-re-feeling-cynical-about-xai-s-big-de",
+      "generated_at": "2026-05-10T20:03:02Z",
+      "category": "AI",
+      "headline": "We're feeling cynical about xAI's big deal with Anthropic",
+      "neutral_summary": "On the latest episode of the Equity podcast, we discussed what xAI's deal with Anthropic might mean for parent company S.",
+      "source_count": 2,
+      "outlets": [
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/",
+        "https://the-decoder.com/anthropic-and-openai-sit-down-with-religious-leaders-to-seek-ethical-advice/"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "2026-05-10T1410Z-WORLD-putin-says-he-thinks-ukraine-conflict-co",
       "generated_at": "2026-05-10T14:10:46Z",
