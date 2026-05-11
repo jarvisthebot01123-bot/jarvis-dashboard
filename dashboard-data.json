@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-08T23:14:03.417865Z",
+  "generated_at": "2026-05-11T12:40:23.937406Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 103.78,
-    "opening_index": 100.0,
-    "daily_pct": 1.401,
+    "index": 104.032,
+    "opening_index": 104.032,
+    "daily_pct": 0.0,
     "total_pct": 3.708,
-    "equity_dollars": 103779.7,
-    "daily_pnl_dollars": 1400.86,
+    "equity_dollars": 104031.74,
+    "daily_pnl_dollars": 0.0,
     "total_pnl_dollars": 3707.99,
     "unrealized_pnl_dollars": 3779.7,
     "capital_deployed": 64952.0
@@ -237,31 +237,31 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "2.6h ago",
-      "status": "warning",
+      "age": "64.1h ago",
+      "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "58m ago",
-      "status": "fresh",
+      "age": "62.4h ago",
+      "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "2.6h ago",
+      "age": "2m ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1.6h ago",
+      "age": "2m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "58m ago",
+      "age": "2m ago",
       "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 67.1,
+    "score": 66.9,
     "rating": "greed"
   },
   "macro_blackout_today": false,
@@ -270,19 +270,18 @@
     {
       "event": "CPI",
       "date": "2026-05-13",
-      "days_away": 5
+      "days_away": 2
     },
     {
       "event": "PPI",
       "date": "2026-05-14",
-      "days_away": 6
+      "days_away": 3
     }
   ],
   "last_routine": {
-    "ts": "2026-05-08T20:17:32Z",
-    "routine": "end_of_day",
-    "daily_pnl": 1400.86,
-    "trades": 0
+    "ts": "2026-05-11T12:39:49Z",
+    "routine": "pre_market",
+    "notes": "Breakout due (14d). Exit UNH; enter AMD\u00d710, QCOM\u00d722, TXN\u00d717. 0 insider filings. VIX 18.2 normal. F&G greed. Equity $104,031.74. Bias BULLISH."
   },
   "strategies_enabled": {
     "pead": true,
