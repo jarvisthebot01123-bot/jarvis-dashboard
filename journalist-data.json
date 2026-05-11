@@ -1,8 +1,64 @@
 {
   "connected": true,
-  "generated_at": "2026-05-10T20:03:53.561379+00:00",
+  "generated_at": "2026-05-11T08:17:09.859505+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-11T0811Z-WORLD-trump-to-discuss-iran-with-xi-jinping-du",
+      "generated_at": "2026-05-11T08:11:43Z",
+      "category": "WORLD",
+      "headline": "Trump to discuss Iran with Xi Jinping during China visit: Officials",
+      "neutral_summary": "US president will likely &#039;apply pressure&#039; to China for buying Iranian oil during war.",
+      "source_count": 4,
+      "outlets": [
+        "Al Jazeera",
+        "BBC News",
+        "DW News",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/5/10/trump-to-discuss-iran-with-xi-jinping-during-china-visit-officials?traffic_source=rss",
+        "https://www.bbc.com/news/articles/clypgz9e5pmo?at_medium=RSS&at_campaign=rss",
+        "https://www.dw.com/en/iran-war-trump-rejects-proposal-to-end-conflict/live-77102104?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/us-v-china-the-trump-mistake-that-threatens-american-tech-supremacy-13542272"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-11T0811Z-INDIA-suvendu-adhikari-to-chair-first-cabinet-",
+      "generated_at": "2026-05-11T08:11:43Z",
+      "category": "INDIA",
+      "headline": "Suvendu Adhikari to chair first Cabinet meeting on May 11",
+      "neutral_summary": "On Monday, Suvendu Adhikari will enter Nabanna for the first time as the Chief Minister; at his first cabinet meeting, p.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/elections/west-bengal-assembly/suvendu-adhikari-to-chair-first-cabinet-meeting-on-may-11-2026/article70963091.ece",
+        "https://indianexpress.com/article/india/himanta-biswa-sarma-elected-party-leader-assam-cm-10682783/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-11T0811Z-AI-anthropic-says-evil-portrayals-of-ai-wer",
+      "generated_at": "2026-05-11T08:11:43Z",
+      "category": "AI",
+      "headline": "Anthropic says 'evil' portrayals of AI were responsible for Claude's blackmail attempts",
+      "neutral_summary": "Fictional portrayals of artificial intelligence can have a real effect on AI models, according to Anthropic.",
+      "source_count": 2,
+      "outlets": [
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/",
+        "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/",
+        "https://the-decoder.com/anthropic-and-openai-sit-down-with-religious-leaders-to-seek-ethical-advice/"
+      ],
+      "confidence": "medium"
+    },
     {
       "id": "2026-05-10T2003Z-WORLD-russia-kills-three-ukrainians-in-24-hour",
       "generated_at": "2026-05-10T20:03:02Z",
@@ -289,7 +345,7 @@
       "source_urls": [
         "https://www.thehindu.com/elections/west-bengal-assembly/west-bengal-government-formation-live-updates-new-cm-to-be-elected-suvendu-adhikari-aide-death-sparks-unrest/article70954007.ece",
         "https://www.thehindu.com/elections/tamil-nadu-assembly/tamil-nadu-government-formation-live-updates-cpi-cpim-vck-key-to-govt-formation-dmk-aiadmk-tvk-politics/article70953684.ece",
-        "https://www.thehindu.com/elections/west-bengal-assembly/suvendu-adhikari-elected-bjp-legislature-party-leader-in-bengal-set-to-become-m/article70955183.ece",
+        "https://www.thehindu.com/elections/west-bengal-assembly/suvendu-adhikari-elected-bjp-legislature-party-leader-in-bengal-set-to-become-cm/article70955183.ece",
         "https://www.ndtv.com/india-news/kanimozhi-stalin-dmk-tamil-nadu-election-vijay-tvk-dumped-for-vijay-dmk-doesnt-want-to-sit-with-congress-in-lok-sabha-anymore-11467120#publisher=newsstand",
         "https://www.ndtv.com/india-news/tamil-nadu-government-formation-new-cm-announcement-live-updates-vijay-tvk-government-congress-aiadmk-dmk-pact-bjp-governor-tamil-nadu-election-result-11465061#publisher=newsstand",
         "https://www.ndtv.com/india-news/vijay-tvk-tamil-nadu-elections-vck-to-get-1-ministry-in-vijays-cabinet-left-to-get-2-sources-11467159#publisher=newsstand"
@@ -565,7 +621,7 @@
       "source_urls": [
         "https://www.theguardian.com/politics/live/2026/may/07/may-local-elections-polls-open-england-scotland-wales-uk-politics-latest-news-updates",
         "https://www.independent.co.uk/news/uk/politics/voter-id-elections-2026-scotland-wales-uk-b2972078.html",
-        "https://www.theguardian.com/politics/2026/may/07/local-elections-results-timeline-when-do-the-key-battlegrounds-across-england-wales-and-scotland-report"
+        "https://www.theguardian.com/politics/2026/may/07/local-elections-results-timeline-when-do-the-key-results-across-england-wales-and-scotland-report"
       ],
       "confidence": "medium"
     },
@@ -712,7 +768,7 @@
       ],
       "source_urls": [
         "https://www.thehindu.com/elections/west-bengal-assembly/suvendu-adhikaris-personal-assistant-shot-dead/article70948478.ece",
-        "https://www.ndtv.com/india-news/bjp-leader-suvendu-adhikaris-personal-secretary-shot-dead-in-west-bengals-madhyamgram-11459161#publisher=newsstand"
+        "https://www.ndtv.com/india-news/bjp-leader-suvendu-adhikaris-personal-secretary-shot-dead-in-west-bengals-madhyamgram-11455161#publisher=newsstand"
       ],
       "confidence": "medium"
     },
