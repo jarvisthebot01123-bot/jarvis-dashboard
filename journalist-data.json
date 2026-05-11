@@ -1,6 +1,6 @@
 {
   "connected": true,
-  "generated_at": "2026-05-11T08:17:09.859505+00:00",
+  "generated_at": "2026-05-11T08:16:52.522827+00:00",
   "persona": "journalist",
   "briefings": [
     {
@@ -621,7 +621,7 @@
       "source_urls": [
         "https://www.theguardian.com/politics/live/2026/may/07/may-local-elections-polls-open-england-scotland-wales-uk-politics-latest-news-updates",
         "https://www.independent.co.uk/news/uk/politics/voter-id-elections-2026-scotland-wales-uk-b2972078.html",
-        "https://www.theguardian.com/politics/2026/may/07/local-elections-results-timeline-when-do-the-key-results-across-england-wales-and-scotland-report"
+        "https://www.theguardian.com/politics/2026/may/07/local-elections-results-timeline-when-do-the-key-battlegrounds-across-england-wales-and-scotland-report"
       ],
       "confidence": "medium"
     },
@@ -768,7 +768,7 @@
       ],
       "source_urls": [
         "https://www.thehindu.com/elections/west-bengal-assembly/suvendu-adhikaris-personal-assistant-shot-dead/article70948478.ece",
-        "https://www.ndtv.com/india-news/bjp-leader-suvendu-adhikaris-personal-secretary-shot-dead-in-west-bengals-madhyamgram-11455161#publisher=newsstand"
+        "https://www.ndtv.com/india-news/bjp-leader-suvendu-adhikaris-personal-secretary-shot-dead-in-west-bengals-madhyamgram-11459161#publisher=newsstand"
       ],
       "confidence": "medium"
     },
