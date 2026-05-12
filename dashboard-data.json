@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T18:25:59.402872Z",
+  "generated_at": "2026-05-12T23:39:50.015876Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -242,26 +242,26 @@
       "count": 50
     },
     "news": {
-      "age": "22.0h ago",
+      "age": "3.4h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "0m ago",
+      "age": "1.8h ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "1m ago",
+      "age": "1.7h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "0m ago",
+      "age": "54m ago",
       "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 65.9,
+    "score": 66.6,
     "rating": "greed"
   },
   "macro_blackout_today": false,
