@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-13T12:55:39.803158Z",
+  "generated_at": "2026-05-13T15:12:46.960423Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 104.44,
+    "index": 104.581,
     "opening_index": 104.44,
-    "daily_pct": -0.082,
+    "daily_pct": 0.053,
     "total_pct": 3.708,
-    "equity_dollars": 104439.98,
-    "daily_pnl_dollars": -85.53,
+    "equity_dollars": 104580.9,
+    "daily_pnl_dollars": 55.39,
     "total_pnl_dollars": 3707.99,
-    "unrealized_pnl_dollars": 4442.29,
-    "capital_deployed": 65615.0
+    "unrealized_pnl_dollars": 3926.13,
+    "capital_deployed": 60192.0
   },
   "spy_benchmark": {
     "return_pct": 1.683,
@@ -19,61 +19,263 @@
     "alpha_pct": 2.025,
     "start_date": "2026-04-27"
   },
-  "open_position_count": 14,
-  "unrealized_pnl_pct": 4.442,
-  "unrealized_pnl_dollars": 4442.29,
+  "open_position_count": 13,
+  "unrealized_pnl_pct": 3.926,
+  "unrealized_pnl_dollars": 3926.13,
   "strategy_stats": {
-    "pead": {"name": "3M Momentum", "trades": 5, "wins": 0, "win_rate": 0.0, "pnl_pct": 0.0, "pnl_dollars": 0, "unrealized_pnl_dollars": 3122.99, "unrealized_pnl_pct": 3.123, "open_positions": 5, "allocated_capital": 25000},
-    "mom6": {"name": "6M Momentum", "trades": 5, "wins": 0, "win_rate": 0.0, "pnl_pct": 0.0, "pnl_dollars": 0, "unrealized_pnl_dollars": 248.84, "unrealized_pnl_pct": 0.249, "open_positions": 5, "allocated_capital": 25000},
-    "breakout": {"name": "1M Momentum", "trades": 1, "wins": 0, "win_rate": 0.0, "pnl_pct": 0.0, "pnl_dollars": 0, "unrealized_pnl_dollars": 590.8, "unrealized_pnl_pct": 0.591, "open_positions": 1, "allocated_capital": 15000},
-    "sector_rot": {"name": "Sector Rotation", "trades": 3, "wins": 0, "win_rate": 0.0, "pnl_pct": 0.0, "pnl_dollars": 0, "unrealized_pnl_dollars": 479.66, "unrealized_pnl_pct": 0.48, "open_positions": 3, "allocated_capital": 20000},
-    "insider": {"name": "Insider Accum.", "trades": 0, "wins": 0, "win_rate": 0, "pnl_pct": 0.0, "pnl_dollars": 0, "unrealized_pnl_dollars": 0, "unrealized_pnl_pct": 0.0, "open_positions": 0, "allocated_capital": 15000}
+    "pead": {
+      "name": "3M Momentum",
+      "trades": 5,
+      "wins": 0,
+      "win_rate": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 3219.13,
+      "unrealized_pnl_pct": 3.219,
+      "open_positions": 5,
+      "allocated_capital": 25000
+    },
+    "mom6": {
+      "name": "6M Momentum",
+      "trades": 5,
+      "wins": 0,
+      "win_rate": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 332.07,
+      "unrealized_pnl_pct": 0.332,
+      "open_positions": 5,
+      "allocated_capital": 25000
+    },
+    "breakout": {
+      "name": "1M Momentum",
+      "trades": 1,
+      "wins": 0,
+      "win_rate": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 0,
+      "unrealized_pnl_pct": 0.0,
+      "open_positions": 0,
+      "allocated_capital": 15000
+    },
+    "sector_rot": {
+      "name": "Sector Rotation",
+      "trades": 3,
+      "wins": 0,
+      "win_rate": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 374.93,
+      "unrealized_pnl_pct": 0.375,
+      "open_positions": 3,
+      "allocated_capital": 20000
+    },
+    "insider": {
+      "name": "Insider Accum.",
+      "trades": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "pnl_pct": 0.0,
+      "pnl_dollars": 0,
+      "unrealized_pnl_dollars": 0,
+      "unrealized_pnl_pct": 0.0,
+      "open_positions": 0,
+      "allocated_capital": 15000
+    }
   },
   "equity_curve": [
-    {"date": "2026-04-27", "index": 99.764, "daily_pct": -0.236, "daily_pnl_dollars": -236.07, "trades": 14, "strategies": ["pead", "mom6", "breakout", "sector_rot"]},
-    {"date": "2026-04-29", "index": 100.533, "daily_pct": 0.769, "daily_pnl_dollars": 769.16, "trades": 0, "strategies": []},
-    {"date": "2026-04-30", "index": 102.272, "daily_pct": 1.739, "daily_pnl_dollars": 1738.51, "trades": 0, "strategies": []},
-    {"date": "2026-05-01", "index": 102.329, "daily_pct": 0.057, "daily_pnl_dollars": 57.38, "trades": 0, "strategies": []},
-    {"date": "2026-05-06", "index": 103.128, "daily_pct": 0.799, "daily_pnl_dollars": 799.04, "trades": 0, "strategies": []},
-    {"date": "2026-05-07", "index": 102.307, "daily_pct": -0.821, "daily_pnl_dollars": -820.89, "trades": 0, "strategies": []},
-    {"date": "2026-05-08", "index": 103.708, "daily_pct": 1.401, "daily_pnl_dollars": 1400.86, "trades": 0, "strategies": []}
+    {
+      "date": "2026-04-27",
+      "index": 99.764,
+      "daily_pct": -0.236,
+      "daily_pnl_dollars": -236.07,
+      "trades": 14,
+      "strategies": [
+        "pead",
+        "mom6",
+        "breakout",
+        "sector_rot"
+      ]
+    },
+    {
+      "date": "2026-04-29",
+      "index": 100.533,
+      "daily_pct": 0.769,
+      "daily_pnl_dollars": 769.16,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-04-30",
+      "index": 102.272,
+      "daily_pct": 1.739,
+      "daily_pnl_dollars": 1738.51,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-05-01",
+      "index": 102.329,
+      "daily_pct": 0.057,
+      "daily_pnl_dollars": 57.38,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-05-06",
+      "index": 103.128,
+      "daily_pct": 0.799,
+      "daily_pnl_dollars": 799.04,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-05-07",
+      "index": 102.307,
+      "daily_pct": -0.821,
+      "daily_pnl_dollars": -820.89,
+      "trades": 0,
+      "strategies": []
+    },
+    {
+      "date": "2026-05-08",
+      "index": 103.708,
+      "daily_pct": 1.401,
+      "daily_pnl_dollars": 1400.86,
+      "trades": 0,
+      "strategies": []
+    }
   ],
   "open_positions": [
-    {"ticker": "***", "strategy": "pead", "pnl_pct": 34.77, "pnl_dollars": 1633.52},
-    {"ticker": "***", "strategy": "pead", "pnl_pct": -0.64, "pnl_dollars": -29.31},
-    {"ticker": "***", "strategy": "pead", "pnl_pct": 9.53, "pnl_dollars": 474.06},
-    {"ticker": "***", "strategy": "pead", "pnl_pct": 11.21, "pnl_dollars": 557.82},
-    {"ticker": "***", "strategy": "mom6", "pnl_pct": -0.68, "pnl_dollars": -16.47},
-    {"ticker": "***", "strategy": "mom6", "pnl_pct": 10.76, "pnl_dollars": 263.27},
-    {"ticker": "***", "strategy": "mom6", "pnl_pct": -0.21, "pnl_dollars": -5.28},
-    {"ticker": "***", "strategy": "pead", "pnl_pct": 9.98, "pnl_dollars": 486.9},
-    {"ticker": "***", "strategy": "breakout", "pnl_pct": 12.04, "pnl_dollars": 590.8},
-    {"ticker": "***", "strategy": "mom6", "pnl_pct": 0.26, "pnl_dollars": 6.46},
-    {"ticker": "***", "strategy": "sector_rot", "pnl_pct": 0.19, "pnl_dollars": 12.87},
-    {"ticker": "***", "strategy": "sector_rot", "pnl_pct": 10.49, "pnl_dollars": 687.11},
-    {"ticker": "***", "strategy": "sector_rot", "pnl_pct": -3.3, "pnl_dollars": -220.32},
-    {"ticker": "***", "strategy": "mom6", "pnl_pct": 0.04, "pnl_dollars": 0.86}
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": 33.04,
+      "pnl_dollars": 1552.32
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": -1.23,
+      "pnl_dollars": -56.81
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": 8.74,
+      "pnl_dollars": 434.58
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": 13.17,
+      "pnl_dollars": 655.26
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": -1.05,
+      "pnl_dollars": -25.44
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": 13.67,
+      "pnl_dollars": 334.25
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": -0.1,
+      "pnl_dollars": -2.42
+    },
+    {
+      "ticker": "***",
+      "strategy": "pead",
+      "pnl_pct": 12.98,
+      "pnl_dollars": 633.78
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": 0.8,
+      "pnl_dollars": 19.76
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": -0.31,
+      "pnl_dollars": -21.06
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": 10.41,
+      "pnl_dollars": 681.83
+    },
+    {
+      "ticker": "***",
+      "strategy": "sector_rot",
+      "pnl_pct": -4.28,
+      "pnl_dollars": -285.84
+    },
+    {
+      "ticker": "***",
+      "strategy": "mom6",
+      "pnl_pct": 0.25,
+      "pnl_dollars": 5.92
+    }
   ],
-  "performance_summary": "14 open swing positions. Equity $104,520.07. Daily P&L +$735.83. AMD best (+38.15%), XLU worst (-2.75%). All-time realised: +$3,707.99.",
+  "performance_summary": "13 open swing positions. Equity $104,580.90. Daily P&L +$55.39. AMD best (+33.04%), XLU worst (-4.28%). All-time realised: +$3,707.99.",
   "live_ready": false,
   "data_freshness": {
-    "congress": {"age": "4m ago", "status": "fresh", "count": 50},
-    "news": {"age": "16.6h ago", "status": "stale", "count": 30},
-    "market_context": {"age": "5m ago", "status": "fresh"},
-    "economic_calendar": {"age": "5m ago", "status": "fresh"},
-    "insider_trades": {"age": "5m ago", "status": "fresh", "count": 0}
+    "congress": {
+      "age": "17.4h ago",
+      "status": "stale",
+      "count": 50
+    },
+    "news": {
+      "age": "18.9h ago",
+      "status": "stale",
+      "count": 30
+    },
+    "market_context": {
+      "age": "2.4h ago",
+      "status": "fresh"
+    },
+    "economic_calendar": {
+      "age": "2.4h ago",
+      "status": "fresh"
+    },
+    "insider_trades": {
+      "age": "2.4h ago",
+      "status": "fresh",
+      "count": 0
+    }
   },
-  "fear_greed": {"score": 65.5, "rating": "greed"},
+  "fear_greed": {
+    "score": 65.5,
+    "rating": "greed"
+  },
   "macro_blackout_today": true,
   "macro_blackout_reason": "CPI",
   "upcoming_macro_events": [
-    {"event": "CPI", "date": "2026-05-13", "days_away": 0},
-    {"event": "PPI", "date": "2026-05-14", "days_away": 1}
+    {
+      "event": "CPI",
+      "date": "2026-05-13",
+      "days_away": 0
+    },
+    {
+      "event": "PPI",
+      "date": "2026-05-14",
+      "days_away": 1
+    }
   ],
   "last_routine": {
-    "ts": "2026-05-13T12:53:16Z",
-    "routine": "pre_market",
-    "notes": "Breakout rebalance due (16d). Top-3 (21d): AMD, QCOM, TXN. Exit: UNH. Entry: QCOM $5k blocked — macro blackout (CPI 2026-05-13). 0 insider filings. VIX 17.97 normal. F&G 65.5 greed. 14 positions held. Equity $104,439.98. Bias NEUTRAL."
+    "ts": "2026-05-13T15:12:24Z",
+    "routine": "intraday",
+    "notes": "13 positions monitored. UNH exit attempted (no_position). Daily P&L +$55.39. No insider signals (0 filings, data fresh). AMD +33.04% on track (>15%). GOOGL +13.67% approaching target. All other positions within normal range. AMD best (+33.04%), XLU worst (-4.28%)."
   },
   "strategies_enabled": {
     "pead": true,
