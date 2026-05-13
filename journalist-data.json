@@ -1,8 +1,93 @@
 {
   "connected": true,
-  "generated_at": "2026-05-11T14:06:07.451010+00:00",
+  "generated_at": "2026-05-13T02:05:43.795849+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-13T0204Z-WORLD-trump-downplays-us-iran-differences-as-h",
+      "generated_at": "2026-05-13T02:04:39Z",
+      "category": "WORLD",
+      "headline": "Trump downplays US-Iran differences as he heads to Beijing to meet with Xi",
+      "neutral_summary": "Trump gives conflicting messages on prominence of Iran war in upcoming talks, with his administration emphasising trade.",
+      "source_count": 3,
+      "outlets": [
+        "Al Jazeera",
+        "DW News",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/5/12/trump-downplays-us-iran-differences-as-he-heads-to-beijing-to-meet-with-xi?traffic_source=rss",
+        "https://www.dw.com/en/iran-surge-of-political-prisoners-amid-us-israel-war/a-77136844?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/cvgznxn18zgo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-13T0204Z-UK-full-list-of-labour-mps-backing-starmer-",
+      "generated_at": "2026-05-13T02:04:39Z",
+      "category": "UK",
+      "headline": "Full list of Labour MPs backing Starmer ‘to deliver change the country needs’ as pressure mounts on PM",
+      "neutral_summary": "A group of 111 Labour MPs signed a letter urging unity and a focus on regaining public trust following a challenging per.",
+      "source_count": 4,
+      "outlets": [
+        "Independent",
+        "Guardian",
+        "BBC Politics",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/starmer-labour-mps-support-leadership-letter-b2975396.html",
+        "https://www.theguardian.com/environment/2026/may/13/labour-must-fulfil-promise-to-introduce-clean-air-act-charities-urge",
+        "https://www.independent.co.uk/news/uk/politics/starmer-resign-cabinet-live-updates-b2974932.html",
+        "https://www.independent.co.uk/news/uk/politics/starmer-resign-labour-leadership-streeting-b2975187.html",
+        "https://www.bbc.com/news/articles/cx21jkmxd42o?at_medium=RSS&at_campaign=rss",
+        "https://news.sky.com/story/starmer-to-meet-with-streeting-ahead-of-kings-speech-13543331"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-13T0204Z-INDIA-himanta-biswa-sarma-takes-oath-as-assam-",
+      "generated_at": "2026-05-13T02:04:39Z",
+      "category": "INDIA",
+      "headline": "Himanta Biswa Sarma takes oath as Assam Chief Minister, four MLAs also sworn in as ministers",
+      "neutral_summary": "Himanta Biswa Sarma takes oath as Assam Chief Minister, four MLAs also sworn in as ministers.",
+      "source_count": 3,
+      "outlets": [
+        "Indian Express",
+        "The Hindu",
+        "NDTV"
+      ],
+      "source_urls": [
+        "https://indianexpress.com/article/india/himanta-biswa-sarma-takes-oath-as-assam-chief-minister-four-mlas-also-sworn-in-as-ministers-10686501/",
+        "https://www.thehindu.com/news/national/tamil-nadu/aiadmk-rebel-mlas-to-back-tvk-in-tamil-nadu-floor-test/article70970896.ece",
+        "https://www.ndtv.com/india-news/tamil-nadu-government-formation-live-updates-aiadmks-cv-shanmugam-faction-announces-support-to-vijays-tvk-tamil-nadu-new-cm-vijay-11481944#publisher=newsstand"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-13T0204Z-AI-sam-altman-defends-openai-in-courtroom-s",
+      "generated_at": "2026-05-13T02:04:39Z",
+      "category": "AI",
+      "headline": "Sam Altman defends OpenAI in courtroom showdown with Elon Musk",
+      "neutral_summary": "The OpenAI chief rejects claims he deceived Elon Musk as high-stakes AI trial nears its endSign up for the Breaking News.",
+      "source_count": 5,
+      "outlets": [
+        "Guardian Tech",
+        "VentureBeat",
+        "The Decoder",
+        "TechCrunch",
+        "The Verge"
+      ],
+      "source_urls": [
+        "https://www.theguardian.com/technology/2026/may/12/sam-altman-openai-trial-elon-musk",
+        "https://venturebeat.com/technology/perceptron-mk1-shocks-with-highly-performant-video-analysis-ai-model-80-90-cheaper-than-anthropic-openai-and-google",
+        "https://the-decoder.com/anthropic-expands-legal-ai-offerings-with-new-cowork-plugins/",
+        "https://the-decoder.com/google-says-it-stopped-a-mass-cyberattack-after-ai-was-used-to-discover-a-zero-day-exploit/",
+        "https://techcrunch.com/2026/05/12/musk-mulled-handing-openai-to-his-children-altman-testifies/",
+        "https://www.theverge.com/ai-artificial-intelligence/928861/openai-sam-altman-elon-musk-damage"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-11T0811Z-WORLD-trump-to-discuss-iran-with-xi-jinping-du",
       "generated_at": "2026-05-11T08:11:43Z",
