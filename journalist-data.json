@@ -1,8 +1,84 @@
 {
   "connected": true,
-  "generated_at": "2026-05-11T14:06:07.451010+00:00",
+  "generated_at": "2026-05-13T14:11:40.961743+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-13T1406Z-WORLD-ceasefire-in-sight-what-s-next-for-russi",
+      "generated_at": "2026-05-13T14:06:01Z",
+      "category": "WORLD",
+      "headline": "Ceasefire in sight? What's next for Russia's war in Ukraine",
+      "neutral_summary": "Four years since Russia's full-scale invasion of Ukraine, is the end finally in sight?",
+      "source_count": 2,
+      "outlets": [
+        "DW News",
+        "Sky News"
+      ],
+      "source_urls": [
+        "https://www.dw.com/en/ceasefire-in-sight-what-s-next-for-russia-s-war-in-ukraine/a-77138367?maca=en-rss-en-all-1573-rdf",
+        "https://news.sky.com/story/scottish-man-jailed-in-ukraine-after-admitting-spying-for-russia-13543467"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-13T1406Z-UK-king-s-speech-2026-key-points-from-charl",
+      "generated_at": "2026-05-13T14:06:01Z",
+      "category": "UK",
+      "headline": "King's Speech 2026: Key points from Charles' address amid Starmer leadership crisis",
+      "neutral_summary": "There were a total of 35 bills announced as part of the speech.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/kings-speech-labour-starmer-key-points-2026-bills-b2975630.html",
+        "https://www.bbc.com/news/articles/clypj215wgpo?at_medium=RSS&at_campaign=rss",
+        "https://www.independent.co.uk/news/uk/politics/kings-speech-2026-full-charles-b2975707.html",
+        "https://www.theguardian.com/politics/2026/may/13/starmer-sets-out-changes-to-education-health-and-courts-in-kings-speech",
+        "https://www.bbc.com/news/articles/cn7p2yl8j73o?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-13T1406Z-INDIA-nia-arrests-hizb-ul-mujahideen-linked-na",
+      "generated_at": "2026-05-13T14:06:01Z",
+      "category": "INDIA",
+      "headline": "NIA arrests Hizb-ul-Mujahideen linked 'narco-terrorist' after extradition from Portugal",
+      "neutral_summary": "According to the NIA, Shera was a key conspirator and handler of an India-based narco-terror module engaged in smuggling.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/nia-arrests-hizb-ul-mujahideen-linked-narco-terrorist-after-extradition-from-portugal/article70973449.ece",
+        "https://indianexpress.com/article/india/nia-arrests-iqbal-singh-shera-portugal-extradition-hizbul-case-10687319/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-13T1406Z-AI-google-is-hiring-hundreds-of-engineers-t",
+      "generated_at": "2026-05-13T14:06:01Z",
+      "category": "AI",
+      "headline": "Google is hiring hundreds of engineers to help customers adopt its AI",
+      "neutral_summary": "Google is hiring now also hundreds of engineers to help customers adopt its AI.",
+      "source_count": 4,
+      "outlets": [
+        "The Decoder",
+        "VentureBeat",
+        "TechCrunch",
+        "AI News"
+      ],
+      "source_urls": [
+        "https://the-decoder.com/google-is-hiring-hundreds-of-engineers-to-help-customers-adopt-its-ai/",
+        "https://venturebeat.com/technology/perceptron-mk1-shocks-with-highly-performant-video-analysis-ai-model-80-90-cheaper-than-anthropic-openai-and-google",
+        "https://techcrunch.com/2026/05/12/musk-mulled-handing-openai-to-his-children-altman-testifies/",
+        "https://www.artificialintelligence-news.com/news/malware-on-hugging-face-malicious-software-masquerading-as-openai-release/"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-11T0811Z-WORLD-trump-to-discuss-iran-with-xi-jinping-du",
       "generated_at": "2026-05-11T08:11:43Z",
@@ -265,7 +341,7 @@
         "Indian Express"
       ],
       "source_urls": [
-        "https://www.thehindu.com/elections/tamil-nadu-assembly/tamil-nadu-government-formation-live-updates-cpi-cpim-vck-dmk-aiadmk-ammk-tvk-alliance-parties-may-9-2026/article70958001.ece",
+        "https://www.thehindu.com/elections/tamil-nadu-assembly/tamil-nadu-government-formation-live-updates-cpi-cpim-vck-dmk-aiadmk-tvk-alliance-parties-may-9-2026/article70958001.ece",
         "https://www.thehindu.com/news/national/west-bengal/trinamool-nominates-sobhandeb-as-opposition-leader-firhad-as-chief-whip/article70960231.ece",
         "https://www.ndtv.com/india-news/tamil-nadu-vijay-chief-minister-tvk-vijay-analysis-in-vijays-delicate-coalition-tango-dmk-holds-some-strings-11473062#publisher=newsstand",
         "https://www.ndtv.com/india-news/tamil-nadu-government-formation-new-cm-announcement-live-updates-vijay-tvk-government-congress-aiadmk-dmk-pact-bjp-governor-tamil-nadu-election-result-11465061#publisher=newsstand",
@@ -864,83 +940,6 @@
         "https://venturebeat.com/security/one-command-open-source-repo-ai-agent-backdoor-openclaw-supply-chain-scanner"
       ],
       "confidence": "medium"
-    },
-    {
-      "id": "2026-05-06T0205Z-WORLD-iran-war-operation-epic-fury-is-over-rub",
-      "generated_at": "2026-05-06T02:05:48Z",
-      "category": "WORLD",
-      "headline": "Iran war: Operation Epic Fury is 'over,' Rubio says",
-      "neutral_summary": "The US Secretary of State says that US forces will now only operate defensively to enforce a naval blockade of Iran, whi.",
-      "source_count": 4,
-      "outlets": [
-        "DW News",
-        "BBC News",
-        "Al Jazeera",
-        "BBC Top Stories"
-      ],
-      "source_urls": [
-        "https://www.dw.com/en/iran-war-operation-epic-fury-is-over-rubio-says/live-77059422?maca=en-rss-en-all-1573-rdf",
-        "https://www.bbc.com/news/articles/clypekl71gdo?at_medium=RSS&at_campaign=rss",
-        "https://www.aljazeera.com/video/newsfeed/2026/5/5/centcom-safe-path-through-hormuz-is-us-priority-in-project?traffic_source=rss",
-        "https://www.aljazeera.com/news/2026/5/5/before-vatican-trip-rubio-defends-trump-remarks-on-pope-leo-over-iran?traffic_source=rss",
-        "https://www.dw.com/en/iran-war-will-tensions-escalate-in-the-strait-of-hormuz/a-77057831?maca=en-rss-en-all-1573-rdf",
-        "https://www.bbc.com/news/articles/cgrpnq00j5vo?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-06T0205Z-UK-zack-polanski-falsely-claimed-to-be-brit",
-      "generated_at": "2026-05-06T02:05:48Z",
-      "category": "UK",
-      "headline": "Zack Polanski falsely claimed to be British Red Cross spokesperson, charity says",
-      "neutral_summary": "Green party leader also accused of incorrectly stating he was a full member of the National Council of HypnotherapyZack.",
-      "source_count": 2,
-      "outlets": [
-        "Guardian",
-        "Sky News Politics"
-      ],
-      "source_urls": [
-        "https://www.theguardian.com/politics/2026/may/05/zack-polanski-falsely-claimed-to-be-british-red-cross-spokesperson-charity-says",
-        "https://news.sky.com/story/attacks-on-british-jews-a-crisis-for-all-of-us-says-pm-13540254"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-06T0205Z-INDIA-3-indians-in-uae-injured-in-iran-drone-s",
-      "generated_at": "2026-05-06T02:05:48Z",
-      "category": "INDIA",
-      "headline": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is 'unacceptable'",
-      "neutral_summary": "3 Indians in UAE injured in Iran drone strike, PM Modi says it is 'unacceptable'.",
-      "source_count": 2,
-      "outlets": [
-        "Indian Express",
-        "The Hindu"
-      ],
-      "source_urls": [
-        "https://indianexpress.com/article/india/3-indians-in-uae-injured-in-iran-drone-strike-pm-modi-says-it-is-unacceptable-10674859/",
-        "https://www.thehindu.com/news/national/bihar/bihar-govts-cabinet-expansion-on-may-7-pm-modi-amit-shah-to-attend-state-bjp-chief/article70941742.ece"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-06T0205Z-AI-openai-president-s-deeply-personal-diary",
-      "generated_at": "2026-05-06T02:05:48Z",
-      "category": "AI",
-      "headline": "OpenAI president's 'deeply personal' diary becomes focus in Musk's case against Altman",
-      "neutral_summary": "Greg Brockman has faced questions about his emails, texts and writings in his personal diary in second week of the trial.",
-      "source_count": 3,
-      "outlets": [
-        "Guardian Tech",
-        "The Decoder",
-        "VentureBeat"
-      ],
-      "source_urls": [
-        "https://www.theguardian.com/technology/2026/may/05/openai-president-personal-diary-musk-altman-case",
-        "https://the-decoder.com/chatgpt-update-rolls-out-gpt-5-5-instant-with-fewer-hallucinations-and-more-personalized-answers/",
-        "https://the-decoder.com/openais-first-hardware-play-might-be-a-phone-that-replaces-your-app-grid-with-an-agent-task-stream/",
-        "https://venturebeat.com/technology/openai-turns-its-sold-out-gpt-5-5-party-into-a-monthlong-codex-giveaway-for-8-000-developers"
-      ],
-      "confidence": "high"
     }
   ]
 }
