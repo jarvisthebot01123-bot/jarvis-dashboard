@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T18:08:05.438452Z",
+  "generated_at": "2026-05-13T18:10:01.436415Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -231,12 +231,12 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "45m ago",
+      "age": "47m ago",
       "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "21.8h ago",
+      "age": "21.9h ago",
       "status": "stale",
       "count": 30
     },
@@ -275,7 +275,7 @@
   "last_routine": {
     "ts": "2026-05-13T18:05:27Z",
     "routine": "intraday",
-    "notes": "13 positions monitored. No trades. Daily P&L +$383.14. Insider data stale (>4h, fetched 12:50 UTC) — skipped. AMD +33.95% on track (>15%). GOOGL +15.28% on track (>15%, approaching profit target). CSCO +13.43% and TXN +13.58% approaching target. All other positions within normal range. AMD best (+33.95%), XLU worst (-3.63%)."
+    "notes": "13 positions monitored. No trades. Daily P&L +$383.14. Insider data stale (>4h, fetched 12:50 UTC) \u2014 skipped. AMD +33.95% on track (>15%). GOOGL +15.28% on track (>15%, approaching profit target). CSCO +13.43% and TXN +13.58% approaching target. All other positions within normal range. AMD best (+33.95%), XLU worst (-3.63%)."
   },
   "strategies_enabled": {
     "pead": true,
