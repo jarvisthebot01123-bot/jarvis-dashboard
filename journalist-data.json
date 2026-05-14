@@ -1,8 +1,88 @@
 {
   "connected": true,
-  "generated_at": "2026-05-14T08:09:06.103402+00:00",
+  "generated_at": "2026-05-14T14:08:15.236896+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-14T1401Z-WORLD-uk-economy-sees-surprise-growth-in-march",
+      "generated_at": "2026-05-14T14:01:49Z",
+      "category": "WORLD",
+      "headline": "UK economy sees surprise growth in March despite Iran war",
+      "neutral_summary": "The economy grew by 0.3% in the month, official figures show, confounding  analysts' forecasts of a small contraction.",
+      "source_count": 3,
+      "outlets": [
+        "BBC Top Stories",
+        "Al Jazeera",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.bbc.com/news/articles/cx213n20njzo?at_medium=RSS&at_campaign=rss",
+        "https://www.aljazeera.com/video/counting-the-cost/2026/5/14/could-iran-war-trigger-a-hunger-crisis?traffic_source=rss",
+        "https://www.bbc.com/news/videos/c707xn4ew3po?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/videos/c707xn4ew3po?at_medium=RSS&at_campaign=rss",
+        "https://www.bbc.com/news/articles/c1w28qw1e0xo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-14T1401Z-UK-starmer-latest-reeves-warns-leadership-c",
+      "generated_at": "2026-05-14T14:01:49Z",
+      "category": "UK",
+      "headline": "Starmer latest: Reeves warns leadership challenge risks 'chaos' as Rayner cleared over tax affairs",
+      "neutral_summary": "Allies of Wes Streeting say he is set to launch a leadership challenge on Thursday.",
+      "source_count": 3,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/streeting-rayner-starmer-labour-leadership-resign-live-updates-b2976383.html",
+        "https://www.independent.co.uk/news/uk/politics/starmer-prime-minister-resign-burnham-streeting-rayner-b2974986.html",
+        "https://www.independent.co.uk/news/uk/politics/peter-mandelson-files-keir-starmer-wes-streeting-b2976444.html",
+        "https://www.bbc.com/news/articles/cx219y4qy0qo?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/live/2026/may/14/angela-rayner-says-starmer-should-reflect-on-stepping-aside-after-hmrc-clears-her-over-tax-affairs-uk-politics-live",
+        "https://www.theguardian.com/politics/2026/may/14/hmrc-investigation-into-angela-rayner-tax-affairs-stamp-duty-explainer"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-14T1401Z-INDIA-kerala-s-chief-minister-designate-v-d-sa",
+      "generated_at": "2026-05-14T14:01:49Z",
+      "category": "INDIA",
+      "headline": "Kerala's Chief Minister-designate V.D. Satheesan holds out an olive branch to other contenders for the top post",
+      "neutral_summary": "He terms Chennithala, United Democratic Front's (UDF) campaign committee chairperson, 'his leader, close friend and belo.",
+      "source_count": 2,
+      "outlets": [
+        "The Hindu",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/kerala/keralas-chief-minister-designate-vd-satheesan-holds-out-an-olive-branch-to-other-contenders-for-the-top-post/article70977720.ece",
+        "https://indianexpress.com/article/india/iran-foreign-minister-araghchi-delhi-two-india-lpg-tankers-cross-strait-hormuz-10689110/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-14T1401Z-AI-claude-subscriptions-get-separate-budget",
+      "generated_at": "2026-05-14T14:01:49Z",
+      "category": "AI",
+      "headline": "Claude subscriptions get separate budgets for programmatic use, billed at full API prices",
+      "neutral_summary": "As of June 15, Anthropic is splitting programmatic Claude usage out of the existing subscription quota.",
+      "source_count": 3,
+      "outlets": [
+        "The Decoder",
+        "TechCrunch",
+        "VentureBeat"
+      ],
+      "source_urls": [
+        "https://the-decoder.com/claude-subscriptions-get-separate-budgets-for-programmatic-use-billed-at-full-api-prices/",
+        "https://techcrunch.com/2026/05/13/clios-500m-milestone-arrives-just-as-anthropic-ups-the-ante/",
+        "https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch",
+        "https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-14T0207Z-WORLD-trump-administration-offers-100m-in-aid-",
       "generated_at": "2026-05-14T02:07:33Z",
