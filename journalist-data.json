@@ -1,8 +1,88 @@
 {
   "connected": true,
-  "generated_at": "2026-05-13T14:11:24.421695+00:00",
+  "generated_at": "2026-05-14T02:13:35.693433+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-14T0207Z-WORLD-trump-administration-offers-100m-in-aid-",
+      "generated_at": "2026-05-14T02:07:33Z",
+      "category": "WORLD",
+      "headline": "Trump administration offers $100m in aid to Cuba in exchange for reform",
+      "neutral_summary": "Amid an oil blockade against the island, the US blames Cuba&#039;s communist leadership for &#039;standing in the way&#0.",
+      "source_count": 3,
+      "outlets": [
+        "Al Jazeera",
+        "DW News",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/5/13/trump-administration-offers-100m-in-aid-to-cuba-in-exchange-for-reform?traffic_source=rss",
+        "https://www.aljazeera.com/news/2026/5/13/memphis-residents-file-lawsuit-alleging-abuses-by-trump-backed-task-force?traffic_source=rss",
+        "https://www.dw.com/en/trump-s-federal-reserve-chair-nominee-confirmed-by-senate/a-77154907?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/c1w28qw1e0xo?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-14T0207Z-UK-starmer-vows-to-fight-to-win-against-str",
+      "generated_at": "2026-05-14T02:07:33Z",
+      "category": "UK",
+      "headline": "Starmer vows 'to fight to win' against Streeting for Labour leadership with health secretary poised to quit government",
+      "neutral_summary": "Another day of fevered speculation in parliament saw allies of Wes Streeting claim he is set to resign from the as healt.",
+      "source_count": 4,
+      "outlets": [
+        "Independent",
+        "BBC Politics",
+        "Guardian",
+        "Sky News Politics"
+      ],
+      "source_urls": [
+        "https://www.independent.co.uk/news/uk/politics/wes-streeting-keir-starmer-labour-leadership-election-b2975962.html",
+        "https://www.independent.co.uk/news/uk/politics/starmer-streeting-resign-kings-speech-live-updates-b2975504.html",
+        "https://www.bbc.com/news/articles/cvgzv4eqdrno?at_medium=RSS&at_campaign=rss",
+        "https://www.theguardian.com/politics/2026/may/13/starmer-sets-out-changes-to-education-health-and-courts-in-kings-speech",
+        "https://news.sky.com/story/streeting-poised-to-strike-contest-to-replace-starmer-could-be-triggered-today-13543767",
+        "https://www.theguardian.com/politics/2026/may/13/wes-streeting-prepares-to-launch-leadership-challenge-against-keir-starmer"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-14T0207Z-INDIA-uae-denies-reports-of-secret-visit-by-is",
+      "generated_at": "2026-05-14T02:07:33Z",
+      "category": "INDIA",
+      "headline": "UAE Denies Reports' Of \"Secret Visit\" By Israeli PM Netanyahu",
+      "neutral_summary": "Israeli PMO on Wednesday claimed that Netanyahu had made a \"secret visit\" to UAE amid the Iran war.",
+      "source_count": 2,
+      "outlets": [
+        "NDTV",
+        "Indian Express"
+      ],
+      "source_urls": [
+        "https://www.ndtv.com/world-news/uae-denies-reports-of-secret-visit-by-israeli-pm-benjamin-netanyahu-11492126#publisher=newsstand",
+        "https://indianexpress.com/article/india/india-uae-may-sign-pacts-on-strategic-petroleum-reserves-lpg-during-pm-visit-10688280/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "2026-05-14T0207Z-AI-anthropic-reinstates-openclaw-and-third-",
+      "generated_at": "2026-05-14T02:07:33Z",
+      "category": "AI",
+      "headline": "Anthropic reinstates OpenClaw and third-party agent usage on Claude subscriptions — with a catch",
+      "neutral_summary": "Good news, OpenClaw fans — you can once again use your Claude AI subscription to power the hit, open source, autonomous.",
+      "source_count": 3,
+      "outlets": [
+        "VentureBeat",
+        "TechCrunch",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch",
+        "https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead",
+        "https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/",
+        "https://the-decoder.com/anthropic-overtakes-openai-in-b2b-adoption-for-the-first-time-according-to-ramp-spending-data/"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-13T1406Z-WORLD-ceasefire-in-sight-what-s-next-for-russi",
       "generated_at": "2026-05-13T14:06:01Z",
@@ -341,7 +421,7 @@
         "Indian Express"
       ],
       "source_urls": [
-        "https://www.thehindu.com/elections/tamil-nadu-assembly/tamil-nadu-government-formation-live-updates-cpi-cpim-vck-dmk-aiadmk-ammk-tvk-alliance-parties-may-9-2026/article70958001.ece",
+        "https://www.thehindu.com/elections/tamil-nadu-assembly/tamil-nadu-government-formation-live-updates-cpi-cpim-vck-dmk-aiadmk-tvk-alliance-parties-may-9-2026/article70958001.ece",
         "https://www.thehindu.com/news/national/west-bengal/trinamool-nominates-sobhandeb-as-opposition-leader-firhad-as-chief-whip/article70960231.ece",
         "https://www.ndtv.com/india-news/tamil-nadu-vijay-chief-minister-tvk-vijay-analysis-in-vijays-delicate-coalition-tango-dmk-holds-some-strings-11473062#publisher=newsstand",
         "https://www.ndtv.com/india-news/tamil-nadu-government-formation-new-cm-announcement-live-updates-vijay-tvk-government-congress-aiadmk-dmk-pact-bjp-governor-tamil-nadu-election-result-11465061#publisher=newsstand",
@@ -793,153 +873,6 @@
         "https://www.artificialintelligence-news.com/news/us-government-increases-ai-in-defence-suppliers-roster-and-rethinks-anthropics-role/"
       ],
       "confidence": "high"
-    },
-    {
-      "id": "2026-05-06T2004Z-WORLD-why-are-pentagon-officials-talking-about",
-      "generated_at": "2026-05-06T20:04:45Z",
-      "category": "WORLD",
-      "headline": "Why are Pentagon officials talking about Iran's 'deadly dolphins'?",
-      "neutral_summary": "Soraya Lennie discusses false claims about Iran using marine life in warfare.",
-      "source_count": 3,
-      "outlets": [
-        "Al Jazeera",
-        "BBC Top Stories",
-        "BBC News"
-      ],
-      "source_urls": [
-        "https://www.aljazeera.com/video/newsfeed/2026/5/6/why-are-pentagon-officials-talking-about-irans-deadly?traffic_source=rss",
-        "https://www.bbc.com/news/articles/cvgzp74rvj5o?at_medium=RSS&at_campaign=rss",
-        "https://www.bbc.com/news/articles/c4g8zejyyr3o?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-06T2004Z-UK-polanski-wrongly-claims-golders-green-te",
-      "generated_at": "2026-05-06T20:04:45Z",
-      "category": "UK",
-      "headline": "Polanski wrongly claims Golders Green terror suspect was handcuffed in video that sparked row with Met Police",
-      "neutral_summary": "Green Party leader apologised last week after sharing criticism of the police response to the knife attack.",
-      "source_count": 2,
-      "outlets": [
-        "Independent",
-        "BBC Politics"
-      ],
-      "source_urls": [
-        "https://www.independent.co.uk/news/uk/politics/polanski-police-golders-green-video-met-police-b2971310.html",
-        "https://www.independent.co.uk/news/uk/politics/zack-polanski-green-party-red-cross-hypnotherapy-local-elections-b2971390.html",
-        "https://www.bbc.com/news/articles/cq5pgv35y7eo?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-06T2004Z-INDIA-suvendu-adhikari-s-personal-assistant-sh",
-      "generated_at": "2026-05-06T20:04:45Z",
-      "category": "INDIA",
-      "headline": "Suvendu Adhikari's personal assistant shot dead",
-      "neutral_summary": "Suvendu Adhikari's personal assistant Chandranath Rath was shot three times by unidentified gunmen in Madhyamgram area o.",
-      "source_count": 2,
-      "outlets": [
-        "The Hindu",
-        "NDTV"
-      ],
-      "source_urls": [
-        "https://www.thehindu.com/elections/west-bengal-assembly/suvendu-adhikaris-personal-assistant-shot-dead/article70948478.ece",
-        "https://www.ndtv.com/india-news/bjp-leader-suvendu-adhikaris-personal-secretary-shot-dead-in-west-bengals-madhyamgram-11455161#publisher=newsstand"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-06T2004Z-AI-how-elon-musk-left-openai-according-to-g",
-      "generated_at": "2026-05-06T20:04:45Z",
-      "category": "AI",
-      "headline": "How Elon Musk left OpenAI, according to Greg Brockman",
-      "neutral_summary": "Cutthroat negotiations between startup founders are rarely shared so publicly, especially when a company becomes as worl.",
-      "source_count": 4,
-      "outlets": [
-        "TechCrunch",
-        "Guardian Tech",
-        "The Verge",
-        "The Decoder"
-      ],
-      "source_urls": [
-        "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/",
-        "https://www.theguardian.com/technology/2026/may/06/shivon-zilis-testimony-elon-musk-openai-lawsuit",
-        "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
-        "https://the-decoder.com/chatgpt-ads-are-now-open-to-small-businesses-as-openai-builds-a-full-self-serve-ad-platform/"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-06T1412Z-WORLD-israeli-attacks-on-southern-eastern-leba",
-      "generated_at": "2026-05-06T14:12:48Z",
-      "category": "WORLD",
-      "headline": "Israeli attacks on southern, eastern Lebanon kill at least six people",
-      "neutral_summary": "Israel issues forced displacement orders for 12 villages in southern Lebanon.",
-      "source_count": 2,
-      "outlets": [
-        "Al Jazeera",
-        "BBC News"
-      ],
-      "source_urls": [
-        "https://www.aljazeera.com/news/2026/5/6/israeli-attacks-on-southern-eastern-lebanon-kill-at-least-six-people?traffic_source=rss",
-        "https://www.bbc.com/news/articles/c202652vvnjo?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-06T1412Z-UK-local-elections-2026-live-polanski-admit",
-      "generated_at": "2026-05-06T14:12:48Z",
-      "category": "UK",
-      "headline": "Local elections 2026 live: Polanski admits he was wrong to claim he was British Red Cross spokesperson after backlash",
-      "neutral_summary": "The Green Party leader also defended his response to footage of the alleged Golders Green attacker being tackled by poli.",
-      "source_count": 3,
-      "outlets": [
-        "Independent",
-        "BBC Politics",
-        "Guardian"
-      ],
-      "source_urls": [
-        "https://www.independent.co.uk/news/uk/politics/local-elections-may-2026-live-updates-uk-scotland-wales-labour-greens-reform-b2971313.html",
-        "https://www.bbc.com/news/articles/cq5pgv35y7eo?at_medium=RSS&at_campaign=rss",
-        "https://www.theguardian.com/politics/live/2026/may/06/local-elections-labour-starmer-greens-polanski-red-cross-reform-tories-conservatives-lib-dems-latest-news-updates",
-        "https://www.independent.co.uk/tv/in-the-room/local-elections-reform-greens-labour-stramer-vote-b2971368.html",
-        "https://www.theguardian.com/politics/2026/may/06/zack-polanski-says-he-was-wrong-to-call-himself-a-red-cross-spokesperson"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-06T1412Z-INDIA-karnataka-s-adopt-a-monument-sees-muted-",
-      "generated_at": "2026-05-06T14:12:48Z",
-      "category": "INDIA",
-      "headline": "Karnataka's 'Adopt a Monument' sees muted response three years after launch",
-      "neutral_summary": "Poor publicity, limited connectivity to several heritage locations, lack of detailed development plans, and the absence.",
-      "source_count": 2,
-      "outlets": [
-        "The Hindu",
-        "NDTV"
-      ],
-      "source_urls": [
-        "https://www.thehindu.com/news/national/karnataka/karnatakas-adopt-a-monument-sees-muted-response-three-years-after-launch/article70942955.ece",
-        "https://www.ndtv.com/india-news/on-camera-stray-dog-attacks-drags-child-for-30-metres-in-karnatakas-vijayapura-11456220#publisher=newsstand"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-06T1412Z-AI-google-tests-remy-ai-agent-for-gemini-as",
-      "generated_at": "2026-05-06T14:12:48Z",
-      "category": "AI",
-      "headline": "Google tests Remy AI agent for Gemini as focus turns to user control",
-      "neutral_summary": "Google is testing Remy, a new AI personal agent for Gemini, according to Business Insider.",
-      "source_count": 2,
-      "outlets": [
-        "AI News",
-        "VentureBeat"
-      ],
-      "source_urls": [
-        "https://www.artificialintelligence-news.com/news/google-remy-ai-agent-gemini-user-control/",
-        "https://venturebeat.com/security/one-command-open-source-repo-ai-agent-backdoor-openclaw-supply-chain-scanner"
-      ],
-      "confidence": "medium"
     }
   ]
 }
