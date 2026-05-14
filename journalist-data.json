@@ -1,8 +1,63 @@
 {
   "connected": true,
-  "generated_at": "2026-05-14T14:08:02.064769+00:00",
+  "generated_at": "2026-05-14T20:08:43.030730+00:00",
   "persona": "journalist",
   "briefings": [
+    {
+      "id": "2026-05-14T2008Z-WORLD-iran-expands-tiered-internet-access-amid",
+      "generated_at": "2026-05-14T20:08:21Z",
+      "category": "WORLD",
+      "headline": "Iran expands tiered internet access amid continued online blackout",
+      "neutral_summary": "Iranians have had limited internet access during the war, with the government now looking at tiered services.",
+      "source_count": 3,
+      "outlets": [
+        "Al Jazeera",
+        "DW News",
+        "BBC News"
+      ],
+      "source_urls": [
+        "https://www.aljazeera.com/editorial/2026/5/14/iran-expands-tiered-internet-access-amid-continued-online-blackout?traffic_source=rss",
+        "https://www.dw.com/en/iran-says-chinese-ships-passed-through-hormuz-overnight/a-77163709?maca=en-rss-en-all-1573-rdf",
+        "https://www.bbc.com/news/articles/cx219xwxg9no?at_medium=RSS&at_campaign=rss"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "2026-05-14T2008Z-INDIA-tasmac-shuts-150-outlets-in-three-days-s",
+      "generated_at": "2026-05-14T20:08:21Z",
+      "category": "INDIA",
+      "headline": "Tasmac shuts 150 outlets in three days; salesmen face challenges from customers",
+      "neutral_summary": "Outlets located in close proximity to educational institutions and places of worship have been shut across Tamil Nadu fo.",
+      "source_count": 1,
+      "outlets": [
+        "The Hindu"
+      ],
+      "source_urls": [
+        "https://www.thehindu.com/news/national/tamil-nadu/tasmac-shuts-150-outlets-in-three-days-salesmen-face-challenges-from-customers/article70979751.ece"
+      ],
+      "confidence": "low"
+    },
+    {
+      "id": "2026-05-14T2008Z-AI-clawdmeter-turns-your-claude-code-usage-",
+      "generated_at": "2026-05-14T20:08:21Z",
+      "category": "AI",
+      "headline": "Clawdmeter turns your Claude Code usage stats into a tiny desktop dashboard",
+      "neutral_summary": "A new open source gadget called Clawdmeter turns Claude Code usage stats into a tiny desktop dashboard for AI coding pow.",
+      "source_count": 4,
+      "outlets": [
+        "TechCrunch",
+        "The Verge",
+        "VentureBeat",
+        "The Decoder"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/14/clawdmeter-turns-your-claude-code-usage-stats-into-a-tiny-desktop-dashboard/",
+        "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
+        "https://venturebeat.com/orchestration/claude-codes-goals-separates-the-agent-that-works-from-the-one-that-decides-its-done",
+        "https://the-decoder.com/microsoft-pits-more-than-100-ai-agents-against-each-other-to-find-windows-vulnerabilities/"
+      ],
+      "confidence": "high"
+    },
     {
       "id": "2026-05-14T1401Z-WORLD-uk-economy-sees-surprise-growth-in-march",
       "generated_at": "2026-05-14T14:01:49Z",
@@ -821,60 +876,6 @@
       "source_urls": [
         "https://the-decoder.com/openais-new-voice-model-brings-gpt-5-level-reasoning-to-real-time-conversations/",
         "https://venturebeat.com/technology/meet-zaya1-8b-a-super-efficient-open-reasoning-model-trained-on-amd-instinct-mi300-gpus"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-07T1411Z-WORLD-hantavirus-cruise-company-says-no-sympom",
-      "generated_at": "2026-05-07T14:11:03Z",
-      "category": "WORLD",
-      "headline": "Hantavirus: Cruise company says no sympomatic guests on ship",
-      "neutral_summary": "The company that operates the cruise ship struck by the hantavirus said that no passengers showing symptoms have remaine.",
-      "source_count": 3,
-      "outlets": [
-        "DW News",
-        "BBC Top Stories",
-        "BBC News"
-      ],
-      "source_urls": [
-        "https://www.dw.com/en/hantavirus-cruise-company-says-no-sympomatic-guests-on-ship/live-77063670?maca=en-rss-en-all-1573-rdf",
-        "https://www.bbc.com/news/articles/c9wepl8we90o?at_medium=RSS&at_campaign=rss",
-        "https://www.bbc.com/news/articles/c5y093d5n9ko?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-07T1411Z-UK-may-elections-live-millions-cast-their-v",
-      "generated_at": "2026-05-07T14:11:03Z",
-      "category": "UK",
-      "headline": "May elections live: millions cast their votes across England, Scotland and Wales",
-      "neutral_summary": "About 5,000 councillors and six mayors up for election in England, while Scotland chooses 129 MSPs, and Wales selects 96.",
-      "source_count": 2,
-      "outlets": [
-        "Guardian",
-        "Independent"
-      ],
-      "source_urls": [
-        "https://www.theguardian.com/politics/live/2026/may/07/may-local-elections-polls-open-england-scotland-wales-uk-politics-latest-news-updates",
-        "https://www.independent.co.uk/news/uk/politics/voter-id-elections-2026-scotland-wales-uk-b2972078.html",
-        "https://www.theguardian.com/politics/2026/may/07/local-elections-results-timeline-when-do-the-key-results-across-england-wales-and-scotland-report"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-07T1411Z-INDIA-operation-sindoor-signalled-no-terror-sa",
-      "generated_at": "2026-05-07T14:11:03Z",
-      "category": "INDIA",
-      "headline": "Operation Sindoor signalled no terror sanctuary is safe: Indian Army",
-      "neutral_summary": "\"Operation Sindoor was not an end, and it was just the beginning,\" Lt Gen Rajiv Ghai, who played a key role in executing.",
-      "source_count": 2,
-      "outlets": [
-        "The Hindu",
-        "Indian Express"
-      ],
-      "source_urls": [
-        "https://www.thehindu.com/news/national/operation-sindoor-signalled-no-terror-sanctuary-is-safe-indian-army/article70950481.ece",
-        "https://indianexpress.com/article/india/military-officials-press-conference-year-operation-sindoor-10677404/"
       ],
       "confidence": "medium"
     }
