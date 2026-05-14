@@ -1,6 +1,6 @@
 {
   "connected": true,
-  "generated_at": "2026-05-14T02:13:26.998860+00:00",
+  "generated_at": "2026-05-14T08:09:06.103402+00:00",
   "persona": "journalist",
   "briefings": [
     {
@@ -797,82 +797,6 @@
         "https://indianexpress.com/article/india/military-officials-press-conference-year-operation-sindoor-10677404/"
       ],
       "confidence": "medium"
-    },
-    {
-      "id": "2026-05-07T0211Z-WORLD-argentina-investigates-link-to-deadly-ha",
-      "generated_at": "2026-05-07T02:11:00Z",
-      "category": "WORLD",
-      "headline": "Argentina investigates link to deadly hantavirus outbreak on cruise ship",
-      "neutral_summary": "Three fatalities reported from South America-related hantavirus as cruise ship remains off Cape Verde coast.",
-      "source_count": 3,
-      "outlets": [
-        "Al Jazeera",
-        "BBC News",
-        "BBC Top Stories"
-      ],
-      "source_urls": [
-        "https://www.aljazeera.com/news/2026/5/6/argentina-investigates-link-to-deadly-hantavirus-outbreak-on-cruise-ship?traffic_source=rss",
-        "https://www.bbc.com/news/articles/c5y093d5n9ko?at_medium=RSS&at_campaign=rss",
-        "https://www.bbc.com/news/articles/c9wepl8we90o?at_medium=RSS&at_campaign=rss",
-        "https://www.bbc.com/news/articles/c8r8j1l6j0go?at_medium=RSS&at_campaign=rss"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-07T0211Z-UK-keir-starmer-makes-late-pitch-to-voters-",
-      "generated_at": "2026-05-07T02:11:00Z",
-      "category": "UK",
-      "headline": "Keir Starmer makes late pitch to voters turning to Greens and Reform",
-      "neutral_summary": "As Labour faces record-breaking losses in Thursday's local elections, prime minister says rivals are unfit to leadLabour.",
-      "source_count": 3,
-      "outlets": [
-        "Guardian",
-        "Independent",
-        "BBC Politics"
-      ],
-      "source_urls": [
-        "https://www.theguardian.com/politics/2026/may/06/starmer-late-pitch-voters-labour-greens-reform-elections",
-        "https://www.independent.co.uk/news/uk/politics/starmer-local-elections-voters-appeal-b2971607.html",
-        "https://www.bbc.com/news/articles/c5y09gl1282o?at_medium=RSS&at_campaign=rss",
-        "https://www.independent.co.uk/news/uk/politics/zack-polanski-green-party-red-cross-hypnotherapy-local-elections-b2971390.html"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "2026-05-07T0211Z-INDIA-india-forgives-nothing-air-force-posts-v",
-      "generated_at": "2026-05-07T02:11:00Z",
-      "category": "INDIA",
-      "headline": "\"India Forgives Nothing\": Air Force Posts Video On 1 Year Of Op Sindoor",
-      "neutral_summary": "Operation Sindoor Anniversary: \"India forgets nothing.",
-      "source_count": 2,
-      "outlets": [
-        "NDTV",
-        "The Hindu"
-      ],
-      "source_urls": [
-        "https://www.ndtv.com/india-news/india-forgives-nothing-air-force-posts-video-on-1-year-of-op-sindoor-11459598#publisher=newsstand",
-        "https://www.thehindu.com/news/national/rubio-to-visit-india-for-bilateral-talks-quad-foreign-ministers-meeting-may-end/article70948359.ece"
-      ],
-      "confidence": "medium"
-    },
-    {
-      "id": "2026-05-07T0211Z-AI-anthropic-taps-spacex-s-colossus-1-data-",
-      "generated_at": "2026-05-07T02:11:00Z",
-      "category": "AI",
-      "headline": "Anthropic taps SpaceX's Colossus-1 data center for 220,000 GPUs to power Claude",
-      "neutral_summary": "Anthropic is taking over the full computing capacity of SpaceX's Colossus 1 data center, more than 300 megawatts and ove.",
-      "source_count": 3,
-      "outlets": [
-        "The Decoder",
-        "Guardian Tech",
-        "AI News"
-      ],
-      "source_urls": [
-        "https://the-decoder.com/anthropic-taps-spacexs-colossus-1-data-center-for-220000-gpus-to-power-claude/",
-        "https://www.theguardian.com/technology/2026/may/06/no-flattery-please-claude-im-british",
-        "https://www.artificialintelligence-news.com/news/us-government-increases-ai-in-defence-suppliers-roster-and-rethinks-anthropics-role/"
-      ],
-      "confidence": "high"
     }
   ]
 }
