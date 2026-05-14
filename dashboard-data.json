@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-14T18:22:27.800838Z",
+  "generated_at": "2026-05-14T19:03:29.722722Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
-    "index": 106.097,
+    "index": 106.271,
     "opening_index": 104.44,
-    "daily_pct": 1.129,
+    "daily_pct": 1.295,
     "total_pct": 3.708,
-    "equity_dollars": 106097.3,
-    "daily_pnl_dollars": 1179.38,
+    "equity_dollars": 106270.59,
+    "daily_pnl_dollars": 1352.67,
     "total_pnl_dollars": 3707.99,
     "unrealized_pnl_dollars": 5443.17,
     "capital_deployed": 61709.0
@@ -227,30 +227,30 @@
       "pnl_dollars": 44.16
     }
   ],
-  "performance_summary": "13 open swing positions. Equity $106,097.30. Daily P&L +$1,179.38. AMD best (+32.80%), XLU worst (-3.60%). All-time realised: +$3,707.99.",
+  "performance_summary": "13 open swing positions. Equity $106,270.59. Daily P&L +$1,352.67. AMD best (+32.80%), XLU worst (-3.60%). All-time realised: +$3,707.99.",
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "1.9h ago",
-      "status": "fresh",
+      "age": "2.6h ago",
+      "status": "warning",
       "count": 50
     },
     "news": {
-      "age": "22.0h ago",
+      "age": "22.7h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "1m ago",
+      "age": "42m ago",
       "status": "fresh"
     },
     "economic_calendar": {
-      "age": "54m ago",
+      "age": "1.6h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "19.5h ago",
-      "status": "stale",
+      "age": "40m ago",
+      "status": "fresh",
       "count": 0
     }
   },
@@ -268,9 +268,9 @@
     }
   ],
   "last_routine": {
-    "ts": "2026-05-14T18:10:00Z",
+    "ts": "2026-05-14T19:10:00Z",
     "routine": "intraday",
-    "notes": "13 positions monitored. No trades. Daily P&L +$1,179.38. Insider data stale (>4h, fetched 2026-05-13) \u2014 skipped. AMD +32.80% on track (>15%). CSCO +29.41% on track (>15%). GOOGL +14.66% approaching target. TXN +13.72% approaching target. No positions down >8%. AMD best (+32.80%), XLU worst (-3.60%)."
+    "notes": "13 positions monitored (cached \u2014 Alpaca positions API 503). No trades. Daily P&L +$1,352.67. No insider signals (0 filings, data fresh 18:22 UTC). AMD +32.80% on track (>15%). CSCO +29.41% on track (>15%). GOOGL +14.66% approaching target. TXN +13.72% approaching target. No positions down >8%. AMD best (+32.80%), XLU worst (-3.60%)."
   },
   "strategies_enabled": {
     "pead": true,
