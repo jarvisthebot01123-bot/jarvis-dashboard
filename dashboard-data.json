@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T19:03:29.722722Z",
+  "generated_at": "2026-05-14T19:04:35.881765Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -241,7 +241,7 @@
       "count": 30
     },
     "market_context": {
-      "age": "42m ago",
+      "age": "43m ago",
       "status": "fresh"
     },
     "economic_calendar": {
@@ -249,7 +249,7 @@
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "40m ago",
+      "age": "41m ago",
       "status": "fresh",
       "count": 0
     }
