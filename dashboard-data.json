@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T23:13:32.823371Z",
+  "generated_at": "2026-05-15T17:16:03.861366Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,26 +239,26 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "2.2h ago",
-      "status": "warning",
+      "age": "59m ago",
+      "status": "fresh",
       "count": 50
     },
     "news": {
-      "age": "2.9h ago",
+      "age": "21.0h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "1.9h ago",
-      "status": "fresh"
+      "age": "19.9h ago",
+      "status": "stale"
     },
     "economic_calendar": {
-      "age": "1.3h ago",
+      "age": "1m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "33m ago",
-      "status": "fresh",
+      "age": "18.6h ago",
+      "status": "stale",
       "count": 0
     }
   },
@@ -266,15 +266,9 @@
     "score": 66.1,
     "rating": "greed"
   },
-  "macro_blackout_today": true,
-  "macro_blackout_reason": "PPI",
-  "upcoming_macro_events": [
-    {
-      "event": "PPI",
-      "date": "2026-05-14",
-      "days_away": 0
-    }
-  ],
+  "macro_blackout_today": false,
+  "macro_blackout_reason": null,
+  "upcoming_macro_events": [],
   "last_routine": {
     "ts": "2026-05-14T20:15:00Z",
     "routine": "end_of_day",
