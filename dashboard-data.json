@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T00:06:32.910291Z",
+  "generated_at": "2026-06-08T15:53:42.326461Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,25 +239,25 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "5.2h ago",
-      "status": "stale",
+      "age": "2.9h ago",
+      "status": "warning",
       "count": 50
     },
     "news": {
-      "age": "3.2h ago",
+      "age": "67.0h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "5.1h ago",
-      "status": "warning"
+      "age": "25m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "4.2h ago",
+      "age": "59m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "3.3h ago",
+      "age": "5m ago",
       "status": "fresh",
       "count": 0
     }
@@ -266,23 +266,23 @@
     "score": 44.5,
     "rating": "fear"
   },
-  "macro_blackout_today": true,
-  "macro_blackout_reason": "NFP",
+  "macro_blackout_today": false,
+  "macro_blackout_reason": null,
   "upcoming_macro_events": [
-    {
-      "event": "NFP",
-      "date": "2026-06-05",
-      "days_away": 0
-    },
     {
       "event": "CPI",
       "date": "2026-06-10",
-      "days_away": 5
+      "days_away": 2
     },
     {
       "event": "FOMC Statement",
       "date": "2026-06-10",
-      "days_away": 5
+      "days_away": 2
+    },
+    {
+      "event": "PPI",
+      "date": "2026-06-11",
+      "days_away": 3
     }
   ],
   "last_routine": {
