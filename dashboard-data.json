@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T00:05:22.301603Z",
+  "generated_at": "2026-07-03T14:04:49.489001Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,50 +239,45 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "156.4h ago",
+      "age": "170.4h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "3.7h ago",
+      "age": "17.7h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "5.6h ago",
-      "status": "warning"
+      "age": "23m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "4.7h ago",
+      "age": "45m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "3.8h ago",
+      "age": "5m ago",
       "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 30.8,
+    "score": 31.9,
     "rating": "fear"
   },
-  "macro_blackout_today": true,
-  "macro_blackout_reason": "NFP",
+  "macro_blackout_today": false,
+  "macro_blackout_reason": null,
   "upcoming_macro_events": [
-    {
-      "event": "NFP",
-      "date": "2026-07-02",
-      "days_away": 0
-    },
     {
       "event": "CPI",
       "date": "2026-07-14",
-      "days_away": 12
+      "days_away": 11
     },
     {
       "event": "PPI",
       "date": "2026-07-15",
-      "days_away": 13
+      "days_away": 12
     }
   ],
   "last_routine": {
