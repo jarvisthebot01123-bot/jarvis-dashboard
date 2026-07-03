@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T21:07:38.821462Z",
+  "generated_at": "2026-07-03T00:05:22.301603Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,25 +239,25 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "153.5h ago",
+      "age": "156.4h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "45m ago",
-      "status": "fresh",
+      "age": "3.7h ago",
+      "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "2.7h ago",
-      "status": "fresh"
+      "age": "5.6h ago",
+      "status": "warning"
     },
     "economic_calendar": {
-      "age": "1.7h ago",
+      "age": "4.7h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "50m ago",
+      "age": "3.8h ago",
       "status": "fresh",
       "count": 0
     }
