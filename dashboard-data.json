@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T17:59:24.579577Z",
+  "generated_at": "2026-07-07T21:24:34.986168Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,31 +239,31 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "270.3h ago",
+      "age": "273.8h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "1.4h ago",
-      "status": "warning",
+      "age": "2.3h ago",
+      "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "3.9h ago",
-      "status": "warning"
+      "age": "2.3h ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "4.5h ago",
+      "age": "1.5h ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "47m ago",
+      "age": "36m ago",
       "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 43.8,
+    "score": 43.3,
     "rating": "fear"
   },
   "macro_blackout_today": false,
