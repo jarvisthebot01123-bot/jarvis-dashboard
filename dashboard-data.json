@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T23:55:47.461438Z",
+  "generated_at": "2026-07-21T13:50:12.707594Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,31 +239,31 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "588.3h ago",
+      "age": "602.2h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "3.5h ago",
+      "age": "17.4h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "5.0h ago",
-      "status": "warning"
+      "age": "34m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "4.2h ago",
+      "age": "59m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "3.6h ago",
+      "age": "5m ago",
       "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 38.4,
+    "score": 36.9,
     "rating": "fear"
   },
   "macro_blackout_today": false,
@@ -272,7 +272,7 @@
     {
       "event": "FOMC Statement",
       "date": "2026-07-29",
-      "days_away": 9
+      "days_away": 8
     }
   ],
   "last_routine": {
