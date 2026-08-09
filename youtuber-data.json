@@ -1,19 +1,25 @@
 {
-  "generated_at": "2026-04-25T00:00:00Z",
-  "connected": false,
-  "channel": {
-    "name": null,
-    "handle": null,
-    "subscribers": null,
-    "total_views": null,
-    "video_count": null,
-    "profile_image": null
-  },
-  "analytics_7d": {
-    "views": null,
-    "watch_time_hours": null,
-    "new_subscribers": null
-  },
-  "recent_videos": [],
-  "top_videos": []
+  "generated_at": "2026-05-10T00:00:00Z",
+  "channels": [
+    {
+      "id": "nila",
+      "name": "N.I.L.A.",
+      "handle": "@nila_ai",
+      "tagline": "A dry AI observing human behaviour",
+      "connected": false,
+      "color": "#1d4ed8",
+      "accent": "#F5E642",
+      "profile_image": null,
+      "subscribers": null,
+      "total_views": null,
+      "video_count": null,
+      "analytics_7d": {
+        "views": null,
+        "watch_time_hours": null,
+        "new_subscribers": null
+      },
+      "recent_videos": [],
+      "top_videos": []
+    }
+  ]
 }

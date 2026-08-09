@@ -8,7 +8,6 @@
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="stylesheet" href="style.css">
 <style>
-/* Captain America — bright patriotic theme */
 :root {
   --bg:         #eef4ff;
   --surface:    #ffffff;
@@ -16,7 +15,7 @@
   --muted:      #4a6285;
   --text:       #0f1f3d;
   --arc:        #1d4ed8;
-  --gold:       #dc2626;
+  --gold:       #F5E642;
   --arc-soft:   rgba(29,78,216,.09);
   --arc-border: rgba(29,78,216,.2);
   --code-bg:    rgba(29,78,216,.05);
@@ -31,15 +30,16 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background:url('img/newspaper-youtuber.svg') center top / cover no-repeat;
   padding:36px 32px 32px;
   position:relative;overflow:hidden;
-  margin-bottom:28px;
+  margin-bottom:0;
 }
 .page-banner::before{
   content:'';position:absolute;inset:0;
   background:linear-gradient(135deg,
-    rgba(30,64,175,.80) 0%,
-    rgba(29,78,216,.74) 30%,
-    rgba(220,38,38,.78) 65%,
-    rgba(153,27,27,.84) 100%);
+    color-mix(in srgb, var(--arc) 80%, black) 0%,
+    color-mix(in srgb, var(--arc) 74%, transparent) 35%,
+    color-mix(in srgb, var(--gold) 60%, var(--arc)) 70%,
+    color-mix(in srgb, var(--gold) 50%, black) 100%);
+  transition:background .4s ease;
 }
 .page-banner-wrap{
   max-width:1200px;margin:0 auto;
@@ -52,8 +52,11 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   border:3px solid rgba(255,255,255,.35);
   box-shadow:0 0 40px rgba(255,255,255,.18),0 6px 30px rgba(0,0,0,.3);
   background:rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:3rem;font-weight:900;color:rgba(255,255,255,.9);
+  letter-spacing:-.05em;
 }
-.page-banner-avatar img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.page-banner-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .page-banner-eyebrow{
   font-size:.63rem;letter-spacing:.25em;text-transform:uppercase;
   color:rgba(255,255,255,.6);font-weight:700;margin-bottom:4px;
@@ -65,12 +68,50 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   text-shadow:0 2px 20px rgba(0,0,0,.3);
 }
 .page-banner-sub{font-size:.88rem;color:rgba(255,255,255,.75);line-height:1.5}
+.page-banner-badge{
+  display:inline-block;margin-top:8px;
+  padding:3px 10px;border-radius:20px;font-size:.7rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+  color:#fff;
+}
+.page-banner-badge.live{background:rgba(5,150,105,.25);border-color:rgba(5,150,105,.5);color:#6ee7b7}
 @media(max-width:600px){
   .page-banner{padding:24px 20px}
   .page-banner-wrap{flex-direction:column;text-align:center;gap:14px}
-  .page-banner-avatar{width:80px;height:80px}
+  .page-banner-avatar{width:80px;height:80px;font-size:2.2rem}
   .page-banner-title{font-size:1.6rem}
 }
+
+/* ── Channel picker tabs ── */
+.channel-picker{
+  display:flex;gap:10px;padding:16px 28px 20px;
+  flex-wrap:wrap;background:var(--surface);
+  border-bottom:1px solid var(--border);
+  margin-bottom:28px;
+}
+.ch-tab{
+  padding:6px 18px;border-radius:20px;
+  border:1.5px solid var(--arc-border);
+  background:transparent;color:var(--muted);
+  cursor:pointer;font-size:.82rem;font-weight:600;
+  transition:all .18s ease;white-space:nowrap;
+}
+.ch-tab:hover{border-color:var(--arc);color:var(--arc)}
+.ch-tab.active{
+  background:var(--arc-soft);
+  border-color:var(--arc);
+  color:var(--arc);font-weight:700;
+}
+.ch-tab .ch-dot{
+  display:inline-block;width:6px;height:6px;
+  border-radius:50%;margin-right:6px;
+  background:var(--muted);vertical-align:middle;
+  transition:background .18s;
+}
+.ch-tab.active .ch-dot,.ch-tab:hover .ch-dot{background:var(--arc)}
+.ch-tab.ch-live .ch-dot{background:#059669}
+.ch-tab.ch-live.active .ch-dot,.ch-tab.ch-live:hover .ch-dot{background:#059669}
 
 .card:hover{border-color:rgba(29,78,216,.3);box-shadow:0 8px 40px rgba(29,78,216,.1)}
 </style>
@@ -92,19 +133,21 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   </div>
 </header>
 
-<!-- Cinematic hero banner -->
-<div class="page-banner">
+<!-- Dynamic hero banner -->
+<div class="page-banner" id="page-banner">
   <div class="page-banner-wrap">
-    <div class="page-banner-avatar">
-      <img src="img/cap_portrait.jpg" alt="Captain America" style="width:100%;height:100%;object-fit:cover;object-position:center top">
-    </div>
+    <div class="page-banner-avatar" id="banner-avatar">—</div>
     <div>
       <div class="page-banner-eyebrow">J.A.R.V.I.S. · YouTuber Module</div>
-      <div class="page-banner-title">Captain America</div>
-      <div class="page-banner-sub">Steve Rogers &nbsp;·&nbsp; AI channel analytics &nbsp;·&nbsp; subscriber &amp; video performance</div>
+      <div class="page-banner-title" id="banner-name">Loading…</div>
+      <div class="page-banner-sub" id="banner-sub"></div>
+      <span class="page-banner-badge" id="banner-badge">Not Connected</span>
     </div>
   </div>
 </div>
+
+<!-- Channel picker tabs (populated by JS) -->
+<div class="channel-picker" id="channel-picker"></div>
 
 <div class="main" style="padding-top:0">
 
@@ -112,85 +155,205 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     <div class="card card-sm" style="text-align:center">
       <div class="card-title"><i class="bi bi-people-fill"></i> Subscribers</div>
       <div class="metric" id="subscribers">—</div>
-      <div class="metric-sub" id="subscribers-sub">Channel not connected</div>
+      <div class="metric-sub" id="subscribers-sub">No data</div>
     </div>
     <div class="card card-sm" style="text-align:center">
       <div class="card-title"><i class="bi bi-eye-fill"></i> Total Views</div>
       <div class="metric" id="total-views">—</div>
-      <div class="metric-sub" id="views-sub">Channel not connected</div>
+      <div class="metric-sub" id="views-sub">No data</div>
     </div>
     <div class="card card-sm" style="text-align:center">
       <div class="card-title"><i class="bi bi-camera-video-fill"></i> Videos</div>
       <div class="metric" id="video-count">—</div>
-      <div class="metric-sub" id="video-sub">Channel not connected</div>
+      <div class="metric-sub" id="video-sub">No data</div>
     </div>
   </div>
 
-  <div class="connect-block">
-    <h3><i class="bi bi-plug-fill" style="color:var(--arc);margin-right:6px"></i>How to connect your channel</h3>
-    <p>Create a project that pushes to <code style="background:rgba(29,78,216,.09);padding:1px 6px;border-radius:4px;font-size:.85rem;color:var(--arc)">youtuber-data.json</code> in the <strong>jarvis-dashboard</strong> repo. The page auto-refreshes every 60 seconds.</p>
-    <div class="code-block">
-# Your YouTube data collector pushes this JSON:
-{
-  "generated_at": "ISO timestamp",
-  "connected": true,
-  "channel": {
-    "name": "Your Channel",
-    "subscribers": 12500,
-    "total_views": 840000,
-    "video_count": 47
-  },
-  "analytics_7d": { "views": 3200, "new_subscribers": 85 },
-  "recent_videos": [
-    { "title": "...", "views": 1200, "published": "2026-04-20" }
-  ]
-}</div>
+  <div id="connect-block" class="connect-block" style="display:none">
+    <h3><i class="bi bi-plug-fill" style="color:var(--arc);margin-right:6px"></i>How to connect this channel</h3>
+    <p>The worker pushes analytics to <code style="background:rgba(29,78,216,.09);padding:1px 6px;border-radius:4px;font-size:.85rem;color:var(--arc)">youtuber-data.json</code> in the <strong>jarvis-dashboard</strong> repo. The page auto-refreshes every 60 seconds.</p>
   </div>
 
-  <div class="coming-soon">
+  <div id="videos-section" style="display:none">
+    <div class="card">
+      <div class="card-title"><i class="bi bi-clock-history"></i> Recent Videos</div>
+      <div id="recent-videos-list"></div>
+    </div>
+  </div>
+
+  <div class="coming-soon" id="coming-soon">
     <i class="bi bi-youtube"></i>
     <h3>Awaiting Connection</h3>
-    <p>Push <code style="background:rgba(29,78,216,.07);padding:1px 6px;border-radius:4px;color:var(--arc)">youtuber-data.json</code> to jarvis-dashboard to activate live analytics.</p>
+    <p>The worker will push analytics once the channel is live and connected.</p>
   </div>
 
 </div>
 
 <script>
-function timeAgo(iso){const m=Math.floor((Date.now()-new Date(iso))/60000);return m<1?'just now':m<60?m+'m ago':Math.floor(m/60)+'h ago'}
-function setNavStatus(active, iso){
-  const el=document.getElementById('nav-status');
-  if(active){
-    const t=iso?timeAgo(iso):'';
-    el.className='pnav-status active';
-    el.innerHTML=`<span class="pnav-status-dot"></span>System Active<span class="pnav-status-time">&nbsp;·&nbsp;${t}</span>`;
+let _channels = [];
+let _activeId = null;
+
+function fmt(n) {
+  if (n == null) return '—';
+  if (n >= 1e6) return (n/1e6).toFixed(1)+'M';
+  if (n >= 1e3) return (n/1e3).toFixed(1)+'K';
+  return String(n);
+}
+function timeAgo(iso){
+  const m=Math.floor((Date.now()-new Date(iso))/60000);
+  return m<1?'just now':m<60?m+'m ago':Math.floor(m/60)+'h ago';
+}
+
+function hexAlpha(hex, a) {
+  const h = hex.replace('#','');
+  const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+function applyTheme(ch) {
+  const root = document.documentElement;
+  root.style.setProperty('--arc', ch.color || '#1d4ed8');
+  root.style.setProperty('--gold', ch.accent || '#F5E642');
+  root.style.setProperty('--arc-soft', hexAlpha(ch.color || '#1d4ed8', 0.09));
+  root.style.setProperty('--arc-border', hexAlpha(ch.color || '#1d4ed8', 0.2));
+  root.style.setProperty('--code-bg', hexAlpha(ch.color || '#1d4ed8', 0.05));
+  root.style.setProperty('--code-text', ch.color || '#1d4ed8');
+}
+
+function renderBanner(ch) {
+  const avatar = document.getElementById('banner-avatar');
+  if (ch.profile_image) {
+    avatar.innerHTML = `<img src="${ch.profile_image}" alt="${ch.name}">`;
   } else {
-    el.className='pnav-status inactive';
-    el.innerHTML='<span class="pnav-status-dot"></span>Not Configured';
+    const initials = (ch.name||'').split(/\s+/).map(w=>w[0]||'').slice(0,2).join('').toUpperCase() || '?';
+    avatar.textContent = initials;
+  }
+  document.getElementById('banner-name').textContent = ch.name || '—';
+  const handle = ch.handle ? `${ch.handle} ` : '';
+  document.getElementById('banner-sub').innerHTML =
+    `${handle}&nbsp;·&nbsp; ${ch.tagline || 'AI-powered channel'} &nbsp;·&nbsp; subscriber &amp; video performance`;
+
+  const badge = document.getElementById('banner-badge');
+  if (ch.connected) {
+    badge.textContent = 'Live';
+    badge.className = 'page-banner-badge live';
+  } else {
+    badge.textContent = 'Not Connected';
+    badge.className = 'page-banner-badge';
   }
 }
+
+function renderMetrics(ch) {
+  document.getElementById('subscribers').textContent = fmt(ch.subscribers);
+  document.getElementById('subscribers-sub').textContent = ch.connected ? 'Live' : 'Channel not connected';
+  document.getElementById('total-views').textContent = fmt(ch.total_views);
+  document.getElementById('views-sub').textContent = ch.connected ? 'All time' : 'Channel not connected';
+  document.getElementById('video-count').textContent = fmt(ch.video_count);
+  document.getElementById('video-sub').textContent = ch.connected ? 'Published' : 'Channel not connected';
+}
+
+function renderVideos(ch) {
+  const section = document.getElementById('videos-section');
+  const list = document.getElementById('recent-videos-list');
+  const cs = document.getElementById('coming-soon');
+  const cb = document.getElementById('connect-block');
+
+  if (ch.connected && ch.recent_videos && ch.recent_videos.length > 0) {
+    section.style.display = '';
+    cs.style.display = 'none';
+    cb.style.display = 'none';
+    list.innerHTML = ch.recent_videos.map(v => `
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)">
+        <div style="font-size:.88rem;color:var(--text)">${v.title||''}</div>
+        <div style="font-size:.8rem;color:var(--muted);white-space:nowrap;margin-left:16px">
+          ${fmt(v.views)} views &nbsp;·&nbsp; ${v.published||''}
+        </div>
+      </div>`).join('');
+  } else if (!ch.connected) {
+    section.style.display = 'none';
+    cs.style.display = '';
+    cb.style.display = '';
+  } else {
+    section.style.display = 'none';
+    cs.style.display = '';
+    cb.style.display = 'none';
+  }
+}
+
+function activateChannel(ch) {
+  _activeId = ch.id;
+  applyTheme(ch);
+  renderBanner(ch);
+  renderMetrics(ch);
+  renderVideos(ch);
+
+  // Update tab active state
+  document.querySelectorAll('.ch-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.id === ch.id);
+  });
+}
+
+function buildTabs(channels) {
+  const picker = document.getElementById('channel-picker');
+  picker.innerHTML = channels.map(ch => {
+    const liveClass = ch.connected ? ' ch-live' : '';
+    return `<button class="ch-tab${liveClass}" data-id="${ch.id}" onclick="activateChannel(_channels.find(c=>c.id==='${ch.id}'))">
+      <span class="ch-dot"></span>${ch.name}
+    </button>`;
+  }).join('');
+}
+
+function setNavStatus(anyConnected, iso) {
+  const el = document.getElementById('nav-status');
+  if (anyConnected) {
+    const t = iso ? timeAgo(iso) : '';
+    el.className = 'pnav-status active';
+    el.innerHTML = `<span class="pnav-status-dot"></span>System Active<span class="pnav-status-time">&nbsp;·&nbsp;${t}</span>`;
+  } else {
+    el.className = 'pnav-status inactive';
+    el.innerHTML = '<span class="pnav-status-dot"></span>Not Configured';
+  }
+}
+
 async function load() {
   try {
     const r = await fetch('youtuber-data.json?t='+Date.now());
     if (!r.ok) { setNavStatus(false); return; }
     const d = await r.json();
-    setNavStatus(d.connected === true, d.generated_at);
-    if (d.connected && d.channel) {
-      const c = d.channel;
-      if (c.subscribers != null) {
-        document.getElementById('subscribers').textContent = c.subscribers >= 1000 ? (c.subscribers/1000).toFixed(1)+'K' : c.subscribers;
-        document.getElementById('subscribers-sub').textContent = 'Live';
-      }
-      if (c.total_views != null) {
-        document.getElementById('total-views').textContent = c.total_views >= 1000000 ? (c.total_views/1000000).toFixed(1)+'M' : c.total_views >= 1000 ? (c.total_views/1000).toFixed(0)+'K' : c.total_views;
-        document.getElementById('views-sub').textContent = 'All time';
-      }
-      if (c.video_count != null) {
-        document.getElementById('video-count').textContent = c.video_count;
-        document.getElementById('video-sub').textContent = 'Published';
-      }
-    }
+
+    // Support both old single-channel schema and new multi-channel schema
+    const channels = d.channels || (d.channel ? [{
+      id: 'main', name: d.channel.name || 'Channel', handle: '', tagline: '',
+      connected: d.connected === true, color: '#1d4ed8', accent: '#F5E642',
+      profile_image: null,
+      subscribers: d.channel.subscribers, total_views: d.channel.total_views,
+      video_count: d.channel.video_count,
+      analytics_7d: d.analytics_7d || {},
+      recent_videos: d.recent_videos || [], top_videos: []
+    }] : []);
+
+    if (!channels.length) { setNavStatus(false); return; }
+
+    _channels = channels;
+    const anyConnected = channels.some(c => c.connected);
+    setNavStatus(anyConnected, d.generated_at);
+
+    buildTabs(channels);
+
+    // Restore last active or default to first
+    const saved = localStorage.getItem('yt-active-channel');
+    const target = channels.find(c => c.id === saved) || channels[0];
+    activateChannel(target);
+
   } catch(e) { setNavStatus(false); }
 }
+
+// Persist channel selection
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.ch-tab');
+  if (btn) localStorage.setItem('yt-active-channel', btn.dataset.id);
+});
+
 load();
 setInterval(load, 60000);
 </script>

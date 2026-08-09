@@ -238,10 +238,20 @@ async function checkSystems() {
     const r = await fetch('youtuber-data.json?t='+Date.now());
     if (r.ok) {
       const d = await r.json();
-      active.youtuber = d.connected === true;
-      document.getElementById('youtuber-stats').innerHTML = active.youtuber
-        ? '<span style="color:#059669">● Live</span>'
-        : '<span style="color:#d97706">● Push youtuber-data.json to activate</span>';
+      // Support both old single-channel and new multi-channel schema
+      const channels = d.channels || (d.channel ? [{ connected: d.connected === true }] : []);
+      const connected = channels.filter(c => c.connected).length;
+      const total = channels.length;
+      active.youtuber = connected > 0;
+      if (total === 0) {
+        document.getElementById('youtuber-stats').innerHTML = '<span style="color:#d97706">● Push youtuber-data.json to activate</span>';
+      } else if (connected === 0) {
+        document.getElementById('youtuber-stats').innerHTML = `<span style="color:#d97706">● ${total} channel${total>1?'s':''} — not connected</span>`;
+      } else if (connected === total) {
+        document.getElementById('youtuber-stats').innerHTML = `<span style="color:#059669">● Live — ${total} channel${total>1?'s':''}</span>`;
+      } else {
+        document.getElementById('youtuber-stats').innerHTML = `<span style="color:#059669">● ${connected}/${total} connected</span>`;
+      }
     } else throw new Error();
   } catch(e) {
     document.getElementById('youtuber-stats').innerHTML = '<span style="color:#d97706">● Not configured</span>';
