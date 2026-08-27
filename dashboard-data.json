@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T04:19:03.881785Z",
+  "generated_at": "2026-08-27T21:51:49.821753Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,31 +239,31 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "1480.7h ago",
+      "age": "1498.2h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "5.2h ago",
+      "age": "22.7h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "9.3h ago",
-      "status": "stale"
+      "age": "26m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "8.5h ago",
-      "status": "warning"
+      "age": "47m ago",
+      "status": "fresh"
     },
     "insider_trades": {
-      "age": "6.7h ago",
-      "status": "warning",
+      "age": "6m ago",
+      "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 55.3,
+    "score": 58.2,
     "rating": "greed"
   },
   "macro_blackout_today": false,
@@ -272,7 +272,7 @@
     {
       "event": "NFP",
       "date": "2026-09-04",
-      "days_away": 9
+      "days_away": 8
     }
   ],
   "last_routine": {
