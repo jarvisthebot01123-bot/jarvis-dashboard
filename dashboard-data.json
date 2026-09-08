@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T00:56:03.099287Z",
+  "generated_at": "2026-09-08T16:06:25.809498Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,31 +239,31 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "1765.3h ago",
+      "age": "1780.5h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "3.0h ago",
+      "age": "18.2h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "4.5h ago",
-      "status": "warning"
+      "age": "28m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "3.8h ago",
+      "age": "53m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "3.0h ago",
+      "age": "7m ago",
       "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 41.9,
+    "score": 42.0,
     "rating": "fear"
   },
   "macro_blackout_today": false,
@@ -272,17 +272,17 @@
     {
       "event": "CPI",
       "date": "2026-09-11",
-      "days_away": 4
+      "days_away": 3
     },
     {
       "event": "PPI",
       "date": "2026-09-12",
-      "days_away": 5
+      "days_away": 4
     },
     {
       "event": "FOMC Statement",
       "date": "2026-09-16",
-      "days_away": 9
+      "days_away": 8
     }
   ],
   "last_routine": {
