@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T01:05:54.810515Z",
+  "generated_at": "2026-09-17T16:22:54.009374Z",
   "halt_trading": false,
   "halt_reason": null,
   "account": {
@@ -239,42 +239,36 @@
   "live_ready": false,
   "data_freshness": {
     "congress": {
-      "age": "1981.5h ago",
+      "age": "1996.7h ago",
       "status": "stale",
       "count": 50
     },
     "news": {
-      "age": "3.1h ago",
+      "age": "18.4h ago",
       "status": "stale",
       "count": 30
     },
     "market_context": {
-      "age": "5.2h ago",
-      "status": "warning"
+      "age": "31m ago",
+      "status": "fresh"
     },
     "economic_calendar": {
-      "age": "4.2h ago",
+      "age": "47m ago",
       "status": "fresh"
     },
     "insider_trades": {
-      "age": "3.2h ago",
+      "age": "8m ago",
       "status": "fresh",
       "count": 0
     }
   },
   "fear_greed": {
-    "score": 26.2,
+    "score": 29.5,
     "rating": "fear"
   },
-  "macro_blackout_today": true,
-  "macro_blackout_reason": "FOMC Statement",
-  "upcoming_macro_events": [
-    {
-      "event": "FOMC Statement",
-      "date": "2026-09-16",
-      "days_away": 0
-    }
-  ],
+  "macro_blackout_today": false,
+  "macro_blackout_reason": null,
+  "upcoming_macro_events": [],
   "last_routine": {
     "ts": "2026-05-14T20:15:00Z",
     "routine": "end_of_day",
